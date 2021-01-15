@@ -80,12 +80,12 @@ https://caniuse.com
 * `CRUD`, 선언 후 추가 하기, 지우기 `delete`
 * ❔ 동일한 이름의 키를 선언한 경우
 * ❔ object.0 비교 array.0
-* this 연산자 만들기
-* `window.alert`을 가릴때, `this`의 수정
+* `오브젝트` 안의 `function`에서 `this 연산자` 만들기(수정 해보기)
+* `오브젝트` 안의 `function`에서 `window.alert`을 수정하기
 * ❔ objectParent > objectChild > 함수에서 `this`
 * `for in`
-* ❔ 사용자의 이름, 나이를 만들고 `for in`으로 출력하기
-* ❔ 사용자의 이름, 나이를 4명 만들어 배열에 넣고, for문으로 출력하기
+* ❔ 사용자의 이름, 나이를 가진 `오브젝트`를 만들고 `for in`으로 출력하기
+* ❔ 사용자의 이름, 나이를 가진 `오브젝트` 4개를 만들어 배열에 넣고, for문으로 출력하기
 
 ## if문(제어문 > 분기문)
 ### if문을 사용하는 이유?
