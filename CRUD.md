@@ -123,7 +123,7 @@ function create(event) {
   spanSpin.className = '';
   // Ajax 원형
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://localhost:3100/api/v1/member');
+  xhr.open('POST', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify(member));
   xhr.onreadystatechange = function () {
@@ -155,7 +155,7 @@ https://momentjs.com/
 function read() {
   NProgress.start();
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'http://localhost:3100/api/v1/member');
+  xhr.open('GET', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
   xhr.onreadystatechange = function () {
@@ -207,7 +207,7 @@ function update(event) {
       var spanSpin = event.srcElement.children[0];
       spanSpin.className = '';
       var xhr = new XMLHttpRequest();
-      xhr.open('PUT', 'http://localhost:3100/api/v1/member');
+      xhr.open('PUT', 'http://localhost:3100/api/v1/members');
       xhr.setRequestHeader('Content-type', 'application/json');
       xhr.send(JSON.stringify({
         key: i,
@@ -241,7 +241,7 @@ function del(event) {
       var spanSpin = event.srcElement.children[0];
       spanSpin.className = '';
       var xhr = new XMLHttpRequest();
-      xhr.open('DELETE', 'http://localhost:3100/api/v1/member/' + i);
+      xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + i);
       xhr.setRequestHeader('Content-type', 'application/json');
       xhr.send();
       xhr.onreadystatechange = function () {
