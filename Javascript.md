@@ -81,8 +81,8 @@ https://caniuse.com
 * ❔ 동일한 이름의 키를 선언한 경우
 * ❔ object.0 비교 array.0
 * `오브젝트` 안의 `function`에서 `this 연산자` 만들기(수정 해보기)
-* `오브젝트` 안의 `function`에서 `window.alert`을 수정하기
 * ❔ objectParent > objectChild > 함수에서 `this`
+* `window.alert`을 수정하기
 * `for in`
 * ❔ 사용자의 이름, 나이를 가진 `오브젝트`를 만들고 `for in`으로 출력하기
 * ❔ 사용자의 이름, 나이를 가진 `오브젝트` 4개를 만들어 배열에 넣고, for문으로 출력하기
