@@ -50,7 +50,6 @@ members.html
     </div>
   </body>
 </html>
-
 ```
 
 ## Create
@@ -80,7 +79,6 @@ const create = function() {
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify(member));
 };
-
 ```
 
 ## Read
@@ -118,72 +116,71 @@ const read = function() {
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
 };
-
 ```
 
 ## Update
 ```js
 const update = function(event) {
   const memberUpdate = document.getElementsByName('member-update');
-  for (let i = 0; i < memberUpdate.length; i++) {
-    if (event.srcElement !== memberUpdate[i]) continue;
-    const member = {
-      name: document.getElementsByName('member-name')[i].value,
-      age: document.getElementsByName('member-age')[i].value
-    };
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4) return;
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        read();
-      } else {
-        const error = {
-          status: xhr.status,
-          statusText: xhr.status,
-          responseText: xhr.responseText
-        }
-        console.error(error);
-      }
-    };
-    xhr.open('PUT', 'http://localhost:3100/api/v1/members');
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send(JSON.stringify({
-      key: i,
-      member: member
-    }));
+  let i = 0;
+  for (; i < memberUpdate.length; i += 1) {
+    if (event.srcElement === memberUpdate[i]) break;
   }
-};
-
+  const member = {
+    name: document.getElementsByName('member-name')[i].value,
+    age: document.getElementsByName('member-age')[i].value
+  };
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4) return;
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+      read();
+    } else {
+      const error = {
+        status: xhr.status,
+        statusText: xhr.status,
+        responseText: xhr.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhr.open('PUT', 'http://localhost:3100/api/v1/members');
+  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.send(JSON.stringify({
+    key: i,
+    member: member
+  }));
+}
 ```
 
 ## Delete
 ```js
 const del = function(event) {
   const memberDelete = document.getElementsByName('member-delete');
-  for (let i = 0; i < memberDelete.length; i++) {
-    if (event.srcElement !== memberDelete[i]) continue;
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== 4) return;
-      if (xhr.status === 200) {
-        console.log(xhr.responseText);
-        read();
-      } else {
-        const error = {
-          status: xhr.status,
-          statusText: xhr.status,
-          responseText: xhr.responseText
-        }
-        console.error(error);
-      }
-    };
-    xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + i);
-    xhr.setRequestHeader('Content-type', 'application/json');
-    xhr.send();
+  let i = 0;
+  for (; i < memberDelete.length; i += 1) {
+    if (event.srcElement === memberDelete[i]) break;
   }
-};
-
+  const xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState !== 4) return;
+    if (xhr.status === 200) {
+      console.log(xhr.responseText);
+      read();
+    } else {
+      const error = {
+        status: xhr.status,
+        statusText: xhr.status,
+        responseText: xhr.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + i);
+  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.send();
+}
 ```
 
 ## Finally
