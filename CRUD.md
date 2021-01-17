@@ -79,7 +79,7 @@ const create = function() {
   xhr.open('POST', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify(member));
-}
+};
 
 ```
 
@@ -97,7 +97,7 @@ const read = function() {
       while (tbodyMembers.children.length) {
         tbodyMembers.removeChild(tbodyMembers.children[0]);
       }
-      for (let i = 0; i < members.length; i += 1) {
+      for (let i = 0; i < members.length; i++) {
         const member = members[i];
         const trMember = tbodyTemplateMembers.children[0].cloneNode(true);
         tbodyMembers.appendChild(trMember);
@@ -117,7 +117,7 @@ const read = function() {
   xhr.open('GET', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
-}
+};
 
 ```
 
@@ -125,7 +125,7 @@ const read = function() {
 ```js
 const update = function(event) {
   const memberUpdate = document.getElementsByName('member-update');
-  for (let i = 0; i < memberUpdate.length; i += 1) {
+  for (let i = 0; i < memberUpdate.length; i++) {
     if (event.srcElement !== memberUpdate[i]) continue;
     const member = {
       name: document.getElementsByName('member-name')[i].value,
@@ -153,7 +153,7 @@ const update = function(event) {
       member: member
     }));
   }
-}
+};
 
 ```
 
@@ -161,7 +161,7 @@ const update = function(event) {
 ```js
 const del = function(event) {
   const memberDelete = document.getElementsByName('member-delete');
-  for (let i = 0; i < memberDelete.length; i += 1) {
+  for (let i = 0; i < memberDelete.length; i++) {
     if (event.srcElement !== memberDelete[i]) continue;
     const xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
@@ -182,7 +182,7 @@ const del = function(event) {
     xhr.setRequestHeader('Content-type', 'application/json');
     xhr.send();
   }
-}
+};
 
 ```
 
