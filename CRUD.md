@@ -188,7 +188,7 @@ const del = function(event) {
 
 ## Finally
 ```js
-read()
+read();
 ```
 
 ## 생각해 보기
