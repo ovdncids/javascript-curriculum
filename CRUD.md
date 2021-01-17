@@ -199,3 +199,4 @@ read();
 
 ## Axios
 https://github.com/axios/axios
+* ❔ 공통 부분 함수화를 Axios로 수정
