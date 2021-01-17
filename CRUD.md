@@ -66,6 +66,7 @@ const create = function() {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       read();
+      console.warn('생성 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -103,6 +104,7 @@ const read = function() {
         document.getElementsByName('member-age')[i].value = member.age;
         trMember.children[2].innerHTML = member.createdDate;
       }
+      console.warn('읽기 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -136,6 +138,7 @@ const update = function(event) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       read();
+      console.warn('수정 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -168,6 +171,7 @@ const del = function(event) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       read();
+      console.warn('삭제 완료');
     } else {
       const error = {
         status: xhr.status,
