@@ -154,7 +154,7 @@ const update = function(event) {
     key: i,
     member: member
   }));
-}
+};
 ```
 
 ## Delete
@@ -184,7 +184,7 @@ const del = function(event) {
   xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + i);
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
-}
+};
 ```
 
 ## Finally
