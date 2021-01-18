@@ -148,7 +148,7 @@ const update = function(event) {
       console.error(error);
     }
   };
-  xhr.open('PUT', 'http://localhost:3100/api/v1/members');
+  xhr.open('PATCH', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({
     key: i,
