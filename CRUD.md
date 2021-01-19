@@ -99,12 +99,12 @@ const read = function() {
       while (tbodyMembers.children.length) {
         tbodyMembers.removeChild(tbodyMembers.children[0]);
       }
-      for (let i = 0; i < members.length; i++) {
-        const member = members[i];
+      for (let index = 0; index < members.length; index += 1) {
+        const member = members[index];
         const trMember = tbodyTemplateMembers.children[0].cloneNode(true);
         tbodyMembers.appendChild(trMember);
-        document.getElementsByName('member-name')[i].value = member.name;
-        document.getElementsByName('member-age')[i].value = member.age;
+        document.getElementsByName('member-name')[index].value = member.name;
+        document.getElementsByName('member-age')[index].value = member.age;
         trMember.children[2].innerHTML = member.createdDate;
       }
       console.warn('읽기 완료');
@@ -127,13 +127,13 @@ const read = function() {
 ```js
 const update = function(event) {
   const memberUpdate = document.getElementsByName('member-update');
-  let i = 0;
-  for (; i < memberUpdate.length; i += 1) {
-    if (event.srcElement === memberUpdate[i]) break;
+  let index = 0;
+  for (; index < memberUpdate.length; index += 1) {
+    if (event.srcElement === memberUpdate[index]) break;
   }
   const member = {
-    name: document.getElementsByName('member-name')[i].value,
-    age: document.getElementsByName('member-age')[i].value
+    name: document.getElementsByName('member-name')[index].value,
+    age: document.getElementsByName('member-age')[index].value
   };
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -154,7 +154,7 @@ const update = function(event) {
   xhr.open('PATCH', 'http://localhost:3100/api/v1/members');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({
-    key: i,
+    index: index,
     member: member
   }));
 };
@@ -164,9 +164,9 @@ const update = function(event) {
 ```js
 const del = function(event) {
   const memberDelete = document.getElementsByName('member-delete');
-  let i = 0;
-  for (; i < memberDelete.length; i += 1) {
-    if (event.srcElement === memberDelete[i]) break;
+  let index = 0;
+  for (; index < memberDelete.length; index += 1) {
+    if (event.srcElement === memberDelete[index]) break;
   }
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -184,7 +184,7 @@ const del = function(event) {
       console.error(error);
     }
   };
-  xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + i);
+  xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + index);
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
 };
