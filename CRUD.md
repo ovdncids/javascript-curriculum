@@ -73,7 +73,7 @@ const create = function() {
     } else {
       const error = {
         status: xhr.status,
-        statusText: xhr.status,
+        statusText: xhr.statusText,
         responseText: xhr.responseText
       }
       console.error(error);
@@ -111,7 +111,7 @@ const read = function() {
     } else {
       const error = {
         status: xhr.status,
-        statusText: xhr.status,
+        statusText: xhr.statusText,
         responseText: xhr.responseText
       }
       console.error(error);
@@ -145,7 +145,7 @@ const update = function(event) {
     } else {
       const error = {
         status: xhr.status,
-        statusText: xhr.status,
+        statusText: xhr.statusText,
         responseText: xhr.responseText
       }
       console.error(error);
@@ -178,7 +178,7 @@ const del = function(event) {
     } else {
       const error = {
         status: xhr.status,
-        statusText: xhr.status,
+        statusText: xhr.statusText,
         responseText: xhr.responseText
       }
       console.error(error);
