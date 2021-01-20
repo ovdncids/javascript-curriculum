@@ -68,8 +68,8 @@ const create = function() {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
       console.log(xhr.responseText);
+      console.warn('서버에 생성 완료');
       read();
-      console.warn('생성 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -93,6 +93,7 @@ const read = function() {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
       console.log(xhr.responseText);
+      console.warn('서버의 리스트 읽기 완료');
       const members = JSON.parse(xhr.responseText).members;
       const tbodyMembers = document.getElementById('tbody-members');
       const tbodyTemplateMembers = document.getElementById('tbody-template-members');
@@ -107,7 +108,6 @@ const read = function() {
         document.getElementsByName('member-age')[index].value = member.age;
         trMember.children[2].innerHTML = member.createdDate;
       }
-      console.warn('읽기 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -141,7 +141,7 @@ const update = function(event) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       read();
-      console.warn('수정 완료');
+      console.warn('서버에 수정 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -173,8 +173,8 @@ const del = function(event) {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
       console.log(xhr.responseText);
+      console.warn('서버에 삭제 완료');
       read();
-      console.warn('삭제 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -196,11 +196,12 @@ read();
 ```
 
 ## 생각해 보기
-* Callbakc 함수 설명 하기
+* Callback 함수 설명 하기
 * 404, 400, 500 에러 보여주기
 * ❔ 브라우저에서 주소 치고 들어가는 것은 무조건 무슨 메소드 인가?
 * ❔ 공통 부분 함수화 하기
 * React 또는 Vue.js와 비교해 보기
+* RESTful API 알아보기
 
 ## Axios
 https://github.com/axios/axios
