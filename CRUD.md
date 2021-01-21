@@ -2,6 +2,9 @@
 
 ## Backend
 * [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/node-server.zip)
+```sh
+node index.js
+```
 
 ## Markup
 members.html
