@@ -15,8 +15,14 @@ https://getbootstrap.com/docs/4.6/getting-started/introduction
 ## Flex
 * Utilities > Flex
 
-## Table
-* Content > Tables
+## Button
+* Compenents > Buttons
 
 ## Modal
 * Compenents > Modal
+
+## Margin, Padding
+* Utilities > Spacing
+
+## Table
+* Content > Tables
