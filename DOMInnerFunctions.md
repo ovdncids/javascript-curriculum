@@ -3,22 +3,22 @@
 ## class 추가 삭제
 ```html
 <!-- 추가 -->
-document.getElementById('').classList.add('')
+document.getElementById('').classList.add('');
 <!-- 삭제 -->
-document.getElementById('').classList.remove('')
+document.getElementById('').classList.remove('');
 <!-- 첫번째 클래스명 -->
-document.getElementById('').classList[0]
+document.getElementById('').classList[0];
 <!-- 클래스 개수 -->
-document.getElementById('').classList.length
+document.getElementById('').classList.length;
 ```
 
 ## window.location
 ```js
-console.log(window.location)
-window.location.href = './list.html'
+console.log(window.location);
+window.location.href = './list.html';
 ```
 
 ## window.history.back
 ```js
-window.history.back()
+window.history.back();
 ```
