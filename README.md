@@ -6,7 +6,7 @@
 
 * [Bootstrap](Bootstrap.md)
 
-* [DOM inner function](DOMInnerFunction.md)
+* [DOM inner functions](DOMInnerFunctions.md)
 
 * [Key Popup](KeyPopup.md)
 
