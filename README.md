@@ -6,6 +6,8 @@
 
 * [Bootstrap](Bootstrap.md)
 
+* [DOM inner function](InnerFunction.md)
+
 * [Key Popup](KeyPopup.md)
 
 * [Holding Long Key](HoldingLongKey.md)
