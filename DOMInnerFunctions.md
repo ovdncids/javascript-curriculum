@@ -1,11 +1,5 @@
 # DOM Inner Functions
 
-## document.location
-```js
-console.log(document.location)
-document.location.href = './list.html'
-```
-
 ## class 추가 삭제
 ```html
 <!-- 추가 -->
@@ -16,4 +10,10 @@ document.getElementById('').classList.remove('')
 document.getElementById('').classList[0]
 <!-- 클래스 개수 -->
 document.getElementById('').classList.length
+```
+
+## document.location
+```js
+console.log(document.location)
+document.location.href = './list.html'
 ```
