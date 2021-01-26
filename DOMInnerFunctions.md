@@ -12,8 +12,13 @@ document.getElementById('').classList[0]
 document.getElementById('').classList.length
 ```
 
-## document.location
+## window.location
 ```js
-console.log(document.location)
-document.location.href = './list.html'
+console.log(window.location)
+window.location.href = './list.html'
+```
+
+## window.history.back
+```js
+window.history.back()
 ```
