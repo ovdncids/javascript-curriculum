@@ -1,5 +1,11 @@
 # DOM Inner Functions
 
+## document.location
+```js
+console.log(document.location)
+document.location.href = './list.html'
+```
+
 ## class 추가 삭제
 ```html
 <!-- 추가 -->
