@@ -1,9 +1,9 @@
 # DOM Inner Functions
 
-## window.location
+## document.location
 ```js
-console.log(window.location)
-window.location.href = './list.html'
+console.log(document.location)
+document.location.href = './list.html'
 ```
 
 ## class 추가 삭제
