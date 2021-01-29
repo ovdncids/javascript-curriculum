@@ -44,8 +44,8 @@ members.html
             <td><input type="text" placeholder="Age" name="members-age" /></td>
             <td></td>
             <td>
-              <button name="members-update" onclick="membersUpdate(event)">Update</button>
-              <button name="members-delete" onclick="membersDelete(event)">Delete</button>
+              <button name="button-members-update" onclick="membersUpdate(event)">Update</button>
+              <button name="button-members-delete" onclick="membersDelete(event)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -133,10 +133,10 @@ const membersRead = function() {
 ## Update
 ```js
 const membersUpdate = function(event) {
-  const membersUpdate = document.getElementsByName('members-update');
+  const buttonMembersUpdate = document.getElementsByName('button-members-update');
   let index = 0;
-  for (; index < membersUpdate.length; index++) {
-    if (event.currentTarget === membersUpdate[index]) break;
+  for (; index < buttonMembersUpdate.length; index++) {
+    if (event.currentTarget === buttonMembersUpdate[index]) break;
   }
   const member = {
     name: document.getElementsByName('members-name')[index].value,
@@ -170,10 +170,10 @@ const membersUpdate = function(event) {
 ## Delete
 ```js
 const membersDelete = function(event) {
-  const membersDelete = document.getElementsByName('members-delete');
+  const buttonMembersDelete = document.getElementsByName('button-members-delete');
   let index = 0;
-  for (; index < membersDelete.length; index++) {
-    if (event.currentTarget === membersDelete[index]) break;
+  for (; index < buttonMembersDelete.length; index++) {
+    if (event.currentTarget === buttonMembersDelete[index]) break;
   }
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
