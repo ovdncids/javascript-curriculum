@@ -107,7 +107,7 @@ const membersRead = function() {
       while (tbodyMembers.children.length) {
         tbodyMembers.removeChild(tbodyMembers.children[0]);
       }
-      for (let index = 0; index < members.length; index += 1) {
+      for (let index = 0; index < members.length; index++) {
         const member = members[index];
         const trMember = tbodyTemplateMembers.children[0].cloneNode(true);
         tbodyMembers.appendChild(trMember);
@@ -135,8 +135,8 @@ const membersRead = function() {
 const membersUpdate = function(event) {
   const membersUpdate = document.getElementsByName('members-update');
   let index = 0;
-  for (; index < membersUpdate.length; index += 1) {
-    if (event.srcElement === membersUpdate[index]) break;
+  for (; index < membersUpdate.length; index++) {
+    if (event.currentTarget === membersUpdate[index]) break;
   }
   const member = {
     name: document.getElementsByName('members-name')[index].value,
@@ -172,8 +172,8 @@ const membersUpdate = function(event) {
 const membersDelete = function(event) {
   const membersDelete = document.getElementsByName('members-delete');
   let index = 0;
-  for (; index < membersDelete.length; index += 1) {
-    if (event.srcElement === membersDelete[index]) break;
+  for (; index < membersDelete.length; index++) {
+    if (event.currentTarget === membersDelete[index]) break;
   }
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
