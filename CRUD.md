@@ -40,12 +40,12 @@ members.html
       <table style="display: none;">
         <tbody id="tbody-template-members">
           <tr>
-            <td><input type="text" placeholder="Name" name="member-name" /></td>
-            <td><input type="text" placeholder="Age" name="member-age" /></td>
+            <td><input type="text" placeholder="Name" name="members-name" /></td>
+            <td><input type="text" placeholder="Age" name="members-age" /></td>
             <td></td>
             <td>
-              <button name="member-update" onclick="update(event)">Update</button>
-              <button name="member-delete" onclick="del(event)">Delete</button>
+              <button name="members-update" onclick="membersUpdate(event)">Update</button>
+              <button name="members-delete" onclick="membersDelete(event)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -56,7 +56,7 @@ members.html
       <h2>Create</h2>
       <input type="text" placeholder="Name" id="member-name" />
       <input type="text" placeholder="Age" id="member-age" />
-      <button onclick="create()">Create</button>
+      <button onclick="membersCreate()">Create</button>
     </div>
   </body>
 </html>
@@ -65,7 +65,7 @@ members.html
 ## Create
 ./js/members.js
 ```js
-const create = function() {
+const membersCreate = function() {
   const member = {
     name: document.getElementById('member-name').value,
     age: document.getElementById('member-age').value
@@ -76,7 +76,7 @@ const create = function() {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       console.warn('서버에 생성 완료');
-      read();
+      membersRead();
     } else {
       const error = {
         status: xhr.status,
@@ -94,7 +94,7 @@ const create = function() {
 
 ## Read
 ```js
-const read = function() {
+const membersRead = function() {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
@@ -111,8 +111,8 @@ const read = function() {
         const member = members[index];
         const trMember = tbodyTemplateMembers.children[0].cloneNode(true);
         tbodyMembers.appendChild(trMember);
-        document.getElementsByName('member-name')[index].value = member.name;
-        document.getElementsByName('member-age')[index].value = member.age;
+        document.getElementsByName('members-name')[index].value = member.name;
+        document.getElementsByName('members-age')[index].value = member.age;
         trMember.children[2].innerHTML = member.createdDate;
       }
     } else {
@@ -132,22 +132,22 @@ const read = function() {
 
 ## Update
 ```js
-const update = function(event) {
-  const memberUpdate = document.getElementsByName('member-update');
+const membersUpdate = function(event) {
+  const membersUpdate = document.getElementsByName('members-update');
   let index = 0;
-  for (; index < memberUpdate.length; index += 1) {
-    if (event.srcElement === memberUpdate[index]) break;
+  for (; index < membersUpdate.length; index += 1) {
+    if (event.srcElement === membersUpdate[index]) break;
   }
   const member = {
-    name: document.getElementsByName('member-name')[index].value,
-    age: document.getElementsByName('member-age')[index].value
+    name: document.getElementsByName('members-name')[index].value,
+    age: document.getElementsByName('members-age')[index].value
   };
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
       console.log(xhr.responseText);
-      read();
+      membersRead();
       console.warn('서버에 수정 완료');
     } else {
       const error = {
@@ -169,11 +169,11 @@ const update = function(event) {
 
 ## Delete
 ```js
-const del = function(event) {
-  const memberDelete = document.getElementsByName('member-delete');
+const membersDelete = function(event) {
+  const membersDelete = document.getElementsByName('members-delete');
   let index = 0;
-  for (; index < memberDelete.length; index += 1) {
-    if (event.srcElement === memberDelete[index]) break;
+  for (; index < membersDelete.length; index += 1) {
+    if (event.srcElement === membersDelete[index]) break;
   }
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -181,7 +181,7 @@ const del = function(event) {
     if (xhr.status === 200) {
       console.log(xhr.responseText);
       console.warn('서버에 삭제 완료');
-      read();
+      membersRead();
     } else {
       const error = {
         status: xhr.status,
@@ -199,7 +199,7 @@ const del = function(event) {
 
 ## Finally
 ```js
-read();
+membersRead();
 ```
 
 ## 생각해 보기
