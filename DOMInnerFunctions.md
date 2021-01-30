@@ -22,3 +22,14 @@ window.location.href = './list.html';
 ```js
 window.history.back();
 ```
+
+## Event
+### onkeypress
+```html
+<input type="text" onkeypress="console.log(event)" />
+```
+
+### onchange
+```html
+<input type="date" onchange="console.log(event)" />
+```
