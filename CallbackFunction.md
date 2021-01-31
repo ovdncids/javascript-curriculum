@@ -111,3 +111,6 @@ const cbError = function(canvasInfo) {
 }
 canvas.nemo(7).catch(cbError);
 ```
+
+## A개발자 코드
+* [canvasA.js](./jscanvasA.js)
