@@ -24,13 +24,13 @@ console.log(`abc`);
 ## Arrow Function(화살표 함수)
 * 기본
 ```js
-const fNormal1 = function() {};
+const f1 = function() {};
 const fBabel1 = () => {};
 ```
 
 * 응용
 ```js
-const fNormal2 = function(a) {
+const f2 = function(a) {
   return a;
 };
 const fBabel2 = (a) => { return a };
