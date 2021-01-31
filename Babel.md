@@ -21,7 +21,7 @@ babel.js
 console.log(`abc`);
 ```
 
-## 화살표 함수
+## Arrow Function(화살표 함수)
 * 기본
 ```js
 const fNormal1 = function() {};
