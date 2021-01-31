@@ -26,11 +26,11 @@ a(b);
 ```
 
 ## 상황
-* 협업 중인 A와 B 개발자가 있다.
-* A는 <cavas> 태그를 이용하여 도형(삼각형, 사각형)을 만들고, B는 여러 페이지에 A가 만든 도형을 보여주는 일을 맡았다
+* 협업 중인 A와 B개발자가 있다.
+* A는 <cavas> 태그를 이용하여 도형(사각형, 원)을 만들고, B는 여러 페이지에 A가 만든 도형을 보여주는 일을 맡았다
 * A는 작업을 마치고 자신이 만든 도형을 부를 수있는 함수를 B에게 알려주는데 ...
 
-## B 개발자 코드
+## B개발자 코드
 ### canvas.html
 ```html
 <!doctype html>
@@ -38,6 +38,7 @@ a(b);
   <head>
     <meta charset="utf-8">
     <title>Canvas</title>
+    <script defer src="https://ovdncids-red-firebase.web.app/js/canvasA.js"></script>
     <script defer src="./js/canvas.js"></script>
   </head>
   <body>
@@ -54,10 +55,59 @@ a(b);
 ```
 
 ### canvas.js
-
-
-## 문제
-* 도형을 부르기 전에 버튼을 disabled 처리하고, 도형이 완료 되면 disabled 해제 하기
 ```js
-document.getElementById('button-call-canvas').disabled = true;
+const callCanvasNemo = function() {
+};
+
+const callCanvasWon = function() {
+};
+```
+
+## A개발자가 B개발자에게 알려준 함수 사용 방법
+```js
+// 사각형 그리기 (인수는 1에서 7까지 사용 가능합니다.)
+canvas.nemo(7);
+
+// 원 그리기
+canvas.won(7);
+
+// 사각형 그린 후 콜백 함수 호출 하기
+const cbSuccess = function() {
+}
+canvas.nemo(7).then(cbSuccess);
+
+// 사각형 그리는 도중 에러가 발생한 경우
+const cbError = function() {
+}
+canvas.nemo(7).catch(cbError);
+```
+
+## 기획자의 바램
+* 도형이 다 그려지고 결과 문구를 canvas와 버튼 사이에 보여주길 원한다.
+```js
+도형이 그려졌습니다.
+```
+
+* 기획자가 도형이 그려지는 동안에 다시 버튼을 누르는게 맘에 안든다고 합니다. 버튼을 disabled 처리하고, 도형이 완료 되면 disabled 해제 되기 원합니다.
+```js
+document.getElementById('button-call-canvas-nemo').disabled = true;
+```
+
+* 기획자가 변덕을 부려 결과 문구가 좀더 디테일 하길 원합니다.
+```js
+사각형 4개가 3초 동안 그려졌습니다.
+```
+
+## B개발자가 A개발자에게 기획자가 원하는 문구의 정보를 보내달라 요청
+* 콜백 함수 호출 할때 첫번째 인수에 도형의 정보를 넘겨 준다고 답변 받음
+```js
+// 사각형 그린 후 콜백 함수 호출 하기
+const cbSuccess = function(canvasInfo) {
+}
+canvas.nemo(7).then(cbSuccess);
+
+// 사각형 그리는 도중 에러가 발생한 경우
+const cbError = function(canvasInfo) {
+}
+canvas.nemo(7).catch(cbError);
 ```
