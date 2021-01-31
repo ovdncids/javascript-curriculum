@@ -99,7 +99,7 @@ document.getElementById('button-call-canvas-nemo').disabled = true;
 ```
 
 ## B개발자가 A개발자에게 기획자가 원하는 문구의 정보를 보내달라 요청
-* 콜백 함수 호출 할때 첫번째 인수에 도형의 정보를 넘겨 준다고 답변 받음
+* A개발자가 콜백 함수 호출 할때 첫번째 인수에 도형의 정보를 넘겨 준다고 답변 받음
 ```js
 // 사각형 그린 후 콜백 함수 호출 하기
 const cbSuccess = function(canvasInfo) {
