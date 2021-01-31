@@ -10,10 +10,10 @@
 
 * [Callback Function](CallbackFunction.md)
 
+* [Babel](Babel.md)
+
 * [Key Popup](KeyPopup.md)
 
 * [Holding Long Key](HoldingLongKey.md)
 
 * [jQuery Functions](jQueryFunctions.md)
-
-* [Babel](Babel.md)
