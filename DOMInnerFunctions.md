@@ -47,6 +47,7 @@ formB.html
   </body>
 </html>
 ```
+* Frontend와 Backend의 차이점은?
 
 ## window.location
 ```js
