@@ -27,11 +27,11 @@ a(b);
 
 ## 상황
 * 협업 중인 A와 B개발자가 있다.
-* A는 <cavas> 태그를 이용하여 도형(사각형, 원)을 만들고, B는 여러 페이지에 A가 만든 도형을 보여주는 일을 맡았다
+* A는 `cavas` 태그를 이용하여 도형(사각형, 원)을 만들고, B는 여러 페이지에 A가 만든 도형을 보여주는 일을 맡았다
 * A는 작업을 마치고 자신이 만든 도형을 부를 수있는 함수를 B에게 알려주는데 ...
 
 ## B개발자 코드
-### canvas.html
+### canvasB.html
 ```html
 <!doctype html>
 <html lang="en">
@@ -39,7 +39,7 @@ a(b);
     <meta charset="utf-8">
     <title>Canvas</title>
     <script defer src="https://ovdncids-red-firebase.web.app/js/canvasA.js"></script>
-    <script defer src="./js/canvas.js"></script>
+    <script defer src="./js/canvasB.js"></script>
   </head>
   <body>
     <div>
@@ -54,7 +54,7 @@ a(b);
 </html>
 ```
 
-### canvas.js
+### canvasB.js
 ```js
 const callCanvasNemo = function() {
 };
