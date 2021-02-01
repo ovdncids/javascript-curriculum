@@ -66,10 +66,10 @@ const callCanvasWon = function() {
 ## A개발자가 B개발자에게 알려준 함수 사용 방법
 ```js
 // 사각형 그리기 (인수는 1에서 7까지 사용 가능 합니다.)
-canvas.nemo(7);
+canvasA.nemo(7);
 
 // 원 그리기
-canvas.won(7);
+canvasA.won(7);
 ```
 
 ## 기획자의 바램1
@@ -88,12 +88,12 @@ canvas.won(7);
 // 사각형 그린 후 콜백 함수 호출 하기
 const cbSuccess = function() {
 }
-canvas.nemo(7).then(cbSuccess);
+canvasA.nemo(7).then(cbSuccess);
 
 // 사각형 그리는 도중 에러가 발생한 경우
 const cbError = function() {
 }
-canvas.nemo(7).catch(cbError);
+canvasA.nemo(7).catch(cbError);
 ```
 
 ## 기획자의 바램2
@@ -114,12 +114,12 @@ document.getElementById('button-call-canvas-nemo').disabled = true;
 // 사각형 그린 후 콜백 함수 호출 하기
 const cbSuccess = function(canvasInfo) {
 }
-canvas.nemo(7).then(cbSuccess);
+canvasA.nemo(7).then(cbSuccess);
 
 // 사각형 그리는 도중 에러가 발생한 경우
 const cbError = function(canvasInfo) {
 }
-canvas.nemo(7).catch(cbError);
+canvasA.nemo(7).catch(cbError);
 ```
 
 ## A개발자 코드
