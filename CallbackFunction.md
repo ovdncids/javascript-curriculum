@@ -18,7 +18,7 @@ const a = function(b) {
   b();
 };
 const b = function() {
-  console.log('콜백 함수 실행);
+  console.log('콜백 함수 실행');
 };
 
 // a함수 실행
