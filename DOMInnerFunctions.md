@@ -12,6 +12,42 @@ document.getElementById('').classList[0];
 document.getElementById('').classList.length;
 ```
 
+## form 태그
+* Ajax 이전에 데이터를 서버에 전송하는 방식(get, post 메소드만 사용가능)
+
+formA.html
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>From A</title>
+  </head>
+  <body>
+    <h1>From A</h1>
+    <form method="get" action="./formB.html">
+      <input type="text" name="name" placeholder="이름" />
+      <input type="submit" value="전송" />
+    </form>
+  </body>
+</html>
+```
+
+formB.html
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>From B</title>
+    <script>console.log(window.location);</script>
+  </head>
+  <body>
+    <h1>From B</h1>
+  </body>
+</html>
+```
+
 ## window.location
 ```js
 console.log(window.location);
