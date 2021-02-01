@@ -1,5 +1,4 @@
-const canvas = {
-  promises: [],
+const canvasA = {
   info: {
     result: '',
     repeat: 0,
@@ -10,28 +9,27 @@ const canvas = {
   },
   cbSuccess: null,
   nemo: function(repeat) {
-    return canvas.draw(repeat, '사각형');
+    return canvasA.draw(repeat, '사각형');
   },
   won: function(repeat) {
-    return canvas.draw(repeat, '동그라미');
+    return canvasA.draw(repeat, '동그라미');
   },
   draw: function(repeat, shape) {
-    canvas.info.repeat = repeat;
-    canvas.info.result = '';
-    canvas.info.timeStart = +new Date();
-    canvas.info.shape = shape;
+    canvasA.info.repeat = repeat;
+    canvasA.info.result = '';
+    canvasA.info.timeStart = +new Date();
+    canvasA.info.shape = shape;
     const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple'];
-    const c = document.getElementById('canvas');
-    const ctx = c.getContext('2d');
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
     if (shape === '사각형') {
       ctx.clearRect(0, 0, 370, 60);
     } else {
       ctx.clearRect(0, 70, 370, 130);
     }
     try {
-      if (!repeat || repeat < 1 || repeat > 7) throw {message: '인수를 1에서 7까지 사용 가능 합니다.'};
+      if (!repeat || repeat < 1 || repeat > 7) throw {message: '인수는 1에서 7까지 사용 가능 합니다.'};
       const promises = [];
-      canvas.promises = [];
       for (let i = 0; i < repeat; i++) {
         promises[i] = new Promise(function (resolve, reject) {
           window.setTimeout(function() {
@@ -48,26 +46,26 @@ const canvas = {
         });
       }
       Promise.all(promises).then(function () {
-        canvas.info.result = '완료';
-        canvas.info.timeEnd = +new Date();
-        canvas.info.timeProcessed = (canvas.info.timeEnd - canvas.info.timeStart) / 1000 + '초';
-        canvas.cbSuccess(canvas.info);
+        canvasA.info.result = '완료';
+        canvasA.info.timeEnd = +new Date();
+        canvasA.info.timeProcessed = (canvasA.info.timeEnd - canvasA.info.timeStart) / 1000 + '초';
+        if (canvasA.cbSuccess) canvasA.cbSuccess(canvasA.info);
       });
     } catch(e) {
-      canvas.info.result = e.message;
+      canvasA.info.result = e.message;
     }
-    return canvas;
+    return canvasA;
   },
   then: function(cbSuccess) {
-    canvas.cbSuccess = cbSuccess
-    return canvas;
+    canvasA.cbSuccess = cbSuccess
+    return canvasA;
   },
   catch: function(cbError) {
-    if (canvas.info.result !== '') {
-      canvas.info.timeEnd = +new Date();
-      canvas.info.timeProcessed = (canvas.info.timeEnd - canvas.info.timeStart) / 1000 + '초';
-      cbError(canvas.info);
+    if (canvasA.info.result !== '') {
+      canvasA.info.timeEnd = +new Date();
+      canvasA.info.timeProcessed = (canvasA.info.timeEnd - canvasA.info.timeStart) / 1000 + '초';
+      if (cbError) cbError(canvasA.info);
     }
-    return canvas;
+    return canvasA;
   }
 };
