@@ -63,10 +63,20 @@ window.history.back();
 ## Event
 ### onkeypress
 ```html
-<input type="text" onkeypress="console.log(event)" />
+<input type="text" onkeyup="console.log(event)" />
 ```
 
 ### onchange
 ```html
 <input type="date" onchange="console.log(event)" />
 ```
+
+## QueryString
+```js
+const url = new URL(window.location.href);
+const queryString = url.searchParams;
+
+console.log(queryString.get('a'));
+console.log(queryString.getAll('a'));
+```
+
