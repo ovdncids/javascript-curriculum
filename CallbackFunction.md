@@ -85,12 +85,12 @@ canvasA.won(7);
 ## B개발자가 A개발자에게 도형이 다 그려지고 콜백 함수를 호출해 달라고 이야기함(에러 포함)
 * A개발자에게 답변 받음
 ```js
-// 사각형 그린 후 콜백 함수 호출 하기
+// 사각형 그린 후, 호출될 함수를 then 함수 첫번째 인자에 넣어주세요.
 const cbSuccess = function() {
 }
 canvasA.nemo(7).then(cbSuccess);
 
-// 사각형 그리는 도중 에러가 발생한 경우
+// 사각형 그리는 도중 에러가 발생한 경우, 호출될 함수를 catch 함수 첫번째 인자에 넣어주세요.
 const cbError = function() {
 }
 canvasA.nemo(7).catch(cbError);
