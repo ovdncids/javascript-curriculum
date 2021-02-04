@@ -133,10 +133,10 @@ const membersRead = function() {
 ## Update
 ```js
 const membersUpdate = function(event) {
-  const buttonMembersUpdate = document.getElementsByName('button-members-update');
+  const eventElement = event.currentTarget || event.srcElement;
   let index = 0;
-  for (; index < buttonMembersUpdate.length; index++) {
-    if (event.currentTarget === buttonMembersUpdate[index]) break;
+  for (; index < document.getElementsByName(eventElement.name).length; index++) {
+    if (srcElement === document.getElementsByName(eventElement.name)[index]) break;
   }
   const member = {
     name: document.getElementsByName('members-name')[index].value,
@@ -170,10 +170,10 @@ const membersUpdate = function(event) {
 ## Delete
 ```js
 const membersDelete = function(event) {
-  const buttonMembersDelete = document.getElementsByName('button-members-delete');
+  const eventElement = event.currentTarget || event.srcElement;
   let index = 0;
-  for (; index < buttonMembersDelete.length; index++) {
-    if (event.currentTarget === buttonMembersDelete[index]) break;
+  for (; index < document.getElementsByName(eventElement.name).length; index++) {
+    if (srcElement === document.getElementsByName(eventElement.name)[index]) break;
   }
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
