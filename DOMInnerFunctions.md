@@ -80,3 +80,16 @@ console.log(queryString.get('a'));
 console.log(queryString.getAll('a'));
 ```
 
+## Orderby Icon
+```html
+<a href="?orderByName=name&orderByType=asc"><i class="bi bi-caret-up" id="i-name-asc"></i></a>
+<a href="?orderByName=name&orderByType=desc"><i class="bi bi-caret-down" id="i-name-desc"></i></a>
+```
+```js
+const orderByName = queryString.get('orderByName') || 'name';
+const orderByType = queryString.get('orderByType') || 'desc';
+const classList = document.getElementById('i-' + orderByName + '-' + orderByType).classList;
+const className = classList[1];
+classList.remove(className);
+classList.add(className + '-fill');
+```
