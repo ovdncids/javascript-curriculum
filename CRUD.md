@@ -30,7 +30,6 @@ members.html
           <tr>
             <th>Name</th>
             <th>Age</th>
-            <th>Created Date</th>
             <th>Modify</th>
           </tr>
         </thead>
@@ -40,9 +39,8 @@ members.html
       <table style="display: none;">
         <tbody id="tbody-template-members">
           <tr>
-            <td><input type="text" placeholder="Name" name="members-name" /></td>
+            <td name="members-name"></td>
             <td><input type="text" placeholder="Age" name="members-age" /></td>
-            <td></td>
             <td>
               <button name="button-members-update" onclick="membersUpdate(event)">Update</button>
               <button name="button-members-delete" onclick="membersDelete(event)">Delete</button>
@@ -74,8 +72,7 @@ const membersCreate = function() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log(xhr.responseText);
-      console.warn('서버에 생성 완료');
+      console.log('Done membersCreate', xhr.responseText);
       membersRead();
     } else {
       const error = {
@@ -99,21 +96,21 @@ const membersRead = function() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log(xhr.responseText);
-      console.warn('서버의 리스트 읽기 완료');
+      console.log('Done membersRead', xhr.responseText);
       const members = JSON.parse(xhr.responseText).members;
-      const tbodyMembers = document.getElementById('tbody-members');
-      const tbodyTemplateMembers = document.getElementById('tbody-template-members');
-      while (tbodyMembers.children.length) {
-        tbodyMembers.removeChild(tbodyMembers.children[0]);
+      const tbody = document.getElementById('tbody-members');
+      const tbodyTemplate = document.getElementById('tbody-template-members');
+      while (tbody.children.length) {
+        tbody.removeChild(tbody.children[0]);
       }
       for (let index = 0; index < members.length; index++) {
         const member = members[index];
-        const trMember = tbodyTemplateMembers.children[0].cloneNode(true);
-        tbodyMembers.appendChild(trMember);
-        document.getElementsByName('members-name')[index].value = member.name;
+        const tr = tbodyTemplate.children[0].cloneNode(true);
+        tbody.appendChild(tr);
+        document.getElementsByName('members-name')[index].innerHTML = member.name;
         document.getElementsByName('members-age')[index].value = member.age;
-        trMember.children[2].innerHTML = member.createdDate;
+        document.getElementsByName('button-members-update')[index].index = index;
+        document.getElementsByName('button-members-delete')[index].index = index;
       }
     } else {
       const error = {
@@ -133,22 +130,17 @@ const membersRead = function() {
 ## Update
 ```js
 const membersUpdate = function(event) {
-  let index = 0;
-  const eventElement = event.currentTarget || event.srcElement;
-  for (; index < document.getElementsByName(eventElement.name).length; index++) {
-    if (eventElement === document.getElementsByName(eventElement.name)[index]) break;
-  }
+  const index = event.currentTarget.index;
   const member = {
-    name: document.getElementsByName('members-name')[index].value,
+    name: document.getElementsByName('members-name')[index].innerHTML,
     age: document.getElementsByName('members-age')[index].value
   };
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log(xhr.responseText);
+      console.log('Done membersUpdate', xhr.responseText);
       membersRead();
-      console.warn('서버에 수정 완료');
     } else {
       const error = {
         status: xhr.status,
@@ -170,17 +162,12 @@ const membersUpdate = function(event) {
 ## Delete
 ```js
 const membersDelete = function(event) {
-  let index = 0;
-  const eventElement = event.currentTarget || event.srcElement;
-  for (; index < document.getElementsByName(eventElement.name).length; index++) {
-    if (eventElement === document.getElementsByName(eventElement.name)[index]) break;
-  }
+  const index = event.currentTarget.index;
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log(xhr.responseText);
-      console.warn('서버에 삭제 완료');
+      console.log('Done membersDelete', xhr.responseText);
       membersRead();
     } else {
       const error = {
