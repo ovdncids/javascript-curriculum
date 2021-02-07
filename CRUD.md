@@ -42,8 +42,8 @@ members.html
             <td name="members-name"></td>
             <td><input type="text" placeholder="Age" name="members-age" /></td>
             <td>
-              <button name="button-members-update" onclick="membersUpdate(event)">Update</button>
-              <button name="button-members-delete" onclick="membersDelete(event)">Delete</button>
+              <button name="button-members-update" onclick="membersUpdate(index)">Update</button>
+              <button name="button-members-delete" onclick="membersDelete(index)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -129,8 +129,7 @@ const membersRead = function() {
 
 ## Update
 ```js
-const membersUpdate = function(event) {
-  const index = event.currentTarget.index;
+const membersUpdate = function(index) {
   const member = {
     name: document.getElementsByName('members-name')[index].innerHTML,
     age: document.getElementsByName('members-age')[index].value
@@ -161,8 +160,7 @@ const membersUpdate = function(event) {
 
 ## Delete
 ```js
-const membersDelete = function(event) {
-  const index = event.currentTarget.index;
+const membersDelete = function(index) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
