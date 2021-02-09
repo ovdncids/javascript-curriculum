@@ -41,8 +41,8 @@ members.html
             <td name="members-name"></td>
             <td><input type="text" placeholder="Age" name="members-age" /></td>
             <td>
-              <button name="members-update" onclick="memberUpdate(index)">Update</button>
-              <button name="members-delete" onclick="memberDelete(index)">Delete</button>
+              <button name="members-update" onclick="membersUpdate(index)">Update</button>
+              <button name="members-delete" onclick="membersDelete(index)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -53,7 +53,7 @@ members.html
       <h2>Create</h2>
       <input type="text" placeholder="Name" id="member-name" />
       <input type="text" placeholder="Age" id="member-age" />
-      <button onclick="memberCreate()">Create</button>
+      <button onclick="membersCreate()">Create</button>
     </div>
   </body>
 </html>
@@ -88,12 +88,12 @@ members.splice(1, 1);
 
 ## Create
 ```js
-const memberCreate = function() {
+const membersCreate = function() {
   members.push({
     name: document.getElementById('member-name').value,
     age: document.getElementById('member-age').value
   });
-  console.log('Done memberCreate');
+  console.log('Done membersCreate');
   membersRead();
 };
 ```
@@ -138,21 +138,21 @@ const membersRead = function() {
 
 ## Update
 ```js
-const memberUpdate = function(index) {
+const membersUpdate = function(index) {
   members[index] = {
     name: document.getElementsByName('members-name')[index].innerHTML,
     age: document.getElementsByName('members-age')[index].value
   };
-  console.log('Done memberUpdate');
+  console.log('Done membersUpdate');
   membersRead();
 };
 ```
 
 ## Delete
 ```js
-const memberDelete = function(index) {
+const membersDelete = function(index) {
   members.splice(index, 1);
-  console.log('Done memberDelete');
+  console.log('Done membersDelete');
   membersRead();
 };
 ```
@@ -164,7 +164,7 @@ membersRead();
 
 ## Ajax Create
 ```js
-const memberCreate = function() {
+const membersCreate = function() {
   const member = {
     name: document.getElementById('member-name').value,
     age: document.getElementById('member-age').value
@@ -173,7 +173,7 @@ const memberCreate = function() {
   xhr.onreadystatechange = function() {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done memberCreate', xhr.responseText);
+      console.log('Done membersCreate', xhr.responseText);
       membersRead();
     } else {
       const error = {
@@ -229,7 +229,7 @@ const membersRead = function() {
 
 ## Ajax Update
 ```js
-const memberUpdate = function(index) {
+const membersUpdate = function(index) {
   const member = {
     name: document.getElementsByName('members-name')[index].innerHTML,
     age: document.getElementsByName('members-age')[index].value
@@ -238,7 +238,7 @@ const memberUpdate = function(index) {
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done memberUpdate', xhr.responseText);
+      console.log('Done membersUpdate', xhr.responseText);
       membersRead();
     } else {
       const error = {
@@ -260,12 +260,12 @@ const memberUpdate = function(index) {
 
 ## Ajax Delete
 ```js
-const memberDelete = function(index) {
+const membersDelete = function(index) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done memberDelete', xhr.responseText);
+      console.log('Done membersDelete', xhr.responseText);
       membersRead();
     } else {
       const error = {
