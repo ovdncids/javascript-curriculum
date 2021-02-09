@@ -59,8 +59,110 @@ members.html
 </html>
 ```
 
-## Create
+## CRUD members
 ./js/members.js
+```js
+// members 배열 만들기
+const members = [];
+// member 2명 넣기, name과 age
+members.push({
+  name: '홍길동',
+  age: 40
+});
+members.push({
+  name: '춘향이',
+  age: 20
+});
+// members for문에서 name과 age console.log 찍기
+for (let index = 0; index < members.length; index++) {
+  console.log(members[index].name, members[index].age);
+}
+// 2번째 member 정보 바꾸기
+members[1] = {
+  name: '심청이',
+  age: 16
+};
+// 2번째 member 지우기
+members.splice(1, 1);
+```
+
+## Create
+```js
+const membersCreate = function() {
+  members.push({
+    name: document.getElementById('member-name').value,
+    age: document.getElementById('member-age').value
+  });
+  console.log('Done membersCreate');
+  membersRead();
+};
+```
+
+## CRUD tbody
+```js
+// tbody 객체 받기
+const tbody = document.getElementById('tbody-members');
+// 새로운 tr을 document.createElement으로 생성하고, innerHTML에 td 넣기
+const tr = document.createElement('tr');
+tr.innerHTML = '<td>1</td>';
+// tbody에 appendChild로 tr을 추가
+tbody.appendChild(tr);
+// tbody에 appendChild로 tr 복사한것을 추가
+tbody.appendChild(tr.cloneNode(true));
+// tbody 첫벗째 자식을 innerHTML을 수정
+tbody.children[0].innerHTML = '<td>2</td>';
+tbody 두번째 자식 삭제, 첫번째 자식 삭제
+tbody.removeChild(tbody.children[1]);
+tbody.removeChild(tbody.children[0]);
+```
+
+## Read
+```js
+const membersRead = function() {
+  const tbody = document.getElementById('tbody-members');
+  while (tbody.children.length) {
+    tbody.removeChild(tbody.children[0]);
+  }
+  for (let index = 0; index < members.length; index++) {
+    const member = members[index];
+    const tr = document.getElementById('tr-template-members').cloneNode(true);
+    tbody.appendChild(tr);
+    document.getElementsByName('members-name')[index].innerHTML = member.name;
+    document.getElementsByName('members-age')[index].value = member.age;
+    document.getElementsByName('button-members-update')[index].index = index;
+    document.getElementsByName('button-members-delete')[index].index = index;
+  }
+  console.log('Done membersRead');
+};
+```
+
+## Update
+```js
+const membersUpdate = function(index) {
+  members[index] = {
+    name: document.getElementsByName('members-name')[index].innerHTML,
+    age: document.getElementsByName('members-age')[index].value
+  };
+  console.log('Done membersUpdate');
+  membersRead();
+};
+```
+
+## Delete
+```js
+const membersDelete = function(index) {
+  members.splice(index, 1);
+  console.log('Done membersDelete');
+  membersRead();
+};
+```
+
+## Finally
+```js
+membersRead();
+```
+
+## Ajax Create
 ```js
 const membersCreate = function() {
   const member = {
@@ -88,32 +190,13 @@ const membersCreate = function() {
 };
 ```
 
-## CRUD tbody
-```js
-// tbody 객체 받기
-const tbody = document.getElementById('tbody-members');
-// 새로운 tr을 document.createElement으로 생성하고, innerHTML에 td 넣기
-const tr = document.createElement('tr');
-tr.innerHTML = '<td>1</td>';
-// tbody에 appendChild로 tr을 추가
-tbody.appendChild(tr);
-// tbody에 appendChild로 tr 복사한것을 추가
-tbody.appendChild(tr.cloneNode(true));
-// tbody 첫벗째 자식을 innerHTML을 수정
-tbody.children[0].innerHTML = '<td>2</td>';
-tbody 두번째 자식 삭제, 첫번째 자식 삭제
-tbody.removeChild(tbody.children[1]);
-tbody.removeChild(tbody.children[0]);
-```
-
-## Read
+## Ajax Read
 ```js
 const membersRead = function() {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done membersRead', xhr.responseText);
       const members = JSON.parse(xhr.responseText).members;
       const tbody = document.getElementById('tbody-members');
       while (tbody.children.length) {
@@ -128,6 +211,7 @@ const membersRead = function() {
         document.getElementsByName('button-members-update')[index].index = index;
         document.getElementsByName('button-members-delete')[index].index = index;
       }
+      console.log('Done membersRead', xhr.responseText);
     } else {
       const error = {
         status: xhr.status,
@@ -143,7 +227,7 @@ const membersRead = function() {
 };
 ```
 
-## Update
+## Ajax Update
 ```js
 const membersUpdate = function(index) {
   const member = {
@@ -174,7 +258,7 @@ const membersUpdate = function(index) {
 };
 ```
 
-## Delete
+## Ajax Delete
 ```js
 const membersDelete = function(index) {
   const xhr = new XMLHttpRequest();
@@ -196,11 +280,6 @@ const membersDelete = function(index) {
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send();
 };
-```
-
-## Finally
-```js
-membersRead();
 ```
 
 ## 생각해 보기
