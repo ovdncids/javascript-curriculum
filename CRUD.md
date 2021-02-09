@@ -88,6 +88,24 @@ const membersCreate = function() {
 };
 ```
 
+## CRUD tbody
+```js
+// tbody 객체 받기
+const tbody = document.getElementById('tbody-members');
+// 새로운 tr을 document.createElement으로 생성하고, innerHTML에 td 넣기
+const tr = document.createElement('tr');
+tr.innerHTML = '<td>1</td>';
+// tbody에 appendChild로 tr을 추가
+tbody.appendChild(tr);
+// tbody에 appendChild로 tr 복사한것을 추가
+tbody.appendChild(tr.cloneNode(true));
+// tbody 첫벗째 자식을 innerHTML을 수정
+tbody.children[0].innerHTML = '<td>2</td>';
+tbody 두번째 자식 삭제, 첫번째 자식 삭제
+tbody.removeChild(tbody.children[1]);
+tbody.removeChild(tbody.children[0]);
+```
+
 ## Read
 ```js
 const membersRead = function() {
