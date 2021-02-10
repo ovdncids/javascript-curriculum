@@ -1,7 +1,7 @@
 # CRUD (Create, Read, Update, Delete)
 
 ## Backend
-* [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/node-server.zip)
+* [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/express-server.zip)
 ```sh
 # BE 서버 실행 방법
 node install
