@@ -1,15 +1,5 @@
 # CRUD (Create, Read, Update, Delete)
 
-## Backend
-* [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/express-server.zip)
-```sh
-# BE 서버 실행 방법
-node install
-node index.js
-# 터미널 종료
-Ctrl + c
-```
-
 ## Markup
 members.html
 ```html
@@ -162,6 +152,44 @@ const membersDelete = function(index) {
 membersRead();
 ```
 
+# Ajax
+* 2000년 초반까지 서버와 통신할 경우 페이지 이동이 필요 했는데, Ajax를 이용하면 페이지 이동 없이 통신이 가능하다.
+* GET과 POST만 사용 할 수 있던 기존 통신 METHOD에서, OPTION, PATCH, PUT, DELETE 등 다양한 METHOD를 이용해 REST API 통신이 유행됐다.
+
+## Backend Server
+* [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/express-server.zip)
+```sh
+# BE 서버 실행 방법
+node install
+node index.js
+# 터미널 종료
+Ctrl + c
+```
+
+## Basic
+```js
+const xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+  if (xhr.readyState !== 4) return;
+  if (xhr.status === 200) {
+    // 통신 완료 후 실행할 부분
+    console.log('Done', xhr.responseText);
+  } else {
+    // 통신 도중 에러가 발생 할때 실행할 부분
+    const error = {
+      status: xhr.status,
+      statusText: xhr.statusText,
+      responseText: xhr.responseText
+    }
+    console.error(error);
+  }
+};
+xhr.open('METHOD', 'http://url');
+// Content-Type이 없으면 xhr.send로 넘기는 값을 서버에서 못 읽음
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.send(JSON.stringify({}));
+```
+
 ## Ajax Create
 ```js
 const membersCreate = function() {
@@ -185,7 +213,7 @@ const membersCreate = function() {
     }
   };
   xhr.open('POST', 'http://localhost:3100/api/v1/members');
-  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify(member));
 };
 ```
@@ -222,7 +250,7 @@ const membersRead = function() {
     }
   };
   xhr.open('GET', 'http://localhost:3100/api/v1/members');
-  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
 };
 ```
@@ -250,7 +278,7 @@ const membersUpdate = function(index) {
     }
   };
   xhr.open('PATCH', 'http://localhost:3100/api/v1/members');
-  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
     index: index,
     member: member
@@ -277,7 +305,7 @@ const membersDelete = function(index) {
     }
   };
   xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + index);
-  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
 };
 ```
