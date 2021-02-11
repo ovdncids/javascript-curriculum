@@ -54,7 +54,7 @@ members.html
 ```js
 // members 배열 만들기
 const members = [];
-// member 2명 넣기, name과 age
+// members.push 메서드를 이용해 member 2명 넣기, name과 age
 members.push({
   name: '홍길동',
   age: 40
@@ -88,20 +88,20 @@ const membersCreate = function() {
 };
 ```
 
-## CRUD tbody
+## CRUD tbody (members 배열과 상관 없이)
 ```js
 // tbody 객체 받기
 const tbody = document.getElementById('tbody-members');
-// 새로운 tr을 document.createElement으로 생성하고, innerHTML에 td 넣기
+// 새로운 tr을 document.createElement('tr') 메소드로 생성하고, innerHTML에 '<td>1</td>' 넣기
 const tr = document.createElement('tr');
 tr.innerHTML = '<td>1</td>';
-// tbody에 appendChild로 tr을 추가
+// tbody에 .appendChild 메소드 첫번째 인수로 tr 객체를 받아서 추가 시킴
 tbody.appendChild(tr);
-// tbody에 appendChild로 tr 복사한것을 추가
+// tbody에 tr 복사한것을 추가 (.cloneNode(true) 메소드 사용)
 tbody.appendChild(tr.cloneNode(true));
-// tbody 첫벗째 자식을 innerHTML을 수정
+// tbody 첫벗째 자식의 innerHTML을 '<td>2</td>'으로 수정
 tbody.children[0].innerHTML = '<td>2</td>';
-tbody 두번째 자식 삭제, 첫번째 자식 삭제
+// tbody 두번째 자식 삭제 하고, 첫번째 자식 삭제까지 삭제
 tbody.removeChild(tbody.children[1]);
 tbody.removeChild(tbody.children[0]);
 ```
