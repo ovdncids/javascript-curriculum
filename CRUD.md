@@ -97,11 +97,14 @@ const tr = document.createElement('tr');
 tr.innerHTML = '<td>1</td>';
 // tbody에 .appendChild 메소드 첫번째 인수로 tr 객체를 받아서 추가 시킴
 tbody.appendChild(tr);
-// tbody에 tr 복사한것을 추가 (.cloneNode(true) 메소드 사용)
-tbody.appendChild(tr.cloneNode(true));
-// tbody 첫벗째 자식의 innerHTML을 '<td>2</td>'으로 수정
+// tr 객체를 복사해서 trClone 상수에 넣기 (.cloneNode(true) 메소드 사용)
+const trClone = tr.cloneNode(true);
+// tbody에 trClone 추가
+tbody.appendChild(trClone);
+// tbody 첫벗째 자식의 innerHTML을 '<td>2</td>'으로 수정 (.children으로 자식 배열 접근)
 tbody.children[0].innerHTML = '<td>2</td>';
-// tbody 두번째 자식 삭제 하고, 첫번째 자식 삭제까지 삭제
+// tbody 두번째 자식 삭제 (.removeChild(자식) 사용)
+// tbody 첫번째 자식 삭제
 tbody.removeChild(tbody.children[1]);
 tbody.removeChild(tbody.children[0]);
 ```
