@@ -5,47 +5,47 @@ members.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>CRUD</title>
-    <script defer src="./js/members.js"></script>
-  </head>
-  <body>
-    <h1>CRUD</h1>
-    <hr />
-    <div>
-      <h2>Read</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Modify</th>
-          </tr>
-        </thead>
-        <tbody id="tbody-members"></tbody>
-      </table>
-      <table style="display: none;">
-        <tbody>
-          <tr id="tr-template-members">
-            <td name="members-name"></td>
-            <td><input type="text" placeholder="Age" name="members-age" /></td>
-            <td>
-              <button name="members-update" onclick="membersUpdate(index)">Update</button>
-              <button name="members-delete" onclick="membersDelete(index)">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <hr />
-    <div>
-      <h2>Create</h2>
-      <input type="text" placeholder="Name" id="member-name" />
-      <input type="text" placeholder="Age" id="member-age" />
-      <button onclick="membersCreate()">Create</button>
-    </div>
-  </body>
+<head>
+<meta charset="utf-8">
+<title>CRUD</title>
+<script defer src="./js/members.js"></script>
+</head>
+<body>
+<h1>CRUD</h1>
+<hr />
+<div>
+  <h2>Read</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Modify</th>
+      </tr>
+    </thead>
+    <tbody id="tbody-members"></tbody>
+  </table>
+  <table style="display: none;">
+    <tbody>
+      <tr id="tr-template-members">
+        <td name="members-name"></td>
+        <td><input type="text" placeholder="Age" name="members-age" /></td>
+        <td>
+          <button name="members-update" onclick="membersUpdate(index)">Update</button>
+          <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<hr />
+<div>
+  <h2>Create</h2>
+  <input type="text" placeholder="Name" id="member-name" />
+  <input type="text" placeholder="Age" id="member-age" />
+  <button onclick="membersCreate()">Create</button>
+</div>
+</body>
 </html>
 ```
 
