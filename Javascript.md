@@ -9,12 +9,13 @@ https://caniuse.com
 # 기본 문법
 
 ## 변수, 상수
-### 변수나 상수를 사용하는 이유?
+### 변수나 상수를 사용하는 이유
 1. 자료형 데이터를 보관 할 수 있다
 ```js
 let a = true;
 const b = 100;
 c = 'abc';
+console.log(a, b, c);
 ```
 2. `debugger`에서 연산의 과정을 볼 수 있다
 ```js
