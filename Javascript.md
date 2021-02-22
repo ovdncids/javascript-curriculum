@@ -3,9 +3,6 @@
 ## 목표
 Backend의 데이터를 받을때 Frontend에서 자유롭게 데이터 핸들링 하기 위해 공부 한다.
 
-## 명언
-* 프로그램을 수정하는것 보다 다시짜는게 빠를때가 있다.
-
 ## 역사
 https://caniuse.com
 
@@ -14,10 +11,34 @@ https://caniuse.com
 ## 변수, 상수
 ### 변수나 상수를 사용하는 이유?
 1. 자료형 데이터를 보관 할 수 있다
-2. `debugger`에서 연산의 결과를 볼 수 있다
-3. 한번의 수정으로 프로그램 전체를 수정 가능하다
+```js
+let a = true;
+const b = 100;
+c = 'abc';
+```
+2. `debugger`에서 연산의 과정을 볼 수 있다
+```js
+debugger;
+console.log(1 + 2 + 3);
+let a = 1;
+let b = 2;
+let c = 3;
+let d = a + b + c;
+console.log(d);
+```
+3. 변수 수정으로 프로그램 전체를 수정 가능하다
+```js
+let a = 100;
+console.log(a + 10);
+console.log(a - 10);
+console.log(a * 10);
+console.log(a / 10);
+```
+* 변수 `a, b, c`를 한줄에 선언(선언문)
+```js
+let a, b, c;
+```
 * ❔ 변수 `a, b, c`를 한줄에 선언(선언문)
-* `;` 설명
 
 ### 변수와 상수의 차이?
 * ❔ `let`이나 `const`를 2번 사용한다면
