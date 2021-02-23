@@ -8,23 +8,27 @@ https://caniuse.com
 
 # 기본 문법
 
-## 변수, 상수
-### 변수나 상수를 사용하는 이유
-1. 자료형 데이터를 보관 할 수 있다
+## 변수 (Variable)
+### 변수를 사용하는 이유
+1. 자료형 데이터를 보관 할 수 있고, 자유롭게 수정 할 수 있다.
 ```js
-let a = true;
-const b = 100;
-c = 'abc';
-console.log(a, b, c);
+let v1 = true;
+let v2 = 100;
+let v3 = 'abc';
+console.log(v1, v2, v3);
+v1 = false;
+v2 = -10;
+v3 = 'def';
+console.log(v1, v2, v3);
 ```
 2. `debugger`에서 연산의 과정을 볼 수 있다
 ```js
 debugger;
 console.log(1 + 2 + 3);
-let a = 1;
-let b = 2;
-let c = 3;
-let d = a + b + c;
+let v4 = 1;
+let v5 = 2;
+let v6 = 3;
+let v7 = a + b + c;
 console.log(d);
 ```
 3. 변수 수정으로 프로그램 전체를 수정 가능하다
