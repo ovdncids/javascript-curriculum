@@ -12,7 +12,7 @@ const promise1 = new Promise(function(resolve, reject) {
   reject('Rejected promise1');
 })
 const promise2 = new Promise(function(resolve, reject) {
-  // resolve('Resolved promise1');
+  // resolve('Resolved promise2');
   reject('Rejected promise2');
 })
 Promise.all([promise1, promise2]).then(function(result) {
