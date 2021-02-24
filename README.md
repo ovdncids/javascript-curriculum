@@ -10,6 +10,8 @@
 
 * [Callback Function](CallbackFunction.md)
 
+* [Promise](Promise.md)
+
 * [Babel](Babel.md)
 
 * [Key Popup](KeyPopup.md)
