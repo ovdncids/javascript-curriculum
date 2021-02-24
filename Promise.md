@@ -50,3 +50,8 @@ Promise.all([promise1, promise2]).then(function(result) {
   console.error(error);
 })
 ```
+
+## Promise Polyfill for IE11
+```html
+<script src="https://unpkg.com/core-js-bundle@3.6.0/minified.js"></script>
+```
