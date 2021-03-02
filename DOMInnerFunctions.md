@@ -10,6 +10,8 @@ document.getElementById('').classList.remove('');
 document.getElementById('').classList[0];
 <!-- 클래스 개수 -->
 document.getElementById('').classList.length;
+<!-- 토글 클래스 -->
+document.getElementById('').classList.toggle('active');
 ```
 
 ## form 태그
