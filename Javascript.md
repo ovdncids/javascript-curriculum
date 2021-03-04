@@ -17,7 +17,7 @@ variable.html
 
 ## 변수 (Variable)
 ### 변수를 사용하는 이유
-1. 자료형 데이터를 보관 할 수 있고, 자유롭게 수정 할 수 있다.
+1. 자료형 데이터를 보관 할 수 있고, 자유롭게 값을 수정 할 수 있다.
 ```js
 let v1 = true;
 let v2 = 100;
@@ -147,7 +147,7 @@ let d2 = null;
 let condition1 = d1 == d2;
 let condition2 = d1 === d2;
 ```
-* ❔ 문제: 조건이 `1 === 1`인 `if`문을 만들고 참인 경우 `console.log('참');`을 찍어 보기
+* ❔ 문제: 조건이 `1 === 1`인 `if`문을 만들고, 참인 경우 `console.log('참');`을 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
