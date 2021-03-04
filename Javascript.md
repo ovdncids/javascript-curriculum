@@ -8,6 +8,13 @@ https://caniuse.com
 
 # 기본 문법
 
+## 테스트 문서 파일 만들기
+variable.html
+```html
+<script>
+</script>
+```
+
 ## 변수 (Variable)
 ### 변수를 사용하는 이유
 1. 자료형 데이터를 보관 할 수 있고, 자유롭게 수정 할 수 있다.
@@ -21,29 +28,43 @@ v2 = -10;
 v3 = 'def';
 console.log(v1, v2, v3);
 ```
+* `let` 설명
+* `console.log();` 설명
+* ❔ `v1` 변수에 let을 2번 선언 한다면
+
 2. `debugger`에서 연산의 과정을 볼 수 있다
 ```js
 debugger;
 console.log(1 + 2 + 3);
-let v4 = 1;
-let v5 = 2;
-let v6 = 3;
-let v7 = a + b + c;
-console.log(d);
+let num1 = 1;
+let num2 = 2;
+let num3 = 3;
+let sum1 = num1 + num2;
+let sum2 = sum1 + num3;
+console.log(sum2);
 ```
+
 3. 변수 수정으로 프로그램 전체를 수정 가능하다
 ```js
-let a = 100;
-console.log(a + 10);
-console.log(a - 10);
-console.log(a * 10);
-console.log(a / 10);
+let calc = 100;
+console.log(calc + 10);
+console.log(calc - 10);
+console.log(calc * 10);
+console.log(calc / 10);
 ```
-* 변수 `a, b, c`를 한줄에 선언(선언문)
+* ❔ 변수 `calc` 값 수정해 보기
+
+### 한줄에 변수 여러개 선언하기 (선언문)
 ```js
 let a, b, c;
 ```
-* ❔ 변수 `a, b, c`를 한줄에 선언(선언문)
+* ❔ 문제: 한줄로 변수 `a, b, c`에 각각 `1, 2, 3` 넣어 보기
+* <details><summary>정답</summary>
+
+  ```css
+  let a = 1, b = 2, c = 3;
+  ```
+</details>
 
 ### 변수와 상수의 차이?
 * ❔ `let`이나 `const`를 2번 사용한다면
