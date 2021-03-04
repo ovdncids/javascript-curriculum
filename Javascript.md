@@ -29,9 +29,10 @@ v3 = 'def';
 console.log(v1, v2, v3);
 ```
 * 자료형에는 `Boolean`(true, false), `Number`(숫자), `String`(문자) 3가지가 주로 쓰인다.
-* `let` 설명
+* `let` 선언문 설명
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
+* ❔ 선언 하지 `v4` 변수에 `console.log(v4);` 찍는다면
 
 2. `debugger`에서 연산의 과정을 볼 수 있다
 ```js
@@ -112,8 +113,8 @@ let true1 = 1 == true;
 let true2 = 1 === true;
 let false1 = 0 == false;
 let false2 = 0 === false;
-let oNum1 = 1 == '1';
-let oNum2 = 1 === '1';
+let oNum1 = 1 != '1';
+let oNum2 = 1 !== '1';
 ```
 * ❕ 연산자는 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다
 * ❔ 문제: `1`과 `2`를 `일치 연산자`로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어 보기
@@ -124,6 +125,40 @@ let oNum2 = 1 === '1';
   console.log(x);
   ```
 </details>
+
+## if문(제어문 > 조건문)
+```js
+if (조건 1) {
+  // 조건 1이 참인 경우 실행
+} else if (조건 2) {
+  // 조건 2가 참인 경우 실행
+} else {
+  // 해당 되는 조건이 없을 경우 실행
+}
+```
+* 조건은 주로 연산자에서 `Boolean` 형식으로 받는다.
+* ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`이고, 나머지는 모두 참인 조건이 된다.
+```js
+debugger;
+let d1;
+// 선언 하고 값을 넣지 않으면 undefined
+let d2 = null;
+// 선언 하고 null 값을 넣으면 null
+let condition1 = d1 == d2;
+let condition2 = d1 === d2;
+```
+* ❔ 문제: 조건이 `1 === 1`인 `if`문을 만들고 참인 경우 `console.log('참');`을 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  if (1 === 1) {
+    console.log('참');
+  }
+  ```
+</details>
+
+비교 연산자
+array.html 만들기
 
 ## 배열
 ### 배열을 사용하는 이유?
