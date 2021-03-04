@@ -115,7 +115,7 @@ let oNum1 = 1 == '1';
 let oNum2 = 1 === '1';
 ```
 * ❕ 연산자는 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다
-* ❔ 문제: 1과 2를 일치 연산자로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어보기
+* ❔ 문제: 1과 2를 일치 연산자로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
