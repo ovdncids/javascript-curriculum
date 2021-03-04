@@ -32,7 +32,7 @@ console.log(v1, v2, v3);
 * `let` 선언문 설명
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
-* ❔ 선언 하지 `v4` 변수에 `console.log(v4);` 찍는다면
+* ❔ 선언 하지 않은 `v4` 변수에 `console.log(v4);` 찍는다면
 
 2. `debugger`에서 연산의 과정을 볼 수 있다
 ```js
