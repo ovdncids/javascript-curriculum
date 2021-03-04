@@ -1,7 +1,7 @@
 # Javascript
 
 ## 목표
-Backend의 데이터를 받을때 Frontend에서 자유롭게 데이터 핸들링 하기 위해 공부 한다.
+Backend의 데이터를 받아서 Frontend에서 자유롭게 데이터 핸들링(CRUD: [Create, Read, Update, Delete]) 하기 위함이다.
 
 ## 역사
 https://caniuse.com
@@ -34,7 +34,7 @@ console.log(v1, v2, v3);
 * ❔ `v1` 변수에 let을 2번 선언 한다면
 * ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 찍는다면
 
-2. `debugger`에서 연산의 과정을 볼 수 있다
+2. `debugger`에서 연산의 과정을 볼 수 있다.
 ```js
 debugger;
 console.log(1 + 2 + 3);
@@ -46,7 +46,7 @@ let sum2 = sum1 + num3;
 console.log(sum2);
 ```
 
-3. 변수 수정으로 프로그램 전체를 수정 가능하다
+3. 변수 수정으로 프로그램 전체를 수정 가능하다.
 ```js
 let calc = 100;
 console.log(calc + 10);
@@ -70,7 +70,7 @@ let a, b, c;
 
 ## 상수 (Constant)
 ### 상수를 사용하는 이유
-1. 한번 선언된 값의 변경을 막기 위해 사용 한다
+1. 한번 선언된 값의 변경을 막기 위해 사용 한다.
 ```js
 const c1 = true;
 const c2 = 100;
@@ -116,7 +116,7 @@ let false2 = 0 === false;
 let oNum1 = 1 != '1';
 let oNum2 = 1 !== '1';
 ```
-* ❕ 연산자는 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다
+* ❕ 연산자는 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다.
 * ❔ 문제: `1`과 `2`를 `일치 연산자`로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
