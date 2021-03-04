@@ -61,27 +61,68 @@ let a, b, c;
 * ❔ 문제: 한줄로 변수 `a, b, c`에 각각 `1, 2, 3` 넣어 보기
 * <details><summary>정답</summary>
 
-  ```css
+  ```js
   let a = 1, b = 2, c = 3;
   ```
 </details>
 
-### 변수와 상수의 차이?
-* ❔ `let`이나 `const`를 2번 사용한다면
-* ❔ `const`에 2번 값을 지정 한다면
-* ❔ 서로 다른 파일에서 1번씩 사용한다면
-* `defer` 설명, `쓰레드` 개념 설명
+## 상수 (Constant)
+### 상수를 사용하는 이유
+1. 한번 선언된 값의 변경을 막기 위해 사용 한다
+```js
+const c1 = true;
+const c2 = 100;
+const c3 = 'abc';
+console.log(c1, c2, c3);
+```
+* ❔ c1 상수에 const을 2번 선언 한다면
+* ❔ c1 상수에 값을 변경해 보기
 
-## 연산자
-### 숫자와 문자형 숫자의 차이?
-* ❔ 문자형 숫자와 숫자를 4칙연산(`+, -, *, /`) 한다면
-* ❔ `true`와 `false`를 4칙연산 한다면
+## 연산자 (Operator)
+1. 문자에 대한 4칙연산 (`+, -, *, /`)
+```js
+debugger;
+let string1 = '1';
+let string2 = '2';
+let result1 = string1 - string2;
+let result2 = string1 * string2;
+let result3 = string1 / string2;
+let result4 = string1 + string2;
+```
+* ❔ `string1` 값을 숫자 `1`로 바꾼다면
+* ❔ `string1` 값을 'a'로 `string2` 값을 'b'로 바꾼다면
+* ❔ 문제: 다음의 `r` 값은?
+```js
+let r = 2 - '1' + 'a';
+```
+* <details><summary>정답</summary>
 
-#### == 연산자(동등 연산자)와 ===(일치 연산자) 연산자의 차이?
-* 연산이 끝나면 `Boolean` 형식으로 반환한다
-* ❔ `true`와 `'true'`를 비교
-* ❔ 문자형 숫자와 숫자를 비교
-* ❔ 1과 2를 일치 연산자로 비교 후에 상수 `a`에 넣고, `a`를 `console.log`로 찍어보기
+  ```js
+  '1a'
+  ```
+</details>
+
+2. == 연산자(동등 연산자)와 ===(일치 연산자) 연산자의 차이
+```js
+debugger;
+let char1 = true == 'true';
+let char2 = true === 'true';
+let true1 = 1 == true;
+let true2 = 1 === true;
+let false1 = 0 == false;
+let false2 = 0 === false;
+let oNum1 = 1 == '1';
+let oNum2 = 1 === '1';
+```
+* ❕ 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다
+* ❔ 문제: 1과 2를 일치 연산자로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어보기
+* <details><summary>정답</summary>
+
+  ```js
+  const x = 1 === 2;
+  console.log(x);
+  ```
+</details>
 
 ## 배열
 ### 배열을 사용하는 이유?
@@ -148,3 +189,7 @@ let a, b, c;
 ### try catch문을 사용하는 이유?
 1. 에러가 발생할 경우 처리를 위해 사용한다
 * 기본형
+
+## 기타
+* ❔ 서로 다른 파일에서 1번씩 사용한다면
+* `defer` 설명, `쓰레드` 개념 설명
