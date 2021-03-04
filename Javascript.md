@@ -28,6 +28,7 @@ v2 = -10;
 v3 = 'def';
 console.log(v1, v2, v3);
 ```
+* 자료형에는 `Boolean`(true, false), `Number`(숫자), `String`(문자) 3가지가 주로 쓰인다.
 * `let` 설명
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
@@ -102,7 +103,7 @@ let r = 2 - '1' + 'a';
   ```
 </details>
 
-2. == 연산자(동등 연산자)와 ===(일치 연산자) 연산자의 차이
+2. ==(동등 연산자) 연산자와 ===(일치 연산자) 연산자의 차이
 ```js
 debugger;
 let char1 = true == 'true';
