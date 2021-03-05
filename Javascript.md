@@ -33,6 +33,7 @@ console.log(v1, v2, v3);
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
 * ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 찍는다면
+* `변수`에 대한 `CRUD` 설명
 
 2. `debugger`에서 연산의 과정을 볼 수 있다.
 ```js
@@ -94,9 +95,9 @@ let result4 = string1 + string2;
 * ❔ `string1` 값을 숫자 `1`로 바꾼다면
 * ❔ `string1` 값을 'a'로 `string2` 값을 'b'로 바꾼다면
 * ❔ 문제: 다음의 `r` 값은?
-```js
-let r = 2 - '1' + 'a';
-```
+  ```js
+  let r = 2 - '1' + 'a';
+  ```
 * <details><summary>정답</summary>
 
   ```js
