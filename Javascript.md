@@ -265,3 +265,7 @@ array.html
 ## 기타
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
 * `defer` 설명, `쓰레드` 개념 설명
+
+<!-- javascript 수정은 함수에서 버튼 만들어서
+Document.written ← 줄바꿈
+로컬 저장소를 바탕으로 CRUD 만들기 -->
