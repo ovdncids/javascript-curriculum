@@ -34,6 +34,14 @@ console.log(v1, v2, v3);
 * ❔ `v1` 변수에 let을 2번 선언 한다면
 * ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 찍는다면
 * `변수`에 대한 `CRUD` 설명
+* ❕ `변수명`에 대한 규칙
+  ```
+  제어문 이름으로 사용 불가 (if, for, switch, while, ...)
+  연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
+  숫자를 앞으로 사용 불가 (1a, 2b, ...)
+  자료형 또는 예약어 사용 불가 (true,  false, null, NaN, delete, ...)
+  주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
+  ```
 
 2. `debugger`에서 연산의 과정을 볼 수 있다.
 ```js
