@@ -38,8 +38,8 @@ console.log(v1, v2, v3);
   ```
   제어문 이름으로 사용 불가 (if, for, switch, while, ...)
   연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
-  숫자를 앞으로 사용 불가 (1a, 2b, ...)
   자료형 또는 예약어 사용 불가 (true,  false, null, NaN, delete, ...)
+  숫자를 앞으로 사용 불가 (1a, 2b, ...)
   주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
   ```
 
@@ -54,6 +54,7 @@ let sum1 = num1 + num2;
 let sum2 = sum1 + num3;
 console.log(sum2);
 ```
+* breakpoint 설명
 
 3. 변수 수정으로 프로그램 전체를 수정 가능하다.
 ```js
@@ -90,9 +91,8 @@ console.log(c1, c2, c3);
 * ❔ c1 상수에 값을 변경해 보기
 
 ## 연산자 (Operator)
-1. 문자에 대한 4칙연산 (`+, -, *, /`)
+1. 문자에 대한 4칙 연산자 (`+, -, *, /`)
 ```js
-debugger;
 let string1 = '1';
 let string2 = '2';
 let result1 = string1 - string2;
@@ -115,23 +115,46 @@ let result4 = string1 + string2;
 
 2. ==(동등 연산자) 연산자와 ===(일치 연산자) 연산자의 차이
 ```js
-debugger;
 let char1 = true == 'true';
 let char2 = true === 'true';
 let true1 = 1 == true;
 let true2 = 1 === true;
-let false1 = 0 == false;
-let false2 = 0 === false;
-let oNum1 = 1 != '1';
-let oNum2 = 1 !== '1';
+let false1 = 0 != false;
+let false2 = 0 !== false;
+let oNum1 = 1 == '1';
+let oNum2 = 1 === '1';
 ```
-* ❕ 연산자는 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다.
+* ❕ 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다.
+* ❕ 위와 같은 이유로 `동등 연산자`는 사용하지 않는다.
 * ❔ 문제: `1`과 `2`를 `일치 연산자`로 비교 후에 상수 `x`에 넣고, `x`를 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
   const x = 1 === 2;
   console.log(x);
+  ```
+</details>
+
+3. 비교 연산자 (<, <=, >, >=)
+```js
+let compare1 = 1 < 1;
+let compare2 = 2 <= 2;
+let compare3 = 3 > 3;
+let compare4 = 4 >= 4;
+```
+
+4. 소괄호() 연산자
+```js
+let roundBracket1 = (1 === '1');
+let roundBracket2 = ((1 + 2) * 3);
+```
+* ❕ `소괄호 연산자`는 `4칙 연산자`보다 우선 순위를 갖는다.
+* ❔ 문제: `소괄호 연산자` 안에서 `true`와 `false`를 `일치 연산자`로 연산 후에 상수 'y'에 넣고, `y`를 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  const y = (true === false);
+  console.log(y);
   ```
 </details>
 
@@ -166,11 +189,13 @@ let condition2 = d1 === d2;
   ```
 </details>
 
-비교 연산자
-array.html 만들기
-로컬 저장소를 바탕으로 CRUD 만들기
-
 ## 배열
+array.html
+```html
+<script>
+</script>
+```
+
 ### 배열을 사용하는 이유?
 1. 순차적인 반복 작업에 사용한다(주로 동일한 데이터 타입으로 묶인 경우가 많다)
 * 기본형, `익명 배열` 설명(재사용을 할 수 없다)
