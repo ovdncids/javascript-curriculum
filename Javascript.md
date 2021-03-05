@@ -320,6 +320,7 @@ testArray1.splice(2, 1);
 * ❔ 함수 넘기기고 넘어간 함수 실행하기(`익명 함수`로 바꾸어 넘겨 보기)
 
 ## 오브젝트
+https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140208_199%2Fyedge__1391863869753lRcSs_JPEG%2FDSC_0846.JPG&type=sc960_832
 ### 오브젝트를 사용하는 이유
 1. 효율적인 관리를 위해 여러 변수를 한곳에 묶어서 사용한다
 * 기본형, `익명 오브젝트`
