@@ -211,8 +211,8 @@ https://t1.daumcdn.net/blogfile/fs8/27_25_21_25_0O7Ul_IMAGE_0_42.jpg?original&fi
 ```js
 // 배열 Create
 array1.push(1);
-array1.push(2);
-array1.push(3);
+array1.push('2');
+array1.push('삼');
 
 // 배열 Read
 array1[0];
@@ -220,9 +220,9 @@ array1[1];
 array1[2];
 
 // 배열 Update
-array1[0] = 4;
-array1[1] = 5;
-array1[2] = 6;
+array1[0] = undefined;
+array1[1] = false;
+array1[2] = true;
 
 // 배열 Update
 array1.splice(0, 1);
@@ -230,17 +230,70 @@ array1.splice(1, 1);
 array1.splice(2, 1);
 ```
 
+### 배열의 크기
+```js
+const length1 = array1.length;
+const length2 = array2.length;
+const lastValue = array1[array1.length - 1];
+```
+* ❕ `lastValue`는 `array1` 배열의 마지막 요소 값을 받는다.
+
+### 배열의 성격
+```js
+let arr1 = [];
+let arr2 = [];
+const quiz1 = arr1[1];
+if (arr1) {
+  console.log('참');
+} else {
+  console.log('참');
+}
+const quiz2 = arr1 === arr2;
+```
+* ❔ 해당 배열이 가진 크기보다 큰 값을 사용 한다면?
+* ❔ `빈 배열`은 참일까 거짓일까?
 * ❔ 문제: `array1`와 `array2는` 같을까?
-* 
+* <details><summary>정답</summary>
 
- `익명 배열` 설명(재사용을 할 수 없다)
+  배열은 선언과 동시에 별도의 `메모리 공간`에 존재하고, 변수는 단지 해당 배열이 있는 `메모리 주소`를 가지고 있다.
+  따라서 `arr1`과 `arr2`는 서로 다른 배열의 주소를 가지므로 같지 않다.
+  만약 `arr1` 변수의 값을 변화 시킨다면, `메모리 주소`를 잃어 버리므로 해당 배열은 더이상 접근할 수 없게 된다.
+  ```
+</details>
 
-* 개발자는 항상 어느 환경에서도 `CRUD` 가능해야한다
-* `.length`, `[1, 2, 3]`, `.push`, `[0]`
-* ❔ `배열[]` 안에 `배열.length`를 이용하여 배열의 마지막 `항목` 구하기
-* ❔ `['a']`, `[overIndex]` 사용하면
-* 지우기 `array.splice(0, 1)`
-* ❔ 1 부터 10까지 더하기(total 변수를 만들어서 한번씩 더해서 만듬), 평균 구하기, 짝수만 더하기, 홀수에 * 2 하고 더하기, 홀수만 지우기
+### 익명 배열
+```js
+console.log([1, 2, 3]);
+```
+* 해당 배열의 `메모리 주소`를 누구도 받지 않으므로 재사용 할 수 없다.
+
+### 배열 실습
+* 1 부터 5까지 더하기(total 변수를 만들어서 한번씩 더해서 만듬)
+```js
+const testArray1 = [1, 2, 3, 4, 5];
+let total1 = testArray1[0];
+total1 = total1 + testArray1[1];
+total1 = total1 + testArray1[2];
+total1 += testArray1[3];
+total1 += testArray1[4];
+```
+
+* `testArray1` 평균 구하기
+```js
+const avg = total1 / testArray1.length;
+```
+
+* `testArray1` 홀수만 더하기
+```js
+const even1 = testArray1[0] + testArray1[2] + testArray1[4];
+```
+
+* 홀수만 지우기
+```js
+testArray1.splice(0, 1);
+testArray1.splice(1, 1);
+testArray1.splice(2, 1);
+```
 
 ## for문(제어문 > 반복문)
 ### for문을 사용하는 이유
@@ -283,14 +336,6 @@ array1.splice(2, 1);
 * ❔ 사용자의 이름, 나이를 가진 `오브젝트`를 만들고 `for in`으로 출력하기
 * ❔ 사용자의 이름, 나이를 가진 `오브젝트` 4개를 만들어 배열에 넣고, for문으로 출력하기
 
-## if문(제어문 > 분기문)
-### if문을 사용하는 이유
-1. 상황에 따라서 선택지를 나누어 사용한다
-* 기본형
-* 거짓은 `0, false, null, undefined`일 경우
-* ❔ `익명 배열`은 참일까 거짓일까
-* `&&, ||, &, |` 설명
-* `3항 연산자`
 
 ## try catch문(제어문 > 예외처리문)
 ### try catch문을 사용하는 이유?
@@ -299,8 +344,11 @@ array1.splice(2, 1);
 
 ## 기타
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
+* `&&, ||, &, |` 설명
+* `3항 연산자`
 * `defer` 설명, `쓰레드` 개념 설명
 
 <!-- javascript 수정은 함수에서 버튼 만들어서
 Document.written ← 줄바꿈
 로컬 저장소를 바탕으로 CRUD 만들기 -->
+
