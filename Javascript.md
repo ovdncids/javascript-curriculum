@@ -79,6 +79,12 @@ let a, b, c;
 </details>
 
 ## 상수 (Constant)
+constant.html
+```html
+<script>
+</script>
+```
+
 ### 상수를 사용하는 이유
 1. 한번 선언된 값의 변경을 막기 위해 사용 한다.
 ```js
