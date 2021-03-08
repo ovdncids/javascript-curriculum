@@ -425,7 +425,20 @@ for (let index8 = 0; index8 < array1.length; index8++) {
 * ❕ 결과적으로 `array2`는 `array1`을 복사하였다.
 * ❔ `array1 === array2` 참일까요?
 * 메모리 설명
-* ❔ 배열을 `const`로 사용하는 이유
+```js
+let array3 = [1, 2, 3];
+let array4 = array3;
+```
+* ❔ `array3 === array4` 참일까?
+```js
+array3 = 3;
+array4 = 4;
+```
+* ❔ 문제: `array3`에서 사용하던 배열에 다시 접근할 수 있을까?
+* <details><summary>정답</summary>
+
+  없다. (배열은 `const`로 사용 해야한다.)
+</details>
 
 ## 함수
 ### 함수를 사용하는 이유
