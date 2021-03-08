@@ -391,7 +391,7 @@ https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F201402
 
 ## 기타
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
-* `&&, ||, &, |` 설명
+* `&& (일치 연산자을 상기 시키키), ||, &, |` 설명 ()
 * `3항 연산자`
 * `defer` 설명, `쓰레드` 개념 설명
 
