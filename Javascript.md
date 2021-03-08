@@ -302,7 +302,47 @@ testArray1.splice(2, 1);
 ```
 
 ## for문(제어문 > 반복문)
+for.html
+```html
+<script>
+</script>
+```
+
 ### for문을 사용하는 이유
+1. 반복 작업을 한곳으로 묶기 위해 사용함 (주로 배열이 사용 된다.)
+
+### for문 문법
+1. 기본 구조
+```js
+for (초기문; 조건문; 증감문) {
+  실행문;
+  ...
+}
+```
+* 예제
+```js
+for (let index1 = 0; index1 < 3; index1++) {
+  console.log(index1);
+}
+```
+
+2. break
+```js
+for (let index2 = 0; index2 < 3; index2++) {
+  console.log(index2);
+  break;
+}
+```
+
+3. continue
+```js
+for (let index3 = 0; index3 < 3; index3++) {
+  console.log(index3);
+  continue;
+  console.log(index3);
+}
+```
+
 * `for ([초기문]; [조건문]; [증감문])`, `index++`, `++index`, `break`, `continue`
 * ❔ 위에 문제를 `for`문을 사용해서 만들기(짝수 구하는 공식: 값 % 2)
 * ❔ `Scope`, 초기문과 같은 이름이 `for`문 위에 쓰여졌다면(같은 이름의 변수를 호출 하려면)
