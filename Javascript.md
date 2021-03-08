@@ -388,7 +388,7 @@ console.log(index6);
   ```
 </details>
 
-* ❔ 문제: `total1`의 평균을 `avg1` 상수에 넣고 `console.log`로 찍어 보기
+* ❔ 문제: `total1`의 `평균`을 `avg1` 상수에 넣고 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -403,9 +403,28 @@ console.log(index6);
 </details>
 
 ### for문에서 배열 사용하기
+```js
+const array1 = [1, 2, 3];
+for (let index8 = 0; index8 < array1.length; index8++) {
+  console.log(array1[index8]);
+}
+```
+* ❔ 문제: `array2` 상수에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
 
-* `window var` 설명
-* ❔ 배열 복사하기, `[] === []` 확인, 메모리란?
+  ```js
+  const array1 = [1, 2, 3];
+  const array2 = [];
+  for (let index8 = 0; index8 < array1.length; index8++) {
+    array2.push(array1[index8]);
+  }
+  console.log(array2);
+  ```
+</details>
+
+* ❕ 결과적으로 `array2`는 `array1`을 복사하였다.
+* ❔ `array1 === array2` 참일까요?
+* 메모리 설명
 * ❔ 배열을 `const`로 사용하는 이유
 
 ## 함수
@@ -447,6 +466,7 @@ https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F201402
 * 기본형
 
 ## 기타
+* `window var` 설명
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
 * `&& (일치 연산자을 상기 시키키), ||, &, |` 설명 ()
 * ++index
