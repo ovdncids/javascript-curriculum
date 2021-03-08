@@ -343,10 +343,67 @@ for (let index3 = 0; index3 < 3; index3++) {
 }
 ```
 
-* `for ([초기문]; [조건문]; [증감문])`, `index++`, `++index`, `break`, `continue`
-* ❔ 위에 문제를 `for`문을 사용해서 만들기(짝수 구하는 공식: 값 % 2)
-* ❔ `Scope`, 초기문과 같은 이름이 `for`문 위에 쓰여졌다면(같은 이름의 변수를 호출 하려면)
-* 가림 현상 설명, Ctrl 키를 눌러서 해당 변수 이동(마우스 오버해보기), `대소문자` 구분
+* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `1`부터 `10` 사이에 `홀수`만 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  for (let index4 = 1; index4 <= 10; index4 += 2) {
+    console.log(index4);
+  }
+   ```
+</details>
+
+* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `1`부터 `10` 사이에 `짝수`만 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  for (let index5 = 2; index5 <= 10; index5 += 2) {
+    console.log(index5);
+  }
+  ```
+</details>
+
+### for문의 범위(Scope), Script 변수와 Blok(Local) 변수의 차이
+1. 초기문 사용하지 않기
+```js
+let index6 = 0;
+for (; index6 < 3; index6++) {
+  console.log(index6);
+}
+console.log(index6);
+```
+* ❕ 결과적으로 `Script 변수 index6`은 for문이 반복된 횟수가 된다.
+* ❔ `let index6 = 0;`초기화 문에 추가해 보기 (에러가 발생할지 생각해 보기)
+* 가림 현상 설명 (Ctrl 키를 눌러서 해당 변수 이동, 마우스 오버해보기, `대소문자` 구분)
+* Blok(Local) 변수 설명
+* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `total1`에 1부터 10까지 더하고, `total1`을 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  let total1 = 0;
+  for (let index7 = 1; index7 <= 10; index7++) {
+    total1 += index7
+  }
+  console.log(total1);
+  ```
+</details>
+
+* ❔ 문제: `total1`의 평균을 `avg1` 상수에 넣고 `console.log`로 찍어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  let total1 = 0;
+  let index7 = 1;
+  for (; index7 <= 10; index7++) {
+    total1 += index7
+  }
+  const avg1 = total1 / (index7 - 1);
+  console.log(avg1);
+  ```
+</details>
+
+### for문에서 배열 사용하기
+
 * `window var` 설명
 * ❔ 배열 복사하기, `[] === []` 확인, 메모리란?
 * ❔ 배열을 `const`로 사용하는 이유
@@ -392,6 +449,7 @@ https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F201402
 ## 기타
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
 * `&& (일치 연산자을 상기 시키키), ||, &, |` 설명 ()
+* ++index
 * `3항 연산자`
 * `defer` 설명, `쓰레드` 개념 설명
 
