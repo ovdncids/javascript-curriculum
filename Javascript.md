@@ -437,7 +437,7 @@ array4 = 4;
 * ❔ 문제: `array3`에서 사용하던 배열에 다시 접근할 수 있을까?
 * <details><summary>정답</summary>
 
-  없다. (배열은 `const`로 사용 해야한다.)
+  없다. (따라서 배열은 `const`로 사용 해야한다.)
 </details>
 
 ## 함수
