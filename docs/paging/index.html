@@ -4,7 +4,7 @@ for (let index = 1; index <= 201; index++) {
   numbersOrigin.push(index);
 }
 
-const page = function(pageNumber, pageSize) {
+const paging = function(pageNumber, pageSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
   pageSize = pageSize >= 1 ? pageSize : 10;
   const pageStartNumber = (pageNumber - 1) * pageSize;
