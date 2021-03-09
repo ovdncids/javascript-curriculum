@@ -2,6 +2,8 @@
 
 * [Javascript](Javascript.md)
 
+* [Paging](Paging.md)
+
 * [CRUD](CRUD.md)
 
 * [Bootstrap](Bootstrap.md)
