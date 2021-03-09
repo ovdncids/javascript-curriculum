@@ -10,10 +10,23 @@ const paging = function(pageNumber, pageSize) {
   const pageStartNumber = (pageNumber - 1) * pageSize;
   const numbersPaging = [];
   for (let index = 0; index < pageSize; index++) {
-    if (numbersOrigin[pageStartNumber + index]) {
-      numbersPaging.push(numbersOrigin[pageStartNumber + index]);
+    const numbersOriginIndex = numbersOrigin[index + pageStartNumber];
+    if (numbersOriginIndex) {
+      numbersPaging.push(numbersOriginIndex);
     }
   }
   return numbersPaging;
+}
+
+const navPaging = function(pageNumber, pageSize, navSize) {
+  pageNumber = pageNumber >= 1 ? pageNumber : 1;
+  pageSize = pageSize >= 1 ? pageSize : 10;
+  navSize = navSize >= 1 ? navSize : 10;
+  const navs = [];
+  for (let index = 1; index <= navSize; index++) {
+    const navCalc = Math.ceil(pageNumber / navSize) * navSize - navSize + index;
+    navs.push(navCalc);
+  }
+  return navs;
 }
 </script>
