@@ -5,7 +5,9 @@
 ## 목표
 Paging의 원리를 알아 보자
 
-## 기본 데이터 만들기
+## 기본 Paging
+
+### 데이터 만들기
 ```js
 const numbersOrigin = [];
 for (let index = 1; index <= 201; index++) {
@@ -13,9 +15,9 @@ for (let index = 1; index <= 201; index++) {
 }
 ```
 
-## 해당 페이지 번호를 받는 함수 만들기
+### 해당 페이지 번호를 받는 함수 만들기
 ```js
-const page = function(pageNumber, pageSize) {
+const paging = function(pageNumber, pageSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
   pageSize = pageSize >= 1 ? pageSize : 10;
 }
@@ -40,15 +42,16 @@ const page = function(pageNumber, pageSize) {
   ```
 </details>
 
-## pageSize 만큼 for문 돌리기
+### pageSize 만큼 for문 돌리기
 ```js
   const numbersPaging = [];
   for (let index = 0; index < pageSize; index++) {
-    numbersPaging.push(numbersOrigin[index]);
+    const numbersOriginIndex = numbersOrigin[index];
+    numbersPaging.push(numbersOriginIndex);
   }
   return numbersPaging;
 ```
-* ❔ 문제: `numbersOrigin`에 `pageStartNumber`값 연결 하기
+* ❔ 문제: `numbersOriginIndex`에 `pageStartNumber`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
@@ -56,7 +59,7 @@ const page = function(pageNumber, pageSize) {
   ```
 </details>
 
-* ❔ 문제: 개발자 도구에서 `page(21)` 입력해보고, `undefined`일 경우 `if문`을 사용하여 `numbersPaging`에 넣지 말기
+* ❔ 문제: 개발자 도구에서 `paging(21)` 입력해보고, `undefined`일 경우 `if문`을 사용하여 `numbersPaging`에 넣지 말기
 * <details><summary>정답</summary>
 
   ```js
