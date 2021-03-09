@@ -22,10 +22,9 @@ const paging = function(pageNumber, pageSize) {
   pageSize = pageSize >= 1 ? pageSize : 10;
 }
 ```
-* pageNumber은 1보다 작은수, 음수, undifined 등을 1로 정의 한다.
-* pageSize는 1보다 작은수, 음수, undifined 등을 10으로 정의 한다.
+* `pageNumber`은 1보다 작은수, 음수, undifined 등을 1로 정의 한다.
+* `pageSize`는 1보다 작은수, 음수, undifined 등을 10으로 정의 한다.
 * ❔ 문제: `pageStartNumber`이라는 상수를 만들고, `pageNumber` 변화에 따른 `numbersOrigin`가 사용할 `index` 값을 구해서, `pageStartNumber` 상수에 넣고, `return` 하기
-
   | pageNumber | pageStartNumber |
   |---|:---|
   | 1 | 0 |
@@ -34,6 +33,20 @@ const paging = function(pageNumber, pageSize) {
   | 4 | 30 |
   | 5 | 40 |
   | ... | ... |
+
+* <details><summary>힌트</summary>
+
+  | pageNumber | pageStartNumber |
+  |---|:---|
+  | 1 | 10 |
+  | 2 | 20 |
+  | 3 | 30 |
+  | 4 | 40 |
+  | 5 | 50 |
+  | ... | ... |
+
+</details>
+
 * <details><summary>정답</summary>
 
   ```js
