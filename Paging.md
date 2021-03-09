@@ -56,19 +56,22 @@ const paging = function(pageNumber, pageSize) {
 </details>
 
 ### pageSize 만큼 for문 돌리기
+```diff
+- return pageStartNumber;
+```
 ```js
-  const numbersPaging = [];
-  for (let index = 0; index < pageSize; index++) {
-    const numbersOriginIndex = numbersOrigin[index];
-    numbersPaging.push(numbersOriginIndex);
-  }
-  return numbersPaging;
+const numbersPaging = [];
+for (let index = 0; index < pageSize; index++) {
+  const numbersOriginIndex = numbersOrigin[index];
+  numbersPaging.push(numbersOriginIndex);
+}
+return numbersPaging;
 ```
 * ❔ 문제: `numbersOriginIndex` 값에 `pageStartNumber`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
-  numbersPaging.push(numbersOrigin[pageStartNumber + index]);
+  numbersPaging.push(numbersOrigin[index + pageStartNumber]);
   ```
 </details>
 
@@ -76,8 +79,8 @@ const paging = function(pageNumber, pageSize) {
 * <details><summary>정답</summary>
 
   ```js
-  if (numbersOrigin[pageStartNumber + index]) {
-    numbersPaging.push(numbersOrigin[pageStartNumber + index]);
+  if (numbersOriginIndex) {
+    numbersPaging.push(numbersOriginIndex);
   }
   ```
 </details>
