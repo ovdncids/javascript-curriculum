@@ -1,0 +1,19 @@
+<script>
+const numbersOrigin = [];
+for (let index = 1; index <= 201; index++) {
+  numbersOrigin.push(index);
+}
+
+const page = function(pageNumber, pageSize) {
+  pageNumber = pageNumber >= 1 ? pageNumber : 1;
+  pageSize = pageSize >= 1 ? pageSize : 10;
+  const pageStartNumber = (pageNumber - 1) * pageSize;
+  const numbersPaging = [];
+  for (let index = 0; index < pageSize; index++) {
+    if (numbersOrigin[pageStartNumber + index]) {
+      numbersPaging.push(numbersOrigin[pageStartNumber + index]);
+    }
+  }
+  return numbersPaging;
+}
+</script>
