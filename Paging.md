@@ -51,7 +51,7 @@ const paging = function(pageNumber, pageSize) {
   }
   return numbersPaging;
 ```
-* ❔ 문제: `numbersOriginIndex`에 `pageStartNumber`값 연결 하기
+* ❔ 문제: `numbersOriginIndex` 값에 `pageStartNumber`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
@@ -66,5 +66,69 @@ const paging = function(pageNumber, pageSize) {
   if (numbersOrigin[pageStartNumber + index]) {
     numbersPaging.push(numbersOrigin[pageStartNumber + index]);
   }
+  ```
+</details>
+
+## Page Navigation 만들기 (선택)
+### navSize 만들 반복하기
+```js
+const navPaging = function(pageNumber, pageSize, navSize) {
+  pageNumber = pageNumber >= 1 ? pageNumber : 1;
+  pageSize = pageSize >= 1 ? pageSize : 10;
+  navSize = navSize >= 1 ? navSize : 10;
+  const navs = [];
+  for (let index = 1; index <= navSize; index++) {
+    const navCalc = index;
+    navs.push(navCalc);
+  }
+  return navs;
+}
+```
+* ❔ 문제: `navCalc` 값에 `pageNumber`에 대응하는 연산식 만들기
+  | pageNumber | navCalc |
+  |---|:---|
+  | 1 ~ 10 | 1 |
+  | 2 ~ 20 | 11 |
+  | 3 ~ 30 | 21 |
+  | 4 ~ 40 | 31 |
+  | 5 ~ 50 | 41 |
+  | ... | ... |
+
+  **연산 과정**
+
+  `1`. 연산 결과를 `올림` 하여 `pageNumber`가 1 ~ 10일 경우 `navCalc` 값이 `1`이 되게 만들기 (올림 내장 함수: `Math.ceil()`)
+  | pageNumber | navCalc |
+  |---|:---|
+  | 1 ~ 10 | 1 |
+  | 2 ~ 20 | 2 |
+  | 3 ~ 30 | 3 |
+  | 4 ~ 40 | 4 |
+  | 5 ~ 50 | 5 |
+  | ... | ... |
+
+  `2`. 다음과 같이 연산 되게 만들기
+  | pageNumber | navCalc |
+  |---|:---|
+  | 1 ~ 10 | 10 |
+  | 2 ~ 20 | 20 |
+  | 3 ~ 30 | 30 |
+  | 4 ~ 40 | 40 |
+  | 5 ~ 50 | 50 |
+  | ... | ... |
+
+  `3`. 다음과 같이 연산 되게 만들기
+  | pageNumber | navCalc |
+  |---|:---|
+  | 1 ~ 10 | 0 |
+  | 2 ~ 20 | 10 |
+  | 3 ~ 30 | 20 |
+  | 4 ~ 40 | 30 |
+  | 5 ~ 50 | 40 |
+  | ... | ... |
+
+* <details><summary>정답</summary>
+
+  ```js
+  const navCalc = Math.ceil(pageNumber / navSize) * navSize - navSize + index;
   ```
 </details>
