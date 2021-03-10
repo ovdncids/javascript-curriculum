@@ -1,6 +1,6 @@
 # Paging
 
-* [데모](https://ovdncids.github.io/javascript-curriculum/paging)
+* [데모](https://ovdncids.github.io/javascript-curriculum/paging.html)
 * 사용법 (크롬 개발자 도구 Colsole 탭에서)
   ```js
   paging(1, 10);
