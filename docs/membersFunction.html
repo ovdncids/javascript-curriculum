@@ -1,0 +1,22 @@
+<script>
+const members = ['최세민'];
+
+const membersCreate = function(name) {
+  members.push(name);
+  return membersRead();
+};
+
+const membersRead = function() {
+  return members;
+};
+
+const membersDelete = function(index) {
+  members.splice(index, 1);
+  return membersRead();
+};
+
+const membersUpdate = function(index, name) {
+  members[index] = name;
+  return membersRead();
+};
+</script>
