@@ -554,7 +554,58 @@ func4(scriptConst4);
 
 5. 라이브러리: 특정 함수의 모음 (Moment.js, Lodash)
 
+### 함수 실습 (회원 CRUD 만들기)
+membersFunction.html
+```html
+<script>
+</script>
+```
 
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
+
+1. Create
+```js
+const members = ['최세민'];
+
+const membersCreate = function(name) {
+  members.push(name);
+  return members;
+};
+```
+
+2. Read
+```js
+const membersRead = function() {
+  return members;
+};
+```
+
+3. Delete
+```js
+const membersDelete = function(index) {
+  members.splice(index, 1);
+  return members;
+};
+```
+
+4. Update
+```js
+const membersUpdate = function(index, name) {
+  members[index] = name;
+  return members;
+};
+```
+
+* ❔ 문제: `membersCreate`, `membersDelete`, `membersUpdate`안에 `return members;` 대신하여 `membersRead` 함수 실행 후 `read` 상수에 리턴받고, `read` 상수를 `return` 시키기
+* <details><summary>정답</summary>
+
+  ```js
+  const read = membersRead();
+  return read;
+  ```
+</details>
+
+* `Backend`의 작업 방식 설명
 
 
 
