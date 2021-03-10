@@ -24,8 +24,8 @@ const paging = function(pageNumber, pageSize) {
 ```
 * `pageNumber`은 1보다 작은수, 음수, undifined 등을 1로 정의 한다.
 * `pageSize`는 1보다 작은수, 음수, undifined 등을 10으로 정의 한다.
-* ❔ 문제: `pageStartNumber`이라는 상수를 만들고, `pageNumber` 변화에 따른 `numbersOrigin`가 사용할 `index` 값을 구해서, `pageStartNumber` 상수에 넣고, `return` 하기
-  | pageNumber | pageStartNumber |
+* ❔ 문제: `pageStartIndex`이라는 상수를 만들고, 다음과 같이 연산 후, `pageStartIndex` 상수 `return` 하기
+  | pageNumber | pageStartIndex |
   |---|:---|
   | 1 | 0 |
   | 2 | 10 |
@@ -36,7 +36,7 @@ const paging = function(pageNumber, pageSize) {
 
 * <details><summary>힌트</summary>
 
-  | pageNumber | pageStartNumber |
+  | pageNumber | pageStartIndex |
   |---|:---|
   | 1 | 10 |
   | 2 | 20 |
@@ -50,14 +50,14 @@ const paging = function(pageNumber, pageSize) {
 * <details><summary>정답</summary>
 
   ```js
-  const pageStartNumber = (pageNumber - 1) * pageSize;
+  const pageStartIndex = (pageNumber - 1) * pageSize;
   return;
   ```
 </details>
 
 ### pageSize 만큼 for문 돌리기
 ```diff
-- return pageStartNumber;
+- return pageStartIndex;
 ```
 ```js
 const numbersPaging = [];
@@ -67,11 +67,11 @@ for (let index = 0; index < pageSize; index++) {
 }
 return numbersPaging;
 ```
-* ❔ 문제: `numbersOriginIndex` 값에 `pageStartNumber`값 연결 하기
+* ❔ 문제: `numbersOriginIndex` 값에 `pageStartIndex`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
-  numbersPaging.push(numbersOrigin[index + pageStartNumber]);
+  numbersPaging.push(numbersOrigin[index + pageStartIndex]);
   ```
 </details>
 
