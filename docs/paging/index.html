@@ -7,15 +7,15 @@ for (let index = 1; index <= 201; index++) {
 const paging = function(pageNumber, pageSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
   pageSize = pageSize >= 1 ? pageSize : 10;
-  const pageStartNumber = (pageNumber - 1) * pageSize;
-  const numbersPaging = [];
+  const pageStartIndex = (pageNumber - 1) * pageSize;
+  const numbers = [];
   for (let index = 0; index < pageSize; index++) {
-    const numbersOriginIndex = numbersOrigin[index + pageStartNumber];
+    const numbersOriginIndex = numbersOrigin[index + pageStartIndex];
     if (numbersOriginIndex) {
-      numbersPaging.push(numbersOriginIndex);
+      numbers.push(numbersOriginIndex);
     }
   }
-  return numbersPaging;
+  return numbers;
 }
 
 const navPaging = function(pageNumber, pageSize, navSize) {
