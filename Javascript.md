@@ -480,11 +480,12 @@ function.html
 // 선언부
 const 함수명 = function(인자1, 인자2, ...) {
   실행문;
+  ...
   return 반환값;
 };
 
 // 실행부
-const 반환확인상수 = 함수명(인수1, 인수2, 인수3);
+const 반환확인상수 = 함수명(인수1, 인수2, ...);
 ```
 
 * 예제
@@ -493,7 +494,6 @@ const func1 = function(argument1, argument2) {
   const sum1 = argument1 + argument2
   return sum1;
 };
-
 const returned1 = func1('parameter1', 'parameter2');
 ```
 * Console 창에서 `func1`, `returned1` 찍어 보기
@@ -503,17 +503,61 @@ const returned1 = func1('parameter1', 'parameter2');
 * ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
 * ❔ `argument2`를 지운다면 `sum1`의 값은?
 
+2. 인수에 자료형 데어터 넘기기
+```js
+const scriptConst2 = 'a';
+const func2 = function(argument1) {
+    const compare1 = scriptConst2 === argument1;
+    argument1 = 'b';
+    const compare2 = scriptConst2 === argument1;
+}
+func2(scriptConst2);
+```
+* ❔ `compare2`는 `참`일까, `거짓`일까?
+
+3. 인수에 배열 넘기기
+```js
+const scriptConst3 = [];
+const func3 = function(argument1) {
+    const compare1 = scriptConst3 === argument1;
+    argument1.push('a');
+    const compare2 = scriptConst3 === argument1;
+}
+func3(scriptConst3);
+```
+* ❔ `compare2`는 `참`일까, `거짓`일까?
+
+4. 인수에 함수 넘기기
+```js
+const scriptConst4 = function() {};
+const func4 = function(argument1) {
+    const compare1 = scriptConst4 === argument1;
+    argument1 = function() {};
+    const compare2 = scriptConst4 === argument1;
+}
+func4(scriptConst4);
+```
+* ❔ `compare2`는 `참`일까, `거짓`일까?
+* 익명 함수 인수로 넘기기
+  ```diff
+  - func4(scriptConst4);
+  + func4(function() {console.log('익명함수 실행');});
+  ```
+* ❔ 문제: `인수`로 넘긴 `익명 함수`, `인자`로 실행 시키기
+* <details><summary>정답</summary>
+
+  ```js
+  argument1();
+  // 인수로 함수를 넘기고, 인자로 실행시키는 함수를 `콜백 함수`(Callback function)라 한다.
+  ```
+</details>
+
+5. 라이브러리: 특정 함수의 모음 (Moment.js, Lodash)
 
 
-* 기본형, `익명 함수`
-* `선언` 하거나, `()`, `[]`에서만 사용, 괄호 연산자 설명
-* ❔ 배열에 익명 함수 3개 넣기
-* 기본 동작, console 찍기, 값 넘기기(인자명은 내부적으로 `let 인자명 = 넘긴값` 이렇게 작동함)
-* 변수 넘기기, 배열 넘기기, 변수의 비교
-* `return` 설명 하기
-* ❔ 위에 문제를 `function`문을 사용해서 만들기
-* 특정 함수의 모음 라이브러리
-* ❔ 함수 넘기기고 넘어간 함수 실행하기(`익명 함수`로 바꾸어 넘겨 보기)
+
+
+
 
 ## 오브젝트
 https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140208_199%2Fyedge__1391863869753lRcSs_JPEG%2FDSC_0846.JPG&type=sc960_832
