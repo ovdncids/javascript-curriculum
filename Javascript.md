@@ -126,8 +126,10 @@ let char1 = true == 'true';
 let char2 = true === 'true';
 let true1 = 1 == true;
 let true2 = 1 === true;
-let false1 = 0 != false;
-let false2 = 0 !== false;
+let true3 = 1 != true;
+let true4 = 1 !== true;
+let false1 = 0 == false;
+let false2 = 0 === false;
 let oNum1 = 1 == '1';
 let oNum2 = 1 === '1';
 ```
