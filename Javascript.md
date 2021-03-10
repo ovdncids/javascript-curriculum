@@ -283,6 +283,7 @@ const quiz3 = arr1 === arr2;
 * ❔ 문제: `array1`와 `array2는` 같을까?
 * <details><summary>정답</summary>
 
+  ```
   배열은 선언과 동시에 별도의 `메모리 공간`에 존재하고, 변수는 단지 해당 배열이 있는 `메모리 주소`를 가지고 있다.
   따라서 `arr1`과 `arr2`는 서로 다른 배열의 주소를 가지므로 같지 않다.
   만약 `arr1` 변수의 값을 변화 시킨다면, `메모리 주소`를 잃어 버리므로 해당 배열은 더이상 접근할 수 없게 된다.
@@ -350,7 +351,7 @@ for (let index1 = 0; index1 < 3; index1++) {
 
 2. break
 ```js
-for (let index2 = 0; index2 < 3; index2++) {
+for (let index2 = 1; index2 <= 3; index2++) {
   console.log(index2);
   break;
 }
@@ -358,7 +359,7 @@ for (let index2 = 0; index2 < 3; index2++) {
 
 3. continue
 ```js
-for (let index3 = 0; index3 < 3; index3++) {
+for (let index3 = 1; index3 <= 3; index3 += 1) {
   console.log(index3);
   continue;
   console.log(index3);
@@ -375,7 +376,7 @@ for (let index3 = 0; index3 < 3; index3++) {
    ```
 </details>
 
-* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `1`부터 `10` 사이에 `짝수`만 `console.log`로 찍어 보기
+* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `2`부터 `10` 사이에 `짝수`만 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -404,7 +405,7 @@ console.log(index6);
   ```js
   let total1 = 0;
   for (let index7 = 1; index7 <= 10; index7++) {
-    total1 += index7
+    total1 += index7;
   }
   console.log(total1);
   ```
@@ -417,7 +418,7 @@ console.log(index6);
   let total1 = 0;
   let index7 = 1;
   for (; index7 <= 10; index7++) {
-    total1 += index7
+    total1 += index7;
   }
   const avg1 = total1 / (index7 - 1);
   console.log(avg1);
