@@ -60,27 +60,27 @@ const paging = function(pageNumber, pageSize) {
 - return pageStartIndex;
 ```
 ```js
-const numbersPaging = [];
+const numbersPaged = [];
 for (let index = 0; index < pageSize; index++) {
   const numbersOriginIndex = numbersOrigin[index];
-  numbersPaging.push(numbersOriginIndex);
+  numbersPaged.push(numbersOriginIndex);
 }
-return numbersPaging;
+return numbersPaged;
 ```
 * ❔ 문제: `numbersOriginIndex` 값에 `pageStartIndex`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
-  numbersPaging.push(numbersOrigin[index + pageStartIndex]);
+  numbersPaged.push(numbersOrigin[index + pageStartIndex]);
   ```
 </details>
 
-* ❔ 문제: 개발자 도구에서 `paging(21)` 입력해보고, `undefined`일 경우 `if문`을 사용하여 `numbersPaging`에 넣지 말기
+* ❔ 문제: 개발자 도구에서 `paging(21)` 입력해보고, `값`이 있는 경우만 `if문`을 사용하여 `numbersPaged`에 넣기
 * <details><summary>정답</summary>
 
   ```js
   if (numbersOriginIndex) {
-    numbersPaging.push(numbersOriginIndex);
+    numbersPaged.push(numbersOriginIndex);
   }
   ```
 </details>
@@ -110,7 +110,7 @@ const navPaging = function(pageNumber, pageSize, navSize) {
   | 5 ~ 50 | 41 |
   | ... | ... |
 
-  **연산 과정**
+* <details><summary>연산 과정</summary>
 
   `1`. 연산 결과를 `올림` 하여 `pageNumber`가 1 ~ 10일 경우 `navCalc` 값이 `1`이 되게 만들기 (올림 내장 함수: `Math.ceil()`)
   | pageNumber | navCalc |
@@ -141,6 +141,9 @@ const navPaging = function(pageNumber, pageSize, navSize) {
   | 4 ~ 40 | 30 |
   | 5 ~ 50 | 40 |
   | ... | ... |
+
+  `4`. `연산값`을 index값에 연결 하기
+</details>
 
 * <details><summary>정답</summary>
 
