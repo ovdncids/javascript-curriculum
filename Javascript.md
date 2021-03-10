@@ -168,16 +168,35 @@ let roundBracket2 = ((1 + 2) * 3);
 </details>
 
 ## if문(제어문 > 조건문)
+1. 기본 구조
 ```js
 if (조건 1) {
   // 조건 1이 참인 경우 실행
 } else if (조건 2) {
   // 조건 2가 참인 경우 실행
+} else if (조건 3) {
+  // 조건 3이 참인 경우 실행
 } else {
   // 해당 되는 조건이 없을 경우 실행
 }
 ```
+* 예제
+```js
+const if1 = 1;
+if (if1 === 1) {
+  console.log('참1');
+} else if (if1 === 2) {
+  console.log('참2');
+} else if (if1 === 3) {
+  console.log('참3');
+} else {
+  console.log('거짓');
+}
+```
 * 조건은 주로 연산자에서 `Boolean` 형식으로 받는다.
+* `if1` 값을 수정하여 `참3`이 나오게 만들기
+
+2. 거짓 조건 비교 하기
 * ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`이고, 나머지는 모두 참인 조건이 된다.
 ```js
 debugger;
@@ -223,16 +242,16 @@ array1.push('2');
 array1.push('삼');
 
 // 배열 Read
-array1[0];
-array1[1];
-array1[2];
+const a1 = array1[0];
+const a2 = array1[1];
+const a3 = array1[2];
 
 // 배열 Update
 array1[0] = undefined;
 array1[1] = false;
 array1[2] = true;
 
-// 배열 Update
+// 배열 Delete
 array1.splice(0, 1);
 array1.splice(1, 1);
 array1.splice(2, 1);
@@ -242,21 +261,22 @@ array1.splice(2, 1);
 ```js
 const length1 = array1.length;
 const length2 = array2.length;
-const lastValue = array1[array1.length - 1];
+const lastValue = array2[array2.length - 1];
 ```
-* ❕ `lastValue`는 `array1` 배열의 마지막 요소 값을 받는다.
+* ❕ `lastValue`는 `array2` 배열의 마지막 요소 값을 받는다.
 
 ### 배열의 성격
 ```js
 let arr1 = [];
 let arr2 = [];
 const quiz1 = arr1[1];
-if (arr1) {
+const quiz2 = arr1;
+if (quiz2) {
   console.log('참');
 } else {
-  console.log('참');
+  console.log('거짓');
 }
-const quiz2 = arr1 === arr2;
+const quiz3 = arr1 === arr2;
 ```
 * ❔ 해당 배열이 가진 크기보다 큰 값을 사용 한다면?
 * ❔ `빈 배열`은 참일까 거짓일까?
