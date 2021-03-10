@@ -60,27 +60,27 @@ const paging = function(pageNumber, pageSize) {
 - return pageStartIndex;
 ```
 ```js
-const numbersPaged = [];
+const numbers = [];
 for (let index = 0; index < pageSize; index++) {
   const numbersOriginIndex = numbersOrigin[index];
-  numbersPaged.push(numbersOriginIndex);
+  numbers.push(numbersOriginIndex);
 }
-return numbersPaged;
+return numbers;
 ```
 * ❔ 문제: `numbersOriginIndex` 값에 `pageStartIndex`값 연결 하기
 * <details><summary>정답</summary>
 
   ```js
-  numbersPaged.push(numbersOrigin[index + pageStartIndex]);
+  numbers.push(numbersOrigin[index + pageStartIndex]);
   ```
 </details>
 
-* ❔ 문제: 개발자 도구에서 `paging(21)` 입력해보고, `값`이 있는 경우만 `if문`을 사용하여 `numbersPaged`에 넣기
+* ❔ 문제: 개발자 도구에서 `paging(21)` 입력해보고, `값`이 있는 경우만 `if문`을 사용하여 `numbers`에 넣기
 * <details><summary>정답</summary>
 
   ```js
   if (numbersOriginIndex) {
-    numbersPaged.push(numbersOriginIndex);
+    numbers.push(numbersOriginIndex);
   }
   ```
 </details>
