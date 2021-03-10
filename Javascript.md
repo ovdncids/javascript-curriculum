@@ -543,7 +543,7 @@ func4(scriptConst4);
   - func4(scriptConst4);
   + func4(function() {console.log('익명함수 실행');});
   ```
-* ❔ 문제: `인수`로 넘긴 `익명 함수`, `인자`로 실행 시키기
+* ❔ 문제: `인수`로 넘긴 `익명 함수`를, `인자`로 실행 시키기
 * <details><summary>정답</summary>
 
   ```js
