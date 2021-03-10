@@ -441,9 +441,47 @@ array4 = 4;
 </details>
 
 ## 함수
+function.html
+```html
+<script>
+</script>
+```
+
 ### 함수를 사용하는 이유
 1. 여러 파일에서 동일한 작업을 하는 경우, 반복을 피할 수 있다
-* `DRY`(Don't repeat yourself)
+2. `DRY`(Don't repeat yourself)
+
+### 함수 문법
+1. 기본 구조
+```js
+// 선언부
+const 함수명 = function(인자1, 인자2, ...) {
+  실행문;
+  return 반환값;
+};
+
+// 실행부
+const 반환확인상수 = 함수명(인수1, 인수2, 인수3);
+```
+
+* 예제
+```js
+const func1 = function(argument1, argument2) {
+  const sum1 = argument1 + argument2
+  return sum1;
+};
+
+const returned1 = func1('parameter1', 'parameter2');
+```
+* Console 창에서 `func1`, `returned1` 찍어 보기
+* breakpoint로 진행 확인
+* func1(1, 2) 실행해 보기
+* ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
+* ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
+* ❔ `argument2`를 지운다면 `sum1`의 값은?
+
+
+
 * 기본형, `익명 함수`
 * `선언` 하거나, `()`, `[]`에서만 사용, 괄호 연산자 설명
 * ❔ 배열에 익명 함수 3개 넣기
