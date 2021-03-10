@@ -606,7 +606,7 @@ const membersUpdate = function(index, name) {
 </details>
 
 * `Backend`의 작업 방식 설명
-* `배열의 CRUD`를 참조 하여 직접 코딩 해보기
+* `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하여 처음 부터 코딩 해보기
 
 
 
