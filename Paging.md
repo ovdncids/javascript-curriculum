@@ -1,7 +1,14 @@
 # Paging
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/paging)
-
+* 사용법 (크롬 개발자 도구 Colsole 탭에서)
+  ```js
+  paging(1, 10);
+  // pageNumber, pageSize
+  
+  navPaging(1, 10, 10)
+  // pageNumber, pageSize, navSize
+  ```
 ## 목표
 Paging의 원리를 알아 보자
 
