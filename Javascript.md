@@ -398,7 +398,7 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
   ```
 </details>
 
-### for문의 범위(Scope), Script 변수와 Blok(Local) 변수의 차이
+### for문의 범위(Scope), Script 변수와 Block(Local) 변수의 차이
 1. 초기문 사용하지 않기
 ```js
 let index6 = 0;
@@ -410,7 +410,7 @@ console.log(index6);
 * ❕ 결과적으로 `Script 변수 index6`은 for문이 반복된 횟수가 된다.
 * ❔ `let index6 = 0;`초기화 문에 추가해 보기 (에러가 발생할지 생각해 보기)
 * 가림 현상 설명 (Ctrl 키를 눌러서 해당 변수 이동, 마우스 오버해보기, `대소문자` 구분)
-* Blok(Local) 변수 설명
+* Block(Local) 변수 설명
 * ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `total1`에 1부터 10까지 더하고, `total1`을 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
@@ -578,6 +578,20 @@ membersFunction.html
 ```
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
+* Console 창에서 실행
+```js
+// Create
+membersCreate('홍길동')
+
+// Read
+membersRead()
+
+// Update
+membersUpdate(0, '김유신')
+
+// Delete
+membersDelete(0)
+```
 
 1. Create
 ```js
@@ -740,7 +754,28 @@ membersDelete(0)
 ## try catch문(제어문 > 예외처리문)
 ### try catch문을 사용하는 이유?
 1. 에러가 발생할 경우 처리를 위해 사용한다
-* 기본형
+2. try문 밖에서 에러가 발생할 경우 프로그램 진행이 멈추지만, try문 안에서 발생할 경우 프로그램이 계속 진행 된다.
+
+* 기본 구조
+```js
+try {
+  실행문;
+  ...
+} catch(에러객체) {
+  // try block에서 에러가 발생할 경우 실행
+  실행문;
+  ...
+}
+```
+* 예제
+```js
+try {
+  t1;
+} catch(error) {
+  console.error(error);
+}
+console.log('진행 가능');
+```
 
 ## 기타
 * `window var` 설명
