@@ -619,25 +619,94 @@ const membersUpdate = function(index, name) {
 * `Backend`의 작업 방식 설명
 * `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
 
+## 오브젝트 (객체)
 
+object.html
+```html
+<script>
+</script>
+```
 
-## 오브젝트
-https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140208_199%2Fyedge__1391863869753lRcSs_JPEG%2FDSC_0846.JPG&type=sc960_832
 ### 오브젝트를 사용하는 이유
 1. 효율적인 관리를 위해 여러 변수를 한곳에 묶어서 사용한다
-* 기본형, `익명 오브젝트`
-* `선언` 하거나, `()`, `[]`에서만 사용, 이 밖이면 그냥 블럭임
-* `Key`는 `영문, 숫자, _`를 쓸 수 있다.
-* `Value`는 `모든 데이터 형식`을 쓸 수 있다(`function` 포함)
-* `CRUD`, 선언 후 추가 하기, 지우기 `delete`
-* ❔ 동일한 이름의 키를 선언한 경우
-* ❔ object.0 비교 array.0
-* `오브젝트` 안의 `function`에서 `this 연산자` 만들기(수정 해보기)
-* ❔ objectParent > objectChild > 함수에서 `this`
-* `window.alert`을 수정하기
-* `for in`
-* ❔ 사용자의 이름, 나이를 가진 `오브젝트`를 만들고 `for in`으로 출력하기
-* ❔ 사용자의 이름, 나이를 가진 `오브젝트` 4개를 만들어 배열에 넣고, for문으로 출력하기
+
+### 배열과 오브젝트의 차이점
+* 배열은 숫자(index)로 요소에 접근하고, 오브젝트는 문자(key)로 요소에 접근한다.
+
+### 오브젝트 문법
+1. 기본 구조
+```js
+const 오브젝트명 = {
+  키1: 값1,
+  키2: 값2  
+}
+```
+
+https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140208_199%2Fyedge__1391863869753lRcSs_JPEG%2FDSC_0846.JPG&type=sc960_832
+
+* 예제
+```js
+const object1 = {};
+const object2 = {
+  key1: 'value1',
+  key2: [1, 2, 3],
+  key3: function() {
+    return this;
+  },
+  key4: {
+    k1: 'v1',
+    k2: 'v2'
+  }
+};
+```
+
+### 오브젝트의 CRUD
+```js
+// 오브젝트 Create
+object1.key1 = 1;
+object1.key2 = '2';
+object1.key3 = '삼';
+
+// 오브젝트 Read
+const o1 = object1.key1;
+const o2 = object1.key2;
+const o3 = object1.key3;
+
+// 오브젝트 Update
+object1.key1 = [];
+object1.key2 = function() {};
+object1.key3 = {};
+
+// 오브젝트 Delete
+delete object1.key1;
+delete object1.key2;
+delete object1.key3;
+```
+* ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 실행 해보기
+* ❔ `object2.key2` 배열의 `length` 구하기
+* ❔ `object2.key3` 함수 실행 시키기
+* ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
+
+* ❕ `키`이름에 대한 규칙
+```
+`영문, 숫자, _, $`를 자유롭게 조합해서 쓸 수 있다.
+숫자를 앞으로 사용 불가 (1a, 2b, ...)
+```
+
+### 오브젝트의 for in문
+```js
+for (let key5 in object2) {
+  const value5 = object2[key5];
+  console.log(key5, value5);
+}
+```
+
+### Object.keys 메소드 확인
+```js
+const array2 = Object.keys(object2);
+array2.length;
+```
+
 
 
 ## try catch문(제어문 > 예외처리문)
