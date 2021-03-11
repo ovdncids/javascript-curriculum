@@ -646,6 +646,7 @@ const membersUpdate = function(index, name) {
   const read = membersRead();
   return read;
   ```
+  * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 `리팩토링`(Refactoring)이라 한다.
 </details>
 
 * `Backend`의 작업 방식 설명
