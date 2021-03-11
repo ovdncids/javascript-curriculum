@@ -1,6 +1,12 @@
 # 내장 함수 (Inner Functions)
 
 ## window 객체
+window.html
+```html
+<script>
+</script>
+```
+
 ### var를 이용해서 변수 선언
 ```js
 var v1 = 'a';
@@ -20,17 +26,24 @@ function f1() {}
 const condition3 = f1 === window.f1;
 ```
 
-### console.log, alert, confirm
+### confirm, alert, console.log
 ```js
-window.console.log('콘솔 로그');
-window.alert('경고');
 if (window.confirm('진행 하시겠습니까?')) {
-  console.log('진행');
+  window.console.log('진행');
 } else {
-  alert('멈춤');
+  window.alert('멈춤');
 }
 ```
-* `window` 안에 있는 메소드는 `window.` 생략 가능
+* `window` 안에 요소들은 `window.` 생략 가능
+
+### JSON
+```js
+const array1 = JSON.parse('[1, 2, 3]');
+const string1 = JSON.stringify(array1);
+```
+
+### sessionStorage, localStorage
+storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
 
 
 
