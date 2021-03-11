@@ -81,7 +81,7 @@ sessionStorage.setItem('members', membersSet);
 
 * ❔ 문제: 리팩토링
   ```
-  1. `membersCreate`, `membersDelete`, `membersUpdate`에 추가된 `공통 부분`을 `함수`로 만들고 `membersSet` `Script 상수`에 넣고, 
+  1. `membersCreate`, `membersDelete`, `membersUpdate`에 추가된 `공통 부분`을 `함수`로 만들고, `membersSet` `Script 상수`에 넣고
   2. `membersCreate`, `membersDelete`, `membersUpdate`에서 `membersSet` 실행 시키기
   ```
 * <details><summary>정답</summary>
