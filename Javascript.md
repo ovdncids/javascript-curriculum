@@ -176,6 +176,7 @@ if (조건 1) {
   // 조건 2가 참인 경우 실행
 } else if (조건 3) {
   // 조건 3이 참인 경우 실행
+  // else if는 여러게 사용 가능
 } else {
   // 해당 되는 조건이 없을 경우 실행
 }
@@ -206,6 +207,11 @@ let d2 = null;
 // 선언 하고 null 값을 넣으면 null
 let condition1 = d1 == d2;
 let condition2 = d1 === d2;
+if (condition1) {
+  console.log('참');
+} else {
+  console.log('거짓');
+}
 ```
 * ❔ 문제: 조건이 `1 === 1`인 `if`문을 만들고, 참인 경우 `console.log('참');`을 찍어 보기
 * <details><summary>정답</summary>
@@ -606,7 +612,7 @@ const membersUpdate = function(index, name) {
 </details>
 
 * `Backend`의 작업 방식 설명
-* `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하여 처음 부터 코딩 해보기
+* `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
 
 
 
