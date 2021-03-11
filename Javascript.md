@@ -785,6 +785,7 @@ try {
 try {
   t1;
 } catch(error) {
+  console.warn(error);
   console.error(error);
 }
 console.log('진행 가능');
