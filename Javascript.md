@@ -262,6 +262,7 @@ array1.splice(0, 1);
 array1.splice(1, 1);
 array1.splice(2, 1);
 ```
+* ❔ `배열의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 실행 해보기
 
 ### 배열의 크기
 ```js
