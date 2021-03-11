@@ -46,7 +46,8 @@ const string1 = JSON.stringify(array1);
 ```js
 debugger;
 const storageGet = sessionStorage.getItem('array2');
-const array2 = JSON.parse(storageGet || '[1, 2, 3]');
+const storageLogical = storageGet || '[1, 2, 3]';
+const array2 = JSON.parse(storageLogical);
 array2.push(array2.length + 1);
 const storageSet = JSON.stringify(array2);
 sessionStorage.setItem('array2', storageSet);
@@ -63,14 +64,50 @@ sessionStorage.clear();
 #### sessionStorage, localStorage 실습
 storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
 
+```diff
+- const members = [];
+```
+```js
+const membersGet = sessionStorage.getItem('members');
+const membersLogical = membersGet || '[]';
+const members = JSON.parse(membersLogical);
+```
+
+* membersCreate, membersDelete, membersUpdate에 추가
+```js
+const membersSet = JSON.stringify(members);
+sessionStorage.setItem('members', membersSet);
+```
+
+* ❔ 문제: 리팩토링
+  ```
+  1. `membersCreate`, `membersDelete`, `membersUpdate`에 추가된 `공통 부분`을 `함수`로 만들고 `membersSet` `Script 상수`에 넣고, 
+  2. `membersCreate`, `membersDelete`, `membersUpdate`에서 `membersSet` 실행 시키기
+  ```
+* <details><summary>정답</summary>
+
+  ```diff
+  - const membersSet = JSON.stringify(members);
+  - sessionStorage.setItem('members', membersSet);
+  + membersSet();
+  ```
+  ```js
+  const membersSet = function() {
+    const membersSet = JSON.stringify(members);
+    sessionStorage.setItem('members', membersSet);
+  };
+  ```
+  * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 리팩토링(Refactoring)이라 한다.
+</details>
+
+* VSCode 서로 다른 파일 비교 설명
 
 
 
 
 <!-- * `defer` 설명, `쓰레드` 개념 설명
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
-Document.written ← 줄바꿈
-로컬 저장소를 바탕으로 CRUD 만들기 -->
+Document.written ← 줄바꿈 -->
 
 
 ## class 추가 삭제
