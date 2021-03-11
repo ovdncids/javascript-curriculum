@@ -43,7 +43,26 @@ const string1 = JSON.stringify(array1);
 ```
 
 ### sessionStorage, localStorage
+```js
+debugger;
+const storageGet = sessionStorage.getItem('array2');
+const array2 = JSON.parse(storageGet || '[1, 2, 3]');
+array2.push(array2.length + 1);
+const storageSet = JSON.stringify(array2);
+sessionStorage.setItem('array2', storageSet);
+```
+* sessionStorage 저장 기간: 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라진다.
+```js
+sessionStorage.removeItem('array2');
+sessionStorage.clear();
+```
+* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
+* localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
+* sessionStorage, localStorage CRUD 설명
+
+#### sessionStorage, localStorage 실습
 storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
+
 
 
 
