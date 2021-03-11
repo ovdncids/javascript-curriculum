@@ -62,7 +62,8 @@ sessionStorage.clear();
 * sessionStorage, localStorage CRUD 설명
 
 #### sessionStorage, localStorage 실습
-storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersStorage.html)
+* storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
 
 ```diff
 - const members = [];
