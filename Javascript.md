@@ -223,6 +223,11 @@ if (condition1) {
   ```
 </details>
 
+### 3항 연산자
+```js
+const condition3 = 1 === 1 ? 'a' : 'b';
+```
+
 ## 배열
 array.html
 ```html
