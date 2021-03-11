@@ -581,7 +581,7 @@ membersFunction.html
 
 1. Create
 ```js
-const members = ['최세민'];
+const members = [];
 
 const membersCreate = function(name) {
   members.push(name);
@@ -712,7 +712,30 @@ const array2 = Object.keys(object2);
 array2.length;
 ```
 
+### 오브젝트 실습 (회원 CRUD 사용)
 
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
+
+* Console 창에서 실행
+```js
+// Create
+membersCreate({
+  name: '홍길동',
+  age: 20
+})
+
+// Read
+membersRead()
+
+// Update
+membersUpdate(0, {
+  name: '김유신',
+  age: 30
+})
+
+// Delete
+membersDelete(0)
+```
 
 ## try catch문(제어문 > 예외처리문)
 ### try catch문을 사용하는 이유?
@@ -724,7 +747,6 @@ array2.length;
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
 * `&& (일치 연산자을 상기 시키키), ||, &, |` 설명 ()
 * ++index
-* `3항 연산자`
 * `defer` 설명, `쓰레드` 개념 설명
 
 <!-- javascript 수정은 함수에서 버튼 만들어서
