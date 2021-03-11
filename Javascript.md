@@ -152,7 +152,13 @@ let compare3 = 3 > 3;
 let compare4 = 4 >= 4;
 ```
 
-4. 소괄호() 연산자
+4. 논리 연산자 (&&, ||)
+```js
+let logical1 = true && 1;
+let logical2 = false || '1';
+```
+
+5. 소괄호() 연산자
 ```js
 let roundBracket1 = (1 === '1');
 let roundBracket2 = ((1 + 2) * 3);
@@ -186,9 +192,9 @@ if (조건1) {
 const if1 = 1;
 if (if1 === 1) {
   console.log('참1');
-} else if (if1 === 2) {
+} else if (if1 === 2 || if1 === 3) {
   console.log('참2');
-} else if (if1 === 3) {
+} else if (if1 === 3 && true) {
   console.log('참3');
 } else {
   console.log('거짓');
@@ -474,6 +480,13 @@ array4 = 4;
 
   없다. (따라서 배열은 `const`로 사용 해야한다.)
 </details>
+
+### index++와 ++index의 차이
+```js
+let index = 0;
+const diff1 = index++;
+const diff2 = ++index;
+```
 
 ## 함수
 function.html
@@ -777,14 +790,9 @@ try {
 console.log('진행 가능');
 ```
 
-## 기타
-* `window var` 설명
+<!-- * `defer` 설명, `쓰레드` 개념 설명
 * ❔ 서로 다른 파일에서 1번씩 사용한다면
-* `&& (일치 연산자을 상기 시키키), ||, &, |` 설명 ()
-* ++index
-* `defer` 설명, `쓰레드` 개념 설명
+* `window var`, `function f1() {}` 설명
 
-<!-- javascript 수정은 함수에서 버튼 만들어서
 Document.written ← 줄바꿈
 로컬 저장소를 바탕으로 CRUD 만들기 -->
-
