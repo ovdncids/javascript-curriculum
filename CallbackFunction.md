@@ -1,4 +1,5 @@
 # 콜백 함수
+* [데모](https://ovdncids.github.io/javascript-curriculum/canvas/canvasB.html)
 
 ## 정의
 * 인수값(Argument): 인수(因數) 또는 어규먼트라 부르고, 함수를 호출 할때 넘기는 값들이다.
@@ -88,12 +89,16 @@ canvasA.won(7);
 // 사각형 그린 후, 호출될 함수를 then 함수 첫번째 인자에 넣어주세요.
 const cbSuccess = function() {
 }
-canvasA.nemo(7).then(cbSuccess);
-
 // 사각형 그리는 도중 에러가 발생한 경우, 호출될 함수를 catch 함수 첫번째 인자에 넣어주세요.
 const cbError = function() {
 }
-canvasA.nemo(7).catch(cbError);
+canvasA.nemo(7).then(cbSuccess).catch(cbError);
+```
+
+### then 메서드와 catch 메서드를 따로 호출 한다면
+```js
+canvasA.nemo(7).then(cbSuccess);
+canvasA.nemo(10).catch(cbError);
 ```
 
 ## 기획자의 바램2
@@ -105,7 +110,11 @@ document.getElementById('button-call-canvas-nemo').disabled = true;
 ## 기획자의 바램3
 * 기획자가 변덕을 부려 결과 문구가 좀더 디테일 하길 원합니다.
 ```js
+// 성공시 결과 문구
 사각형 4개가 3초 동안 그려졌습니다.
+
+// 실패시 결과 문구
+에러의 이유
 ```
 
 ## B개발자가 A개발자에게 기획자가 원하는 문구의 정보를 보내달라 요청
@@ -114,13 +123,11 @@ document.getElementById('button-call-canvas-nemo').disabled = true;
 // 사각형 그린 후 콜백 함수 호출 하기
 const cbSuccess = function(canvasInfo) {
 }
-canvasA.nemo(7).then(cbSuccess);
-
 // 사각형 그리는 도중 에러가 발생한 경우
 const cbError = function(canvasInfo) {
 }
-canvasA.nemo(7).catch(cbError);
+canvasA.nemo(7).then(cbSuccess).catch(cbError);
 ```
 
 ## A개발자 코드
-* [canvasA.js](./js/canvasA.js)
+* [canvasA.js](https://github.com/ovdncids/javascript-curriculum/blob/master/docs/canvas/canvasA.js)
