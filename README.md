@@ -2,13 +2,13 @@
 
 * [Javascript](Javascript.md)
 
+* [내장 함수](InnerFunctions.md)
+
 * [Paging](Paging.md)
 
 * [CRUD](CRUD.md)
 
 * [Bootstrap](Bootstrap.md)
-
-* [DOM inner functions](DOMInnerFunctions.md)
 
 * [Callback Function](CallbackFunction.md)
 
