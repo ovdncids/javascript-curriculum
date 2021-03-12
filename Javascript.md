@@ -40,6 +40,7 @@ console.log(v1, v2, v3);
   연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
   자료형 또는 예약어 사용 불가 (true,  false, null, NaN, delete, ...)
   숫자를 앞으로 사용 불가 (1a, 2b, ...)
+  대소문자 구분 (lowUP, LowUp, LOWUP)
   주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
   ```
 
@@ -201,7 +202,7 @@ if (if1 === 1) {
 }
 ```
 * 조건은 주로 연산자에서 `Boolean` 형식으로 받는다.
-* `if1` 값을 수정하여 `참3`이 나오게 만들기
+* `if1` 값을 수정하여 `참4`이 나오게 만들기
 
 2. 거짓 조건 비교 하기
 * ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`이고, 나머지는 모두 참인 조건이 된다.
@@ -288,20 +289,22 @@ const length1 = array1.length;
 const length2 = array2.length;
 const lastValue = array2[array2.length - 1];
 ```
-* ❕ `lastValue`는 `array2` 배열의 마지막 요소 값을 받는다.
+* ❕ `lastValue`는 `array2` 배열의 마지막 요소의 값을 받는다.
 
 ### 배열의 성격
 ```js
 let arr1 = [];
 let arr2 = [];
-const quiz1 = arr1[1];
-const quiz2 = arr1;
-if (quiz2) {
-  console.log('참');
+const quiz1 = arr1;
+if (quiz1) {
+  const result = '참';
 } else {
-  console.log('거짓');
+  const result = '거짓';
 }
-const quiz3 = arr1 === arr2;
+const quiz2 = arr1 === arr2;
+const quiz3 = arr1[0];
+arr1[9] = 10;
+const quiz4 = arr1;
 ```
 * ❔ 해당 배열이 가진 크기보다 큰 값을 사용 한다면?
 * ❔ `빈 배열`은 참일까 거짓일까?
@@ -314,6 +317,9 @@ const quiz3 = arr1 === arr2;
   만약 `arr1` 변수의 값을 변화 시킨다면, `메모리 주소`를 잃어 버리므로 해당 배열은 더이상 접근할 수 없게 된다.
   ```
 </details>
+
+* ❔ 해당 배열이 가진 크기보다 큰 값을 `Read` 한다면?
+* ❔ 해당 배열이 가진 크기보다 큰 값을 `Update` 한다면?
 
 ### 익명 배열
 ```js
@@ -416,20 +422,20 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
 ```js
 let index6 = 0;
 for (; index6 < 3; index6++) {
-  console.log(index6);
+  const blockConst = index6;
 }
 console.log(index6);
 ```
 * ❕ 결과적으로 `Script 변수 index6`은 for문이 반복된 횟수가 된다.
 * ❔ `let index6 = 0;`초기화 문에 추가해 보기 (에러가 발생할지 생각해 보기)
-* 가림 현상 설명 (VSCode에서 Ctrl(또는 command) 키를 눌러서 해당 변수 이동, 마우스 오버해보기, `대소문자` 구분)
+* 가림 현상 설명 (VSCode에서 `index6` 마우스 오버해보기, Ctrl(또는 command) 키를 눌러서 해당 변수 이동)
 * Block(Local) 변수 설명
-* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 10까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
+* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 5까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
   let total1 = 0;
-  for (let index7 = 1; index7 <= 10; index7++) {
+  for (let index7 = 1; index7 <= 5; index7++) {
     total1 += index7;
   }
   console.log(total1);
@@ -437,17 +443,19 @@ console.log(index6);
 </details>
 
 * ❔ 문제: `total1`의 `평균` 값을 구해 `avg1` 상수에 넣고, `avg1`을 `console.log`로 찍어 보기
+* ❕ 힌트: 평균으로 나눌 `5`값을 얻는 과정이 중요
 * <details><summary>정답</summary>
 
   ```js
   let total1 = 0;
   let index7 = 1;
-  for (; index7 <= 10; index7++) {
+  for (; index7 <= 5; index7++) {
     total1 += index7;
   }
   const avg1 = total1 / (index7 - 1);
   console.log(avg1);
   ```
+  `total1 / 5 ` 이렇게 바로 나누었다면, 나중에 프로그램이 1에서 10까지로 변한다면, `5`값을 `2군데`에서 수정 해야 한다.
 </details>
 
 ### for문에서 배열 사용하기
@@ -457,7 +465,7 @@ for (let index8 = 0; index8 < array1.length; index8++) {
   console.log(array1[index8]);
 }
 ```
-* ❔ 문제: `array2` 상수에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 `console.log`로 찍어 보기
+* ❔ 문제: `array2` 상수에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문 밖에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -472,7 +480,7 @@ for (let index8 = 0; index8 < array1.length; index8++) {
 
 * ❕ 결과적으로 `array2`는 `array1`을 복사하였다.
 * ❔ `array1 === array2` 참일까요?
-* 메모리 설명
+* ❕ 메모리 설명
 ```js
 let array3 = [1, 2, 3];
 let array4 = array3;
