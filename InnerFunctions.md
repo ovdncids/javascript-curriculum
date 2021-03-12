@@ -126,9 +126,21 @@ window.location.reload();
 ```
 * ❔ 위에 2부분을 `documentWrite.html` 파일 어디에 넣어야 할까?
 
+## document 객체
+### form 태그
+form.html
+```html
+<form method="get">
+  <input type="text" name="text-name" value="초기값" placeholder="입력 하세요.">
+  <input type="hidden" name="hidden-name" id="form-hidden" value="hidden-value">
+  <input type="submit" value="전송">
+</form>
+```
+
 
 <!-- * `defer` 설명, `쓰레드` 개념 설명
 * ❔ 서로 다른 파일에서 1번씩 사용한다면 -->
+
 
 
 ## class 추가 삭제
