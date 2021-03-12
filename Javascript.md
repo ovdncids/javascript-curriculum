@@ -193,9 +193,9 @@ const if1 = 1;
 if (if1 === 1) {
   console.log('참1');
 } else if (if1 === 2 || if1 === 3) {
-  console.log('참2');
-} else if (if1 === 3 && true) {
-  console.log('참3');
+  console.log('참2 또는 참3');
+} else if (if1 === 4 && true) {
+  console.log('참4');
 } else {
   console.log('거짓');
 }
