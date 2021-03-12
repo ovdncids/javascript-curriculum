@@ -563,7 +563,7 @@ const func4 = function(argument1) {
 func4(scriptConst4);
 ```
 * ❔ `compare2`는 `참`일까, `거짓`일까?
-* 익명 함수 인수로 넘기기
+* 익명 함수를 인수로 넘기기
   ```diff
   - func4(scriptConst4);
   ```
