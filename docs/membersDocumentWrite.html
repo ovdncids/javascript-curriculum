@@ -1,0 +1,40 @@
+<script>
+const membersGet = sessionStorage.getItem('members');
+const membersLogical = membersGet || '[]';
+const members = JSON.parse(membersLogical);
+
+const membersCreate = function(name) {
+  members.push(name);
+  membersSet();
+  const read = membersRead();
+  return read;
+};
+
+const membersRead = function() {
+  location.reload();
+  return members;
+};
+
+const membersDelete = function(index) {
+  members.splice(index, 1);
+  membersSet();
+  const read = membersRead();
+  return read;
+};
+
+const membersUpdate = function(index, name) {
+  members[index] = name;
+  membersSet();
+  const read = membersRead();
+  return read;
+};
+
+const membersSet = function() {
+  const membersSet = JSON.stringify(members);
+  sessionStorage.setItem('members', membersSet);
+};
+
+for (let index in members) {
+  document.write('<div>' + members[index] + '</div>');
+}
+</script>
