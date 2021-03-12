@@ -3,8 +3,8 @@ const membersGet = sessionStorage.getItem('members');
 const membersLogical = membersGet || '[]';
 const members = JSON.parse(membersLogical);
 
-const membersCreate = function(name) {
-  members.push(name);
+const membersCreate = function(member) {
+  members.push(member);
   membersSet();
   const read = membersRead();
   return read;
