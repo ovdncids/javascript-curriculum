@@ -233,6 +233,13 @@ if (condition1) {
 ```js
 const condition3 = 1 === 1 ? 'a' : 'b';
 ```
+* ❔ 문제: 조건이 `2 === 3`인 `3항 연산자`문을 만들고, 참인 경우 `'c'` 거짓인 경우 `'d'`를 `condition4` 상수에 넣어 보기
+* <details><summary>정답</summary>
+
+  ```js
+  const condition4 = 2 === 3 ? 'c' : 'd';
+  ```
+</details>
 
 ## 배열
 array.html
@@ -417,7 +424,7 @@ console.log(index6);
 * ❔ `let index6 = 0;`초기화 문에 추가해 보기 (에러가 발생할지 생각해 보기)
 * 가림 현상 설명 (VSCode에서 Ctrl(또는 command) 키를 눌러서 해당 변수 이동, 마우스 오버해보기, `대소문자` 구분)
 * Block(Local) 변수 설명
-* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 10까지 더하고, `total1`을 `console.log`로 찍어 보기
+* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 10까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -429,7 +436,7 @@ console.log(index6);
   ```
 </details>
 
-* ❔ 문제: `total1`의 `평균`을 `avg1` 상수에 넣고 `console.log`로 찍어 보기
+* ❔ 문제: `total1`의 `평균` 값을 구해 `avg1` 상수에 넣고, `avg1`을 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -675,7 +682,7 @@ const 오브젝트명 = {
 }
 ```
 
-https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20140208_199%2Fyedge__1391863869753lRcSs_JPEG%2FDSC_0846.JPG&type=sc960_832
+https://ovdncids.github.io/javascript-curriculum/images/Photo_2021-03-12-21-45-29.jpeg
 
 * 예제
 ```js
@@ -744,6 +751,7 @@ array2.length;
 ### 오브젝트 실습 (회원 CRUD 사용)
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
+* 또는 membersFunction.html 파일 실행 시키기
 
 * Console 창에서 실행
 ```js
