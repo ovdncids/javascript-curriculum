@@ -750,8 +750,7 @@ array2.length;
 
 ### 오브젝트 실습 (회원 CRUD 사용)
 
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
-* 또는 membersFunction.html 파일 실행 시키기
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html) 또는 membersFunction.html 파일 실행 시키기
 
 * Console 창에서 실행
 ```js
