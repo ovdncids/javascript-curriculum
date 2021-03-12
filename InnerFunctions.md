@@ -103,12 +103,32 @@ sessionStorage.setItem('members', membersSet);
 
 * VSCode 서로 다른 파일 비교 설명
 
+### document.write, location
+```js
+debugger;
+document.write('documentWrite1');
+document.write('documentWrite2');
+window.location.reload();
+window.location.href = 'https://naver.com';
+```
 
+#### document.write, location 실습
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html)
+* documentWrite.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersStorage.html
+
+```js
+for (let index in members) {
+  document.write('<div>' + members[index] + '</div>');
+}
+```
+```js
+window.location.reload();
+```
+* ❔ 위에 2부분을 `documentWrite.html` 파일 어디에 넣어야 할까?
 
 
 <!-- * `defer` 설명, `쓰레드` 개념 설명
-* ❔ 서로 다른 파일에서 1번씩 사용한다면
-Document.written ← 줄바꿈 -->
+* ❔ 서로 다른 파일에서 1번씩 사용한다면 -->
 
 
 ## class 추가 삭제
