@@ -273,7 +273,7 @@ array1.splice(0, 1);
 array1.splice(1, 1);
 array1.splice(2, 1);
 ```
-* ❔ `배열의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 실행 해보기
+* ❔ `배열의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `배열의 CRUD` 실행 해보기
 
 ### 배열의 크기
 ```js
@@ -610,8 +610,8 @@ membersDelete(0)
 ```js
 const members = [];
 
-const membersCreate = function(name) {
-  members.push(name);
+const membersCreate = function(member) {
+  members.push(member);
   return members;
 };
 ```
@@ -639,6 +639,7 @@ const membersUpdate = function(index, name) {
 };
 ```
 
+* `Backend`의 작업 방식 설명
 * ❔ 문제: `membersCreate`, `membersDelete`, `membersUpdate`안에 `return members;` 대신하여 `membersRead` 함수 실행 후 `read` 상수에 리턴받고, `read` 상수를 `return` 시키기
 * <details><summary>정답</summary>
 
@@ -649,7 +650,6 @@ const membersUpdate = function(index, name) {
   * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 `리팩토링`(Refactoring)이라 한다.
 </details>
 
-* `Backend`의 작업 방식 설명
 * `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
 
 ## 오브젝트 (객체)
@@ -664,7 +664,7 @@ object.html
 1. 효율적인 관리를 위해 여러 변수를 한곳에 묶어서 사용한다
 
 ### 배열과 오브젝트의 차이점
-* 배열은 숫자(index)로 요소에 접근하고, 오브젝트는 문자(key)로 요소에 접근한다.
+* ❕ 배열은 숫자(index)로 요소에 접근하고, 오브젝트는 문자(key)로 요소에 접근한다.
 
 ### 오브젝트 문법
 1. 기본 구조
@@ -715,9 +715,10 @@ delete object1.key1;
 delete object1.key2;
 delete object1.key3;
 ```
-* ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 실행 해보기
+* ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 실행 해보기
 * ❔ `object2.key2` 배열의 `length` 구하기
 * ❔ `object2.key3` 함수 실행 시키기
+* ❔  this 실행 시키기, this의 개념 설명
 * ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
 
 * ❕ `키`이름에 대한 규칙
