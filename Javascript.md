@@ -443,7 +443,7 @@ console.log(index6);
 </details>
 
 * ❔ 문제: `total1`의 `평균` 값을 구해 `avg1` 상수에 넣고, `avg1`을 `console.log`로 찍어 보기
-* ❕ 힌트: 평균으로 나눌 `5`값을 얻는 과정이 중요
+* ❕ 힌트: 평균으로 나눌 `5`값을 얻는 과정이 중요 (변수 또는 상수를 여러개 사용해도 무관)
 * <details><summary>정답</summary>
 
   ```js
@@ -452,7 +452,8 @@ console.log(index6);
   for (; index7 <= 5; index7++) {
     total1 += index7;
   }
-  const avg1 = total1 / (index7 - 1);
+  const count = index7 - 1;
+  const avg1 = total1 / count;
   console.log(avg1);
   ```
   `total1 / 5 ` 이렇게 바로 나누었다면, 나중에 프로그램이 1에서 10까지로 변한다면, `5`값을 `2군데`에서 수정 해야 한다.
