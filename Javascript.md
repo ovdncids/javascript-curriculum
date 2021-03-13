@@ -304,7 +304,7 @@ if (quiz1) {
 const quiz2 = arr1 === arr2;
 const quiz3 = arr1[0];
 arr1[9] = 10;
-const quiz4 = arr1;
+const quiz4 = arr1.length;
 ```
 * ❔ `빈 배열`은 참일까 거짓일까?
 * ❔ 문제: `array1`와 `array2는` 같을까?
