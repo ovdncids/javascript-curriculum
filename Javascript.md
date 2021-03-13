@@ -155,8 +155,8 @@ let compare4 = 4 >= 4;
 
 4. 논리 연산자 (&&, ||)
 ```js
-let logical1 = true && 1;
-let logical2 = false || '1';
+let logical1 = true && true;
+let logical2 = false || false;
 ```
 
 5. 소괄호() 연산자
@@ -287,7 +287,8 @@ array1.splice(2, 1);
 ```js
 const length1 = array1.length;
 const length2 = array2.length;
-const lastValue = array2[array2.length - 1];
+const lastIndex = array2.length - 1;
+const lastValue = array2[lastIndex];
 ```
 * ❕ `lastValue`는 `array2` 배열의 마지막 요소의 값을 받는다.
 
