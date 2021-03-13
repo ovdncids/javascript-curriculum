@@ -306,7 +306,6 @@ const quiz3 = arr1[0];
 arr1[9] = 10;
 const quiz4 = arr1;
 ```
-* ❔ 해당 배열이 가진 크기보다 큰 값을 사용 한다면?
 * ❔ `빈 배열`은 참일까 거짓일까?
 * ❔ 문제: `array1`와 `array2는` 같을까?
 * <details><summary>정답</summary>
