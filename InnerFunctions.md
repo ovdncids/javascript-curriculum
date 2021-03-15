@@ -48,7 +48,8 @@ debugger;
 const storageGet = sessionStorage.getItem('array2');
 const storageLogical = storageGet || '[1, 2, 3]';
 const array2 = JSON.parse(storageLogical);
-array2.push(array2.length + 1);
+const nextNumber = array2.length + 1;
+array2.push(nextNumber);
 const storageSet = JSON.stringify(array2);
 sessionStorage.setItem('array2', storageSet);
 ```
