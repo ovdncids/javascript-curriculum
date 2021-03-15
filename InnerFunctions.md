@@ -43,24 +43,42 @@ const string1 = JSON.stringify(array1);
 ```
 
 ### sessionStorage, localStorage
+### sessionStorage CRUD
+```js
+// storageGet Create
+sessionStorage.setItem('ss1', 1);
+sessionStorage.setItem('ss2', '이');
+sessionStorage.setItem('ss3', undefined);
+
+// storageGet Read
+const ss1 = sessionStorage.getItem('ss1');
+const ss2 = sessionStorage.getItem('ss2');
+const ss3 = sessionStorage.getItem('ss3');
+
+// storageGet Update
+sessionStorage.setItem('ss1', [1, 2, 3]);
+sessionStorage.setItem('ss2', { key1: 'value1' });
+sessionStorage.setItem('ss3', function() {});
+
+// storageGet Delete
+sessionStorage.removeItem('ss1');
+sessionStorage.clear();
+```
+
+### JSON을 사용해 sessionStorage에 배열 넣기
 ```js
 debugger;
 const storageGet = sessionStorage.getItem('array2');
 const storageLogical = storageGet || '[1, 2, 3]';
 const array2 = JSON.parse(storageLogical);
-const nextNumber = array2.length + 1;
-array2.push(nextNumber);
+const plus1 = array2.length + 1;
+array2.push(plus1);
 const storageSet = JSON.stringify(array2);
 sessionStorage.setItem('array2', storageSet);
 ```
 * sessionStorage 저장 기간: 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라진다.
-```js
-sessionStorage.removeItem('array2');
-sessionStorage.clear();
-```
-* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
 * localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
-* sessionStorage, localStorage CRUD 설명
+* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
 
 #### sessionStorage, localStorage 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersStorage.html)
@@ -109,8 +127,9 @@ sessionStorage.setItem('members', membersSet);
 debugger;
 document.write('documentWrite1');
 document.write('documentWrite2');
-window.location.reload();
-window.location.href = 'https://naver.com';
+// window.location.reload();
+// window.location.href = 'https://naver.com';
+// window.history.back();
 ```
 
 #### document.write, location 실습
@@ -144,7 +163,7 @@ form.html
 
 
 
-## class 추가 삭제
+### class 추가 삭제
 ```html
 <!-- 추가 -->
 document.getElementById('').classList.add('');
@@ -158,7 +177,7 @@ document.getElementById('').classList.length;
 document.getElementById('').classList.toggle('active');
 ```
 
-## form 태그
+### form 태그
 * Ajax 이전에 데이터를 서버에 전송하는 방식(get, post 메소드만 사용가능)
 
 formA.html
@@ -195,16 +214,11 @@ formB.html
 ```
 * Frontend와 Backend의 차이점은?
 
-## window.location
-```js
-console.log(window.location);
-window.location.href = './list.html';
+<!-- ### activeElement
+* focus된 엘리먼트를 반환한다. focus가 된곳이 없다면 <Body> 또는 <html>을 반환한다.
 ```
-
-## window.history.back
-```js
-window.history.back();
-```
+const activeElement = document.activeElement;
+``` -->
 
 ## Event
 ### onkeypress
