@@ -251,6 +251,29 @@ const membersSubmit = function(form) {
 ```
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
+### pre 태그, document.getElementById
+form/form.html
+```diff
+- <script src="./form.js"></script>
++ <script defer src="./form.js"></script>
+```
+```html
+<pre id="pre-tag"></pre>
+```
+
+form/form.js
+```diff
+- for (let index in members) {
+-   document.write(members[index] + ' ');
+- }
+```
+```js
+const preTag = document.getElementById('pre-tag');
+for (let index in members) {
+  preTag.innerHTML += members[index] + '\n';
+}
+```
+
 
 ### class 추가 삭제
 ```html
@@ -265,43 +288,6 @@ document.getElementById('').classList.length;
 <!-- 토글 클래스 -->
 document.getElementById('').classList.toggle('active');
 ```
-
-### form 태그
-* Ajax 이전에 데이터를 서버에 전송하는 방식(get, post 메소드만 사용가능)
-
-formA.html
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>From A</title>
-  </head>
-  <body>
-    <h1>From A</h1>
-    <form method="get" action="./formB.html">
-      <input type="text" name="name" placeholder="이름" />
-      <input type="submit" value="전송" />
-    </form>
-  </body>
-</html>
-```
-
-formB.html
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>From B</title>
-    <script>console.log(window.location);</script>
-  </head>
-  <body>
-    <h1>From B</h1>
-  </body>
-</html>
-```
-* Frontend와 Backend의 차이점은?
 
 <!-- ### activeElement
 * focus된 엘리먼트를 반환한다. focus가 된곳이 없다면 <Body> 또는 <html>을 반환한다.
