@@ -43,6 +43,8 @@ const string1 = JSON.stringify(array1);
 ```
 
 ### sessionStorage, localStorage
+* 브라우저에서 사용하는 DB로 쿠키와 비슷하다고 생각하면 된다.
+
 ### sessionStorage CRUD
 ```js
 // storageGet Create
@@ -122,7 +124,7 @@ sessionStorage.setItem('members', membersSet);
   * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 리팩토링(Refactoring)이라 한다.
 </details>
 
-* VSCode 서로 다른 파일 비교 설명
+* VSCode 서로 다른 파일 비교하는 방법 설명
 
 ### document.write, location
 ```js
@@ -142,15 +144,17 @@ document.writeln('documentWrite6 ');
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html)
 * documentWrite.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersStorage.html
 
+* membersRead 추가
 ```js
 for (let index in members) {
   document.write(members[index] + ' ');
 }
 ```
+* membersCreate, membersDelete, membersUpdate에 추가
 ```js
 window.location.reload();
 ```
-* ❔ 위에 2부분을 `documentWrite.html` 파일 어디에 넣어야 할까?
+* ❔ `데모`와 동일하게 만드려면?
 
 ## document 객체
 ### html 태그
@@ -172,22 +176,26 @@ html/index.html
 #### javascript 실행 순서 확인 하기
 html/index1.js
 ```
+debugger;
 console.log('index1.js');
 ```
 
 html/index2.js
 ```
+debugger;
 console.log('index2.js');
 ```
 
 html/index3.js
 ```
+debugger;
 console.log('index3.js');
 ```
 
 html/index.html (가장 아래에)
 ```html
 <script>
+debugger;
 console.log('html bottom');
 </script>
 ```
@@ -195,7 +203,10 @@ console.log('html bottom');
 * ❕ `defer` 설명
 * ❕ `싱글 쓰레드(Single Thread)`, `멀티 쓰레드(Multi Thread)` 설명
 * ❕ `동기(Sync)`, `비동기(Async)` 설명
-* ❔ 모든 `console.log` 위에 `debugger;` 넣기
+```html
+<script async src="./index1.js"></script>
+```
+* ❕ 따라서 `async`는 사용하지 않는다.
 * ❔ `form1.js`, `form2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
