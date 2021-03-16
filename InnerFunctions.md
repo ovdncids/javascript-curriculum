@@ -165,6 +165,7 @@ html/index.html
 ```html
 <script defer src="./index1.js"></script>
 <script src="./index2.js"></script>
+<script src="./index3.js"></script>
 ```
 * ❕ Network 탭 설명 하기
 
@@ -179,6 +180,11 @@ html/index2.js
 console.log('index2.js');
 ```
 
+html/index3.js
+```
+console.log('index3.js');
+```
+
 html/index.html (가장 아래에)
 ```html
 <script>
@@ -188,19 +194,59 @@ console.log('html bottom');
 
 * ❕ `defer` 설명
 * ❕ `싱글 쓰레드(Single Thread)`, `멀티 쓰레드(Multi Thread)` 설명
-* ❕ `동기(Sync)`, `비동기(Async)`
+* ❕ `동기(Sync)`, `비동기(Async)` 설명
+* ❔ 모든 `console.log` 위에 `debugger;` 넣기
 * ❔ `form1.js`, `form2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
-* from 태그 넣기 (body 태그 안에 넣기
+form/form.html
+
+#### from 태그 넣기 (body 태그 안에 넣기)
 ```html
-<form method="get">
-  <input type="text" name="text-name" value="초기값" placeholder="입력 하세요.">
-  <input type="hidden" name="hidden-name" id="form-hidden" value="hidden-value">
+<form method="get" action="./form.html">
+  <input type="text" name="text-name" value="초기값" placeholder="명령을 입력 하세요.">
+  <input type="hidden" name="hidden-name" id="form-hidden" value="숨겨진값">
   <input type="submit" value="전송">
 </form>
 ```
+* `get`, `post` 메소드 설명
+* ❔ `action`을 `https://naver.com`으로 바꾼다면
 
+#### from 태그 실습
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/form.html)
+* form/form.js <- https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html
+
+#### onsubmit 메소드 추가
+```diff
+- <form method="get" action="./form.html">
++ <form method="get" action="./form.html" onsubmit="return false;">
+```
+* ❔ `return undefined;`, `return null;`, `return 0;`, `return true;` 변경 하기
+```html
+<form method="get" action="./form.html" onsubmit="return membersSubmit(this);">
+```
+
+#### .js 파일 부르기 (head 태그 안에 넣기)
+```html
+<script src="./form.js"></script>
+```
+
+#### form.js
+```diff
+- window.location.reload();
++ // window.location.reload();
+```
+```js
+const membersSubmit = function(form) {
+  const textNameObject = form['text-name'];
+  try {
+    const evalReturn = eval(textNameObject.value);
+  } catch(error) {
+    console.error(error);
+    return false;
+  }
+}
+```
 
 
 
