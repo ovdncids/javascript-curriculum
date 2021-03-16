@@ -259,10 +259,16 @@ const membersSubmit = function(form) {
   }
 }
 ```
+* `eval` 설명
+
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 ### pre 태그, document.getElementById
 form/membersForm.html
+```diff
+- <script src="./form.js"></script>
++ <script defer src="./form.js"></script>
+```
 ```html
 <pre id="pre-tag"></pre>
 ```
@@ -279,12 +285,7 @@ for (let index in members) {
   preTag.innerHTML += members[index] + '\n';
 }
 ```
-
-form/membersForm.html
-```diff
-- <script src="./form.js"></script>
-+ <script defer src="./form.js"></script>
-```
+* ❔ `defer`를 뺀다면
 
 
 ### class 추가 삭제
