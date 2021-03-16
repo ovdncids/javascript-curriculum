@@ -205,7 +205,7 @@ if (if1 === 1) {
 * `if1` 값을 수정하여 `참4`이 나오게 만들기
 
 2. 거짓 조건 비교 하기
-* ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`이고, 나머지는 모두 참인 조건이 된다.
+* ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`, `NaN`이고, 나머지는 모두 참인 조건이 된다.
 ```js
 debugger;
 let d1;
@@ -654,17 +654,6 @@ const membersUpdate = function(index, name) {
   return members;
 };
 ```
-
-* `Backend`의 작업 방식 설명
-* ❔ 문제: `membersCreate`, `membersDelete`, `membersUpdate`안에 `return members;` 대신하여 `membersRead` 함수 실행 후 `read` 상수에 리턴받고, `read` 상수를 `return` 시키기
-* <details><summary>정답</summary>
-
-  ```js
-  const read = membersRead();
-  return read;
-  ```
-  * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 `리팩토링`(Refactoring)이라 한다.
-</details>
 
 * `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
 
