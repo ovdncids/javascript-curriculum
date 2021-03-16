@@ -39,6 +39,7 @@ const membersSubmit = function(form) {
     const evalReturn = eval(textNameObject.value);
   } catch(error) {
     console.error(error);
+    alert(error);
     return false;
   }
 }
