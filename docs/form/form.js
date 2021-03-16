@@ -37,6 +37,7 @@ const membersSubmit = function(form) {
   const textNameObject = form['text-name'];
   try {
     const evalReturn = eval(textNameObject.value);
+    console.log(evalReturn);
   } catch(error) {
     console.error(error);
     alert(error);
