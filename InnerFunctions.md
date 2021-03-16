@@ -210,7 +210,7 @@ console.log('html bottom');
 * ❔ `form1.js`, `form2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
-form/form.html
+form/membersForm.html
 
 #### from 태그 넣기 (body 태그 안에 넣기)
 ```html
@@ -224,28 +224,27 @@ form/form.html
 * ❔ `action`을 `https://naver.com`으로 바꾼다면
 
 #### from 태그 실습
-* [데모](https://ovdncids.github.io/javascript-curriculum/form/form.html)
-* form/form.js <- https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
+* form/membersForm.js <- https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html
 
 #### onsubmit 메소드 추가
 ```diff
 - <form method="get" action="./form.html">
 + <form method="get" action="./form.html" onsubmit="return false;">
 ```
-* ❔ `return undefined;`, `return null;`, `return 0;`, `return true;` 변경 하기
+* ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기
 ```html
 <form method="get" action="./form.html" onsubmit="return membersSubmit(this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
 ```html
-<script src="./form.js"></script>
+<script src="./membersForm.js"></script>
 ```
 
-#### form.js
+#### form/membersForm.js
 ```diff
 - window.location.reload();
-+ // window.location.reload();
 ```
 ```js
 const membersSubmit = function(form) {
@@ -263,16 +262,12 @@ const membersSubmit = function(form) {
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 ### pre 태그, document.getElementById
-form/form.html
-```diff
-- <script src="./form.js"></script>
-+ <script defer src="./form.js"></script>
-```
+form/membersForm.html
 ```html
 <pre id="pre-tag"></pre>
 ```
 
-form/form.js
+form/membersForm.js
 ```diff
 - for (let index in members) {
 -   document.write(members[index] + ' ');
@@ -283,6 +278,12 @@ const preTag = document.getElementById('pre-tag');
 for (let index in members) {
   preTag.innerHTML += members[index] + '\n';
 }
+```
+
+form/membersForm.html
+```diff
+- <script src="./form.js"></script>
++ <script defer src="./form.js"></script>
 ```
 
 
