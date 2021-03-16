@@ -6,27 +6,29 @@ const members = JSON.parse(membersLogical);
 const membersCreate = function(member) {
   members.push(member);
   membersSet();
-  const read = membersRead();
-  return read;
+  window.location.reload();
+  return members;
 };
 
 const membersRead = function() {
-  window.location.reload();
+  for (let index in members) {
+    document.write(members[index] + ' ');
+  }
   return members;
 };
 
 const membersDelete = function(index) {
   members.splice(index, 1);
   membersSet();
-  const read = membersRead();
-  return read;
+  window.location.reload();
+  return members;
 };
 
 const membersUpdate = function(index, name) {
   members[index] = name;
   membersSet();
-  const read = membersRead();
-  return read;
+  window.location.reload();
+  return members;
 };
 
 const membersSet = function() {
@@ -34,7 +36,5 @@ const membersSet = function() {
   sessionStorage.setItem('members', membersSet);
 };
 
-for (let index in members) {
-  document.write(members[index] + ' ');
-}
+membersRead();
 </script>
