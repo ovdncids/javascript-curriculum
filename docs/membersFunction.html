@@ -3,8 +3,7 @@ const members = [];
 
 const membersCreate = function(member) {
   members.push(member);
-  const read = membersRead();
-  return read;
+  return members;
 };
 
 const membersRead = function() {
@@ -13,13 +12,11 @@ const membersRead = function() {
 
 const membersDelete = function(index) {
   members.splice(index, 1);
-  const read = membersRead();
-  return read;
+  return members;
 };
 
 const membersUpdate = function(index, name) {
   members[index] = name;
-  const read = membersRead();
-  return read;
+  return members;
 };
 </script>
