@@ -241,6 +241,7 @@ const membersSubmit = function(form) {
   const textNameObject = form['text-name'];
   try {
     const evalReturn = eval(textNameObject.value);
+    console.log(evalReturn);
   } catch(error) {
     console.error(error);
     alert(error);
@@ -248,7 +249,7 @@ const membersSubmit = function(form) {
   }
 }
 ```
-
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 
 ### class 추가 삭제
