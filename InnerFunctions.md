@@ -57,13 +57,18 @@ const ss3 = sessionStorage.getItem('ss3');
 
 // storageGet Update
 sessionStorage.setItem('ss1', [1, 2, 3]);
-sessionStorage.setItem('ss2', { key1: 'value1' });
+sessionStorage.setItem('ss2', {
+  key1: 'value1'
+});
 sessionStorage.setItem('ss3', function() {});
 
 // storageGet Delete
 sessionStorage.removeItem('ss1');
 sessionStorage.clear();
 ```
+* sessionStorage 저장 기간: 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라진다.
+* localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
+* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
 
 ### JSON을 사용해 sessionStorage에 배열 넣기
 ```js
@@ -76,9 +81,6 @@ array2.push(plus1);
 const storageSet = JSON.stringify(array2);
 sessionStorage.setItem('array2', storageSet);
 ```
-* sessionStorage 저장 기간: 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라진다.
-* localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
-* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
 
 #### sessionStorage, localStorage 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersStorage.html)
@@ -125,8 +127,12 @@ sessionStorage.setItem('members', membersSet);
 ### document.write, location
 ```js
 debugger;
-document.write('documentWrite1');
-document.write('documentWrite2');
+document.write('documentWrite1 ');
+document.write('documentWrite2 ');
+document.write('documentWrite3 ');
+document.writeln('documentWrite4 ');
+document.writeln('documentWrite5 ');
+document.writeln('documentWrite6 ');
 // window.location.reload();
 // window.location.href = 'https://naver.com';
 // window.history.back();
@@ -138,7 +144,7 @@ document.write('documentWrite2');
 
 ```js
 for (let index in members) {
-  document.write('<div>' + members[index] + '</div>');
+  document.write(members[index] + ' ');
 }
 ```
 ```js
@@ -147,8 +153,46 @@ window.location.reload();
 * ❔ 위에 2부분을 `documentWrite.html` 파일 어디에 넣어야 할까?
 
 ## document 객체
+### html 태그
+html/index.html
+
+#### html 기본 구조 만들기
+```sh
+!키 입력 후 탭키 누르기
+```
+
+#### .js 파일 부르기 (head 태그 안에 넣기)
+```html
+<script defer src="./index1.js"></script>
+<script src="./index2.js"></script>
+```
+* ❕ Network 탭 설명 하기
+
+#### javascript 실행 순서 확인 하기
+html/index1.js
+```
+console.log('index1.js');
+```
+
+html/index2.js
+```
+console.log('index2.js');
+```
+
+html/index.html (가장 아래에)
+```html
+<script>
+console.log('html bottom');
+</script>
+```
+
+* ❕ `defer` 설명
+* ❕ `싱글 쓰레드(Single Thread)`, `멀티 쓰레드(Multi Thread)` 설명
+* ❕ `동기(Sync)`, `비동기(Async)`
+* ❔ `form1.js`, `form2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
+
 ### form 태그
-form.html
+* from 태그 넣기 (body 태그 안에 넣기
 ```html
 <form method="get">
   <input type="text" name="text-name" value="초기값" placeholder="입력 하세요.">
@@ -157,9 +201,6 @@ form.html
 </form>
 ```
 
-
-<!-- * `defer` 설명, `쓰레드` 개념 설명
-* ❔ 서로 다른 파일에서 1번씩 사용한다면 -->
 
 
 
