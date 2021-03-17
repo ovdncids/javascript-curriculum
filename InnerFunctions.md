@@ -215,8 +215,8 @@ form/membersForm.html
 #### from 태그 넣기 (body 태그 안에 넣기)
 ```html
 <form method="get" action="./form.html">
-  <input type="text" name="text-name" value="초기값" placeholder="명령을 입력 하세요.">
-  <input type="hidden" name="hidden-name" id="form-hidden" value="숨겨진값">
+  <input type="text" name="name-text" value="초기값" placeholder="명령을 입력 하세요.">
+  <input type="hidden" name="name-hidden" id="form-hidden" value="숨겨진값">
   <input type="submit" value="전송">
 </form>
 ```
@@ -248,9 +248,9 @@ form/membersForm.html
 ```
 ```js
 const membersSubmit = function(form) {
-  const textNameObject = form['text-name'];
+  const nameTextObject = form['name-text'];
   try {
-    const evalReturn = eval(textNameObject.value);
+    const evalReturn = eval(nameTextObject.value);
     console.log(evalReturn);
   } catch(error) {
     console.error(error);
@@ -271,7 +271,7 @@ form/membersForm.html
 + <script defer src="./form.js"></script>
 ```
 ```html
-<pre id="pre-tag"></pre>
+<pre id="tag-pre"></pre>
 ```
 
 form/membersForm.js
@@ -281,26 +281,64 @@ form/membersForm.js
 - }
 ```
 ```js
-const preTag = document.getElementById('pre-tag');
+const tagPre = document.getElementById('tag-pre');
 for (let index in members) {
-  let innerHTML = preTag.innerHTML + members[index];
+  let innerHTML = tagPre.innerHTML + members[index];
   innerHTML += '\n';
-  preTag.innerHTML = innerHTML;
+  tagPre.innerHTML = innerHTML;
 }
 ```
 * ❔ `defer`를 뺀다면
-* ❔ 다음을 한줄로 표현 한다면
+* ❔ 문제: 다음을 한줄로 표현 하라
   ```js
-  let innerHTML = preTag.innerHTML + members[index];
+  let innerHTML = tagPre.innerHTML + members[index];
   innerHTML += '\n';
-  preTag.innerHTML = innerHTML;
+  tagPre.innerHTML = innerHTML;
   ```
 * <details><summary>정답</summary>
 
   ```js
-  preTag.innerHTML += members[index] + '\n';
+  tagPre.innerHTML += members[index] + '\n';
   ```
 </details>
+
+### Query string, document.getElementsByName
+```js
+const url = new URL(window.location.href);
+const queryString = url.searchParams;
+const nameText  = queryString.get('name-text');
+const nameHiddens = queryString.getAll('name-hidden');
+const nameHidden = nameHiddens[0];
+
+const nameTextObjects = document.getElementsByName('name-text');
+const nameTextObject = nameTextObjects[0];
+```
+* ❔ 문제: `input box`의 `value`값을 Query string으로 받아온 `nameText`으로 값 넣기
+* <details><summary>정답</summary>
+
+  ```js
+  nameTextObject.value = nameText;
+  ```
+</details>
+
+* ❔ 문제: 문제: 다음을 한줄로 표현 하라 (`nameTextObjects` 상수는 삭제)
+  ```js
+  const nameTextObjects = document.getElementsByName('name-text');
+  const nameTextObject = nameTextObjects[0];
+  ```
+* <details><summary>정답</summary>
+
+  ```js
+  const nameTextObject = document.getElementsByName('name-text')[0];
+  ```
+</details>
+
+### focus, blur
+```js
+nameTextObject.focus();
+// nameTextObject.blur();
+```
+
 
 
 
@@ -333,15 +371,6 @@ const activeElement = document.activeElement;
 ### onchange
 ```html
 <input type="date" onchange="console.log(event)" />
-```
-
-## QueryString
-```js
-const url = new URL(window.location.href);
-const queryString = url.searchParams;
-
-console.log(queryString.get('a'));
-console.log(queryString.getAll('a'));
 ```
 
 ## Orderby Icon
