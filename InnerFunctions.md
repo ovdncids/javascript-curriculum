@@ -129,12 +129,12 @@ sessionStorage.setItem('members', membersSet);
 ### document.write, location
 ```js
 debugger;
-document.write('documentWrite1 ');
-document.write('documentWrite2 ');
-document.write('documentWrite3 ');
-document.writeln('documentWrite4 ');
-document.writeln('documentWrite5 ');
-document.writeln('documentWrite6 ');
+document.write('documentWrite1');
+document.write('documentWrite2');
+document.write('documentWrite3');
+document.writeln('documentWrite4');
+document.writeln('documentWrite5');
+document.writeln('documentWrite6');
 // window.location.reload();
 // window.location.href = 'https://naver.com';
 // window.history.back();
@@ -147,7 +147,7 @@ document.writeln('documentWrite6 ');
 * membersRead 추가
 ```js
 for (let index in members) {
-  document.write(members[index] + ' ');
+  document.writeln(members[index]);
 }
 ```
 * membersCreate, membersDelete, membersUpdate에 추가
@@ -282,10 +282,25 @@ form/membersForm.js
 ```js
 const preTag = document.getElementById('pre-tag');
 for (let index in members) {
-  preTag.innerHTML += members[index] + '\n';
+  let innerHTML = preTag.innerHTML + members[index];
+  innerHTML += '\n';
+  preTag.innerHTML = innerHTML;
 }
 ```
 * ❔ `defer`를 뺀다면
+* ❔ 다음을 한줄로 표현 한다면
+  ```js
+  let innerHTML = preTag.innerHTML + members[index];
+  innerHTML += '\n';
+  preTag.innerHTML = innerHTML;
+  ```
+* <details><summary>정답</summary>
+
+  ```js
+  preTag.innerHTML += members[index] + '\n';
+  ```
+</details>
+
 
 
 ### class 추가 삭제
