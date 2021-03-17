@@ -260,6 +260,7 @@ const membersSubmit = function(form) {
 }
 ```
 * `eval` 설명
+* ❔ `eval` 대신 `JSON.parse`를 사용한다면
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
