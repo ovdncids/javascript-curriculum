@@ -4,8 +4,7 @@ const nameText  = queryString.get('name-text');
 const nameHiddens = queryString.getAll('name-hidden');
 const nameHidden = nameHiddens[0];
 
-const nameTextObjects = document.getElementsByName('name-text');
-const nameTextObject = nameTextObjects[0];
+const nameTextObject = document.getElementsByName('name-text')[0];
 nameTextObject.value = nameText;
 nameTextObject.focus();
 
