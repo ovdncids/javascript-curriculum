@@ -303,7 +303,7 @@ if (quiz1) {
   const result = '거짓';
 }
 const quiz2 = arr1 === arr2;
-const quiz3 = arr1[0];
+const quiz3 = arr1[1];
 arr1[9] = 10;
 const quiz4 = arr1.length;
 ```
@@ -318,8 +318,8 @@ const quiz4 = arr1.length;
   ```
 </details>
 
-* ❔ 해당 배열이 가진 크기보다 큰 값을 `Read` 한다면?
-* ❔ 해당 배열이 가진 크기보다 큰 값을 `Update` 한다면?
+* ❔ 해당 배열이 가진 `length`보다 큰 `index`를 `Read` 한다면?
+* ❔ 해당 배열이 가진 `length`보다 큰 `index`를 `Update` 한다면?
 
 ### 익명 배열
 ```js
