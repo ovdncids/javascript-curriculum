@@ -304,7 +304,7 @@ for (let index in members) {
 
 ### Query string, document.getElementsByName
 ```js
-const url = new URL(window.location.href);
+const url = new URL(window.location);
 const queryString = url.searchParams;
 const nameText  = queryString.get('name-text');
 const nameHiddens = queryString.getAll('name-hidden');
@@ -313,6 +313,23 @@ const nameHidden = nameHiddens[0];
 const nameTextObjects = document.getElementsByName('name-text');
 const nameTextObject = nameTextObjects[0];
 ```
+* ❕ `new` 키워드는 `클래스`를 바탕으로 `오브젝트`를 만든다.
+* <details><summary>클래스</summary>
+
+  ```js
+  class Class1 {
+    v1 = '멤버 변수';
+    m1 = function() {
+      return '멤버 메소드';
+    };
+  }
+  const class1 = new Class1();
+  const c1 = class1.v1;
+  const c2 = class1.m1();
+  ```
+  * ❔ `new` 키워드를 뺀다면
+</details>
+
 * ❔ 문제: `input box`의 `value`값을 Query string으로 받아온 `nameText`으로 값 넣기
 * <details><summary>정답</summary>
 
