@@ -388,6 +388,54 @@ const membersDelete = function(index) {
 + return membersRead();
 ```
 
+#### Update
+form/membersNoRefresh.js
+```js
+tagPre.innerHTML += '<button onClick="membersUpdate(' + index + ')">Update</button>';
+```
+
+```diff
+- const membersUpdate = function(index, member) {
+-   members[index] = member;
+-   membersSet();
+-   return members;
+- };
+```
+```js
+const membersUpdate = function(index) {
+  const member = ❔ 문제
+  members[index] = member;
+  membersSet();
+  return membersRead();
+};
+```
+
+#### Create
+form/membersNoRefresh.html
+```diff
+- <form method="get" onsubmit="return membersSubmit(this);">
++ <form method="get" onsubmit="membersCreate(this); return false;">
+```
+
+form/membersNoRefresh.js
+```diff
+- const membersCreate = function(member) {
+-   members.push(member);
+-   membersSet();
+-   return members;
+- };
+```
+```js
+const membersCreate = function(form) {
+  const nameTextObject = form['name-text'];
+  members.push(❔ 문제);
+  membersSet();
+  return membersRead();
+};
+```
+* `membersSubmit` 메소드 삭제
+* ❔ 문제: `create` 후 입력된 `input box`의 문자 지우기
+
 ### class 추가 삭제
 ```html
 <!-- 추가 -->
