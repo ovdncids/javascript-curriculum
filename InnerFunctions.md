@@ -356,8 +356,37 @@ nameTextObject.focus();
 // nameTextObject.blur();
 ```
 
+### 새로 고침 없이 회원 CRUD
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersNoRefresh.html)
+* form/membersNoRefresh.html <- https://ovdncids.github.io/javascript-curriculum/form/membersForm.html
+* form/membersNoRefresh.js <- https://ovdncids.github.io/javascript-curriculum/form/membersForm.js
 
+#### Delete
+form/membersNoRefresh.html
+```diff
+- <script defer src="./membersForm.js"></script>
++ <script defer src="./membersNoRefresh.js"></script>
+```
 
+form/membersNoRefresh.js
+``` diff
+- for (let index in members) {
+-   tagPre.innerHTML += members[index] + '\n';
+- }
+```
+```js
+tagPre.innerHTML = '';
+for (let index in members) {
+  tagPre.innerHTML += '<input type="text" name="members-name" value="' + members[index] + '">';
+  tagPre.innerHTML += '<button onClick="membersDelete(' + index + ')">Delete</button>';
+  tagPre.innerHTML += '\n';
+}
+```
+``` diff
+const membersDelete = function(index) {
+- return members;
++ return membersRead();
+```
 
 ### class 추가 삭제
 ```html
