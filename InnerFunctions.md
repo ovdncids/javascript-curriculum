@@ -486,6 +486,75 @@ membersDeleteObject.index = index;
 ```
 * ❕ `onclick` 안에 `index` 설명
 
+### 회원 정보에 나이 추가
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersObject.html)
+
+#### Create
+form/membersNoRefresh.html
+```diff
+- <input type="text" name="name-text" value="" placeholder="Name">
+- <input type="hidden" name="name-hidden" value="숨겨진값">
+```
+```html
+<input type="text" name="member-name" value="" placeholder="Name">
+<input type="text" name="member-age" value="" placeholder="Age">
+```
+
+form/membersNoRefresh.js
+```diff
+- const nameTextObject = form['name-text'];
+- members.push(nameTextObject.value);
+- nameTextObject.value = '';
+```
+```js
+const memberNameObject = form['member-name'];
+const memberAgeObject = form['member-age'];
+members.push({
+  name: memberNameObject.value,
+  age: memberAgeObject.value
+});
+memberNameObject.value = '';
+memberAgeObject.value = '';
+```
+
+#### Read
+form/membersNoRefresh.html
+```html
+<input type="text" name="members-age" value="">
+```
+
+form/membersNoRefresh.js
+```js
+const membersAgeObject = document.getElementsByName('members-age')[index];
+```
+```diff
+- membersNameObject.value = members[index];
+```
+```js
+membersNameObject.value = members[index].name;
+membersAgeObject.value = members[index].age;
+```
+
+#### Update
+* ❔ 문제: Update 구현하기
+* <details><summary>정답</summary>
+
+  ```js
+  const age = document.getElementsByName('members-age')[index].value;
+  ```
+  ```diff
+  - members[index] = name;
+  ```
+  ```js
+  members[index] = {
+    name: name,
+    age: age
+  };
+  ```
+</details>
+
+
+
 
 
 
