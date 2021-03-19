@@ -348,6 +348,7 @@ const nameTextObject = nameTextObjects[0];
   ```js
   const nameTextObject = document.getElementsByName('name-text')[0];
   ```
+  * ❕ `document.getElementsByName` 메소드는 항상 `배열`을 반환한다.
 </details>
 
 ### focus, blur
@@ -436,25 +437,76 @@ const membersCreate = function(form) {
 * `membersSubmit` 메소드 삭제
 * ❔ 문제: `create` 후 입력된 `input box`의 문자 지우기
 
-### class 추가 삭제
+### div 태그 복사
+form/membersNoRefresh.html
+
+* div 태그 설명
+```diff
+- <pre id="tag-pre"></pre>
+```
 ```html
-<!-- 추가 -->
-document.getElementById('').classList.add('');
-<!-- 삭제 -->
-document.getElementById('').classList.remove('');
-<!-- 첫번째 클래스명 -->
-document.getElementById('').classList[0];
-<!-- 클래스 개수 -->
-document.getElementById('').classList.length;
-<!-- 토글 클래스 -->
-document.getElementById('').classList.toggle('active');
+<div id="tag-div-parent"></div>
+<div style="display: none;">
+  <div id="tag-div-child">
+    <input type="text" name="members-name" value="">
+    <button name="members-update" onclick="membersUpdate(index)">Update</button>
+    <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+  </div>
+</div>
 ```
 
-<!-- ### activeElement
+form/membersNoRefresh.js
+```diff
+- const membersRead (삭제)
+```
+```js
+const membersRead = function() {
+  const tagDivParent = document.getElementById('tag-div-parent');
+  const tagDivChild = document.getElementById('tag-div-child');
+  tagDivParent.innerHTML = '';
+  for (let index in members) {
+    const newDivChild = tagDivChild.cloneNode(true);
+    tagDivParent.appendChild(newDivChild);
+  }
+  return members;
+};
+```
+
+#### DOM 객체 접근하기
+form/membersNoRefresh.js
+```js
+const membersNameObject = document.getElementsByName('members-name')[index];
+const membersUpdateObject = document.getElementsByName('members-update')[index];
+const membersDeleteObject = document.getElementsByName('members-delete')[index];
+membersNameObject.value = members[index];
+membersUpdateObject.index = index;
+membersDeleteObject.index = index;
+```
+* ❕ `onclick` 안에 `index` 설명
+
+
+
+
+
+<!-- ### class 추가 삭제
+```html
+// 추가
+document.getElementById('').classList.add('');
+// 삭제
+document.getElementById('').classList.remove('');
+// 토글 클래스
+document.getElementById('').classList.toggle('active');
+// 첫번째 클래스명
+document.getElementById('').classList[0];
+// 클래스 개수
+document.getElementById('').classList.length;
+```
+
+### activeElement
 * focus된 엘리먼트를 반환한다. focus가 된곳이 없다면 <Body> 또는 <html>을 반환한다.
 ```
 const activeElement = document.activeElement;
-``` -->
+```
 
 ## Event
 ### onkeypress
@@ -479,4 +531,4 @@ const classList = document.getElementById('i-' + orderByName + '-' + orderByType
 const className = classList[1];
 classList.remove(className);
 classList.add(className + '-fill');
-```
+``` -->
