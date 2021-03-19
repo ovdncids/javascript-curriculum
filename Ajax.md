@@ -26,7 +26,7 @@ xhrObject.setRequestHeader('Content-Type', 'application/json');
 xhrObject.send(JSON.stringify({}));
 ```
 
-## template 파일을 불러 오기
+## 파일과 통신
 ajax/basicTemplate.html
 ```html
 <div>
@@ -69,3 +69,187 @@ const ajaxTest = function() {
 ```
 * VSCode 확장 `Live Server` 설치
 * ❔ `xhrObject.open` url을 `./basicTemplate2.html`로 바꾼다면
+
+## Backend와 통신
+
+### node.js 설치
+
+### Backend Server
+* [Download](https://github.com/ovdncids/vue-curriculum/raw/master/download/express-server.zip)
+```sh
+# BE 서버 실행 방법
+npm install
+node index.js
+# 터미널 종료
+Ctrl + c
+```
+
+### Frontend Server
+* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAJAX.html)
+* ajax/membersAJAX.html <- https://ovdncids.github.io/javascript-curriculum/form/membersObject.html
+* ajax/membersAJAX.js <- https://ovdncids.github.io/javascript-curriculum/form/membersObject.js
+
+#### Create
+```diff
+- const membersCreate (삭제)
+```
+```js
+const membersCreate = function(form) {
+  const memberNameObject = form['member-name'];
+  const memberAgeObject = form['member-age'];
+  const member = {
+    name: memberNameObject.value,
+    age: memberAgeObject.value
+  };
+  const successFunction = function() {
+    memberNameObject.value = '';
+    memberAgeObject.value = '';
+    membersRead();
+  }
+  const xhrObject = new XMLHttpRequest();
+  xhrObject.onreadystatechange = function() {
+    if (xhrObject.readyState !== 4) return;
+    if (xhrObject.status === 200) {
+      successFunction();
+    } else {
+      const error = {
+        status: xhrObject.status,
+        statusText: xhrObject.statusText,
+        responseText: xhrObject.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhrObject.open('POST', 'http://localhost:3100/api/v1/members');
+  xhrObject.setRequestHeader('Content-Type', 'application/json');
+  xhrObject.send(JSON.stringify(member));
+};
+```
+
+#### Read
+```diff
+- const membersRead (삭제)
+```
+```js
+const membersRead = function() {
+  const successFunction = function(xhrObject) {
+    const membersLogical = JSON.parse(xhrObject.responseText);
+    const members = membersLogical.members;
+    const tagDivParent = document.getElementById('tag-div-parent');
+    const tagDivChild = document.getElementById('tag-div-child');
+    tagDivParent.innerHTML = '';
+    for (let index in members) {
+      const newDivChild = tagDivChild.cloneNode(true);
+      tagDivParent.appendChild(newDivChild);
+      const membersNameObject = document.getElementsByName('members-name')[index];
+      const membersAgeObject = document.getElementsByName('members-age')[index];
+      const membersUpdateObject = document.getElementsByName('members-update')[index];
+      const membersDeleteObject = document.getElementsByName('members-delete')[index];
+      membersNameObject.value = members[index].name;
+      membersAgeObject.value = members[index].age;
+      membersUpdateObject.index = index;
+      membersDeleteObject.index = index;
+    }
+    console.log('Readed', members);
+  };
+  const xhrObject = new XMLHttpRequest();
+  xhrObject.onreadystatechange = function () {
+    if (xhrObject.readyState !== 4) return;
+    if (xhrObject.status === 200) {
+      successFunction(xhrObject);
+    } else {
+      const error = {
+        status: xhrObject.status,
+        statusText: xhrObject.statusText,
+        responseText: xhrObject.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhrObject.open('GET', 'http://localhost:3100/api/v1/members');
+  xhrObject.setRequestHeader('Content-Type', 'application/json');
+  xhrObject.send();
+};
+```
+
+#### Delete
+```diff
+- const membersDelete (삭제)
+```
+```js
+const membersDelete = function(index) {
+  const xhrObject = new XMLHttpRequest();
+  xhrObject.onreadystatechange = function () {
+    if (xhrObject.readyState !== 4) return;
+    if (xhrObject.status === 200) {
+      membersRead();
+    } else {
+      const error = {
+        status: xhrObject.status,
+        statusText: xhrObject.statusText,
+        responseText: xhrObject.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhrObject.open('DELETE', 'http://localhost:3100/api/v1/members/' + index);
+  xhrObject.setRequestHeader('Content-Type', 'application/json');
+  xhrObject.send();
+};
+```
+
+#### Update
+```diff
+- const membersUpdate (삭제)
+```
+```js
+const membersUpdate = function(index) {
+  const name = document.getElementsByName('members-name')[index].value;
+  const age = document.getElementsByName('members-age')[index].value;
+  const memberUpdate = {
+    index: index,
+    member: {
+      name: name,
+      age: age
+    }
+  };
+  const xhrObject = new XMLHttpRequest();
+  xhrObject.onreadystatechange = function () {
+    if (xhrObject.readyState !== 4) return;
+    if (xhrObject.status === 200) {
+      membersRead();
+    } else {
+      const error = {
+        status: xhrObject.status,
+        statusText: xhrObject.statusText,
+        responseText: xhrObject.responseText
+      }
+      console.error(error);
+    }
+  };
+  xhrObject.open('PATCH', 'http://localhost:3100/api/v1/members');
+  xhrObject.setRequestHeader('Content-Type', 'application/json');
+  xhrObject.send(JSON.stringify(memberUpdate));
+};
+```
+* RESTful API 설명
+* ❔ 브라우저에서 주소 치고 들어가는 것은 무조건 무슨 메소드 인가
+* 404, 400, 403, 500 에러 보여주기
+  ```
+  404: backend쪽 페이지가 없는 경우
+  400: frontend쪽에서 정보가 재대로 넘어 오지 않은 경우
+  403: 인증관련 에러 (로그인이 제대로 되지 않은 경우)
+  500: backend쪽 에러 (backend 문법 오류 또는 DB가 멈춰 있는 경우)
+  ```
+* ❔ 공통 부분 함수화 하기
+  ```js
+  const ajax = function(method, url, callback) {
+    ...
+  };
+  ```
+* Callback 함수 설명
+* React 또는 Vue.js와 비교해 보기
+
+## Axios
+https://github.com/axios/axios
+* ❔ 공통 부분 함수화를 Axios로 수정 하기
