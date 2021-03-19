@@ -24,8 +24,8 @@ const membersDelete = function(index) {
   return members;
 };
 
-const membersUpdate = function(index, name) {
-  members[index] = name;
+const membersUpdate = function(index, member) {
+  members[index] = member;
   membersSet();
   window.location.reload();
   return members;
