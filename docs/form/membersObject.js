@@ -1,13 +1,3 @@
-// const url = new URL(window.location.href);
-// const queryString = url.searchParams;
-// const nameText  = queryString.get('name-text');
-// const nameHiddens = queryString.getAll('name-hidden');
-// const nameHidden = nameHiddens[0];
-
-// const nameTextObject = document.getElementsByName('name-text')[0];
-// nameTextObject.value = nameText;
-// nameTextObject.focus();
-
 const membersGet = sessionStorage.getItem('members');
 const membersLogical = membersGet || '[]';
 const members = JSON.parse(membersLogical);
