@@ -8,7 +8,14 @@
   <script defer src="./membersNoRefresh.js"></script>
 </head>
 <body>
-  <pre id="tag-pre"></pre>
+  <div id="tag-div-parent"></div>
+  <div style="display: none;">
+    <div id="tag-div-child">
+      <input type="text" name="members-name" value="">
+      <button name="members-update" onclick="membersUpdate(index)">Update</button>
+      <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+    </div>
+  </div>
   <form method="get" onsubmit="membersCreate(this); return false;">
     <input type="text" name="name-text" value="" placeholder="Name">
     <input type="hidden" name="name-hidden" value="숨겨진값">
