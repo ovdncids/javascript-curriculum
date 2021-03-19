@@ -4,9 +4,9 @@
 
 * [내장 함수](InnerFunctions.md)
 
-* [Paging](Paging.md)
+* [Ajax](Ajax.md)
 
-* [CRUD](CRUD.md)
+* [Paging](Paging.md)
 
 * [Bootstrap](Bootstrap.md)
 
