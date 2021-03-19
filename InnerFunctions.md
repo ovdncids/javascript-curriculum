@@ -378,7 +378,7 @@ form/membersNoRefresh.js
 tagPre.innerHTML = '';
 for (let index in members) {
   tagPre.innerHTML += '<input type="text" name="members-name" value="' + members[index] + '">';
-  tagPre.innerHTML += '<button onClick="membersDelete(' + index + ')">Delete</button>';
+  tagPre.innerHTML += '<button onclick="membersDelete(' + index + ')">Delete</button>';
   tagPre.innerHTML += '\n';
 }
 ```
@@ -391,7 +391,7 @@ const membersDelete = function(index) {
 #### Update
 form/membersNoRefresh.js
 ```js
-tagPre.innerHTML += '<button onClick="membersUpdate(' + index + ')">Update</button>';
+tagPre.innerHTML += '<button onclick="membersUpdate(' + index + ')">Update</button>';
 ```
 
 ```diff
