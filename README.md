@@ -6,18 +6,12 @@
 
 * [Ajax](Ajax.md)
 
-* [Paging](Paging.md)
-
-* [Bootstrap](Bootstrap.md)
-
 * [Callback Function](CallbackFunction.md)
+
+* [Paging](Paging.md)
 
 * [Promise](Promise.md)
 
 * [Babel](Babel.md)
 
-* [Key Popup](KeyPopup.md)
-
-* [Holding Long Key](HoldingLongKey.md)
-
-* [jQuery Functions](jQueryFunctions.md)
+* [Bootstrap](Bootstrap.md)
