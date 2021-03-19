@@ -584,10 +584,16 @@ const activeElement = document.activeElement;
 ```html
 <input type="text" onkeyup="console.log(event)" />
 ```
+```js
+event.target.value;
+```
 
 ### onchange
 ```html
 <input type="date" onchange="console.log(event)" />
+```
+```js
+event.currentTarget.value;
 ```
 
 ## Orderby Icon
