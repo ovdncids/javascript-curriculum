@@ -21,14 +21,20 @@ const membersCreate = function(form) {
 };
 
 const membersRead = function() {
-  const tagPre = document.getElementById('tag-pre');
-  tagPre.innerHTML = '';
+  const tagDivParent = document.getElementById('tag-div-parent');
+  const tagDivChild = document.getElementById('tag-div-child');
+  tagDivParent.innerHTML = '';
   for (let index in members) {
-    tagPre.innerHTML += '<input type="text" name="members-name" value="' + members[index] + '">';
-    tagPre.innerHTML += '<button onclick="membersUpdate(' + index + ')">Update</button>';
-    tagPre.innerHTML += '<button onclick="membersDelete(' + index + ')">Delete</button>';
-    tagPre.innerHTML += '\n';
+    const newDivChild = tagDivChild.cloneNode(true);
+    tagDivParent.appendChild(newDivChild);
+    const membersNameObject = document.getElementsByName('members-name')[index];
+    const membersUpdateObject = document.getElementsByName('members-update')[index];
+    const membersDeleteObject = document.getElementsByName('members-delete')[index];
+    membersNameObject.value = members[index];
+    membersUpdateObject.index = index;
+    membersDeleteObject.index = index;
   }
+  console.log('Readed', members);
   return members;
 };
 
