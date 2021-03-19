@@ -241,7 +241,7 @@ const membersUpdate = function(index) {
   403: 인증관련 에러 (로그인이 제대로 되지 않은 경우)
   500: backend쪽 에러 (backend 문법 오류 또는 DB가 멈춰 있는 경우)
   ```
-* ❔ 공통 부분 함수화 하기
+* ❔ 공통 부분 함수화 하기(리팩토링)
   ```js
   const ajax = function(method, url, callback) {
     ...
