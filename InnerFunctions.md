@@ -216,7 +216,7 @@ form/membersForm.html
 ```html
 <form method="get" action="./form.html">
   <input type="text" name="name-text" value="초기값" placeholder="명령을 입력 하세요.">
-  <input type="hidden" name="name-hidden" id="form-hidden" value="숨겨진값">
+  <input type="hidden" name="name-hidden" value="숨겨진값">
   <input type="submit" value="전송">
 </form>
 ```
@@ -382,6 +382,7 @@ for (let index in members) {
   tagPre.innerHTML += '<button onclick="membersDelete(' + index + ')">Delete</button>';
   tagPre.innerHTML += '\n';
 }
+console.log('Readed', members);
 ```
 ``` diff
 const membersDelete = function(index) {
@@ -404,8 +405,8 @@ tagPre.innerHTML += '<button onclick="membersUpdate(' + index + ')">Update</butt
 ```
 ```js
 const membersUpdate = function(index) {
-  const member = ❔ 문제
-  members[index] = member;
+  const name = ❔ 문제
+  members[index] = name;
   membersSet();
   return membersRead();
 };
@@ -468,6 +469,7 @@ const membersRead = function() {
     const newDivChild = tagDivChild.cloneNode(true);
     tagDivParent.appendChild(newDivChild);
   }
+  console.log('Readed', members);
   return members;
 };
 ```
