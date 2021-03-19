@@ -649,8 +649,8 @@ const membersDelete = function(index) {
 
 4. Update
 ```js
-const membersUpdate = function(index, name) {
-  members[index] = name;
+const membersUpdate = function(index, member) {
+  members[index] = member;
   return members;
 };
 ```
