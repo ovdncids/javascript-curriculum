@@ -243,7 +243,7 @@ const membersUpdate = function(index) {
   ```
 * ❔ 공통 부분 함수화 하기(리팩토링)
   ```js
-  const ajax = function(method, url, callback) {
+  const ajax = function(method, url, data, callback) {
     ...
   };
   ```
