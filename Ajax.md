@@ -37,8 +37,6 @@ ajax/basicTemplate.html
 </div>
 ```
 
-### VSCode 확장 `Live Server` 설치
-
 ajax/basicAjax.html
 ```html
 <body>
@@ -69,5 +67,5 @@ const ajaxTest = function() {
 };
 </script>
 ```
+* VSCode 확장 `Live Server` 설치
 * ❔ `xhrObject.open` url을 `./basicTemplate2.html`로 바꾼다면
-
