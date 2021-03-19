@@ -10,6 +10,8 @@
 
 * [Paging](Paging.md)
 
+* [Event](Event.md)
+
 * [Promise](Promise.md)
 
 * [Babel](Babel.md)
