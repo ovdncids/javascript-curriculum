@@ -14,7 +14,7 @@ const membersCreate = function(form) {
 };
 
 const membersRead = function() {
-  const successFunction = function(response) {
+  axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     const data = response.data;
     const members = data.members;
     const tagDivParent = document.getElementById('tag-div-parent');
@@ -33,8 +33,7 @@ const membersRead = function() {
       membersDeleteObject.index = index;
     }
     console.log('Readed', members);
-  };
-  axios.get('http://localhost:3100/api/v1/members').then(successFunction);
+  });
 };
 
 const membersDelete = function(index) {
