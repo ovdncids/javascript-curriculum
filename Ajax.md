@@ -253,4 +253,6 @@ const membersUpdate = function(index) {
 
 ## Axios
 https://github.com/axios/axios
+* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAxios.html)
 * ❔ 공통 부분 함수화를 Axios로 수정 하기
+* ❔ `membersRead`안에 `successFunction` 상수를 삭제하고, 해당 `함수`를 `.then()` 안에 넣기
