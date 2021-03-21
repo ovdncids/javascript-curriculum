@@ -338,7 +338,7 @@ const nameTextObject = nameTextObjects[0];
   ```
 </details>
 
-* ❔ 문제: 문제: 다음을 한줄로 표현 하라 (`nameTextObjects` 상수는 삭제)
+* ❔ 문제: 다음을 한줄로 표현 하라 (`nameTextObjects` 상수는 삭제)
   ```js
   const nameTextObjects = document.getElementsByName('name-text');
   const nameTextObject = nameTextObjects[0];
