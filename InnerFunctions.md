@@ -267,8 +267,8 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/ev
 ### pre 태그, document.getElementById
 form/membersForm.html
 ```diff
-- <script src="./form.js"></script>
-+ <script defer src="./form.js"></script>
+- <script src="./membersForm.js"></script>
++ <script defer src="./membersForm.js"></script>
 ```
 ```html
 <pre id="tag-pre"></pre>
