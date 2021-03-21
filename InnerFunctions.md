@@ -214,7 +214,7 @@ form/membersForm.html
 
 #### from 태그 넣기 (body 태그 안에 넣기)
 ```html
-<form method="get" action="./form.html">
+<form method="get" action="./membersForm.html">
   <input type="text" name="name-text" value="초기값" placeholder="명령을 입력 하세요.">
   <input type="hidden" name="name-hidden" value="숨겨진값">
   <input type="submit" value="전송">
@@ -234,7 +234,7 @@ form/membersForm.html
 ```
 * ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기
 ```html
-<form method="get" action="./form.html" onsubmit="return membersSubmit(this);">
+<form method="get" action="./membersForm.html" onsubmit="return membersSubmit(this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
