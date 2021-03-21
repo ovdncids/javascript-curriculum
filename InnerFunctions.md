@@ -306,7 +306,7 @@ for (let index in members) {
 ```js
 const url = new URL(window.location);
 const queryString = url.searchParams;
-const nameText  = queryString.get('name-text');
+const nameText = queryString.get('name-text');
 const nameHiddens = queryString.getAll('name-hidden');
 const nameHidden = nameHiddens[0];
 
