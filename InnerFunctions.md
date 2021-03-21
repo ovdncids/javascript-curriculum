@@ -277,7 +277,7 @@ form/membersForm.html
 form/membersForm.js
 ```diff
 - for (let index in members) {
--   document.write(members[index] + ' ');
+-   document.writeln(members[index]);
 - }
 ```
 ```js
