@@ -167,7 +167,7 @@ html/index.html
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
 ```html
-<script defer src="./index1.js"></script>
+<script async src="./index1.js"></script>
 <script src="./index2.js"></script>
 <script src="./index3.js"></script>
 ```
@@ -200,13 +200,14 @@ console.log('html bottom');
 </script>
 ```
 
-* ❕ `defer` 설명
 * ❕ `싱글 쓰레드(Single Thread)`, `멀티 쓰레드(Multi Thread)` 설명
 * ❕ `동기(Sync)`, `비동기(Async)` 설명
-```html
-<script async src="./index1.js"></script>
-```
 * ❕ 따라서 `async`는 사용하지 않는다.
+```diff
+- <script async src="./index1.js"></script>
++ <script defer src="./index1.js"></script>
+```
+* ❕ `defer` 설명
 * ❔ `index1.js`, `index2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
