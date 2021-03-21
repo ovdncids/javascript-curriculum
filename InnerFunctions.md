@@ -207,7 +207,7 @@ console.log('html bottom');
 <script async src="./index1.js"></script>
 ```
 * ❕ 따라서 `async`는 사용하지 않는다.
-* ❔ `form1.js`, `form2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
+* ❔ `index1.js`, `index2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
 form/membersForm.html
@@ -229,8 +229,8 @@ form/membersForm.html
 
 #### onsubmit 메소드 추가
 ```diff
-- <form method="get" action="./form.html">
-+ <form method="get" action="./form.html" onsubmit="return false;">
+- <form method="get" action="./membersForm.html">
++ <form method="get" action="./membersForm.html" onsubmit="return false;">
 ```
 * ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기
 ```html
