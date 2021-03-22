@@ -543,6 +543,7 @@ const returned1 = func1('parameter1', 'parameter2');
 * `func1(1, 2)` 실행해 보기
 * ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
 * ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
+* ❔ `parameter1`, `parameter2` 둘다 넘기지 않는다면 `sum1`의 값은?
 * ❔ `argument2`를 지운다면 `sum1`의 값은?
 
 2. 인수에 자료형 데어터 넘기기
