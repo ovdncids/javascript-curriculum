@@ -533,7 +533,7 @@ const 반환확인상수 = 함수명(인수1, 인수2, ...);
 * 예제
 ```js
 const func1 = function(argument1, argument2) {
-  const sum1 = argument1 + argument2
+  const sum1 = argument1 + argument2;
   return sum1;
 };
 const returned1 = func1('parameter1', 'parameter2');
