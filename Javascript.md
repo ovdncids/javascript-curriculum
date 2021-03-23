@@ -544,7 +544,9 @@ const returned1 = func1('parameter1', 'parameter2');
 * ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
 * ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
 * ❔ `parameter1`, `parameter2` 둘다 넘기지 않는다면 `sum1`의 값은?
+* `argument1`은 함수 내부적으로 `let argument1 = 인수1` 이렇게 작동 한다.
 * ❔ `argument2`를 지운다면 `sum1`의 값은?
+* ❔ `argument1`, `argument2` 둘다 지운다면 `sum1`의 값은?
 
 2. 인수에 자료형 데어터 넘기기
 ```js
