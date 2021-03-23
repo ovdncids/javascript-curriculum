@@ -299,8 +299,10 @@ let arr2 = [];
 // quiz1
 if (arr1) {
   const result = '참';
+  console.log(result);
 } else {
   const result = '거짓';
+  console.log(result);
 }
 const quiz2 = arr1 === arr2;
 const quiz3 = arr1[5];
