@@ -226,7 +226,7 @@ form/membersForm.html
 
 #### from 태그 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
-* form/membersForm.js <- https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html
+* form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
 
 #### onsubmit 메소드 추가
 ```diff
@@ -360,10 +360,10 @@ nameTextObject.focus();
 
 ### 새로 고침 없이 회원 CRUD
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/membersNoRefresh.html)
-* form/membersNoRefresh.html <- https://ovdncids.github.io/javascript-curriculum/form/membersForm.html
-* form/membersNoRefresh.js <- https://ovdncids.github.io/javascript-curriculum/form/membersForm.js
+* form/membersNoRefresh.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.html
+* form/membersNoRefresh.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.js
 
-#### Delete
+#### Read
 form/membersNoRefresh.html
 ```diff
 - <script defer src="./membersForm.js"></script>
@@ -385,6 +385,8 @@ for (let index in members) {
 }
 console.log('Readed', members);
 ```
+
+#### Delete
 ``` diff
 const membersDelete = function(index) {
 - return members;
