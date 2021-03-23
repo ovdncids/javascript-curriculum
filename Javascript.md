@@ -165,7 +165,7 @@ let roundBracket1 = (1 === '1');
 let roundBracket2 = ((1 + 2) * 3);
 ```
 * ❕ `소괄호 연산자`는 `4칙 연산자`보다 우선 순위를 갖는다.
-* ❔ 문제: `소괄호 연산자` 안에서 `true`와 `false`를 `일치 연산자`로 연산 후에 상수 'y'에 넣고, `y`를 `console.log`로 찍어 보기
+* ❔ 문제: `소괄호 연산자` 안에서 `true`와 `false`를 `일치 연산자`로 연산 후에 상수 `y`에 넣고, `y`를 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -296,19 +296,19 @@ const lastValue = array2[lastIndex];
 ```js
 let arr1 = [];
 let arr2 = [];
-const quiz1 = arr1;
-if (quiz1) {
+// quiz1
+if (arr1) {
   const result = '참';
 } else {
   const result = '거짓';
 }
 const quiz2 = arr1 === arr2;
-const quiz3 = arr1[1];
+const quiz3 = arr1[5];
+// quiz4
 arr1[9] = 10;
-const quiz4 = arr1.length;
 ```
 * ❔ `빈 배열`은 참일까 거짓일까?
-* ❔ 문제: `array1`와 `array2는` 같을까?
+* ❔ 문제: `arr1`와 `arr2`는 같을까?
 * <details><summary>정답</summary>
 
   ```
