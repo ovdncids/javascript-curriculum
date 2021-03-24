@@ -313,6 +313,7 @@ arr1[9] = 10;
 * ❔ 문제: `arr1`와 `arr2`는 같을까?
 * <details><summary>정답</summary>
 
+  https://ovdncids.github.io/javascript-curriculum/images/memory.png
   ```
   배열은 선언과 동시에 별도의 `메모리 공간`에 존재하고, 변수는 단지 해당 배열이 있는 `메모리 주소`를 가지고 있다.
   따라서 `arr1`과 `arr2`는 서로 다른 배열의 주소를 가지므로 같지 않다.
@@ -686,7 +687,7 @@ const 오브젝트명 = {
 }
 ```
 
-https://ovdncids.github.io/javascript-curriculum/images/Photo_2021-03-12-21-45-29.jpeg
+https://ovdncids.github.io/javascript-curriculum/images/object.jpeg
 
 * 예제
 ```js
