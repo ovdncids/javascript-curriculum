@@ -38,7 +38,7 @@ console.log(v1, v2, v3);
   ```
   제어문 이름으로 사용 불가 (if, for, switch, while, ...)
   연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
-  자료형 또는 예약어 사용 불가 (true,  false, null, NaN, delete, ...)
+  자료형 또는 예약어 사용 불가 (true, false, null, NaN, delete, ...)
   숫자를 앞으로 사용 불가 (1a, 2b, ...)
   대소문자 구분 (lowUP, LowUp, LOWUP)
   주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
@@ -348,7 +348,12 @@ const avg = total1 / testArray1.length;
 
 * `testArray1` 홀수만 더하기
 ```js
-const even1 = testArray1[0] + testArray1[2] + testArray1[4];
+const odd1 = testArray1[0] + testArray1[2] + testArray1[4];
+```
+
+* `testArray1` 짝수만 더하기
+```js
+const even1 = testArray1[1] + testArray1[3];
 ```
 
 * 홀수만 지우기
