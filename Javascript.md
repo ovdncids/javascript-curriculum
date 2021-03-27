@@ -563,7 +563,7 @@ const func2 = function(argument1) {
     const compare1 = scriptConst2 === argument1;
     argument1 = 'b';
     const compare2 = scriptConst2 === argument1;
-}
+};
 func2(scriptConst2);
 ```
 * ❔ `compare2`는 `참`일까, `거짓`일까?
@@ -575,7 +575,7 @@ const func3 = function(argument1) {
     const compare1 = scriptConst3 === argument1;
     argument1.push('a');
     const compare2 = scriptConst3 === argument1;
-}
+};
 func3(scriptConst3);
 ```
 * ❔ `compare2`는 `참`일까, `거짓`일까?
@@ -587,7 +587,7 @@ const func4 = function(argument1) {
     const compare1 = scriptConst4 === argument1;
     argument1 = function() {};
     const compare2 = scriptConst4 === argument1;
-}
+};
 func4(scriptConst4);
 ```
 * ❔ `compare2`는 `참`일까, `거짓`일까?
