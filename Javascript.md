@@ -405,7 +405,7 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
 }
 ```
 
-* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `1`부터 `10` 사이에 `홀수`만 `console.log`로 찍어 보기
+* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `1`부터 `10` 사이에 `홀수`만 `실행문`에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -415,7 +415,7 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
    ```
 </details>
 
-* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `2`부터 `10` 사이에 `짝수`만 `console.log`로 찍어 보기
+* ❔ 문제: `초기문`, `조건문`, `증감문`을 이용하여 `2`부터 `10` 사이에 `짝수`만 `실행문`에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
@@ -452,7 +452,7 @@ console.log(index6);
 </details>
 
 * ❔ 문제: `total1`의 `평균` 값을 구해 `avg1` 상수에 넣고, `avg1`을 `console.log`로 찍어 보기
-* ❕ 힌트: 평균으로 나눌 `5`값을 얻는 과정이 중요 (변수 또는 상수를 여러개 사용해도 무관)
+* ❕ 힌트: 평균으로 나눌 `5`값을 얻는 과정이 중요 (변수 또는 상수를 여러개 사용해도 무관, 사직연산 가능)
 * <details><summary>정답</summary>
 
   ```js
@@ -574,6 +574,7 @@ const scriptConst3 = [];
 const func3 = function(argument1) {
     const compare1 = scriptConst3 === argument1;
     argument1.push('a');
+    scriptConst3.push('b');
     const compare2 = scriptConst3 === argument1;
 };
 func3(scriptConst3);
