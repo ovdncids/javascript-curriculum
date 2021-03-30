@@ -709,9 +709,10 @@ https://ovdncids.github.io/javascript-curriculum/images/object.jpeg
 ```js
 const object1 = {};
 const object2 = {
-  key1: 'value1',
+  key1: '값1',
   key2: [1, 2, 3],
   key3: function() {
+    // console.log(this.key1);
     return this;
   },
   key4: {
@@ -746,7 +747,7 @@ delete object1.key3;
 * ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 실행 해보기
 * ❔ `object2.key2` 배열의 `length` 구하기
 * ❔ `object2.key3` 함수 실행 시키기
-* ❔ `this`의 개념 설명
+* ❔ `this`의 개념 설명, `// console.log(this.key1);` 주석을 푼다면
 * ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
 
 * ❕ `키`이름에 대한 규칙
@@ -757,9 +758,11 @@ delete object1.key3;
 
 ### 오브젝트의 for in문
 ```js
-for (let key5 in object2) {
-  const value5 = object2[key5];
-  console.log(key5, value5);
+for (const c1 in object2) {
+  const value1 = object2[c1];
+  console.log(c1);
+  console.log(value1);
+  console.log(object2.c1);
 }
 ```
 
