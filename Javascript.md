@@ -555,6 +555,16 @@ const returned1 = func1('parameter1', 'parameter2');
 * `argument1`은 함수 내부적으로 `let argument1 = 인수1` 이렇게 작동 한다.
 * ❔ `argument2`를 지운다면 `sum1`의 값은?
 * ❔ `argument1`, `argument2` 둘다 지운다면 `sum1`의 값은?
+* ❔ 문제: `console.log('함수 실행');`이라는 실행문을 가진 `함수`를 상수 `f1`에 넣고, 해당 `함수` 실행 시키기
+* <details><summary>정답</summary>
+
+  ```js
+  const f1 = function() {
+    console.log('함수 실행');
+  };
+  f();
+  ```
+</details>
 
 2. 인수에 자료형 데어터 넘기기
 ```js
@@ -736,7 +746,7 @@ delete object1.key3;
 * ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 실행 해보기
 * ❔ `object2.key2` 배열의 `length` 구하기
 * ❔ `object2.key3` 함수 실행 시키기
-* ❔  this 실행 시키기, this의 개념 설명
+* ❔ `this`의 개념 설명
 * ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
 
 * ❕ `키`이름에 대한 규칙
