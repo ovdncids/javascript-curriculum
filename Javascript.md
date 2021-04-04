@@ -817,9 +817,10 @@ try {
 ```js
 try {
   t1;
+  console.log('진행 가능1?');
 } catch(error) {
   console.warn(error);
   console.error(error);
 }
-console.log('진행 가능');
+console.log('진행 가능2?');
 ```
