@@ -727,22 +727,22 @@ const object2 = {
 // 오브젝트 Create
 object1.key1 = 1;
 object1.key2 = '2';
-object1.key3 = '삼';
+object1['key3'] = '삼';
 
 // 오브젝트 Read
 const o1 = object1.key1;
-const o2 = object1.key2;
+const o2 = object1['key2'];
 const o3 = object1.key3;
 
 // 오브젝트 Update
-object1.key1 = [];
+object1['key1'] = [];
 object1.key2 = function() {};
 object1.key3 = {};
 
 // 오브젝트 Delete
 delete object1.key1;
 delete object1.key2;
-delete object1.key3;
+delete object1['key3'];
 ```
 * ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 실행 해보기
 * ❔ `object2.key2` 배열의 `length` 구하기
