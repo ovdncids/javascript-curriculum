@@ -208,6 +208,7 @@ console.log('html bottom');
 + <script defer src="./index1.js"></script>
 ```
 * ❕ `defer` 설명
+* ❔ `defer` 다른 `.js` 파일에 적용 한다면
 * ❔ `index1.js`, `index2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
