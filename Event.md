@@ -16,7 +16,7 @@ event.currentTarget.value;
 ```
 
 ## activeElement
-* focus된 엘리먼트를 반환한다. focus가 된곳이 없다면 <Body> 또는 <html>을 반환한다.
+* focus된 엘리먼트를 반환한다. focus가 된곳이 없다면 `<Body>` 또는 `<html>`을 반환한다.
 ```js
 const activeElement = document.activeElement;
 ```
