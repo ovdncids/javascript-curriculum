@@ -1,5 +1,7 @@
 # WebSocket
-https://github.com/websockets/ws
+* https://github.com/websockets/ws
+* https://poiemaweb.com/nodejs-socketio
+* https://sub0709.tistory.com/40
 
 ## 설치
 ```sh
@@ -54,7 +56,7 @@ ws.onclose = function(event) {
 };
 ```
 
-## Others
+## Server broadcast
 * 해당 Client 빼고 나머지 Clients에게 메시지를 보내기
 
 server.js
