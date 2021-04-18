@@ -175,19 +175,19 @@ html/index.html
 
 #### javascript 실행 순서 확인 하기
 html/index1.js
-```
+```js
 debugger;
 console.log('index1.js');
 ```
 
 html/index2.js
-```
+```js
 debugger;
 console.log('index2.js');
 ```
 
 html/index3.js
-```
+```js
 debugger;
 console.log('index3.js');
 ```
