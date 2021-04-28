@@ -1,4 +1,5 @@
-# 문제
+# Quiz
+## 문제1
 quiz1.html
 ```html
 <!DOCTYPE html>
@@ -6,7 +7,7 @@ quiz1.html
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz1</title>
   <script defer src="./quiz1.js"></script>
 </head>
 <body>
