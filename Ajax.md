@@ -84,6 +84,9 @@ node index.js
 Ctrl + c
 ```
 
+* ❕ `member`, `memberUpdate` 구조를 `스키마` 또는 `모델`이라고 한다.
+
+
 ### Frontend Server
 * [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAJAX.html)
 * ajax/membersAJAX.html <- https://ovdncids.github.io/javascript-curriculum/form/membersObject.html
