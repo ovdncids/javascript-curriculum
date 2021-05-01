@@ -232,11 +232,11 @@ form/membersForm.html
 #### onsubmit 메소드 추가
 ```diff
 - <form method="get" action="./membersForm.html">
-+ <form method="get" action="./membersForm.html" onsubmit="return false;">
++ <form onsubmit="return false;">
 ```
 * ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기
 ```html
-<form method="get" action="./membersForm.html" onsubmit="return membersSubmit(this);">
+* <form onsubmit="return membersSubmit(this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
@@ -263,6 +263,24 @@ const membersSubmit = function(form) {
 ```
 * `eval` 설명
 * ❔ `eval` 대신 `JSON.parse`를 사용한다면
+
+#### Input.value CRUD
+* `nameTextObject` 상수에서 `break point` 걸고, Console 창에서 실행
+```js
+// Input 객체 Create
+nameTextObject.value = 'abc';
+
+// Input 객체 Read
+nameTextObject.a1 = nameTextObject.value;
+nameTextObject.a2 = nameTextObject.value;
+
+// Input 객체 Update
+nameTextObject.value = 'membersDelete(0)';
+
+// Input 객체 Delete
+delete nameTextObject.value;
+nameTextObject.value = '';
+```
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
@@ -303,6 +321,26 @@ for (let index in members) {
   tagPre.innerHTML += members[index] + '\n';
   ```
 </details>
+
+#### Pre.innerHTML CRUD
+* Console 창에서 실행
+```js
+const tagPre = document.getElementById('tag-pre');
+
+// Pre 객체 Create
+tagPre.innerHTML = 'abc';
+
+// Pre 객체 Read
+tagPre.a1 = tagPre.innerHTML;
+tagPre.a2 = tagPre.innerHTML;
+
+// Pre 객체 Update
+tagPre.innerHTML = 'membersDelete(0)';
+
+// Pre 객체 Delete
+delete tagPre.innerHTML;
+tagPre.innerHTML = '';
+```
 
 ### Query string, document.getElementsByName
 ```js
