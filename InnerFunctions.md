@@ -217,8 +217,8 @@ form/membersForm.html
 #### from 태그 넣기 (body 태그 안에 넣기)
 ```html
 <form method="get" action="./membersForm.html">
-  <input type="text" name="name-text" value="초기값" placeholder="명령을 입력 하세요.">
-  <input type="hidden" name="name-hidden" value="숨겨진값">
+  <input type="text" name="input-text" value="초기값" placeholder="명령을 입력 하세요.">
+  <input type="hidden" name="input-hidden" value="숨겨진값">
   <input type="submit" value="전송">
 </form>
 ```
@@ -250,9 +250,9 @@ form/membersForm.html
 ```
 ```js
 const membersSubmit = function(form) {
-  const nameTextObject = form['name-text'];
+  const inputTextObject = form['input-text'];
   try {
-    const evalReturn = eval(nameTextObject.value);
+    const evalReturn = eval(inputTextObject.value);
     console.log(evalReturn);
   } catch(error) {
     console.error(error);
@@ -265,21 +265,21 @@ const membersSubmit = function(form) {
 * ❔ `eval` 대신 `JSON.parse`를 사용한다면
 
 #### Input.value CRUD
-* `nameTextObject` 상수에서 `break point` 걸고, Console 창에서 실행
+* `inputTextObject` 상수에서 `break point` 걸고, Console 창에서 실행
 ```js
 // Input 객체 Create
-nameTextObject.value = 'abc';
+inputTextObject.value = 'abc';
 
 // Input 객체 Read
-nameTextObject.a1 = nameTextObject.value;
-nameTextObject.a2 = nameTextObject.value;
+inputTextObject.a1 = inputTextObject.value;
+inputTextObject.a2 = inputTextObject.value;
 
 // Input 객체 Update
-nameTextObject.value = 'membersDelete(0)';
+inputTextObject.value = 'membersDelete(0)';
 
 // Input 객체 Delete
-delete nameTextObject.value;
-nameTextObject.value = '';
+delete inputTextObject.value;
+inputTextObject.value = '';
 ```
 
 https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
@@ -346,12 +346,12 @@ tagPre.innerHTML = '';
 ```js
 const url = new URL(window.location);
 const queryString = url.searchParams;
-const nameText = queryString.get('name-text');
-const nameHiddens = queryString.getAll('name-hidden');
-const nameHidden = nameHiddens[0];
+const nameText = queryString.get('input-text');
+const inputHiddens = queryString.getAll('input-hidden');
+const inputHidden = inputHiddens[0];
 
-const nameTextObjects = document.getElementsByName('name-text');
-const nameTextObject = nameTextObjects[0];
+const inputTextObjects = document.getElementsByName('input-text');
+const inputTextObject = inputTextObjects[0];
 ```
 * ❕ `new` 키워드는 `클래스`를 바탕으로 `오브젝트`를 만든다.
 * <details><summary>클래스</summary>
@@ -374,27 +374,27 @@ const nameTextObject = nameTextObjects[0];
 * <details><summary>정답</summary>
 
   ```js
-  nameTextObject.value = nameText;
+  inputTextObject.value = nameText;
   ```
 </details>
 
-* ❔ 문제: 다음을 한줄로 표현 하라 (`nameTextObjects` 상수는 삭제)
+* ❔ 문제: 다음을 한줄로 표현 하라 (`inputTextObjects` 상수는 삭제)
   ```js
-  const nameTextObjects = document.getElementsByName('name-text');
-  const nameTextObject = nameTextObjects[0];
+  const inputTextObjects = document.getElementsByName('input-text');
+  const inputTextObject = inputTextObjects[0];
   ```
 * <details><summary>정답</summary>
 
   ```js
-  const nameTextObject = document.getElementsByName('name-text')[0];
+  const inputTextObject = document.getElementsByName('input-text')[0];
   ```
   * ❕ `document.getElementsByName` 메소드는 항상 `배열`을 반환한다.
 </details>
 
 ### focus, blur
 ```js
-nameTextObject.focus();
-// nameTextObject.blur();
+inputTextObject.focus();
+// inputTextObject.blur();
 ```
 
 ### 새로 고침 없이 회원 CRUD
@@ -471,7 +471,7 @@ form/membersNoRefresh.js
 ```
 ```js
 const membersCreate = function(form) {
-  const nameTextObject = form['name-text'];
+  const inputTextObject = form['input-text'];
   members.push(❔ 문제);
   membersSet();
   return membersRead();
@@ -534,8 +534,8 @@ membersDeleteObject.index = index;
 #### Create
 form/membersNoRefresh.html
 ```diff
-- <input type="text" name="name-text" value="" placeholder="Name">
-- <input type="hidden" name="name-hidden" value="숨겨진값">
+- <input type="text" name="input-text" value="" placeholder="Name">
+- <input type="hidden" name="input-hidden" value="숨겨진값">
 ```
 ```html
 <input type="text" name="member-name" value="" placeholder="Name">
@@ -544,9 +544,9 @@ form/membersNoRefresh.html
 
 form/membersNoRefresh.js
 ```diff
-- const nameTextObject = form['name-text'];
-- members.push(nameTextObject.value);
-- nameTextObject.value = '';
+- const inputTextObject = form['input-text'];
+- members.push(inputTextObject.value);
+- inputTextObject.value = '';
 ```
 ```js
 const memberNameObject = form['member-name'];
