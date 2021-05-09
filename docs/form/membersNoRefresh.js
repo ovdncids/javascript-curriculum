@@ -1,21 +1,21 @@
 const url = new URL(window.location.href);
 const queryString = url.searchParams;
-const nameText  = queryString.get('name-text');
-const nameHiddens = queryString.getAll('name-hidden');
-const nameHidden = nameHiddens[0];
+const inputText  = queryString.get('input-text');
+const inputHiddens = queryString.getAll('input-hidden');
+const inputHidden = inputHiddens[0];
 
-const nameTextObject = document.getElementsByName('name-text')[0];
-nameTextObject.value = nameText;
-nameTextObject.focus();
+const inputTextObject = document.getElementsByName('input-text')[0];
+inputTextObject.value = inputText;
+inputTextObject.focus();
 
 const membersGet = sessionStorage.getItem('members');
 const membersLogical = membersGet || '[]';
 const members = JSON.parse(membersLogical);
 
 const membersCreate = function(form) {
-  const nameTextObject = form['name-text'];
-  members.push(nameTextObject.value);
-  nameTextObject.value = '';
+  const inputTextObject = form['input-text'];
+  members.push(inputTextObject.value);
+  inputTextObject.value = '';
   membersSet();
   return membersRead();
 };
