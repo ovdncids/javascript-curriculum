@@ -4,7 +4,7 @@ const inputText  = queryString.get('input-text');
 const inputHiddens = queryString.getAll('input-hidden');
 const inputHidden = inputHiddens[0];
 
-const inputTextObject = document.getElementsByName('name-text')[0];
+const inputTextObject = document.getElementsByName('input-text')[0];
 inputTextObject.value = inputText;
 inputTextObject.focus();
 
@@ -44,7 +44,7 @@ const membersSet = function() {
 };
 
 const membersSubmit = function(form) {
-  const inputTextObject = form['name-text'];
+  const inputTextObject = form['input-text'];
   try {
     const evalReturn = eval(inputTextObject.value);
     console.log(evalReturn);
