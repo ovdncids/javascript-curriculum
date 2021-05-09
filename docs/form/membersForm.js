@@ -1,12 +1,12 @@
 const url = new URL(window.location.href);
 const queryString = url.searchParams;
-const nameText  = queryString.get('name-text');
-const nameHiddens = queryString.getAll('name-hidden');
-const nameHidden = nameHiddens[0];
+const inputText  = queryString.get('input-text');
+const inputHiddens = queryString.getAll('input-hidden');
+const inputHidden = inputHiddens[0];
 
-const nameTextObject = document.getElementsByName('name-text')[0];
-nameTextObject.value = nameText;
-nameTextObject.focus();
+const inputTextObject = document.getElementsByName('name-text')[0];
+inputTextObject.value = inputText;
+inputTextObject.focus();
 
 const membersGet = sessionStorage.getItem('members');
 const membersLogical = membersGet || '[]';
@@ -44,9 +44,9 @@ const membersSet = function() {
 };
 
 const membersSubmit = function(form) {
-  const nameTextObject = form['name-text'];
+  const inputTextObject = form['name-text'];
   try {
-    const evalReturn = eval(nameTextObject.value);
+    const evalReturn = eval(inputTextObject.value);
     console.log(evalReturn);
   } catch(error) {
     console.error(error);
