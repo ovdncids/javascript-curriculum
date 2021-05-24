@@ -10,6 +10,8 @@
 
 * [Paging](Paging.md)
 
+* [Sort](Sort.md)
+
 * [Event](Event.md)
 
 * [Promise](Promise.md)
