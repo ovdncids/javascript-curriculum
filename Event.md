@@ -48,3 +48,13 @@ document.getElementById('').classList[0];
 // 클래스 개수
 document.getElementById('').classList.length;
 ```
+
+# Form
+## input에서 엔터 눌렀을 때 button의 onclick이 실행 되는 경우
+```html
+<form>
+  <input>
+  <button type="button" onclick="alert('실행');">button</button>
+  <!-- button 태그에 type="button"이 없으면 input 태그 안에서 enter을 누르면 alert('실행')이 실행 된다 -->
+</form>
+```
