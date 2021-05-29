@@ -30,21 +30,22 @@ Promise.all([promise1, promise2]).then(function(result) {
 
 ## Axios 대입
 ```js
-const promise1 = new Promise(function(resolve, reject) {
+const promise = []
+promise[0] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
 })
-const promise2 = new Promise(function(resolve, reject) {
+promise[1] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
 })
-Promise.all([promise1, promise2]).then(function(result) {
+Promise.all(promise).then(function(result) {
   console.log(result);
 }).catch(function(error) {
   console.error(error);
