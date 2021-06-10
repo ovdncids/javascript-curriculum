@@ -71,6 +71,7 @@ console.log(calc / 10);
 ```js
 let a, b, c;
 ```
+* ❔ 문제: console.log(a); 한다면
 * ❔ 문제: 한줄로 변수 `a, b, c`에 각각 `1, 2, 3` 넣어 보기
 * <details><summary>정답</summary>
 
