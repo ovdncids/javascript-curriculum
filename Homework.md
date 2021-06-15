@@ -1,7 +1,7 @@
 # Homework
 
 ## 변수, 상수, 연산자
-### 동영상
+### 동영상 (수코딩 #01 ~ #08)
 * https://www.youtube.com/watch?v=klYF4Ngz-OE
 * https://www.youtube.com/watch?v=VrvGyDU6cYA
 * https://www.youtube.com/watch?v=ifhnOyoMX3U
