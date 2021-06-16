@@ -20,8 +20,8 @@
 
 4. 출력할 문구중에 일정 부분만 바꾸어서 출력하고 싶다. 다음을 완성 하시오.
     ```js
-    const stringFirst = "올해 총 카드 사용 금액은 ";
-    const stringLast = " 입니다.";
+    const stringFirst = '올해 총 카드 사용 금액은 ';
+    const stringLast = ' 입니다.';
     let stringChange = ??;
     ```
     ```
@@ -30,18 +30,31 @@
     올해 총 카드 사용 금액은 이천만원 입니다.
     ```
 
-5. 주어진 상수만 사용하여 다음과 같이 출력 하시오.
+5. 주어진 상수와 연산자를 사용하여 다음과 같이 출력 하시오.
     ```js
-    const string1 = "곱하기 ";
-    const string2 = "는 ";
-    const string3 = " 이다.";
+    const string1 = '곱하기 ';
+    const string2 = '는 ';
+    const string3 = ' 이다.';
     const ten = 10;
-    const four = 4;
+    const four = 5;
     ```
     ```
-    10곱하기 4는 40이다.
+    10곱하기 5는 50이다.
     ```
 
-6. 비교 연산자문제
+6. 주어진 상수와 연산자를 사용하여 다음과 같이 출력 하시오.
+    ```js
+    const string4 = '"';
+    const string5 = '는 ';
+    const string6 = '보다 같거나 크다';
+    const string7 = '라는 명제는 ';
+    const string8 = '이다.';
+    const nine = 9;
+    const three = 3;
+    ```
+    ```
+    "9는 3보다 같거나 크다"라는 명제는 true이다.
+    ```
+
 7. 논리 연산자문제
 
