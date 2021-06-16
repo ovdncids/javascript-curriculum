@@ -40,6 +40,7 @@ console.log(v1, v2, v3);
   연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
   자료형 또는 예약어 사용 불가 (true, false, null, NaN, delete, ...)
   숫자를 앞으로 사용 불가 (1a, 2b, ...)
+  영문, _, $, 숫자 조합으로 사용 (_a, $b, c1, ...)
   대소문자 구분 (lowUP, LowUp, LOWUP)
   주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
   ```
@@ -122,6 +123,25 @@ let result4 = string1 + string2;
   ```
 </details>
 
+* ❔ 문제: 프리랜서 개발자가 월 500만원을 받고 있다. 3.3% 원천징수를 때고 받는 실수령액과 세금을 계산하라.
+  ```js
+  const salary = 5000000;
+  const rate = 3.3;
+  let tax = ??;
+  let realSalary = ??;
+
+  힌트: 세금 계산식 = 급여 * 원천징수 / 100
+  ```
+* <details><summary>정답</summary>
+
+  ```js
+  const salary = 5000000;
+  const rate = 3.3;
+  let tax = salary * rate / 100;
+  let realSalary = salary - tax;
+  ```
+</details>
+
 2. ==(동등 연산자) 연산자와 ===(일치 연산자) 연산자의 차이
 ```js
 let char1 = true == 'true';
@@ -159,11 +179,14 @@ let compare4 = 4 >= 4;
 let logical1 = true && true;
 let logical2 = false || false;
 ```
+* `&&`를 사용하는 상황: 로그인이 되어 있고, 글수정 권한이 있는 아이디인 경우, 글수정 버튼 활성화
+* `||`를 사용하는 상황: 프리미엄 회원이거나 광고를 본 경우, 영상 시청 가능
 
 5. 소괄호() 연산자
 ```js
-let roundBracket1 = (1 === '1');
-let roundBracket2 = ((1 + 2) * 3);
+let roundBracket1 = 1 + 2 * 3;
+let roundBracket2 = (1 + 2) * 3;
+let roundBracket3 = ((1 + 2) * 3);
 ```
 * ❕ `소괄호 연산자`는 `4칙 연산자`보다 우선 순위를 갖는다.
 * ❔ 문제: `소괄호 연산자` 안에서 `true`와 `false`를 `일치 연산자`로 연산 후에 상수 `y`에 넣고, `y`를 `console.log`로 찍어 보기
@@ -203,7 +226,9 @@ if (if1 === 1) {
 }
 ```
 * 조건은 주로 연산자에서 `Boolean` 형식으로 받는다.
+* `if1` 값을 수정하여 `참2 또는 참3`이 나오게 만들기
 * `if1` 값을 수정하여 `참4`이 나오게 만들기
+* `if1` 값을 수정하여 `거짓`이 나오게 만들기
 
 2. 거짓 조건 비교 하기
 * ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`, `NaN`이고, 나머지는 모두 참인 조건이 된다.
