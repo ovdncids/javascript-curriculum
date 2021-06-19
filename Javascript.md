@@ -45,7 +45,7 @@ console.log(v1, v2, v3);
   주로 `Camel(낙타) 표기법`으로 사용 (carUse, busTake, ...)
   ```
 
-2. `debugger`에서 연산의 과정을 볼 수 있다.
+2. `디버깅 모드`에서 연산의 과정을 볼 수 있다.
 ```js
 debugger;
 console.log(1 + 2 + 3);
@@ -233,7 +233,6 @@ if (if1 === 1) {
 2. 거짓 조건 비교 하기
 * ❕ 거짓 조건은 `false`, `0`, `null`, `undefined`, `NaN`이고, 나머지는 모두 참인 조건이 된다.
 ```js
-debugger;
 let d1;
 // 선언 하고 값을 넣지 않으면 undefined
 let d2 = null;
