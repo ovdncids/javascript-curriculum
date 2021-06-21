@@ -101,7 +101,7 @@ console.log(c1, c2, c3);
 * 상수에 대한 CRUD 설명
 
 ## 연산자 (Operator)
-1. 문자에 대한 4칙 연산자 (`+, -, *, /`)
+1. 문자에 대한 사칙 연산자 (`+, -, *, /`)
 ```js
 let string1 = '1';
 let string2 = '2';
@@ -188,7 +188,7 @@ let roundBracket1 = 1 + 2 * 3;
 let roundBracket2 = (1 + 2) * 3;
 let roundBracket3 = ((1 + 2) * 3);
 ```
-* ❕ `소괄호 연산자`는 `4칙 연산자`보다 우선 순위를 갖는다.
+* ❕ `소괄호 연산자`는 `사칙 연산자`보다 우선 순위를 갖는다.
 * ❔ 문제: `소괄호 연산자` 안에서 `true`와 `false`를 `일치 연산자`로 연산 후에 상수 `y`에 넣고, `y`를 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
