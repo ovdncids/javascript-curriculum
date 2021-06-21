@@ -426,8 +426,9 @@ for (let index2 = 1; index2 <= 3; index2++) {
 3. continue
 ```js
 for (let index3 = 1; index3 <= 3; index3 += 1) {
-  console.log(index3);
-  continue;
+  if (index3 === 2) {
+    continue;
+  }
   console.log(index3);
 }
 ```
