@@ -1,4 +1,4 @@
-# Homework
+# Homework - 1st week
 
 ## 변수, 상수, 연산자
 ### 동영상 (수코딩 #01 ~ #08)
