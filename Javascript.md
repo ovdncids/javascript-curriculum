@@ -453,27 +453,40 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
   ```
 </details>
 
+### 홀수와 짝수 표현하기
+```js
+for (let index6 = 1; index6 <= 10; index6 += 1) {
+  if (index6 % 2 === 1) {
+    console.log(index6 + '은 홀수 입니다.');
+  } else {
+    console.log(index6 + '은 짝수 입니다.');
+  }
+  const oddEven = index6 % 2 ? '홀수' : '짝수';
+  console.log(index6 + '은 '+ oddEven +' 입니다.');
+}
+```
+
 ### for문의 범위(Scope), Script 변수와 Block(Local) 변수의 차이
 1. 초기문 사용하지 않기
 ```js
-let index6 = 0;
-for (; index6 < 3; index6++) {
-  const blockConst = index6;
+let index7 = 0;
+for (; index7 < 3; index7++) {
+  const blockConst = index7;
   console.log(blockConst);
 }
-console.log(index6);
+console.log(index7);
 ```
-* ❕ 결과적으로 `Script 변수 index6`은 for문이 반복된 횟수가 된다.
-* ❔ `let index6 = 0;` `초기문`에 추가해 보기 (에러가 발생할지 생각해 보기)
-* 가림 현상 설명 (VSCode에서 `index6` 마우스 오버해보기, Ctrl(또는 command) 키를 눌러서 해당 변수 이동)
+* ❕ 결과적으로 `Script 변수 index7`은 for문이 반복된 횟수가 된다.
+* ❔ `let index7 = 0;` `초기문`에 추가해 보기 (에러가 발생할지 생각해 보기)
+* 가림 현상 설명 (VSCode에서 `index7` 마우스 오버해보기, Ctrl(또는 command) 키를 눌러서 해당 변수 이동)
 * Block(Local) 변수 설명
 * ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 5까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
   let total1 = 0;
-  for (let index7 = 1; index7 <= 5; index7++) {
-    total1 += index7;
+  for (let index8 = 1; index8 <= 5; index8++) {
+    total1 += index8;
   }
   console.log(total1);
   ```
@@ -485,11 +498,11 @@ console.log(index6);
 
   ```js
   let total1 = 0;
-  let index7 = 1;
-  for (; index7 <= 5; index7++) {
-    total1 += index7;
+  let index8 = 1;
+  for (; index8 <= 5; index8++) {
+    total1 += index8;
   }
-  const count = index7 - 1;
+  const count = index8 - 1;
   const avg1 = total1 / count;
   console.log(avg1);
   ```
@@ -499,8 +512,8 @@ console.log(index6);
 ### for문에서 배열 사용하기
 ```js
 const array1 = [1, 2, 3];
-for (let index8 = 0; index8 < array1.length; index8++) {
-  console.log(array1[index8]);
+for (let index9 = 0; index9 < array1.length; index9++) {
+  console.log(array1[index9]);
 }
 ```
 * ❔ 문제: `array2` 상수에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문 밖에서 `console.log`로 찍어 보기
@@ -509,8 +522,8 @@ for (let index8 = 0; index8 < array1.length; index8++) {
   ```js
   const array1 = [1, 2, 3];
   const array2 = [];
-  for (let index8 = 0; index8 < array1.length; index8++) {
-    array2.push(array1[index8]);
+  for (let index9 = 0; index9 < array1.length; index9++) {
+    array2.push(array1[index9]);
   }
   console.log(array2);
   ```
