@@ -516,7 +516,7 @@ for (let index9 = 0; index9 < array1.length; index9++) {
   console.log(array1[index9]);
 }
 ```
-* ❔ 문제: `array2` 상수에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문 밖에서 `console.log`로 찍어 보기
+* ❔ 문제: `Script 상수 array2`에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문이 끝나고 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
