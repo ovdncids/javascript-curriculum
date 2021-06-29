@@ -589,7 +589,7 @@ const returned1 = func1('parameter1', 'parameter2');
 ```
 * Console 창에서 `func1`, `returned1` 찍어 보기
 * `breakpoint`로 진행 확인
-* `func1(1, 2)` 실행해 보기
+* `func1(1, 2);` 실행해 보기
 * ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
 * ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
 * ❔ `parameter1`, `parameter2` 둘다 넘기지 않는다면 `sum1`의 값은?
