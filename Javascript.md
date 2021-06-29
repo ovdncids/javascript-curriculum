@@ -604,7 +604,7 @@ const returned1 = func1('parameter1', 'parameter2');
   const f1 = function() {
     console.log('함수 호출');
   };
-  f();
+  f1();
   ```
 </details>
 
