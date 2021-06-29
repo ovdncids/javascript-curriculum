@@ -589,19 +589,19 @@ const returned1 = func1('parameter1', 'parameter2');
 ```
 * Console 창에서 `func1`, `returned1` 찍어 보기
 * `breakpoint`로 진행 확인
-* `func1(1, 2);` 실행해 보기
+* `func1(1, 2);` 호출 해 보기
 * ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
 * ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
 * ❔ `parameter1`, `parameter2` 둘다 넘기지 않는다면 `sum1`의 값은?
 * `argument1`은 함수 내부적으로 `let argument1 = 인수1` 이렇게 작동 한다.
 * ❔ `argument2`를 지운다면 `sum1`의 값은?
 * ❔ `argument1`, `argument2` 둘다 지운다면 `sum1`의 값은?
-* ❔ 문제: `console.log('함수 실행');`이라는 실행문을 가진 `함수`를 상수 `f1`에 넣고, 해당 `함수` 실행 시키기
+* ❔ 문제: `console.log('함수 호출');`이라는 실행문을 가진 `함수`를 상수 `f1`에 넣고, 해당 `함수` 호출 시키기
 * <details><summary>정답</summary>
 
   ```js
   const f1 = function() {
-    console.log('함수 실행');
+    console.log('함수 호출');
   };
   f();
   ```
@@ -649,15 +649,15 @@ func4(scriptConst4);
   ```
   ```js
   func4(function() {
-    console.log('익명함수 실행');
+    console.log('익명함수 호출');
   });
   ```
-* ❔ 문제: `인수`로 넘긴 `익명 함수`를, `인자`로 실행 시키기
+* ❔ 문제: `인수`로 넘긴 `익명 함수`를, `인자`로 호출 시키기
 * <details><summary>정답</summary>
 
   ```js
   argument1();
-  // 인수로 함수를 넘기고, 인자로 실행시키는 함수를 `콜백 함수`(Callback function)라 한다.
+  // 인수로 함수를 넘기고, 인자로 호출시키는 함수를 `콜백 함수`(Callback function)라 한다.
   ```
 </details>
 
@@ -671,7 +671,7 @@ membersFunction.html
 ```
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
-* Console 창에서 실행
+* Console 창에서 호출
 ```js
 // Create
 membersCreate('홍길동')
@@ -785,9 +785,9 @@ delete object1.key1;
 delete object1.key2;
 delete object1['key3'];
 ```
-* ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 실행 해보기
+* ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 호출 해보기
 * ❔ `object2.key2` 배열의 `length` 구하기
-* ❔ `object2.key3` 함수 실행 시키기
+* ❔ `object2.key3` 함수 호출 시키기
 * ❔ `this`의 개념 설명, `// console.log(this.key1);` 주석을 푼다면
 * ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
 
@@ -815,9 +815,9 @@ array2.length;
 
 ### 오브젝트 실습 (회원 CRUD 사용)
 
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html) 또는 membersFunction.html 파일 실행 시키기
+* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html) 또는 membersFunction.html 파일 호출 시키기
 
-* Console 창에서 실행
+* Console 창에서 호출
 ```js
 // Create
 membersCreate({
