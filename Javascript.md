@@ -662,7 +662,7 @@ func4(scriptConst4);
   ```
 </details>
 
-5. 라이브러리: 특정 함수의 모음 (Moment.js, Lodash)
+5. 라이브러리: 특정 함수들의 모음 (Moment.js, Lodash)
 
 ### 함수 실습 (회원 CRUD 만들기)
 membersFunction.html
