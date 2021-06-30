@@ -675,16 +675,16 @@ membersFunction.html
 * Console 창에서 호출
 ```js
 // Create
-membersCreate('홍길동')
+membersCreate('홍길동');
 
 // Read
-membersRead()
+membersRead();
 
 // Update
-membersUpdate(0, '김유신')
+membersUpdate(0, '김유신');
 
 // Delete
-membersDelete(0)
+membersDelete(0);
 ```
 
 1. Create
@@ -742,7 +742,7 @@ object.html
 const 오브젝트명 = {
   키1: 값1,
   키2: 값2  
-}
+};
 ```
 
 https://ovdncids.github.io/javascript-curriculum/images/object.jpeg
@@ -824,19 +824,19 @@ array2.length;
 membersCreate({
   name: '홍길동',
   age: 20
-})
+});
 
 // Read
-membersRead()
+membersRead();
 
 // Update
 membersUpdate(0, {
   name: '김유신',
   age: 30
-})
+});
 
 // Delete
-membersDelete(0)
+membersDelete(0);
 ```
 
 ## try catch문(제어문 > 예외처리문)
