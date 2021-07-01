@@ -16,11 +16,11 @@
 2. 배열의 `마지막 요소`에 1 더해주는 함수를 만들고, 아래 상수를 인수로 하나씩 넣고, 해당 인수마다 2번씩 호출 하시오. (총 6번 함수가 호출 됨)
 
    프로그램 만들기 전에, 함수 호출 완료 후 변경될 `a, b, c` 상수의 값들을 예상해보고, 프로그램 완료 후에 값과 비교해 보기
-   ```js
-   const a = [1, 2, 3];
-   const b = ['a', 'b', 'c'];
-   const c = 'abc';
-   ```
+    ```js
+    const a = [1, 2, 3];
+    const b = ['a', 'b', 'c'];
+    const c = 'abc';
+    ```
 
 3. for문이 3번 반복 되는 부분을 함수로 만들어 호출 하시오.
     ```js
@@ -53,6 +53,37 @@
     21부터 30까지의 합은 255이고, 평균은 25.5이다.
     ```
 
-4. 콜백문제
+4. 함수 2개가 있다. 함수 하나는 서버와 연결 하는 함수이고, 하나는 서버 연결 후에 호출 되는 함수이다. `?` 부분을 수정해서 다음을 출력 하시오.
+    ```js
+    const afterFunc = function() {
+      console.log('콜백 함수 호출');
+    };
+    const connectFunc = function(callback) {
+      console.log('서버 연결');
+      ?
+      console.log('연결 종료');
+    };
+    connectFunc(afterFunc);
+    ```
+    출력
+    ```
+    서버 연결
+    콜백 함수 호출
+    연결 종료
+    ```
 
-5. usersCreate 만들기
+5. `membersFunction2.html`을 복사해서 `usersFunction.html` 파일을 만들고,
+   변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
+   ```js
+   // Create
+   usersCreate('홍길동');
+
+   // Read
+   usersRead();
+
+   // Update
+   usersUpdate(0, '김유신');
+
+   // Delete
+   usersDelete(0);
+   ```
