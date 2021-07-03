@@ -581,22 +581,22 @@ const 반환받는상수 = 함수명(인수1, 인수2, ...);
 
 * 예제
 ```js
-const func1 = function(argument1, argument2) {
-  const sum1 = argument1 + argument2;
+const func1 = function(parameter1, parameter2) {
+  const sum1 = parameter1 + parameter2;
   return sum1;
 };
-const returned1 = func1('parameter1', 'parameter2');
+const returned1 = func1('argument1', 'argument2');
 ```
 * Console 창에서 `func1`, `returned1` 찍어 보기
 * `breakpoint`로 진행 확인
 * `실행`과 `호출`의 차이 설명하기
 * `func1(1, 2);` `호출` 해보기
 * ❔ 함수 안에 `return`이 없다면 `returned1`의 값은?
-* ❔ `parameter2`를 넘기지 않는다면 `sum1`의 값은?
-* ❔ `parameter1`, `parameter2` 둘다 넘기지 않는다면 `sum1`의 값은?
-* `argument1`은 함수 내부적으로 `let argument1 = 인수1` 이렇게 작동 한다.
-* ❔ `argument2`를 지운다면 `sum1`의 값은?
-* ❔ `argument1`, `argument2` 둘다 지운다면 `sum1`의 값은?
+* ❔ `argument2`를 넘기지 않는다면 `sum1`의 값은?
+* ❔ `argument1`, `argument2` 둘다 넘기지 않는다면 `sum1`의 값은?
+* `parameter1`은 함수 내부적으로 `let parameter1 = 인수1` 이렇게 작동 한다.
+* ❔ `parameter2`를 지운다면 `sum1`의 값은?
+* ❔ `parameter1`, `parameter2` 둘다 지운다면 `sum1`의 값은?
 * ❔ 문제: `console.log('함수 호출');`이라는 실행문을 가진 `함수`를 상수 `f1`에 넣고, 해당 `함수` 호출 시키기
 * <details><summary>정답</summary>
 
@@ -611,10 +611,10 @@ const returned1 = func1('parameter1', 'parameter2');
 2. 인수에 자료형 데어터 넘기기
 ```js
 const scriptConst2 = 'a';
-const func2 = function(argument1) {
-    const compare1 = scriptConst2 === argument1;
-    argument1 = 'b';
-    const compare2 = scriptConst2 === argument1;
+const func2 = function(parameter1) {
+    const compare1 = scriptConst2 === parameter1;
+    parameter1 = 'b';
+    const compare2 = scriptConst2 === parameter1;
 };
 func2(scriptConst2);
 ```
@@ -623,11 +623,11 @@ func2(scriptConst2);
 3. 인수에 배열 넘기기
 ```js
 const scriptConst3 = [];
-const func3 = function(argument1) {
-    const compare1 = scriptConst3 === argument1;
-    argument1.push('a');
+const func3 = function(parameter1) {
+    const compare1 = scriptConst3 === parameter1;
+    parameter1.push('a');
     scriptConst3.push('b');
-    const compare2 = scriptConst3 === argument1;
+    const compare2 = scriptConst3 === parameter1;
 };
 func3(scriptConst3);
 ```
@@ -636,10 +636,10 @@ func3(scriptConst3);
 4. 인수에 함수 넘기기
 ```js
 const scriptConst4 = function() {};
-const func4 = function(argument1) {
-    const compare1 = scriptConst4 === argument1;
-    argument1 = function() {};
-    const compare2 = scriptConst4 === argument1;
+const func4 = function(parameter1) {
+    const compare1 = scriptConst4 === parameter1;
+    parameter1 = function() {};
+    const compare2 = scriptConst4 === parameter1;
 };
 func4(scriptConst4);
 ```
@@ -657,7 +657,7 @@ func4(scriptConst4);
 * <details><summary>정답</summary>
 
   ```js
-  argument1();
+  parameter1();
   // 인수로 함수를 넘기고, 인자로 호출시키는 함수를 `콜백 함수`(Callback function)라 한다.
   ```
 </details>
