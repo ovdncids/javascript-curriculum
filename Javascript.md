@@ -771,7 +771,7 @@ object1.key1 = 1;
 object1.key2 = '2';
 object1['key3'] = '삼';
 
-// 오브젝트 Read
+// 오브젝트 Read (. 연산자, 대괄호 연산자)
 const o1 = object1.key1;
 const o2 = object1['key2'];
 const o3 = object1.key3;
@@ -787,10 +787,10 @@ delete object1.key2;
 delete object1['key3'];
 ```
 * ❔ `오브젝트의 CRUD` 부분 주석 처리하고, 개발자 도구 Console 창에서 `오브젝트의 CRUD` 호출 해보기
-* ❔ `object2.key2` 배열의 `length` 구하기
-* ❔ `object2.key3` 함수 호출 시키기
-* ❔ `this`의 개념 설명, `// console.log(this.key1);` 주석을 푼다면
-* ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기
+* ❔ `object2.key2` 배열의 `length` 구하기 (`. 연산자`, `대괄호 연산자` 사용)
+* ❔ `object2.key3` 함수 호출 시키기 (`. 연산자`, `대괄호 연산자` 사용)
+* ❔ `this 연산자`의 개념 설명, `// console.log(this.key1);` 주석을 푼다면
+* ❔ `object2.key4` 오브젝트의 `k1`키 삭제 하기 (`. 연산자`, `대괄호 연산자` 사용)
 
 * ❕ `키`이름에 대한 규칙
 ```
@@ -838,6 +838,7 @@ membersUpdate(0, {
 // Delete
 membersDelete(0);
 ```
+* `회원 CRUD` 안보고 Console 창에서 CRUD 호출 해보기
 
 ## try catch문(제어문 > 예외처리문)
 ### try catch문을 사용하는 이유?
