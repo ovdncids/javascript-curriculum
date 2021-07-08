@@ -4,4 +4,6 @@
 
 * [2nd week - if문, 배열, for문](./homework/2week.md)
 
-* [3th week - function](./homework/3week.md)
+* [3th week - 함수](./homework/3week.md)
+
+* [4th week - 오브젝트](./homework/4week.md)
