@@ -26,20 +26,20 @@
    변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
     ```js
     // Create
-    membersCreate({
+    usersCreate({
       name: '홍길동',
       age: 20
     });
 
     // Read
-    membersRead();
+    usersRead();
 
     // Update
-    membersUpdate(0, {
+    usersUpdate(0, {
       name: '김유신',
       age: 30
     });
 
     // Delete
-    membersDelete(0);
+    usersDelete(0);
     ```
