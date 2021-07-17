@@ -7,3 +7,5 @@
 * [3th week - 함수](./homework/3week.md)
 
 * [4th week - 오브젝트](./homework/4week.md)
+
+* [5th week - 내장함수 - sessionStorage, document.write, html 태그](./homework/5week.md)
