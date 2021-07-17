@@ -74,7 +74,6 @@ sessionStorage.clear();
 
 ### JSON을 사용해 sessionStorage에 배열 넣기
 ```js
-debugger;
 const storageGet = sessionStorage.getItem('array2');
 const storageLogical = storageGet || '[1, 2, 3]';
 const array2 = JSON.parse(storageLogical);
