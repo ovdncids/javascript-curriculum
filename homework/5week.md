@@ -1,6 +1,6 @@
 # Homework - 5th week
 
-## 내장함수 - sessionStorage, document.write
+## 내장함수 - sessionStorage, document.write, html 태그
 ### 동영상 (수코딩)
 * https://www.youtube.com/watch?v=4ZvMxejkNZk
 
