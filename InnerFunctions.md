@@ -86,7 +86,7 @@ sessionStorage.setItem('array2', storageSet);
 
 #### sessionStorage, localStorage 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersStorage.html)
-* storage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
+* membersStorage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
 
 ```diff
 - const members = [];
