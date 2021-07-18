@@ -38,8 +38,9 @@ if (window.confirm('진행 하시겠습니까?')) {
 
 ### JSON
 ```js
-const array1 = JSON.parse('[1, 2, 3]');
-const string1 = JSON.stringify(array1);
+const string1 = '[1, 2, 3]';
+const array1 = JSON.parse(string1);
+const string2 = JSON.stringify(array1);
 ```
 
 ### sessionStorage, localStorage
