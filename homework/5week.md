@@ -1,6 +1,6 @@
 # Homework - 5th week
 
-## 내장함수 - sessionStorage, document.write, html 태그
+## 내장함수 - sessionStorage, document.write
 ### 동영상 (수코딩)
 * https://www.youtube.com/watch?v=4ZvMxejkNZk
 
@@ -38,31 +38,4 @@
 
     // Delete
     userssDelete(0);
-    ```
-
-5. html-homework 폴더 안에 아래와 같이 4개의 파일을 생성한다. 아래와 같이 출력 하시요. (async 또는 defer를 사용하시오)
-
-    index.html
-    ````html
-    <script src="./index1.js"></script>
-    <script src="./index2.js"></script>
-    <script src="./index3.js"></script>
-    ````
-    index1.js
-    ```js
-    console.log('index1.js');
-    ```
-    index2.js
-    ```js
-    console.log('index2.js');
-    ```
-    index3.js
-    ```js
-    console.log('index3.js');
-    ```
-    출력
-    ```
-    index2.js
-    index1.js
-    index3.js
     ```
