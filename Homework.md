@@ -8,6 +8,6 @@
 
 * [4th week - 오브젝트](./homework/4week.md)
 
-* [5th week - 내장함수 - sessionStorage, document.write, html 태그](./homework/5week.md)
+* [5th week - 내장함수 - sessionStorage, document.write](./homework/5week.md)
 
 * [6th week - 내장함수 - html 태그, form 태그, pre 태그, document.getElementById](./homework/6week.md)
