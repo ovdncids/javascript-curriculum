@@ -217,7 +217,7 @@ console.log('html bottom');
 ### form 태그
 form/membersForm.html
 
-#### from 태그 넣기 (body 태그 안에 넣기)
+#### form 태그 넣기 (body 태그 안에 넣기)
 ```html
 <form method="get" action="./membersForm.html">
   <input type="text" name="input-text" value="초기값" placeholder="명령을 입력 하세요.">
@@ -228,7 +228,7 @@ form/membersForm.html
 * `get`, `post` 메소드 설명
 * ❔ `action`을 `https://naver.com`으로 바꾼다면
 
-#### from 태그 실습
+#### form 태그 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
 * form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
 
