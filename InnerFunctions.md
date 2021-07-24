@@ -267,6 +267,8 @@ const membersSubmit = function(form) {
 * `eval` 설명
 * ❔ `eval` 대신 `JSON.parse`를 사용한다면
 
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
+
 #### Input.value CRUD
 * `inputTextObject` 상수에서 `break point` 걸고, Console 창에서 실행
 ```js
@@ -284,8 +286,6 @@ inputTextObject.value = 'membersDelete(0)';
 delete inputTextObject.value;
 inputTextObject.value = '';
 ```
-
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 ### pre 태그, document.getElementById
 form/membersForm.html
