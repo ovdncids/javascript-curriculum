@@ -144,16 +144,16 @@ let result4 = string1 + string2;
 
 2. ==(동등 연산자) 연산자와 ===(일치 연산자) 연산자의 차이
 ```js
-let char1 = true == 'true';
-let char2 = true === 'true';
+let oNum1 = 1 == '1';
+let oNum2 = 1 === '1';
 let true1 = 1 == true;
 let true2 = 1 === true;
 let true3 = 1 != true;
 let true4 = 1 !== true;
 let false1 = 0 == false;
 let false2 = 0 === false;
-let oNum1 = 1 == '1';
-let oNum2 = 1 === '1';
+let char1 = true == 'true';
+let char2 = true === 'true';
 ```
 * ❕ 연산이 끝나면 `Boolean` 형식으로 결과를 반환한다.
 * ❕ 위와 같은 이유로 `동등 연산자`는 사용하지 않는다.
