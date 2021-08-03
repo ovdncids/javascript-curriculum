@@ -38,7 +38,7 @@ console.log(v1, v2, v3);
   ```
   제어문 이름으로 사용 불가 (if, for, switch, while, ...)
   연산자 이름으로 사용 불가 (+, -, *, /, ==, !, <, >, this, ...)
-  자료형 또는 예약어 사용 불가 (true, false, null, NaN, delete, ...)
+  자료형 또는 예약어(명령어) 사용 불가 (true, false, null, NaN, delete, ...)
   숫자를 앞으로 사용 불가 (1a, 2b, ...)
   영문, _, $, 숫자 조합으로 사용 (_a, $b, c1, ...)
   대소문자 구분 (lowUP, LowUp, LOWUP)
