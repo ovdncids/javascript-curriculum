@@ -1,6 +1,6 @@
 # Homework - 6th week
 
-## 내장함수 - html 태그
+## 내장함수 - html 태그, form 태그, pre 태그, document.getElementById
 ### 문제
 1. html-homework 폴더 안에 아래와 같이 4개의 파일을 생성한다. 아래와 같이 출력 하시요. (async 또는 defer를 사용하시오)
 
