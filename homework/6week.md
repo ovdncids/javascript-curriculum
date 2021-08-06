@@ -42,10 +42,10 @@
     </head>
     <body>
       <form onsubmit="return false;">
-        <input type="text" name="input-original" placeholder="원본" value="">
+        <input type="text" id="input-original" placeholder="원본" value="">
         <button onclick="copy();">복사</button>
-        <input type="text" name="input-copy" placeholder="복사본1" value="">
-        <input type="text" name="input-copy" placeholder="복사본2" value="">
+        <input type="text" id="input-copy1" placeholder="복사본1" value="">
+        <input type="text" id="input-copy2" placeholder="복사본2" value="">
       </form>
     </body>
     </html>
