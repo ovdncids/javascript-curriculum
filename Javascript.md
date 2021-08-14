@@ -457,12 +457,12 @@ for (let index3 = 1; index3 <= 3; index3 += 1) {
 ```js
 for (let index6 = 1; index6 <= 10; index6 += 1) {
   if (index6 % 2 === 1) {
-    console.log(index6 + '은 홀수 입니다.');
+    console.log('숫자 ' + index6 + '은 홀수 입니다.');
   } else {
-    console.log(index6 + '은 짝수 입니다.');
+    console.log('숫자 ' + index6 + '은 짝수 입니다.');
   }
   const oddEven = index6 % 2 ? '홀수' : '짝수';
-  console.log(index6 + '은 '+ oddEven +' 입니다.');
+  console.log('숫자 ' + index6 + '은 '+ oddEven + ' 입니다.');
 }
 ```
 
