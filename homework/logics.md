@@ -7,7 +7,7 @@ const b = ['a', 'b', 'c'];
 const c = [];
 const t = 3;
 for (let index = 0; index < a.length; index++) {
-  c.push(a[index])
+  c.push(a[index]);
   if (index % t === t - 1) {
     const bIndex = Math.floor(index / t) % t;
     c.push(b[bIndex]);
