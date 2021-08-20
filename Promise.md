@@ -30,22 +30,22 @@ Promise.all([promise1, promise2]).then(function(result) {
 
 ## Axios 대입
 ```js
-const promise = []
-promise[0] = new Promise(function(resolve, reject) {
+const promises = []
+promises[0] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
 })
-promise[1] = new Promise(function(resolve, reject) {
+promises[1] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
 })
-Promise.all(promise).then(function(result) {
+Promise.all(promises).then(function(result) {
   console.log(result);
 }).catch(function(error) {
   console.error(error);
@@ -55,4 +55,73 @@ Promise.all(promise).then(function(result) {
 ## Promise Polyfill for IE11
 ```html
 <script src="https://unpkg.com/core-js-bundle@3.6.0/minified.js"></script>
+```
+
+## Custom Promise
+```js
+class CustomPrimose {
+  constructor(callback) {
+    callback && callback(this.resolve, this.reject);
+  }
+  state;
+  returnValue;
+  parentPromise;
+  resolve = (returnValue) => {
+    this.state = 'resolved';
+    this.returnValue = returnValue;
+    this.parentPromise && this.parentPromise.then(this.parentPromise._then);
+  };
+  reject = (returnValue) => {
+    this.state = 'rejected';
+    this.returnValue = returnValue;
+    this.parentPromise && this.parentPromise.catch(this.parentPromise._catch);
+  };
+  static all = function(promises) {
+    const parentPromise = {
+      promises: promises,
+      then: function(callback) {
+        this._then = callback
+        const returnValues = []
+        for (let index in this.promises) {
+          returnValues.push(this.promises[index].returnValue)
+          if (this.promises[index].state !== 'resolved') {
+            return this
+          }
+        }
+        this._then(returnValues)
+        return this
+      },
+      catch: function(callback) {
+        this._catch = callback
+        for (let index in this.promises) {
+          if (this.promises[index].state === 'rejected') {
+            this._catch(this.promises[index].returnValue)
+            break
+          }
+        }
+        return this
+      }
+    };
+    for (let index in promises) {
+      promises[index].parentPromise = parentPromise;
+    }
+    return parentPromise;
+  }
+}
+```
+```js
+const promises = []
+promises[0] = new CustomPrimose(function(resolve, reject) {
+  // resolve('Resolved promise1');
+  reject('Rejected promise1');
+});
+promises[1] = new CustomPrimose(function(resolve, reject) {
+  // resolve('Resolved promise2');
+  reject('Rejected promise2');
+});
+CustomPrimose.all(promises).then(function(result) {
+  console.log(result);
+}).catch(function(error) {
+  console.log(error);
+});
 ```
