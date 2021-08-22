@@ -811,7 +811,7 @@ for (const c1 in object2) {
 ### Object.keys 메소드 확인
 ```js
 const array2 = Object.keys(object2);
-array2.length;
+console.log(array2.length);
 ```
 
 ### 오브젝트 실습 (회원 CRUD 사용)
