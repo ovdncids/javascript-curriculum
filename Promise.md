@@ -30,7 +30,7 @@ Promise.all([promise1, promise2]).then(function(result) {
 
 ## Axios 대입
 ```js
-const promises = []
+const promises = [];
 promises[0] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
