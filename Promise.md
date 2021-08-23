@@ -80,26 +80,26 @@ class CustomPromise {
     const parentPromise = {
       promises: promises,
       then: function(callback) {
-        this._then = callback
-        const returnValues = []
+        this._then = callback;
+        const returnValues = [];
         for (let index in this.promises) {
-          returnValues.push(this.promises[index].returnValue)
+          returnValues.push(this.promises[index].returnValue);
           if (this.promises[index].state !== 'resolved') {
-            return this
+            return this;
           }
         }
-        this._then(returnValues)
-        return this
+        this._then(returnValues);
+        return this;
       },
       catch: function(callback) {
-        this._catch = callback
+        this._catch = callback;
         for (let index in this.promises) {
           if (this.promises[index].state === 'rejected') {
-            this._catch(this.promises[index].returnValue)
-            break
+            this._catch(this.promises[index].returnValue);
+            break;
           }
         }
-        return this
+        return this;
       }
     };
     for (let index in promises) {
@@ -110,7 +110,7 @@ class CustomPromise {
 }
 ```
 ```js
-const promises = []
+const promises = [];
 promises[0] = new CustomPromise(function(resolve, reject) {
   // resolve('Resolved promise1');
   reject('Rejected promise1');
