@@ -557,9 +557,11 @@ const diff2 = ++index;
 
   ```js
   let index = 0;
+  // const diff1 = index++;
   const diff1 = index;
   index += 1;
 
+  // const diff2 = ++index;
   index += 1;
   const diff2 = index;
   ```
