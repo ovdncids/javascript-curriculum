@@ -59,7 +59,7 @@ Promise.all(promises).then(function(result) {
 
 ## Custom Promise
 ```js
-class CustomPrimose {
+class CustomPromise {
   constructor(callback) {
     callback && callback(this.resolve, this.reject);
   }
@@ -111,15 +111,15 @@ class CustomPrimose {
 ```
 ```js
 const promises = []
-promises[0] = new CustomPrimose(function(resolve, reject) {
+promises[0] = new CustomPromise(function(resolve, reject) {
   // resolve('Resolved promise1');
   reject('Rejected promise1');
 });
-promises[1] = new CustomPrimose(function(resolve, reject) {
+promises[1] = new CustomPromise(function(resolve, reject) {
   // resolve('Resolved promise2');
   reject('Rejected promise2');
 });
-CustomPrimose.all(promises).then(function(result) {
+CustomPromise.all(promises).then(function(result) {
   console.log(result);
 }).catch(function(error) {
   console.log(error);
