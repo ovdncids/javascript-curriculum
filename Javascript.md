@@ -553,7 +553,18 @@ let index = 0;
 const diff1 = index++;
 const diff2 = ++index;
 ```
+* <details><summary>동작</summary>
 
+  ```js
+  let index = 0;
+  const diff1 = index;
+  index += 1;
+
+  index += 1;
+  const diff2 = index;
+  ```
+</details>
+  
 ## 함수
 function.html
 ```html
