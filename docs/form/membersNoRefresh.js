@@ -1,5 +1,4 @@
-const url = new URL(window.location.href);
-const queryString = url.searchParams;
+const queryString = new URLSearchParams(window.location.search);
 const inputText  = queryString.get('input-text');
 const inputHiddens = queryString.getAll('input-hidden');
 const inputHidden = inputHiddens[0];
