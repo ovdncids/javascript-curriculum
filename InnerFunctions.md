@@ -347,8 +347,7 @@ tagPre.innerHTML = '';
 
 ### Query string, document.getElementsByName
 ```js
-const url = new URL(window.location);
-const queryString = url.searchParams;
+const queryString = new URLSearchParams(window.location.search);
 const nameText = queryString.get('input-text');
 const inputHiddens = queryString.getAll('input-hidden');
 const inputHidden = inputHiddens[0];
