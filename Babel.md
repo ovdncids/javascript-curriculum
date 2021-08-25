@@ -15,7 +15,7 @@ babel.html
 <body>
 ```
 
-## 문자 안에 변수 넣기
+## 문자 안에 변수 넣기 (Grave accent: 빽틱)
 ```js
 const number1 = 10;
 const string1 = `총 개수는 ${number1}개 입니다.`;
