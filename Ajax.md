@@ -210,12 +210,10 @@ const membersDelete = function(index) {
 const membersUpdate = function(index) {
   const name = document.getElementsByName('members-name')[index].value;
   const age = document.getElementsByName('members-age')[index].value;
-  const memberUpdate = {
-    index: index,
-    member: {
-      name: name,
-      age: age
-    }
+  const url = 'http://localhost:3100/api/v1/members/' + index;
+  const member: {
+    name: name,
+    age: age
   };
   const xhrObject = new XMLHttpRequest();
   xhrObject.onreadystatechange = function () {
@@ -231,9 +229,9 @@ const membersUpdate = function(index) {
       console.error(error);
     }
   };
-  xhrObject.open('PATCH', 'http://localhost:3100/api/v1/members');
+  xhrObject.open('PATCH', url);
   xhrObject.setRequestHeader('Content-Type', 'application/json');
-  xhrObject.send(JSON.stringify(memberUpdate));
+  xhrObject.send(JSON.stringify(member));
 };
 ```
 * RESTful API 설명
