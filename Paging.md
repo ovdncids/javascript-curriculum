@@ -118,7 +118,8 @@ const navPaging = function(pageNumber, pageSize, navSize) {
   | 5 ~ 50 | 41 |
   | ... | ... |
 
-  `힌트`: Math.ceil() (올림 내장 함수), `pageNumber`와 `navSize` 상수만 이용하여 연산식 완성하기
+  * `pageNumber`와 `navSize` 변수만 사용하여 연산식 완성하기
+  * `Math.ceil()` 올림 내장 함수 사용하기
 * <details><summary>연산 과정</summary>
 
   `1`. 연산 결과를 `올림` 하여 `pageNumber`가 1 ~ 10일 경우 `navCalc` 값이 `1`이 되게 만들기
