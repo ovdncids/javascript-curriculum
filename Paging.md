@@ -176,3 +176,65 @@ const pageMax = Math.ceil(numbersOrigin.length / pageSize);
   }
   ```
 </details>
+
+<!--
+## Vue.js 적용
+* navPaging를 그대로 가지고 오고, `router-link` v-for문 적용
+* 마지막 페이지 이동을 위해 paging.pageMax 적용
+```js
+data() {
+  return {
+    paging: {
+      pageNumber: 1,
+      pageSize: 10,
+      pageMax: 0,
+      navSize: 10,
+      navs: []
+    }
+  }
+},
+watch: {
+  members: function() {
+    this.paging.pageNumber = this.$route.query.pageNumber >= 1 ? Number(this.$route.query.pageNumber) : 1
+    this.paging.pageMax = Math.ceil(this.membersTotal / this.paging.pageSize)
+    this.paging.navs = this.navPaging(this.paging.pageNumber, this.paging.pageMax, this.paging.navSize)
+  },
+  '$route.query.pageNumber': function(pageNumber) {
+    this.$store.dispatch('membersRead', pageNumber)
+  }
+},
+computed: {
+  membersTotal() {
+    return this.$store.state.members.membersTotal
+  }
+},
+methods: {
+  navPaging(pageNumber, pageMax, navSize) {
+    pageNumber = pageNumber >= 1 ? pageNumber : 1
+    pageMax = pageMax >= 1 ? pageMax : 0
+    navSize = navSize >= 1 ? navSize : 10
+    const navs = []
+    for (let index = 1; index <= navSize; index++) {
+      const navCalc = Math.ceil(pageNumber / navSize) * navSize - navSize + index
+      if (navCalc <= pageMax && pageNumber <= pageMax) {
+        navs.push(navCalc)
+      }
+    }
+    return navs
+  }
+}
+```
+```html
+<div v-if="paging.pageMax">
+  <router-link :to="{name: 'Members', query: {pageNumber: 1}}">처음</router-link>
+  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageNumber - 1}}">이전</router-link>
+  <router-link
+    v-for="(nav, index) in paging.navs" :key="index"
+    :to="{name: 'Members', query: {pageNumber: nav}}"
+    :class="{active: nav === paging.pageNumber}"
+  >{{nav}}</router-link>
+  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageNumber + 1}}">다음</router-link>
+  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageMax}}">마지막</router-link>
+</div>
+```
+-->
