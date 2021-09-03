@@ -1,0 +1,36 @@
+<script>
+const numbersOrigin = [];
+for (let index = 1; index <= 201; index++) {
+  numbersOrigin.push(index);
+}
+
+const paging = function(pageNumber, pageSize) {
+  pageNumber = pageNumber >= 1 ? pageNumber : 1;
+  pageSize = pageSize >= 1 ? pageSize : 10;
+  const pageStartIndex = (pageNumber - 1) * pageSize;
+  const numbers = [];
+  for (let index = 0; index < pageSize; index++) {
+    const numbersOriginIndex = numbersOrigin[index + pageStartIndex];
+    if (index + pageStartIndex < numbersOrigin.length) {
+      const numbersOriginIndex = numbersOrigin[index + pageStartIndex];
+      numbers.push(numbersOriginIndex);
+    }
+  }
+  return numbers;
+};
+
+const navPaging = function(pageNumber, pageSize, navSize) {
+  pageNumber = pageNumber >= 1 ? pageNumber : 1;
+  pageSize = pageSize >= 1 ? pageSize : 10;
+  navSize = navSize >= 1 ? navSize : 10;
+  const pageMax = Math.ceil(numbersOrigin.length / pageSize);
+  const navs = [];
+  for (let index = 1; index <= navSize; index++) {
+    const navCalc = Math.ceil(pageNumber / navSize) * navSize - navSize + index;
+    if (navCalc <= pageMax && pageNumber <= pageMax) {
+      navs.push(navCalc);
+    }
+  }
+  return navs;
+};
+</script>
