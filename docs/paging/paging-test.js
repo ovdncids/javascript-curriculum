@@ -10,9 +10,7 @@ const paging = function(pageNumber, pageSize) {
 
 const navPaging = function(pageNumber, pageSize, navSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
-  pageSize = pageSize >= 1 ? pageSize : 10;
   navSize = navSize >= 1 ? navSize : 10;
-  const pageMax = Math.ceil(numbersOrigin.length / pageSize);
   const navs = [];
   for (let index = 1; index <= navSize; index++) {
     const navCalc = index;
