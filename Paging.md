@@ -6,7 +6,7 @@
   paging(1, 10);
   // pageNumber, pageSize
   
-  navPaging(1, 10, 10)
+  navPaging(1, 10, 10);
   // pageNumber, pageSize, navSize
   ```
 ## 목표
@@ -27,11 +27,11 @@ for (let index = 1; index <= 201; index++) {
 const paging = function(pageNumber, pageSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
   pageSize = pageSize >= 1 ? pageSize : 10;
-}
+};
 ```
 * `pageNumber`은 1보다 작은수, 음수, undifined 등을 1로 정의 한다.
 * `pageSize`는 1보다 작은수, 음수, undifined 등을 10으로 정의 한다.
-* ❔ 문제: `paging(1, 10);` 호출 예정이다. `paging` 함수 안에서 `pageStartIndex`이라는 상수를 만들고, 다음과 같이 연산 후, `pageStartIndex` 상수 `return` 하기
+* ❔ 문제: `paging(1, 10)` 호출 예정이다. `paging` 함수 안에서 `pageStartIndex`이라는 상수를 만들고, 다음과 같이 연산 후, `pageStartIndex` 상수 `return` 하기
   | pageNumber | pageStartIndex |
   |---|:---|
   | 1 | 0 |
