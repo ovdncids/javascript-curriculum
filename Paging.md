@@ -78,7 +78,7 @@ return numbers;
 * <details><summary>정답</summary>
 
   ```js
-  numbers.push(numbersOrigin[index + pageStartIndex]);
+  const numbersOriginIndex = numbersOrigin[index + pageStartIndex];
   ```
 </details>
 
@@ -86,7 +86,8 @@ return numbers;
 * <details><summary>정답</summary>
 
   ```js
-  if (numbersOriginIndex) {
+  if (index + pageStartIndex < numbersOrigin.length) {
+    const numbersOriginIndex = numbersOrigin[index + pageStartIndex];
     numbers.push(numbersOriginIndex);
   }
   ```
