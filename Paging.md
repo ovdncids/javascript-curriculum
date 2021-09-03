@@ -94,19 +94,20 @@ return numbers;
 </details>
 
 ## Page Navigation 만들기 (선택)
-### navSize 만들 반복하기
+### navSize 만큼 반복하기
 ```js
 const navPaging = function(pageNumber, pageSize, navSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
   pageSize = pageSize >= 1 ? pageSize : 10;
   navSize = navSize >= 1 ? navSize : 10;
+  const pageMax = Math.ceil(numbersOrigin.length / pageSize);
   const navs = [];
   for (let index = 1; index <= navSize; index++) {
     const navCalc = index;
     navs.push(navCalc);
   }
   return navs;
-}
+};
 ```
 * ❔ 문제: `navCalc` 값에 `pageNumber`에 대응하는 연산식 만들기
   | pageNumber | navCalc |
@@ -118,7 +119,7 @@ const navPaging = function(pageNumber, pageSize, navSize) {
   | 5 ~ 50 | 41 |
   | ... | ... |
 
-  `힌트`: Math.ceil() (올림 내장 함수)
+  `힌트`: Math.ceil() (올림 내장 함수), `pageNumber`와 `navSize` 상수만 이용하여 연산식 완성하기
 * <details><summary>연산 과정</summary>
 
   `1`. 연산 결과를 `올림` 하여 `pageNumber`가 1 ~ 10일 경우 `navCalc` 값이 `1`이 되게 만들기
@@ -158,5 +159,16 @@ const navPaging = function(pageNumber, pageSize, navSize) {
 
   ```js
   const navCalc = Math.ceil(pageNumber / navSize) * navSize - navSize + index;
+  ```
+</details>
+
+### 유효한 nav만 넣기
+* ❔ 문제: 개발자 도구에서 `navPaging(22)` 입력해보고, `pageMax`와 `if문`을 사용하여 `navs`에 넣기
+* <details><summary>정답</summary>
+
+  ```js
+  if (navCalc <= pageMax && pageNumber <= pageMax) {
+    navs.push(navCalc);
+  }
   ```
 </details>
