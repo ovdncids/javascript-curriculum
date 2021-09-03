@@ -1,6 +1,7 @@
 # Paging
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/paging/paging.html)
+* [실습](https://ovdncids.github.io/javascript-curriculum/paging/paging-test.html)
 * 사용법 (크롬 개발자 도구 Colsole 탭에서)
   ```js
   paging(1, 10);
@@ -98,9 +99,7 @@ return numbers;
 ```js
 const navPaging = function(pageNumber, pageSize, navSize) {
   pageNumber = pageNumber >= 1 ? pageNumber : 1;
-  pageSize = pageSize >= 1 ? pageSize : 10;
   navSize = navSize >= 1 ? navSize : 10;
-  const pageMax = Math.ceil(numbersOrigin.length / pageSize);
   const navs = [];
   for (let index = 1; index <= navSize; index++) {
     const navCalc = index;
@@ -163,6 +162,10 @@ const navPaging = function(pageNumber, pageSize, navSize) {
 </details>
 
 ### 유효한 nav만 넣기
+```js
+pageSize = pageSize >= 1 ? pageSize : 10;
+const pageMax = Math.ceil(numbersOrigin.length / pageSize);
+```
 * ❔ 문제: 개발자 도구에서 `navPaging(22)` 입력해보고, `pageMax`와 `if문`을 사용하여 `navs`에 넣기
 * <details><summary>정답</summary>
 
