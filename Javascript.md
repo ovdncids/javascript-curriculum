@@ -792,7 +792,10 @@ const o3 = object1.key3;
 // 오브젝트 Update
 object1['key1'] = [];
 object1.key2 = function() {};
-object1.key3 = {};
+object1.key3 = {
+  k1: 'v1',
+  k2: 'v2'
+};
 
 // 오브젝트 Delete
 delete object1.key1;
