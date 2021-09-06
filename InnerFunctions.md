@@ -170,6 +170,12 @@ html/index.html
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
 ```html
+<script>
+console.time("index1.js");
+console.time("index2.js");
+console.time("index3.js");
+console.time("html bottom");
+</script>
 <script src="./index1.js"></script>
 <script src="./index2.js"></script>
 <script src="./index3.js"></script>
@@ -179,26 +185,26 @@ html/index.html
 html/index1.js
 ```js
 // debugger;
-console.log('index1.js');
+console.timeLog('index1.js');
 ```
 
 html/index2.js
 ```js
 // debugger;
-console.log('index2.js');
+console.timeLog('index2.js');
 ```
 
 html/index3.js
 ```js
 // debugger;
-console.log('index3.js');
+console.timeLog('index3.js');
 ```
 
 html/index.html (가장 아래에)
 ```html
 <script>
 // debugger;
-console.log('html bottom');
+console.timeEnd('html bottom');
 </script>
 ```
 
