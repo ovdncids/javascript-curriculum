@@ -185,19 +185,19 @@ console.time("html bottom");
 html/index1.js
 ```js
 // debugger;
-console.timeLog('index1.js');
+console.timeEnd('index1.js');
 ```
 
 html/index2.js
 ```js
 // debugger;
-console.timeLog('index2.js');
+console.timeEnd('index2.js');
 ```
 
 html/index3.js
 ```js
 // debugger;
-console.timeLog('index3.js');
+console.timeEnd('index3.js');
 ```
 
 html/index.html (가장 아래에)
