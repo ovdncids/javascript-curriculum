@@ -179,26 +179,26 @@ html/index.html
 #### javascript 실행 순서 확인 하기
 html/index1.js
 ```js
-debugger;
+// debugger;
 console.log('index1.js');
 ```
 
 html/index2.js
 ```js
-debugger;
+// debugger;
 console.log('index2.js');
 ```
 
 html/index3.js
 ```js
-debugger;
+// debugger;
 console.log('index3.js');
 ```
 
 html/index.html (가장 아래에)
 ```html
 <script>
-debugger;
+// debugger;
 console.log('html bottom');
 </script>
 ```
