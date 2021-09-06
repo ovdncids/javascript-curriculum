@@ -174,7 +174,6 @@ html/index.html
 <script src="./index2.js"></script>
 <script src="./index3.js"></script>
 ```
-* ❕ Network 탭 설명 하기
 
 #### javascript 실행 순서 확인 하기
 html/index1.js
@@ -203,6 +202,7 @@ console.log('html bottom');
 </script>
 ```
 
+* ❕ Network 탭 설명
 * ❕ `싱글 쓰레드(Single Thread)`, `멀티 쓰레드(Multi Thread)` 설명
 * ❕ `동기(Sync)`, `비동기(Async)` 설명
 
