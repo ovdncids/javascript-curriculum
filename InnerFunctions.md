@@ -171,10 +171,10 @@ html/index.html
 #### .js 파일 부르기 (head 태그 안에 넣기)
 ```html
 <script>
-console.time("index1.js");
-console.time("index2.js");
-console.time("index3.js");
-console.time("html bottom");
+console.time('index1.js');
+console.time('index2.js');
+console.time('index3.js');
+console.time('html bottom');
 </script>
 <script src="./index1.js"></script>
 <script src="./index2.js"></script>
