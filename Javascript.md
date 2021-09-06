@@ -19,14 +19,21 @@ variable.html
 ### 변수를 사용하는 이유
 1. 자료형 데이터를 보관 할 수 있고, 자유롭게 값을 수정 할 수 있다.
 ```js
+// 변수 Create
 let v1 = true;
 let v2 = 100;
 let v3 = 'abc';
+
+// 변수 Read
 console.log(v1, v2, v3);
+
+// 변수 Update
 v1 = false;
 v2 = -10;
 v3 = 'def';
 console.log(v1, v2, v3);
+
+// 변수 Delete
 ```
 * 자료형에는 `Boolean`(true, false), `Number`(숫자), `String`(문자) 3가지가 주로 쓰인다.
 * `let` 선언문 설명
@@ -91,10 +98,16 @@ constant.html
 ### 상수를 사용하는 이유
 1. 한번 선언된 값의 변경을 막기 위해 사용 한다.
 ```js
+// 상수 Create
 const c1 = true;
 const c2 = 100;
 const c3 = 'abc';
+
+// 상수 Read
 console.log(c1, c2, c3);
+
+// 상수 Update
+// 상수 Delete
 ```
 * ❔ c1 상수에 const을 2번 선언 한다면
 * ❔ c1 상수에 값을 변경해 보기
