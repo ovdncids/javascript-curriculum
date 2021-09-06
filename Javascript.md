@@ -31,6 +31,8 @@ console.log(v1, v2, v3);
 v1 = false;
 v2 = -10;
 v3 = 'def';
+
+// 변수 Read
 console.log(v1, v2, v3);
 
 // 변수 Delete
