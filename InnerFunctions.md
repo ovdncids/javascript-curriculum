@@ -73,6 +73,19 @@ sessionStorage.clear();
 * localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
 * ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
 
+<!--
+### Prototype과 toString()
+```js
+const a = {};
+a.__proto__.toString = function() {
+  return 123;
+};
+a.toString();
+String(a);
+String(a.toString());
+```
+-->
+
 ### JSON을 사용해 sessionStorage에 배열 넣기
 ```js
 const storageGet = sessionStorage.getItem('array2');
