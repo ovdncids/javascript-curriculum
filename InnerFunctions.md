@@ -201,6 +201,14 @@ console.timeEnd('index3.js');
 ```
 
 html/index.html (가장 아래에)
+<!--
+```html
+<script>
+// debugger;
+console.timeLog('html bottom');
+</script>
+```
+-->
 ```html
 <script>
 // debugger;
