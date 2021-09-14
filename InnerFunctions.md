@@ -250,9 +250,10 @@ console.timeEnd('html bottom');
 * ❔ `debugger;` 풀고, `index1.js`, `index2.js` 파일에서 `const test1 = 1;` 1번씩 사용한다면
 
 ### form 태그
-form/membersForm.html
+* 주로 구글이나 네이버의 검색창에 사용 된다.
 
 #### form 태그 넣기 (body 태그 안에 넣기)
+form/membersForm.html
 ```html
 <form method="get" action="./membersForm.html">
   <input type="text" name="input-text" value="초기값" placeholder="명령을 입력 하세요.">
@@ -260,7 +261,8 @@ form/membersForm.html
   <input type="submit" value="전송">
 </form>
 ```
-* `get`, `post` 메소드 설명
+* `get` 메소드 설명 (포털 사이트에서 검색 후에 URL 주소를 복사해서, 다른 사람과 공유 할때 유용 하다. CRUD중 Read에 속함)
+* `post` 메소드 설명 (CRUD중 Create, Update, Delete를 처리함)
 * ❔ `action`을 `https://naver.com`으로 바꾼다면
 
 #### form 태그 실습
