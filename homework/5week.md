@@ -18,7 +18,7 @@
     ) members;
     ```
 
-4. `storage.html`을 복사해서 `storageUsers.html` 파일을 만들고,
+4. `membersStorage.html`을 복사해서 `usersStorage.html` 파일을 만들고,
    변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
     ```js
     // Create
