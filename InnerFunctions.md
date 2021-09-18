@@ -140,6 +140,7 @@ sessionStorage.setItem('members', membersSet);
 * VSCode 서로 다른 파일 비교하는 방법 설명
 
 ### document.write, location
+document.html
 ```js
 debugger;
 document.write('documentWrite1');
