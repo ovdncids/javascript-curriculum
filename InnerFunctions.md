@@ -266,18 +266,21 @@ form/membersForm.html
 * `post` 메소드 설명 (CRUD중 Create, Update, Delete를 처리함)
 * ❔ `action`을 `https://naver.com`으로 바꾼다면
 
-#### form 태그 실습
-* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
-* form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
-
 #### onsubmit 메소드 추가
 ```diff
 - <form method="get" action="./membersForm.html">
 + <form onsubmit="return false;">
 ```
 * ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기 `return testFunction();`
-```html
-* <form onsubmit="return membersSubmit(this);">
+* ❔  `return false;`를 반환 하는 함수를 만들고, `testFunction` 상수에 넣기
+
+#### form 태그 실습
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
+* form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
+
+```diff
+- <form onsubmit="return testFunction();">
++ <form onsubmit="return membersSubmit(this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
