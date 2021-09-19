@@ -9,12 +9,12 @@
 
 2. localStorage를 이용하여 새로고침 할때 마다 화면에 `홀수`와 `짝수`를 번가라가며 출력 하시오. (Javascript 기초수업의 `홀수와 짝수 표현하기` 부분 참조)
 
-3. document.write 또는 document.writeln을 사용하여 화면에 아래와 같이 출력 하시오.
+3. document.write 또는 document.writeln을 사용하여 화면에 아래와 같이 출력 하시오. 스페이스는 (&nbsp;)
     ```
     # MainQuery
     select members.name from (
-     /* SubQuery */
-     select '홍길동' as name, 39 as age
+      /* SubQuery */
+      select '홍길동' as name, 39 as age
     ) members;
     ```
 
