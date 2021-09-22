@@ -58,3 +58,14 @@ document.getElementById('').classList.length;
   <!-- button 태그에 type="button"이 없으면 input 태그 안에서 enter을 누르면 alert('실행')이 실행 된다 -->
 </form>
 ```
+
+## input file에서 선택한 이미지 임시로 보여주기
+```html
+<script>
+const changeFile = function(inputFile) {
+  document.getElementById('image').src = URL.createObjectURL(inputFile.files[0]);
+}
+</script>
+<input type="file" onchange="changeFile(this)" />
+<img id="image" />
+```
