@@ -59,7 +59,7 @@ document.getElementById('').classList.length;
 </form>
 ```
 
-## input file에서 선택한 이미지 임시로 보여주기
+## input file에서 선택한 이미지, 임시로 보여주기
 ```html
 <script>
 const changeFile = function(inputFile) {
