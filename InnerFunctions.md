@@ -413,7 +413,7 @@ const inputTextObject = inputTextObjects[0];
   * ❔ `new` 키워드를 뺀다면
 </details>
 
-* ❔ 문제: `input box`의 `value`값을 Query string으로 받아온 `nameText`로 값 넣기
+* ❔ 문제: `input box`의 `value`값을, `Query string`의 `input-text`로 넣기
 * <details><summary>정답</summary>
 
   ```js
