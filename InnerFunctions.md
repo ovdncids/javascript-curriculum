@@ -386,15 +386,10 @@ delete tagPre.innerHTML;
 tagPre.innerHTML = '';
 ```
 
-### Query string, document.getElementsByName
+### Query string - get
 ```js
 const queryString = new URLSearchParams(window.location.search);
 const nameText = queryString.get('input-text');
-const inputHiddens = queryString.getAll('input-hidden');
-const inputHidden = inputHiddens[0];
-
-const inputTextObjects = document.getElementsByName('input-text');
-const inputTextObject = inputTextObjects[0];
 ```
 * ❕ `new` 키워드는 `클래스`를 바탕으로 `오브젝트`를 만든다.
 * <details><summary>클래스</summary>
@@ -411,6 +406,22 @@ const inputTextObject = inputTextObjects[0];
   const c2 = class1.m1();
   ```
   * ❔ `new` 키워드를 뺀다면
+  * ❔ `Class1.v1`, `Class1.m1` 확인해 보기
+</details>
+
+### document.getElementsByName
+```js
+const inputTextObjects = document.getElementsByName('input-text');
+const inputTextObject = inputTextObjects[0];
+```
+
+* ❔ 문제: 위의 두줄을 한줄로 표현 하라 (`inputTextObjects` 상수는 삭제)
+* <details><summary>정답</summary>
+
+  ```js
+  const inputTextObject = document.getElementsByName('input-text')[0];
+  ```
+  * ❕ `document.getElementsByName` 메소드는 항상 `배열`을 반환한다.
 </details>
 
 * ❔ 문제: `input box`의 `value`값을, `Query string`의 `input-text`로 넣기
@@ -421,18 +432,11 @@ const inputTextObject = inputTextObjects[0];
   ```
 </details>
 
-* ❔ 문제: 다음을 한줄로 표현 하라 (`inputTextObjects` 상수는 삭제)
-  ```js
-  const inputTextObjects = document.getElementsByName('input-text');
-  const inputTextObject = inputTextObjects[0];
-  ```
-* <details><summary>정답</summary>
-
-  ```js
-  const inputTextObject = document.getElementsByName('input-text')[0];
-  ```
-  * ❕ `document.getElementsByName` 메소드는 항상 `배열`을 반환한다.
-</details>
+### Query string - getAll
+```js
+const inputHiddens = queryString.getAll('input-hidden');
+const inputHidden = inputHiddens[0];
+```
 
 ### focus, blur
 ```js
