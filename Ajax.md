@@ -131,13 +131,20 @@ const membersCreate = function(form) {
 
 #### Read
 ```diff
+- const membersGet = sessionStorage.getItem('members');
+- const membersLogical = membersGet || '[]';
+- const members = JSON.parse(membersLogical);
++ let members;
+```
+
+```diff
 - const membersRead (삭제)
 ```
 ```js
 const membersRead = function() {
   const successFunction = function(xhrObject) {
     const membersLogical = JSON.parse(xhrObject.responseText);
-    const members = membersLogical.members;
+    members = membersLogical.members;
     const tagDivParent = document.getElementById('tag-div-parent');
     const tagDivChild = document.getElementById('tag-div-child');
     tagDivParent.innerHTML = '';
