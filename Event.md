@@ -69,3 +69,8 @@ const changeFile = function(inputFile) {
 <input type="file" onchange="changeFile(this)" />
 <img id="image" />
 ```
+
+## input select placeholder
+```html
+<option disabled selected hidden>placeholder</option>
+```
