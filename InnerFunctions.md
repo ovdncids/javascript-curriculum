@@ -317,6 +317,7 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/ev
 inputTextObject.value = 'abc';
 
 // Input 객체 Read
+inputTextObject.value;
 inputTextObject.a1 = inputTextObject.value;
 inputTextObject.a2 = inputTextObject.value;
 
