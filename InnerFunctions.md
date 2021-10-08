@@ -54,6 +54,7 @@ sessionStorage.setItem('ss2', '이');
 sessionStorage.setItem('ss3', undefined);
 
 // storageGet Read
+sessionStorage.getItem('ss1');
 const ss1 = sessionStorage.getItem('ss1');
 const ss2 = sessionStorage.getItem('ss2');
 const ss3 = sessionStorage.getItem('ss3');
@@ -376,6 +377,7 @@ const tagPre = document.getElementById('tag-pre');
 tagPre.innerHTML = 'abc';
 
 // Pre 객체 Read
+tagPre.innerHTML;
 tagPre.a1 = tagPre.innerHTML;
 tagPre.a2 = tagPre.innerHTML;
 
