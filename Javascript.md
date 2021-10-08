@@ -308,6 +308,7 @@ array1.push('2');
 array1.push('삼');
 
 // 배열 Read
+array1[0];
 const a1 = array1[0];
 const a2 = array1[1];
 const a3 = array1[2];
@@ -800,6 +801,7 @@ object1.key2 = '2';
 object1['key3'] = '삼';
 
 // 오브젝트 Read (. 연산자, 대괄호 연산자)
+object1.key1;
 const o1 = object1.key1;
 const o2 = object1['key2'];
 const o3 = object1.key3;
