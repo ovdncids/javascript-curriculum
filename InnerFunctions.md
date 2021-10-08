@@ -555,8 +555,8 @@ form/membersNoRefresh.js
 ```js
 const membersRead = function() {
   const tagDivParent = document.getElementById('tag-div-parent');
-  const tagDivChild = document.getElementById('tag-div-child');
   tagDivParent.innerHTML = '';
+  const tagDivChild = document.getElementById('tag-div-child');
   for (let index in members) {
     const newDivChild = tagDivChild.cloneNode(true);
     tagDivParent.appendChild(newDivChild);
@@ -565,6 +565,10 @@ const membersRead = function() {
   return members;
 };
 ```
+<!--
+`const tagDivChild`가 `tagDivParent.innerHTML = ''`; 보다 아래 있는 이유
+`tagDivParent.innerHTML = ''` 자식을 지운 후에는 'tag-div-child'가 항상 템플릿 하나만 남게 된다.
+-->
 
 #### DOM 객체 접근하기
 form/membersNoRefresh.js
