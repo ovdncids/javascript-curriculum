@@ -146,8 +146,8 @@ const membersRead = function() {
     const membersLogical = JSON.parse(xhrObject.responseText);
     members = membersLogical.members;
     const tagDivParent = document.getElementById('tag-div-parent');
-    const tagDivChild = document.getElementById('tag-div-child');
     tagDivParent.innerHTML = '';
+    const tagDivChild = document.getElementById('tag-div-child');
     for (let index in members) {
       const newDivChild = tagDivChild.cloneNode(true);
       tagDivParent.appendChild(newDivChild);
