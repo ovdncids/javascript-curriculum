@@ -84,7 +84,7 @@ node index.js
 Ctrl + c
 ```
 
-* ❕ `member`, `memberUpdate` 구조를 `스키마` 또는 `모델`이라고 한다.
+* ❕ `member` 구조를 `스키마` 또는 `모델`이라고 한다.
 
 
 ### Frontend Server
