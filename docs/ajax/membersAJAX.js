@@ -36,8 +36,8 @@ const membersCreate = function(form) {
 const membersRead = function() {
   const successFunction = function(xhrObject) {
     const membersLogical = JSON.parse(xhrObject.responseText);
-    const members = membersLogical.members;
     const tagDivParent = document.getElementById('tag-div-parent');
+    const members = membersLogical.members;
     const tagDivChild = document.getElementById('tag-div-child');
     tagDivParent.innerHTML = '';
     for (let index in members) {
