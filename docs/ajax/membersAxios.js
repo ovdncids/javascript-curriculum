@@ -1,3 +1,5 @@
+let members;
+
 const membersCreate = function(form) {
   const memberNameObject = form['member-name'];
   const memberAgeObject = form['member-age'];
@@ -16,10 +18,10 @@ const membersCreate = function(form) {
 const membersRead = function() {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     const data = response.data;
-    const members = data.members;
+    members = data.members;
     const tagDivParent = document.getElementById('tag-div-parent');
-    const tagDivChild = document.getElementById('tag-div-child');
     tagDivParent.innerHTML = '';
+    const tagDivChild = document.getElementById('tag-div-child');
     for (let index in members) {
       const newDivChild = tagDivChild.cloneNode(true);
       tagDivParent.appendChild(newDivChild);
@@ -42,16 +44,14 @@ const membersDelete = function(index) {
 };
 
 const membersUpdate = function(index) {
+  const url = 'http://localhost:3100/api/v1/members/' + index;
   const name = document.getElementsByName('members-name')[index].value;
   const age = document.getElementsByName('members-age')[index].value;
-  const memberUpdate = {
-    index: index,
-    member: {
-      name: name,
-      age: age
-    }
+  const member = {
+    name: name,
+    age: age
   };
-  axios.patch('http://localhost:3100/api/v1/members', memberUpdate).then(membersRead);
+  axios.patch(url, member).then(membersRead);
 };
 
 membersRead();
