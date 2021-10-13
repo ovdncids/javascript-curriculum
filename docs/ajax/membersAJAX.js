@@ -1,3 +1,5 @@
+let members;
+
 const ajax = function(method, url, data, callback) {
   const xhrObject = new XMLHttpRequest();
   xhrObject.onreadystatechange = function() {
@@ -36,10 +38,10 @@ const membersCreate = function(form) {
 const membersRead = function() {
   const successFunction = function(xhrObject) {
     const membersLogical = JSON.parse(xhrObject.responseText);
+    members = membersLogical.members;
     const tagDivParent = document.getElementById('tag-div-parent');
-    const members = membersLogical.members;
-    const tagDivChild = document.getElementById('tag-div-child');
     tagDivParent.innerHTML = '';
+    const tagDivChild = document.getElementById('tag-div-child');
     for (let index in members) {
       const newDivChild = tagDivChild.cloneNode(true);
       tagDivParent.appendChild(newDivChild);
@@ -63,16 +65,14 @@ const membersDelete = function(index) {
 };
 
 const membersUpdate = function(index) {
+  const url = 'http://localhost:3100/api/v1/members/' + index;
   const name = document.getElementsByName('members-name')[index].value;
   const age = document.getElementsByName('members-age')[index].value;
-  const memberUpdate = {
-    index: index,
-    member: {
-      name: name,
-      age: age
-    }
+  const member = {
+    name: name,
+    age: age
   };
-  ajax('PATCH', 'http://localhost:3100/api/v1/members', memberUpdate, membersRead);
+  ajax('PATCH', url, member, membersRead);
 };
 
 membersRead();
