@@ -582,7 +582,7 @@ const diff2 = ++index;
   const diff2 = index;
   ```
 </details>
-  
+
 ## 함수
 function.html
 ```html
