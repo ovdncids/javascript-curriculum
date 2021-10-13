@@ -215,9 +215,9 @@ const membersDelete = function(index) {
 ```
 ```js
 const membersUpdate = function(index) {
+  const url = 'http://localhost:3100/api/v1/members/' + index;
   const name = document.getElementsByName('members-name')[index].value;
   const age = document.getElementsByName('members-age')[index].value;
-  const url = 'http://localhost:3100/api/v1/members/' + index;
   const member = {
     name: name,
     age: age
