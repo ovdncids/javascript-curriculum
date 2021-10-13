@@ -641,9 +641,9 @@ const returned1 = func1('argument1', 'argument2');
 ```js
 const scriptConst2 = 'a';
 const func2 = function(parameter1) {
-    const compare1 = scriptConst2 === parameter1;
-    parameter1 = 'b';
-    const compare2 = scriptConst2 === parameter1;
+  const compare1 = scriptConst2 === parameter1;
+  parameter1 = 'b';
+  const compare2 = scriptConst2 === parameter1;
 };
 func2(scriptConst2);
 ```
@@ -653,10 +653,10 @@ func2(scriptConst2);
 ```js
 const scriptConst3 = [];
 const func3 = function(parameter1) {
-    const compare1 = scriptConst3 === parameter1;
-    parameter1.push('a');
-    scriptConst3.push('b');
-    const compare2 = scriptConst3 === parameter1;
+  const compare1 = scriptConst3 === parameter1;
+  parameter1.push('a');
+  scriptConst3.push('b');
+  const compare2 = scriptConst3 === parameter1;
 };
 func3(scriptConst3);
 ```
@@ -666,9 +666,9 @@ func3(scriptConst3);
 ```js
 const scriptConst4 = function() {};
 const func4 = function(parameter1) {
-    const compare1 = scriptConst4 === parameter1;
-    parameter1 = function() {};
-    const compare2 = scriptConst4 === parameter1;
+  const compare1 = scriptConst4 === parameter1;
+  parameter1 = function() {};
+  const compare2 = scriptConst4 === parameter1;
 };
 func4(scriptConst4);
 ```
