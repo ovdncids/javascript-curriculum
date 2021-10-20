@@ -96,18 +96,18 @@ index.html
 </head>
 <body>
   <div>
-    <input onclick="layerPopup('div-layerPopup1')">
+    <input onclick="layerPopup('div-layer-popup1')">
     <div
-      id="div-layerPopup1" class="layer-popup"
+      id="div-layer-popup1" class="layer-popup"
       style="background-color: #235bb6;" onclick="event.stopPropagation();"
     >
       레이어 팝업1
     </div>
   </div>
   <div>
-    <input onclick="layerPopup('div-layerPopup2')">
+    <input onclick="layerPopup('div-layer-popup2')">
     <div
-      id="div-layerPopup2" class="layer-popup"
+      id="div-layer-popup2" class="layer-popup"
       style="background-color: #EA4335;" onclick="event.stopPropagation();"
     >
       레이어 팝업2
