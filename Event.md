@@ -111,6 +111,7 @@ index.html
       style="background-color: #EA4335;" onclick="event.stopPropagation();"
     >
       레이어 팝업2
+      <span onclick="document.body.click()">X</span>
     </div>
   </div>
 </body>
@@ -174,6 +175,7 @@ index.vue
         style="background-color: #EA4335" @click.stop
       >
         레이어 팝업2
+        <span onclick="document.body.click()">X</span>
       </div>
     </div>
   </div>
