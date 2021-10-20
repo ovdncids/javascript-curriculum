@@ -153,3 +153,84 @@ const layerPopupRemoveEvent = function(id) {
   window.layerPopup.esc[id] = null;
 };
 ```
+
+index.vue
+```vue
+<template>
+  <div>
+    <div>
+      <input @click="layerPopup('divLayerPopup1')">
+      <div
+        class="layer-popup" :class="{active: divLayerPopup1}"
+        style="background-color: #235bb6" @click.stop=""
+      >
+        레이어 팝업1
+      </div>
+    </div>
+    <div>
+      <input @click="layerPopup('divLayerPopup2')">
+      <div
+        class="layer-popup" :class="{active: divLayerPopup2}"
+        style="background-color: #EA4335" @click.stop
+      >
+        레이어 팝업2
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      divLayerPopup1: false,
+      divLayerPopup2: false
+    }
+  },
+  methods: {
+    layerPopup: function(id) {
+      const callback = () => {
+        return this[id] = !this[id]
+      }
+      layerPopupToggle(id, callback)
+    }
+  }
+}
+
+const layerPopupToggle = function(id, callback) {
+  if (!window.layerPopup) window.layerPopup = {
+    click: {},
+    esc: {}
+  }
+  if (window.layerPopup.click[id]) return
+  window.layerPopup.click[id] = function() {
+    const isShow = callback()
+    if (!isShow) layerPopupRemoveEvent(id)
+  }
+  window.layerPopup.esc[id] = function(event) {
+    if (event.key === 'Escape') {
+      callback()
+      layerPopupRemoveEvent(id)
+    }
+  }
+  document.addEventListener('click', window.layerPopup.click[id])
+  document.addEventListener('keydown', window.layerPopup.esc[id])
+}
+
+const layerPopupRemoveEvent = function(id) {
+  document.removeEventListener('click', window.layerPopup.click[id])
+  document.removeEventListener('keydown', window.layerPopup.esc[id])
+  window.layerPopup.click[id] = null
+  window.layerPopup.esc[id] = null
+}
+</script>
+
+<style>
+.layer-popup {
+  display: none;
+}
+.layer-popup.active {
+  display: block;
+}
+</style>
+```
