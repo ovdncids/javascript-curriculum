@@ -74,3 +74,82 @@ const changeFile = function(inputFile) {
 ```html
 <option disabled selected hidden>placeholder</option>
 ```
+
+# Layer Popup
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layer Popup</title>
+  <script src="./index.js"></script>
+  <style>
+    .layer-popup {
+      display: none;
+    }
+    .layer-popup.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input onclick="layerPopup('div-layerPopup1')">
+    <div
+      id="div-layerPopup1" class="layer-popup"
+      style="background-color: #235bb6;" onclick="event.stopPropagation();"
+    >
+      레이어 팝업1
+    </div>
+  </div>
+  <div>
+    <input onclick="layerPopup('div-layerPopup2')">
+    <div
+      id="div-layerPopup2" class="layer-popup"
+      style="background-color: #EA4335;" onclick="event.stopPropagation();"
+    >
+      레이어 팝업2
+    </div>
+  </div>
+</body>
+</html>
+```
+
+index.js
+```js
+const layerPopup = function(id) {
+  const callback = function() {
+    return document.getElementById(id).classList.toggle('active');
+  };
+  layerPopupToggle(id, callback);
+};
+
+const layerPopupToggle = function(id, callback) {
+  if (!window.layerPopup) window.layerPopup = {
+    click: {},
+    esc: {}
+  };
+  if (window.layerPopup.click[id]) return;
+  window.layerPopup.click[id] = function() {
+    const isShow = callback();
+    if (!isShow) layerPopupRemoveEvent(id);
+  };
+  window.layerPopup.esc[id] = function(event) {
+    if (event.key === 'Escape') {
+      callback();
+      layerPopupRemoveEvent(id);
+    }
+  };
+  document.addEventListener('click', window.layerPopup.click[id]);
+  document.addEventListener('keydown', window.layerPopup.esc[id]);
+};
+
+const layerPopupRemoveEvent = function(id) {
+  document.removeEventListener('click', window.layerPopup.click[id]);
+  document.removeEventListener('keydown', window.layerPopup.esc[id]);
+  window.layerPopup.click[id] = null;
+  window.layerPopup.esc[id] = null;
+};
+```
