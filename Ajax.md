@@ -37,7 +37,7 @@ ajax/basicTemplate.html
 </div>
 ```
 
-ajax/basicAjax.html
+ajax/basicAJAX.html
 ```html
 <body>
   <div><button onclick="ajaxTest()">Ajax run</button></div>
