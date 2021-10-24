@@ -89,8 +89,8 @@ Ctrl + c
 
 ### Frontend Server
 * [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAJAX.html)
-* ajax/membersAJAX.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.html
-* ajax/membersAJAX.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.js
+* ajax/membersAJAX.html <- [form/membersNoRefresh.html](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.html)
+* ajax/membersAJAX.js <- [form/membersNoRefresh.js](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.js)
 
 #### Create
 ```diff
