@@ -256,6 +256,7 @@ const membersUpdate = function(index) {
     ...
   };
   ```
+* ❕ 통신 부분 주석은 리팩토링 완료 후 따로 삭제
 * Callback 함수 설명
 * React 또는 Vue.js와 비교해 보기
 
