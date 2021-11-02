@@ -1,7 +1,8 @@
 # Javascript
 
 ## 목표
-Backend의 데이터를 받아서 Frontend에서 자유롭게 데이터 핸들링(CRUD: [Create, Read, Update, Delete]) 하기 위함이다.
+* Backend의 데이터를 받아서 Frontend에서 자유롭게 데이터 핸들링(CRUD: [Create, Read, Update, Delete]) 하기 위함이다.
+* html과 css를 자유롭게 핸들링 하기 위합니다.
 
 ## 역사
 https://caniuse.com
