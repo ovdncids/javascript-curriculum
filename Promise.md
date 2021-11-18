@@ -56,7 +56,7 @@ Promise.all(promises).then(function(result) {
 * https://stackoverflow.com/questions/33289726/combination-of-async-function-await-settimeout
 ```js
 const sleep = function(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise(function(resolve) {setTimeout(resolve, ms)});
 };
 console.log('sleeping');
 sleep(3000).then(function() {
