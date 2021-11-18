@@ -55,9 +55,9 @@ Promise.all(promises).then(function(result) {
 ## Sleep 함수 만들기
 * https://stackoverflow.com/questions/33289726/combination-of-async-function-await-settimeout
 ```js
-function sleep(ms) {
+const sleep = function(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
+};
 console.log('sleeping');
 sleep(3000).then(function() {
   console.log('woke up');
