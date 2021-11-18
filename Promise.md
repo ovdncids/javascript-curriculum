@@ -68,6 +68,11 @@ sleep(3000).then(function() {
 ```html
 <script src="https://unpkg.com/core-js-bundle@3.6.0/minified.js"></script>
 ```
+```sh
+React: 적용 해야함 # 안되면 build 후에 확인
+Vue.js: 불필요
+Angular: IE11 지원 안 함
+```
 
 ## Custom Promise
 ```js
