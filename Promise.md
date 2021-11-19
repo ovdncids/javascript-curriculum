@@ -73,7 +73,7 @@ React: 적용 해야함 # 안되면 build 후에 확인
 Vue.js: 불필요
 Angular: TypeScript로 바뀌면서 IE11 지원 안 함
 ```
-* ❕ `async await`는 `babel`이 자동으로 `Promise 패턴`으로 변경해준다. 따라서 신경 쓰지 않고 사용해도 된다.
+* ❕ `async await`는 `babel`이 자동으로 `Promise 패턴`으로 변경해준다. 따라서 `babel` 환경에서는 신경 쓰지 않고 사용해도 된다.
 
 
 ## Custom Promise
