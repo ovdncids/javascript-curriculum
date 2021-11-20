@@ -35,7 +35,7 @@
     ```js
     const string1 = '곱하기 ';
     const string2 = '는 ';
-    const string3 = ' 이다.';
+    const string3 = '이다.';
     const ten = 10;
     const five = 5;
     ```
