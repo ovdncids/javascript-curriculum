@@ -37,7 +37,7 @@
     const string2 = '는 ';
     const string3 = ' 이다.';
     const ten = 10;
-    const four = 5;
+    const five = 5;
     ```
     출력
     ```
