@@ -447,7 +447,7 @@ inputTextObject.focus();
 // inputTextObject.blur();
 ```
 
-### 새로 고침 없이 회원 CRUD
+### 새로고침 없이 회원 CRUD
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/membersNoRefresh.html)
 * form/membersNoRefresh.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.html
 * form/membersNoRefresh.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.js
