@@ -39,8 +39,10 @@ const compare6 = func.__proto__ === window.Function.prototype;
 * 문제
 ```js
 window.Array.prototype.arr1 = 'Array attribute';
+arr.obj1;
 arr.arr1;
 obj.arr1;
 ```
+* ❔ `arr.obj1` 값은?
 * ❔ `arr.arr1` 값은?
 * ❔ `obj.arr1` 값은?
