@@ -79,22 +79,26 @@ Angular: TypeScript로 바뀌면서 IE11 지원 안 함
 ## Custom Promise
 ```js
 class CustomPromise {
-  constructor(callback) {
-    callback && callback(this.resolve, this.reject);
-  }
   state;
   returnValue;
   parentPromise;
+
+  constructor(callback) {
+    callback && callback(this.resolve, this.reject);
+  }
+
   resolve = (returnValue) => {
     this.state = 'resolved';
     this.returnValue = returnValue;
     this.parentPromise && this.parentPromise.then(this.parentPromise._then);
   };
+
   reject = (returnValue) => {
     this.state = 'rejected';
     this.returnValue = returnValue;
     this.parentPromise && this.parentPromise.catch(this.parentPromise._catch);
   };
+
   static all = function(promises) {
     const parentPromise = {
       promises: promises,
