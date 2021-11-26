@@ -236,3 +236,15 @@ const layerPopupRemoveEvent = function(id) {
 }
 </style>
 ```
+
+# JSON
+## Query string으로 JSON 형식 보낼때 textarea에서 보내는 특수문자 처리
+```js
+// 보낼때
+const object = {
+  specialCharacter: encodeURIComponent(encodeURIComponent('`~!@#$%^&*()-_=+[{]}\|;:\'",<.>/?'))
+};
+
+// 받고 사용할때
+decodeURIComponent(object.specialCharacter);
+```
