@@ -83,10 +83,6 @@ class CustomPromise {
   returnValue;
   parentPromise;
 
-  constructor(callback) {
-    callback && callback(this.resolve, this.reject);
-  }
-
   resolve = (returnValue) => {
     this.state = 'resolved';
     this.returnValue = returnValue;
@@ -98,6 +94,10 @@ class CustomPromise {
     this.returnValue = returnValue;
     this.parentPromise && this.parentPromise.catch(this.parentPromise._catch);
   };
+
+  constructor(callback) {
+    callback && callback(this.resolve, this.reject);
+  }
 
   static all = function(promises) {
     const parentPromise = {
