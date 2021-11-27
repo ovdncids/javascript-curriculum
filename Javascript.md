@@ -848,6 +848,28 @@ const array2 = Object.keys(object2);
 console.log(array2.length);
 ```
 
+### Object 체이닝 패턴
+```js
+const chain1 = {
+  total: 0,
+  plus1: function() {
+    this.total += 1;
+    return this;
+  },
+  plus10: function() {
+    this.total += 10;
+    return this;
+  },
+  plus: function(num) {
+    this.total += num;
+    return this;
+  }
+};
+chain1.plus1().plus10();
+```
+* ❕ 체이닝 패턴의 핵심은 함수 호출 후에 `this`를 리턴한다.
+* ❔ `chain1.total` 값을 `27`로 만들기
+
 ### 오브젝트 실습 (회원 CRUD 사용)
 
 * [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html) 또는 membersFunction.html 파일 호출 시키기
