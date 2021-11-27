@@ -79,7 +79,7 @@ Angular: TypeScript로 바뀌면서 IE11 지원 안 함
 ## Custom Promise
 ```js
 class CustomPromise {
-  state;
+  state = 'waiting';
   returnValue;
   parentPromise;
 
