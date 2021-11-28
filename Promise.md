@@ -10,16 +10,16 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Pr
 const promise1 = new Promise(function(resolve, reject) {
   // resolve('Resolved promise1');
   reject('Rejected promise1');
-})
+});
 const promise2 = new Promise(function(resolve, reject) {
   // resolve('Resolved promise2');
   reject('Rejected promise2');
-})
-Promise.all([promise1, promise2]).then(function(result) {
+});
+const promiseAll = Promise.all([promise1, promise2]).then(function(result) {
   console.log(result);
 }).catch(function(error) {
   console.error(error);
-})
+});
 ```
 
 ### Case1
@@ -37,19 +37,19 @@ promises[0] = new Promise(function(resolve, reject) {
   }).catch(function(error) {
     reject(error);
   })
-})
+});
 promises[1] = new Promise(function(resolve, reject) {
   axios.get('http://localhost:3100/api/v1/members').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
-})
+});
 Promise.all(promises).then(function(result) {
   console.log(result);
 }).catch(function(error) {
   console.error(error);
-})
+});
 ```
 
 ## Sleep 함수 만들기
