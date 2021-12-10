@@ -2,14 +2,14 @@
 
 ## 목차
 * [변수](#변수-variable)
-* 상수
-* 연산자
-* if문
-* 배열
-* for문
-* 함수
-* 오브젝트
-* try catch문
+* [상수](#상수-constant)
+* [연산자](#연산자-operator)
+* [if문](#if문제어문--조건문)
+* [배열](#배열)
+* [for문](#for문제어문--반복문)
+* [함수](#함수)
+* [오브젝트](#오브젝트-객체)
+* [try catch문](#try-catch문제어문--예외처리문)
 
 ## 목표
 * Backend의 데이터를 받아서 Frontend에서 자유롭게 데이터 핸들링(CRUD: [Create, Read, Update, Delete]) 하기 위함이다.
