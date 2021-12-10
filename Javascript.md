@@ -1,7 +1,7 @@
 # Javascript
 
 ## 목차
-* 변수
+* [변수](#변수-variable)
 * 상수
 * 연산자
 * if문
