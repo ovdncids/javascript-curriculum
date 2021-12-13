@@ -7,7 +7,7 @@ const membersCreate = function(member) {
   members.push(member);
   membersSet();
   window.location.reload();
-  return members;
+  return 'Created';
 };
 
 const membersRead = function() {
@@ -21,14 +21,14 @@ const membersDelete = function(index) {
   members.splice(index, 1);
   membersSet();
   window.location.reload();
-  return members;
+  return 'Deleted';
 };
 
 const membersUpdate = function(index, member) {
   members[index] = member;
   membersSet();
   window.location.reload();
-  return members;
+  return 'Updated';
 };
 
 const membersSet = function() {
