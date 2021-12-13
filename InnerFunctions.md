@@ -478,7 +478,7 @@ console.log('Readed', members);
 #### Delete
 ``` diff
 const membersDelete = function(index) {
-- return members;
+- return 'Deleted';
 + return membersRead();
 ```
 
@@ -492,7 +492,7 @@ tagPre.innerHTML += '<button onclick="membersUpdate(' + index + ')">Update</butt
 - const membersUpdate = function(index, member) {
 -   members[index] = member;
 -   membersSet();
--   return members;
+-   return 'Updated';
 - };
 ```
 ```js
@@ -516,7 +516,7 @@ form/membersNoRefresh.js
 - const membersCreate = function(member) {
 -   members.push(member);
 -   membersSet();
--   return members;
+-   return 'Created';
 - };
 ```
 ```js
