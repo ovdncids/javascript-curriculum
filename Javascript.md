@@ -735,7 +735,7 @@ const members = [];
 
 const membersCreate = function(member) {
   members.push(member);
-  return members;
+  return 'Created';
 };
 ```
 
@@ -750,7 +750,7 @@ const membersRead = function() {
 ```js
 const membersDelete = function(index) {
   members.splice(index, 1);
-  return members;
+  return 'Deleted';
 };
 ```
 
@@ -758,7 +758,7 @@ const membersDelete = function(index) {
 ```js
 const membersUpdate = function(index, member) {
   members[index] = member;
-  return members;
+  return 'Updated';
 };
 ```
 
