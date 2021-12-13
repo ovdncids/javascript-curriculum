@@ -14,7 +14,7 @@ const members = JSON.parse(membersLogical);
 const membersCreate = function(member) {
   members.push(member);
   membersSet();
-  return members;
+  return 'Created';
 };
 
 const membersRead = function() {
@@ -28,13 +28,13 @@ const membersRead = function() {
 const membersDelete = function(index) {
   members.splice(index, 1);
   membersSet();
-  return members;
+  return 'Deleted';
 };
 
 const membersUpdate = function(index, member) {
   members[index] = member;
   membersSet();
-  return members;
+  return 'Updated';
 };
 
 const membersSet = function() {
