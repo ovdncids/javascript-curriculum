@@ -248,3 +248,8 @@ const object = {
 // 받고 사용할때
 decodeURIComponent(object.specialCharacter);
 ```
+
+# 부가가치세 계산식
+```js
+Math.floor(10000 / 11);
+```
