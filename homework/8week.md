@@ -2,7 +2,7 @@
 
 ## 코딩 테스트 문제
 ### 문제
-1. 시험 문제 3개가 있다. 문제는 `questions`, 응답은 `answers`로 정의 되어 있다. `questions`와 `answers`를 이용하여 아래 정답과 같이 출력 하시오.
+1. 시험 문제 3개가 있다. 문제는 `questions`, 응답은 `answers`로 정의 되어 있다. `questions`와 `answers`를 이용하여 아래 `정답`과 같이 출력 하시오.
 ```js
 const questions = [{
   question: "1번 문제. 1 + 1은?",
