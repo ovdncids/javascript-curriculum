@@ -853,6 +853,7 @@ for (const c1 in object2) {
   console.log(object2.c1);
 }
 ```
+* ❕ 키 `c1`은 항상 `String`이다.
 
 ### Object.keys 메소드 확인
 ```js
