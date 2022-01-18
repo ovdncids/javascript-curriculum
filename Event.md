@@ -75,6 +75,17 @@ const changeFile = function(inputFile) {
 <option disabled selected hidden>placeholder</option>
 ```
 
+# 팝업창 닫혔는지 유무
+```js
+const popup = window.open('');
+let popupClose = null;
+popupClose = setInterval(function() {
+  if (!popup.closed) return;
+  clearInterval(popupClose);
+  console.log('팝업창 닫힘');
+});
+```
+
 # Layer Popup
 index.html
 ```html
