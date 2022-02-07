@@ -264,3 +264,31 @@ decodeURIComponent(object.specialCharacter);
 ```js
 Math.floor(10000 / 11);
 ```
+
+# 모바일웹에서 키패드 보여주기
+* https://kcmschool.com/184
+index.vue
+```vue
+<template>
+  <input
+    v-model="parent.child"
+    type="number"
+    pattern="\d*"
+    maxlength="4"
+    @input="maxLengthCheck($event, { parent: gsNPoint, child: 'cardNo1' })"
+  />
+</template>
+
+<script>
+export default {
+  methods: {
+    maxLengthCheck($event, model) {
+      const input = $event.target
+      if (input.value.length > input.maxLength) {
+        model.parent[model.child] = input.value.substring(0, input.maxLength)
+      }
+    }
+  }
+}
+</script>
+```
