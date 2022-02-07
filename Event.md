@@ -267,6 +267,7 @@ Math.floor(10000 / 11);
 
 # 모바일웹에서 키패드 보여주기
 * https://kcmschool.com/184
+
 index.vue
 ```vue
 <template>
