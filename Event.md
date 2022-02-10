@@ -265,6 +265,36 @@ decodeURIComponent(object.specialCharacter);
 Math.floor(10000 / 11);
 ```
 
+# 상품에 종속된 아이템들에게도 할인율 적용하기
+| 할인율 | 상품A | 상품A-아이템1 | 상품A-아이템2 | 상품A-아이템3 |
+|---|:---|:---|:---|:---|
+| 가격 | 10,000원 | 5,000원 | 3,000원 | 2,000원 |
+| 할인 1,000원(할인율: 0.9) | 9,000원 | 4,500원 | 2,700원 | 1,800원 |
+| 할인 1,111원(할인율: 0.8889) | 8,889원 | 4,444.5원 | 2,666.7원 | 1777.8원 |
+| 할인 1,111원(반올림) | 8,889원 | 4,445원 | 2,667원 | 1778원 |
+```js
+const discountPrice = 9000;
+const discountRate = discountPrice / 10000;
+const productAItem1 = 5000 * discountRate;
+const productAItem2 = 3000 * discountRate;
+const productAItem3 = 2000 * discountRate;
+const discountTotal = productAItem1 + productAItem2 + productAItem3;
+```
+```js
+const discountPrice = 8889;
+const discountRate = discountPrice / 10000;
+const productAItem1 = Math.round(5000 * discountRate);
+const productAItem2 = Math.round(3000 * discountRate);
+let productAItem3 = Math.round(2000 * discountRate);
+const discountTotal = productAItem1 + productAItem2 + productAItem3;
+// 할인된 상품 금액 8,889원, 할인된 아이템 금액의 총합 8,890원
+// 1원의 차이가 발생: 상품A-아이템1 또는 상품A-아이템3에 차액을 더해야함
+productAItem3 += discountPrice + discountTotal;
+```
+* `할인율`: `할인된 상품 금액` / `원금`
+* `아이템 계산식`: `할인된 아이템 금액` * `할인율`
+* `차액 계산식`: `차액을 적용할 아이템` += `할인된 상품 금액` + `할인된 아이템 금액의 총합`
+
 # 모바일웹에서 키패드 보여주기
 * https://kcmschool.com/184
 
