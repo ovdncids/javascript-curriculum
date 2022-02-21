@@ -85,7 +85,7 @@ popupClose = setInterval(function() {
   console.log('팝업창 닫힘');
 });
 ```
-* ❔ `close` 될때 발생하는 이벤트 찾아 보자
+* ❔ `close` 될때 발생하는 `이벤트` 찾아 보자
 
 # Layer Popup
 index.html
