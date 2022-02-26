@@ -76,8 +76,9 @@ const changeFile = function(inputFile) {
 ```
 
 # 팝업창 닫혔는지 확인
+1번 방법
 ```js
-const popup = window.open('');
+const popup = window.open('./');
 let popupClose = null;
 popupClose = setInterval(function() {
   if (!popup.closed) return;
@@ -85,7 +86,17 @@ popupClose = setInterval(function() {
   console.log('팝업창 닫힘');
 });
 ```
-* ❔ `close` 될때 발생하는 `이벤트` 찾아 보자
+2번 방법
+```js
+const popup = window.open('./');
+popup.onunload = function() {
+  console.log('popup')
+  if (!popup.name) { popup.name = 'popup'; return; }
+  console.log('팝업창 닫힘');
+};
+```
+* ❕ `2번 방법`은 검증전
+* ❕ `window.open` 2개 띄울 수 없다.
 
 # Layer Popup
 index.html
