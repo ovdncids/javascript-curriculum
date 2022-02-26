@@ -90,7 +90,6 @@ popupClose = setInterval(function() {
 ```js
 const popup = window.open('./');
 popup.onunload = function() {
-  console.log('popup')
   if (!popup.name) { popup.name = 'popup'; return; }
   console.log('팝업창 닫힘');
 };
