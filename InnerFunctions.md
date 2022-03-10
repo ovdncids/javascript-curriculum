@@ -270,12 +270,12 @@ form/membersForm.html
 #### onsubmit 메소드 추가
 ```diff
 - <form method="get" action="./membersForm.html">
-+ <form method="get" onsubmit="console.log(event); console.log(this); event.preventDefault();">
++ <form method="get" onsubmit="debugger; console.log(event, this); event.preventDefault();">
 ```
-* `event.preventDefault();` 설명
-* ❔ `event.target === this` 같은지 확인
-* ❔ `console.log(method);` 확인
+* ❔ `event.target === this` 같은지 확인 (Console 창에서 확인)
+* ❔ `method` 확인
 * ❔ `method === this.method` 같은지 확인
+* `event.preventDefault();` 설명
 <!--
 <form abc="123"> `abc`와 같이 기본 속성이 아닌 경우, `this.abc`에 값이 들어가지 않는다.
 -->
@@ -285,7 +285,7 @@ form/membersForm.html
 * form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
 
 ```diff
-- <form method="get" onsubmit="console.log(event); console.log(this); event.preventDefault();">
+- <form method="get" onsubmit="debugger; console.log(event, this); event.preventDefault();">
 + <form onsubmit="membersSubmit(event, this);">
 ```
 
