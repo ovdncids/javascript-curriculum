@@ -272,6 +272,7 @@ form/membersForm.html
 - <form method="get" action="./membersForm.html">
 + <form method="get" onsubmit="console.log(event); console.log(this); event.preventDefault();">
 ```
+* `event.preventDefault();` 설명
 * ❔ `event.target === this` 같은지 확인
 * ❔ `console.log(method);` 확인
 * ❔ `method === this.method` 같은지 확인
