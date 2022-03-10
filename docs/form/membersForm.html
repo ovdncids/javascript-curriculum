@@ -8,7 +8,7 @@
 </head>
 <body>
   <pre id="tag-pre"></pre>
-  <form method="get" onsubmit="return membersSubmit(this);">
+  <form onsubmit="membersSubmit(event, this);">
     <input type="text" name="input-text" value="membersCreate('홍길동')" placeholder="명령을 입력 하세요.">
     <input type="hidden" name="input-hidden" value="숨겨진값">
     <input type="submit" value="전송">
