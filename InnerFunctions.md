@@ -270,18 +270,22 @@ form/membersForm.html
 #### onsubmit 메소드 추가
 ```diff
 - <form method="get" action="./membersForm.html">
-+ <form onsubmit="return false;">
++ <form method="get" onsubmit="console.log(event); console.log(this); event.preventDefault();">
 ```
-* ❔ `return undefined;`, `return null;`, `return 0;`, `return NaN;`, `return true;` 변경 하기 `return testFunction();`
-* ❔  `return false;`를 반환 하는 함수를 만들고, `testFunction` 상수에 넣기
+* ❔ `event.target === this` 같은지 확인
+* ❔ `console.log(method);` 확인
+* ❔ `method === this.method` 같은지 확인
+<!--
+<form abc="123"> `abc`와 같이 기본 속성이 아닌 경우, `this.abc`에 값이 들어가지 않는다.
+-->
 
 #### form 태그 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
 * form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
 
 ```diff
-- <form onsubmit="return testFunction();">
-+ <form onsubmit="return membersSubmit(this);">
+- <form method="get" onsubmit="console.log(event); console.log(this); event.preventDefault();">
++ <form onsubmit="membersSubmit(event, this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
@@ -294,7 +298,7 @@ form/membersForm.html
 - window.location.reload();
 ```
 ```js
-const membersSubmit = function(form) {
+const membersSubmit = function(event, form) {
   const inputTextObject = form['input-text'];
   try {
     const evalReturn = eval(inputTextObject.value);
@@ -302,7 +306,7 @@ const membersSubmit = function(form) {
   } catch(error) {
     console.error(error);
     alert(error);
-    return false;
+    event.preventDefault();
   }
 }
 ```
@@ -507,8 +511,8 @@ const membersUpdate = function(index) {
 #### Create
 form/membersNoRefresh.html
 ```diff
-- <form method="get" onsubmit="return membersSubmit(this);">
-+ <form method="get" onsubmit="membersCreate(this); return false;">
+- <form onsubmit="membersSubmit(event, this);">
++ <form onsubmit="event.preventDefault(); membersCreate(this);">
 ```
 
 form/membersNoRefresh.js
