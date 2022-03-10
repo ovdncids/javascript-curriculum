@@ -18,7 +18,7 @@
       <button name="members-delete" onclick="membersDelete(index)">Delete</button>
     </div>
   </div>
-  <form method="get" onsubmit="membersCreate(this); return false;">
+  <form onsubmit="event.preventDefault(); membersCreate(this);">
     <input type="text" name="member-name" value="" placeholder="Name">
     <input type="text" name="member-age" value="" placeholder="Age">
     <input type="submit" value="Create">
