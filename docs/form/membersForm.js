@@ -42,7 +42,7 @@ const membersSet = function() {
   sessionStorage.setItem('members', membersSet);
 };
 
-const membersSubmit = function(form) {
+const membersSubmit = function(event, form) {
   const inputTextObject = form['input-text'];
   try {
     const evalReturn = eval(inputTextObject.value);
@@ -50,7 +50,7 @@ const membersSubmit = function(form) {
   } catch(error) {
     console.error(error);
     alert(error);
-    return false;
+    event.preventDefault();
   }
 }
 
