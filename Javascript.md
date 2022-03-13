@@ -209,6 +209,13 @@ let logical2 = false || false;
 * `&&`를 사용하는 상황: 로그인이 되어 있고, 글수정 권한이 있는 아이디인 경우, 글수정 버튼 활성화
 * `||`를 사용하는 상황: 프리미엄 회원이거나 광고를 본 경우, 영상 시청 가능
 
+```js
+let logical3 = true && 'abc';
+let logical4 = false || 'def';
+```
+* ❕ `logical3 변수`는 앞의 조건이 `참`이면 `abc`를 받는다.
+* ❕ `logical4 변수`는 앞의 조건이 `거짓`이면 `def`를 받는다.
+
 5. 소괄호() 연산자
 ```js
 let roundBracket1 = 1 + 2 * 3;
