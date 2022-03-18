@@ -68,16 +68,14 @@ console.log(v1, v2, v3);
 
 2. `디버깅 모드`에서 연산의 과정을 볼 수 있다.
 ```js
-func testVariable2() throws {
-    debugger;
-    console.log(1 + 2 + 3);
-    let num1 = 1;
-    let num2 = 2;
-    let num3 = 3;
-    let sum1 = num1 + num2;
-    let sum2 = sum1 + num3;
-    console.log(sum2);
-}
+debugger;
+console.log(1 + 2 + 3);
+let num1 = 1;
+let num2 = 2;
+let num3 = 3;
+let sum1 = num1 + num2;
+let sum2 = sum1 + num3;
+console.log(sum2);
 ```
 * breakpoint 설명
 
