@@ -53,7 +53,7 @@ console.log(v1, v2, v3);
 * `let` 선언문 설명
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
-* ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 찍는다면
+* ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 읽는(Read)다면
 * `변수`에 대한 `CRUD` 설명
 * ❕ `변수명`에 대한 규칙
   ```
