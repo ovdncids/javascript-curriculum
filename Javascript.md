@@ -424,7 +424,7 @@ testArray1.splice(0, 1);
 testArray1.splice(1, 1);
 testArray1.splice(2, 1);
 ```
-* ❔ 문제: 짝수만 지워기
+* ❔ 문제: 짝수만 지기
 
 ## for문(제어문 > 반복문)
 for.html
