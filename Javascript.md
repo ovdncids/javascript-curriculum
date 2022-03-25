@@ -499,7 +499,7 @@ for (let index6 = 1; index6 <= 10; index6 += 1) {
     console.log('숫자 ' + index6 + '은 짝수 입니다.');
   }
   const oddEven = index6 % 2 ? '홀수' : '짝수';
-  console.log('숫자 ' + index6 + '은 '+ oddEven + ' 입니다.');
+  console.log('숫자 ' + index6 + '은 ' + oddEven + ' 입니다.');
 }
 ```
 
