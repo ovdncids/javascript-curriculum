@@ -241,6 +241,7 @@ console.timeEnd('html bottom');
 - <script src="./index1.js"></script>
 + <script async src="./index1.js"></script>
 ```
+* Network 탭에서 `No throttling`에서 `Slow 3G`로 변경
 * ❕ 따라서 `async`는 사용하지 않는다.
 
 ```diff
