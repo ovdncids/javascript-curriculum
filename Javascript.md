@@ -517,7 +517,7 @@ console.log(index7);
 * ❔ `let index7 = 0;` `초기문`에 추가해 보기 (에러가 발생할지 생각해 보기)
 * 가림 현상 설명 (VSCode에서 `index7` 마우스 오버해보기, Ctrl(또는 command) 키를 눌러서 해당 변수 이동)
 * Block(Local) 변수 설명
-* ❔ 문제: `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 5까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
+* ❔ 문제: `for문` 위에 `Script 변수 total1`에 `0`을 넣고, `for문`을 이용해 `total1`에 1부터 5까지 더하고, `total1`을 `for문` 밖에서 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
   ```js
