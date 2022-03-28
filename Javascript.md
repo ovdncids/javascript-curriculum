@@ -888,7 +888,7 @@ const chain1 = {
     return this;
   }
 };
-chain1.plus1().plus10();
+chain1.plus1().plus10().plus(2);
 ```
 * ❕ 체이닝 패턴의 핵심은 함수 호출 후에 `this`를 리턴한다.
 * ❔ `chain1.total` 값을 `27`로 만들기
