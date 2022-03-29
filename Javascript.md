@@ -660,7 +660,7 @@ const returned1 = func1('argument1', 'argument2');
   ```
 </details>
 
-2. 인수에 자료형 데어터 넘기기
+2. 인수에 자료형 데이터 넘기기
 ```js
 const scriptConst2 = 'a';
 const func2 = function(parameter1) {
