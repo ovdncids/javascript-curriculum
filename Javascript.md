@@ -696,15 +696,15 @@ const func4 = function(parameter1) {
 func4(scriptConst4);
 ```
 * ❔ `compare2`는 `참`일까, `거짓`일까?
-* 익명 함수를 인수로 넘기기
-  ```diff
-  - func4(scriptConst4);
-  ```
-  ```js
-  func4(function() {
-    console.log('익명함수 호출');
-  });
-  ```
+
+5. 익명 함수를 인수로 넘기기
+```js
+const func5 = function(parameter1) {
+};
+func5(function() {
+  console.log('익명함수 호출');
+});
+```
 * ❔ 문제: `인수`로 넘긴 `익명 함수`를, `인자`로 호출 시키기
 * <details><summary>정답</summary>
 
@@ -714,7 +714,7 @@ func4(scriptConst4);
   ```
 </details>
 
-5. 라이브러리: 특정 함수들의 모음 (Moment.js, Lodash)
+6. 라이브러리: 특정 함수들의 모음 (Moment.js, Lodash)
 
 ### 함수 실습 (회원 CRUD 만들기)
 membersFunction.html
