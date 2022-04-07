@@ -397,6 +397,8 @@ tagPre.innerHTML = '';
 ```
 
 ### Query string - get
+* 주로 `검색`, `링크 공유`, `뒤로가기` 했을때 페이지 유지에 사용 된다.
+* CRUD 중 `Read`에 해당 한다.
 ```js
 const queryString = new URLSearchParams(window.location.search);
 const nameText = queryString.get('input-text');
