@@ -30,7 +30,7 @@ xhrObject.send(JSON.stringify({}));
 ajax/basicTemplate.html
 ```html
 <div>
-  <form method="get" onsubmit="alert(this['template'].value); return false;">
+  <form method="get" onsubmit="event.preventDefault(); alert(this['template'].value);">
     <input type="text" name="template" value="Ajax done" placeholder="Name">
     <input type="submit" value="Alert">
   </form>
