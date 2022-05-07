@@ -36,3 +36,25 @@ const answers = [2, 4, 3];
   answer: 3
 }];
 ```
+
+## 8비트 경우의 수 
+```js
+var ways = [];
+for (var i1 = 0; i1 <= 1; i1++) {
+  for (var i2 = 0; i2 <= 1; i2++) {
+    for (var i3 = 0; i3 <= 1; i3++) {
+      for (var i4 = 0; i4 <= 1; i4++) {
+        for (var i5 = 0; i5 <= 1; i5++) {
+          for (var i6 = 0; i6 <= 1; i6++) {
+            for (var i7 = 0; i7 <= 1; i7++) {
+              for (var i8 = 0; i8 <= 1; i8++) {
+                ways.push([i1, i2, i3, i4, i5, i6, i7, i8]);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
