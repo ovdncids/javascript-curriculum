@@ -38,16 +38,17 @@ const answers = [2, 4, 3];
 ```
 
 ## 8비트 경우의 수 
+### 하드코딩
 ```js
-var ways = [];
-for (var i1 = 0; i1 <= 1; i1++) {
-  for (var i2 = 0; i2 <= 1; i2++) {
-    for (var i3 = 0; i3 <= 1; i3++) {
-      for (var i4 = 0; i4 <= 1; i4++) {
-        for (var i5 = 0; i5 <= 1; i5++) {
-          for (var i6 = 0; i6 <= 1; i6++) {
-            for (var i7 = 0; i7 <= 1; i7++) {
-              for (var i8 = 0; i8 <= 1; i8++) {
+const ways = [];
+for (let i1 = 0; i1 <= 1; i1++) {
+  for (let i2 = 0; i2 <= 1; i2++) {
+    for (let i3 = 0; i3 <= 1; i3++) {
+      for (let i4 = 0; i4 <= 1; i4++) {
+        for (let i5 = 0; i5 <= 1; i5++) {
+          for (let i6 = 0; i6 <= 1; i6++) {
+            for (let i7 = 0; i7 <= 1; i7++) {
+              for (let i8 = 0; i8 <= 1; i8++) {
                 ways.push([i1, i2, i3, i4, i5, i6, i7, i8]);
               }
             }
@@ -57,4 +58,23 @@ for (var i1 = 0; i1 <= 1; i1++) {
     }
   }
 }
+console.log(ways);
+```
+
+### 재귀함수
+```js
+const numberOfCases = function(ways, indexes, degree) {
+  for (indexes[degree - 1] = 0; indexes[degree - 1] <= 1; indexes[degree - 1]++) {
+    if (degree === 1) {
+      ways.push([...indexes].reverse());
+    } else {
+      numberOfCases(ways, indexes, degree - 1);
+    }
+  }
+  return ways;
+}
+const cases = numberOfCases([], [], 8);
+console.log(cases);
+
+console.log(JSON.stringify(ways) === JSON.stringify(cases));
 ```
