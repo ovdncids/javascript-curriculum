@@ -63,17 +63,23 @@ console.log(ways);
 
 ### 재귀함수
 ```js
-const numberOfCases = function(ways, indexes, degree) {
-  for (indexes[degree - 1] = 0; indexes[degree - 1] <= 1; indexes[degree - 1]++) {
-    if (degree === 1) {
-      ways.push([...indexes].reverse());
-    } else {
-      numberOfCases(ways, indexes, degree - 1);
+const numberOfCases = function(degree) {
+  const ways = [];
+  const indexes = [];
+  const repeat = function(ways, indexes, degree) {
+    for (indexes[degree - 1] = 0; indexes[degree - 1] <= 1; indexes[degree - 1]++) {
+      if (degree === 1) {
+        ways.push([...indexes].reverse());
+      } else {
+        repeat(ways, indexes, degree - 1);
+      }
     }
+    return ways;
   }
+  repeat(ways, indexes, degree);
   return ways;
 }
-const cases = numberOfCases([], [], 8);
+const cases = numberOfCases(8);
 console.log(cases);
 
 console.log(JSON.stringify(ways) === JSON.stringify(cases));
