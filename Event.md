@@ -1,18 +1,42 @@
 # Event
-## onkeypress
+## onkeydown, onkeyup, onkeypress
 ```html
-<input type="text" onkeyup="console.log(event)" />
+<input type="text" onkeydown="onKeydown(event);" />
 ```
 ```js
-event.target.value;
+const onKeydown = function(event) {
+  console.log(event.target.value);
+  event.preventDefault();
+  // onkeydown에서 event.preventDefault() 적용 하면 키입력을 막을 수 있다.
+}
 ```
 
-## onchange
+## onclick
 ```html
-<input type="date" onchange="console.log(event)" />
+<div onclick="onClick(event);">
+  <input type="text">
+</div>
 ```
 ```js
-event.currentTarget.value;
+const onClick = function(event) {
+  console.log(event.currentTarget);
+  // event.currentTarget는 항상 onClick 함수를 호출하는 div태그가 된다.
+  console.log(event.target);
+}
+```
+
+## onchange, onblur
+```html
+<input type="date" value="2022-05-01" onchange="event.preventDefault();" onblur="onBlur(event);" />
+<!-- onchange 이벤트는 event.preventDefault(); 적용 되지 않는다. -->
+```
+```js
+const onBlur = function(event) {
+  if (event.target.value > event.target.defaultValue) {
+    alert('오늘과 이전만 선택 가능합니다.');
+    event.target.value = event.target.defaultValue;
+  }
+}
 ```
 
 ## activeElement
