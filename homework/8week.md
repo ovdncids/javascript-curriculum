@@ -132,6 +132,7 @@ B라는 문제가 알고력 10, 코딩력 20을 요구한다면 코딩력이 부
 // 정답
 function solution(alp, cop, problems) {
   let useTime = 0;
+  // 1시간 알고력, 코딩력 공부도 문제로 추가함.
   problems.unshift([0, 0, 0, 1, 1]);
   problems.unshift([0, 0, 1, 0, 1]);
 
