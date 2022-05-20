@@ -44,3 +44,11 @@ set.add(1);
 set.add('a');
 const array = [...set];
 ```
+
+## 정렬 > K번째수
+[https://programmers.co.kr/learn/courses/30/lessons/42748](https://programmers.co.kr/learn/courses/30/lessons/42748)
+
+``js
+const a = [1, 2, 3, 4];
+a.slice(2, 3);  // 3
+```
