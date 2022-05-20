@@ -1,0 +1,46 @@
+# Programmers
+
+## 서울에서 김서방 찾기
+[https://programmers.co.kr/learn/courses/30/lessons/12919](https://programmers.co.kr/learn/courses/30/lessons/12919)
+
+## 없는 숫자 더하기
+[https://programmers.co.kr/learn/courses/30/lessons/86051](https://programmers.co.kr/learn/courses/30/lessons/86051)
+
+## 숫자 문자열과 영단어
+[https://programmers.co.kr/learn/courses/30/lessons/81301](https://programmers.co.kr/learn/courses/30/lessons/81301)
+
+## 내적
+[https://programmers.co.kr/learn/courses/30/lessons/70128](https://programmers.co.kr/learn/courses/30/lessons/70128)
+
+## 음양 더하기
+[https://programmers.co.kr/learn/courses/30/lessons/76501](https://programmers.co.kr/learn/courses/30/lessons/76501)
+
+## 약수의 개수와 덧셈
+[https://programmers.co.kr/learn/courses/30/lessons/77884](https://programmers.co.kr/learn/courses/30/lessons/77884)
+
+```js
+// 루트를 씌운다.
+Math.sqrt(2);
+
+// 정수(소수점이 아닌 양수, 음수, 0)
+Number.isInteger(-1);
+```
+
+## 3진법 뒤집기
+[https://programmers.co.kr/learn/courses/30/lessons/68935](https://programmers.co.kr/learn/courses/30/lessons/68935)
+
+```js
+let ternary = n.toString(3);
+let reverse = ternary.split('').reverse().join('');
+let answer = Number.parseInt(reverse, 3);
+```
+
+## 두 개 뽑아서 더하기
+[https://programmers.co.kr/learn/courses/30/lessons/68644](https://programmers.co.kr/learn/courses/30/lessons/68644)
+
+```js
+const set = new Set();
+set.add(1);
+set.add('a');
+const array = [...set];
+```
