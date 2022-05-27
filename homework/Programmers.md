@@ -52,3 +52,6 @@ const array = [...set];
 const a = [1, 2, 3, 4];
 a.slice(2, 3);  // 3
 ```
+
+## 완전탐색 > 모의고사
+[https://programmers.co.kr/learn/courses/30/lessons/42840](https://programmers.co.kr/learn/courses/30/lessons/42840)
