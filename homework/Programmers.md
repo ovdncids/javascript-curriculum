@@ -55,3 +55,11 @@ a.slice(2, 3);  // 3
 
 ## 완전탐색 > 모의고사
 [https://programmers.co.kr/learn/courses/30/lessons/42840](https://programmers.co.kr/learn/courses/30/lessons/42840)
+
+## 해시 > 완주하지 못한 선수
+[https://programmers.co.kr/learn/courses/30/lessons/42576](https://programmers.co.kr/learn/courses/30/lessons/42576)
+
+```sh
+문제는 쉽지만 효용성이 떨어지면 통과 못하는 문제
+여러가지 방법을 생각해 봐야 한다.
+```
