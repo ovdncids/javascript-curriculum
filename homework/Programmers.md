@@ -78,6 +78,13 @@ const strings = ['d', 'c', 'b', 'a'].sort();
 # 예제만 보고 lost, reserve가 오름정렬 되어 있다고 믿으면 안 됨
 ```
 
+## 신고 결과 받기
+[https://programmers.co.kr/learn/courses/30/lessons/92334](https://programmers.co.kr/learn/courses/30/lessons/92334)
+```js
+// 중복 제거
+const report = [...new Set(1, 1, 2, 2, 3, 3)];
+```
+
 # 재미 있는 문제
 ## 키패드 누르기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/67256](https://programmers.co.kr/learn/courses/30/lessons/67256)
