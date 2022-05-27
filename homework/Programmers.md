@@ -1,6 +1,6 @@
 # Programmers
 
-## 서울에서 김서방 찾기
+## 서울에서 김서방 찾기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/12919](https://programmers.co.kr/learn/courses/30/lessons/12919)
 
 ## 없는 숫자 더하기
@@ -79,5 +79,5 @@ const strings = ['d', 'c', 'b', 'a'].sort();
 ```
 
 # 재미 있는 문제
-## 키패드 누르기
+## 키패드 누르기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/67256](https://programmers.co.kr/learn/courses/30/lessons/67256)
