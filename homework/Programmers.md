@@ -71,3 +71,9 @@ const numbers = [4, 3, 2, 1].sort(function(a, b) {
 // 문자의 오름정렬
 const strings = ['d', 'c', 'b', 'a'].sort();
 ```
+
+## 탐욕법(Greedy) > 체육복
+[https://programmers.co.kr/learn/courses/30/lessons/42862](https://programmers.co.kr/learn/courses/30/lessons/42862)
+```sh
+# 예제만 보고 lost, reserve가 오름정렬 되어 있다고 믿으면 안 됨
+```
