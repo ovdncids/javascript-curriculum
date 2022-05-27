@@ -63,3 +63,11 @@ a.slice(2, 3);  // 3
 문제는 쉽지만 효용성이 떨어지면 통과 못하는 문제
 여러가지 방법을 생각해 봐야 한다.
 ```
+```js
+// 숫자의 오름정렬
+const numbers = [4, 3, 2, 1].sort(function(a, b) {
+  return a - b;
+});
+// 문자의 오름정렬
+const strings = ['d', 'c', 'b', 'a'].sort();
+```
