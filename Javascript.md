@@ -336,7 +336,7 @@ const a3 = array1[2];
 // 배열 Update
 array1[0] = undefined;
 array1[1] = false;
-array1[2] = [1, 2, 3];
+array1[2] = [4, 5, 6, 7];
 
 // 배열 Delete
 array1.splice(0, 1);
