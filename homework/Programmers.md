@@ -17,7 +17,6 @@
 
 ## 약수의 개수와 덧셈
 [https://programmers.co.kr/learn/courses/30/lessons/77884](https://programmers.co.kr/learn/courses/30/lessons/77884)
-
 ```js
 // 루트를 씌운다.
 Math.sqrt(2);
@@ -28,7 +27,6 @@ Number.isInteger(-1);
 
 ## 3진법 뒤집기
 [https://programmers.co.kr/learn/courses/30/lessons/68935](https://programmers.co.kr/learn/courses/30/lessons/68935)
-
 ```js
 let ternary = n.toString(3);
 let reverse = ternary.split('').reverse().join('');
@@ -37,7 +35,6 @@ let answer = Number.parseInt(reverse, 3);
 
 ## 두 개 뽑아서 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/68644](https://programmers.co.kr/learn/courses/30/lessons/68644)
-
 ```js
 const set = new Set();
 set.add(1);
@@ -47,10 +44,17 @@ const array = [...set];
 
 ## 정렬 > K번째수
 [https://programmers.co.kr/learn/courses/30/lessons/42748](https://programmers.co.kr/learn/courses/30/lessons/42748)
-
 ```js
 const a = [1, 2, 3, 4];
 a.slice(2, 3);  // 3
+```
+
+## 소수 만들기
+[https://programmers.co.kr/learn/courses/30/lessons/12977](https://programmers.co.kr/learn/courses/30/lessons/12977)
+```sh
+# 소수
+1과 자신으로만 나누어지는 수
+예) 2, 3, 5, 7, 11, 13, 17, 19 ...
 ```
 
 ## 완전탐색 > 모의고사
