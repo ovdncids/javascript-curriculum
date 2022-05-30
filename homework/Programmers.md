@@ -18,6 +18,9 @@
 ## 음양 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/76501](https://programmers.co.kr/learn/courses/30/lessons/76501)
 
+## 신규 아이디 추천 (추천)
+[https://programmers.co.kr/learn/courses/30/lessons/72410](https://programmers.co.kr/learn/courses/30/lessons/72410)
+
 ## 약수의 개수와 덧셈
 [https://programmers.co.kr/learn/courses/30/lessons/77884](https://programmers.co.kr/learn/courses/30/lessons/77884)
 ```js
