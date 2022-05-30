@@ -79,6 +79,12 @@ a.slice(2, 3);  // 3
 ## 완전탐색 > 모의고사
 [https://programmers.co.kr/learn/courses/30/lessons/42840](https://programmers.co.kr/learn/courses/30/lessons/42840)
 
+## 실패율
+[https://programmers.co.kr/learn/courses/30/lessons/42889](https://programmers.co.kr/learn/courses/30/lessons/42889)
+```sh
+stages의 길이가 200,000 이하로 길기 때문에 stages 반복을 최소화 해야 한다.
+```
+
 ## 해시 > 완주하지 못한 선수
 [https://programmers.co.kr/learn/courses/30/lessons/42576](https://programmers.co.kr/learn/courses/30/lessons/42576)
 
