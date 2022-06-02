@@ -21,6 +21,9 @@
 ## 음양 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/76501](https://programmers.co.kr/learn/courses/30/lessons/76501)
 
+## 최소직사각형
+[https://programmers.co.kr/learn/courses/30/lessons/86491](https://programmers.co.kr/learn/courses/30/lessons/86491)
+
 ## 크레인 인형뽑기 게임
 [https://programmers.co.kr/learn/courses/30/lessons/64061](https://programmers.co.kr/learn/courses/30/lessons/64061)
 ```sh
