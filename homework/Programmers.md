@@ -6,6 +6,9 @@
 ## 없는 숫자 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/86051](https://programmers.co.kr/learn/courses/30/lessons/86051)
 
+## 나머지가 1이 되는 수 찾기
+[https://programmers.co.kr/learn/courses/30/lessons/87389](https://programmers.co.kr/learn/courses/30/lessons/87389)
+
 ## 숫자 문자열과 영단어
 [https://programmers.co.kr/learn/courses/30/lessons/81301](https://programmers.co.kr/learn/courses/30/lessons/81301)
 
