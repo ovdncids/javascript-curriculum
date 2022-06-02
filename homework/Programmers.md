@@ -64,6 +64,9 @@ const array = [...set];
 ## 폰켓몬 (두 개 뽑아서 더하기 풀었다면 공짜 문제)
 [https://programmers.co.kr/learn/courses/30/lessons/1845](https://programmers.co.kr/learn/courses/30/lessons/1845)
 
+## 예산
+[https://programmers.co.kr/learn/courses/30/lessons/12982](https://programmers.co.kr/learn/courses/30/lessons/12982)
+
 ## 정렬 > K번째수
 [https://programmers.co.kr/learn/courses/30/lessons/42748](https://programmers.co.kr/learn/courses/30/lessons/42748)
 ```js
