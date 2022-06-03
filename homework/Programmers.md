@@ -128,6 +128,12 @@ a.slice(2, 3);  // 3
 예) 2, 3, 5, 7, 11, 13, 17, 19 ...
 ```
 
+## 소수 찾기
+[https://programmers.co.kr/learn/courses/30/lessons/12921](https://programmers.co.kr/learn/courses/30/lessons/12921)
+```sh
+# 로직은 수학적 지식이 필요하므로 성능 테스트에서 실패하는건 인정
+```
+
 ## 완전탐색 > 모의고사
 [https://programmers.co.kr/learn/courses/30/lessons/42840](https://programmers.co.kr/learn/courses/30/lessons/42840)
 
