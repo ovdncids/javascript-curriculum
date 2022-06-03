@@ -9,6 +9,9 @@
 ## 나머지가 1이 되는 수 찾기
 [https://programmers.co.kr/learn/courses/30/lessons/87389](https://programmers.co.kr/learn/courses/30/lessons/87389)
 
+## 부족한 금액 계산하기
+[https://programmers.co.kr/learn/courses/30/lessons/82612](https://programmers.co.kr/learn/courses/30/lessons/82612)
+
 ## 숫자 문자열과 영단어
 [https://programmers.co.kr/learn/courses/30/lessons/81301](https://programmers.co.kr/learn/courses/30/lessons/81301)
 
