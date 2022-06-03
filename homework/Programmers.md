@@ -94,6 +94,9 @@ const array = [...set];
 ## 나누어 떨어지는 숫자 배열
 [https://programmers.co.kr/learn/courses/30/lessons/12910](https://programmers.co.kr/learn/courses/30/lessons/12910)
 
+## 문자열 내림차순으로 배치하기
+[https://programmers.co.kr/learn/courses/30/lessons/12917](https://programmers.co.kr/learn/courses/30/lessons/12917)
+
 ## 문자열 내 마음대로 정렬하기
 [https://programmers.co.kr/learn/courses/30/lessons/12915](https://programmers.co.kr/learn/courses/30/lessons/12915)
 ```js
