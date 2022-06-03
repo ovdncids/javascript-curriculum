@@ -85,6 +85,9 @@ const array = [...set];
 ## 예산
 [https://programmers.co.kr/learn/courses/30/lessons/12982](https://programmers.co.kr/learn/courses/30/lessons/12982)
 
+## 나누어 떨어지는 숫자 배열
+[https://programmers.co.kr/learn/courses/30/lessons/12910](https://programmers.co.kr/learn/courses/30/lessons/12910)
+
 ## 정렬 > K번째수
 [https://programmers.co.kr/learn/courses/30/lessons/42748](https://programmers.co.kr/learn/courses/30/lessons/42748)
 ```js
