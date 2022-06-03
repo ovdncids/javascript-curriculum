@@ -3,6 +3,9 @@
 ## 서울에서 김서방 찾기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/12919](https://programmers.co.kr/learn/courses/30/lessons/12919)
 
+## 가운데 글자 가져오기
+[https://programmers.co.kr/learn/courses/30/lessons/12903](https://programmers.co.kr/learn/courses/30/lessons/12903)
+
 ## 없는 숫자 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/86051](https://programmers.co.kr/learn/courses/30/lessons/86051)
 
