@@ -53,7 +53,7 @@ Math.sqrt(2);
 Number.isInteger(-1);
 ```
 
-## 3진법 뒤집기
+## 3진법 뒤집기 (3진수)
 [https://programmers.co.kr/learn/courses/30/lessons/68935](https://programmers.co.kr/learn/courses/30/lessons/68935)
 ```js
 let ternary = n.toString(3);
