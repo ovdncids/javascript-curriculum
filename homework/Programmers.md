@@ -3,6 +3,9 @@
 ## 서울에서 김서방 찾기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/12919](https://programmers.co.kr/learn/courses/30/lessons/12919)
 
+## 두 정수 사이의 합
+[https://programmers.co.kr/learn/courses/30/lessons/12912](https://programmers.co.kr/learn/courses/30/lessons/12912)
+
 ## 다른 사람의 풀이
 [https://programmers.co.kr/learn/courses/30/lessons/12906](https://programmers.co.kr/learn/courses/30/lessons/12906)
 
