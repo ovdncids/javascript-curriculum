@@ -100,7 +100,7 @@ a.slice(2, 3);  // 3
 ## 완전탐색 > 모의고사
 [https://programmers.co.kr/learn/courses/30/lessons/42840](https://programmers.co.kr/learn/courses/30/lessons/42840)
 
-## 다트 게임
+## [1차] 다트 게임
 [https://programmers.co.kr/learn/courses/30/lessons/17682#](https://programmers.co.kr/learn/courses/30/lessons/17682#)
 
 ## 실패율
