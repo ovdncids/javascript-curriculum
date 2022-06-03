@@ -61,6 +61,9 @@ let reverse = ternary.split('').reverse().join('');
 let answer = Number.parseInt(reverse, 3);
 ```
 
+## [1차] 비밀지도
+[https://programmers.co.kr/learn/courses/30/lessons/17681](https://programmers.co.kr/learn/courses/30/lessons/17681)
+
 ## 두 개 뽑아서 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/68644](https://programmers.co.kr/learn/courses/30/lessons/68644)
 ```js
