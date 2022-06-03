@@ -6,6 +6,9 @@
 ## 두 정수 사이의 합
 [https://programmers.co.kr/learn/courses/30/lessons/12912](https://programmers.co.kr/learn/courses/30/lessons/12912)
 
+## 문자열 내 p와 y의 개수
+[https://programmers.co.kr/learn/courses/30/lessons/12916](https://programmers.co.kr/learn/courses/30/lessons/12916)
+
 ## 다른 사람의 풀이
 [https://programmers.co.kr/learn/courses/30/lessons/12906](https://programmers.co.kr/learn/courses/30/lessons/12906)
 
