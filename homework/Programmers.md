@@ -27,6 +27,12 @@
 ## 숫자 문자열과 영단어
 [https://programmers.co.kr/learn/courses/30/lessons/81301](https://programmers.co.kr/learn/courses/30/lessons/81301)
 
+## 문자열 다루기 기본
+[https://programmers.co.kr/learn/courses/30/lessons/12918](https://programmers.co.kr/learn/courses/30/lessons/12918)
+```sh
+# 0 ~ 9까지 숫자만 생각 하면 된다.
+```
+
 ## 2016년
 [https://programmers.co.kr/learn/courses/30/lessons/12901](https://programmers.co.kr/learn/courses/30/lessons/12901)
 
