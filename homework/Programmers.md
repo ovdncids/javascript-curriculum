@@ -12,6 +12,9 @@
 ## 두 정수 사이의 합
 [https://programmers.co.kr/learn/courses/30/lessons/12912](https://programmers.co.kr/learn/courses/30/lessons/12912)
 
+## 이상한 문자 만들기
+[https://programmers.co.kr/learn/courses/30/lessons/12930](https://programmers.co.kr/learn/courses/30/lessons/12930)
+
 ## 시저 암호
 [https://programmers.co.kr/learn/courses/30/lessons/12926](https://programmers.co.kr/learn/courses/30/lessons/12926)
 
