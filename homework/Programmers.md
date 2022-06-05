@@ -3,6 +3,9 @@
 ## 서울에서 김서방 찾기 (추천)
 [https://programmers.co.kr/learn/courses/30/lessons/12919](https://programmers.co.kr/learn/courses/30/lessons/12919)
 
+## 자릿수 더하기
+[https://programmers.co.kr/learn/courses/30/lessons/12931](https://programmers.co.kr/learn/courses/30/lessons/12931)
+
 ## 약수의 합
 [https://programmers.co.kr/learn/courses/30/lessons/12928](https://programmers.co.kr/learn/courses/30/lessons/12928)
 
