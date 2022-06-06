@@ -42,6 +42,9 @@
 ## 없는 숫자 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/86051](https://programmers.co.kr/learn/courses/30/lessons/86051)
 
+## 하샤드 수
+[https://programmers.co.kr/learn/courses/30/lessons/12947](https://programmers.co.kr/learn/courses/30/lessons/12947)
+
 ## 콜라츠 추측
 [https://programmers.co.kr/learn/courses/30/lessons/12943](https://programmers.co.kr/learn/courses/30/lessons/12943)
 
