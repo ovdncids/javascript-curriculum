@@ -553,6 +553,8 @@ for (let index9 = 0; index9 < array1.length; index9++) {
   console.log(array1[index9]);
 }
 ```
+* ❕ `array1[index9]` 어떻게 동작하는지 `Console 창`에서 설명
+* ❕ 위의 `평균 문제`를 배열을 사용했을 경우 어떻게 되는지 보여주고 비교해 보기
 * ❔ 문제: `Script 상수 array2`에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문이 끝나고 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
