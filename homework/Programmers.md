@@ -6,6 +6,9 @@
 ## 짝수와 홀수
 [https://programmers.co.kr/learn/courses/30/lessons/12937](https://programmers.co.kr/learn/courses/30/lessons/12937)
 
+## 평균 구하기
+[https://programmers.co.kr/learn/courses/30/lessons/12944](https://programmers.co.kr/learn/courses/30/lessons/12944)
+
 ## 자릿수 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/12931](https://programmers.co.kr/learn/courses/30/lessons/12931)
 
