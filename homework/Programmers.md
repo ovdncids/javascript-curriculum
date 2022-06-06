@@ -86,6 +86,13 @@ Math.sqrt(2);
 Number.isInteger(-1);
 ```
 
+## 정수 제곱근 판별
+[https://programmers.co.kr/learn/courses/30/lessons/12934](https://programmers.co.kr/learn/courses/30/lessons/12934)
+```js
+// 제곱
+Math.pow(2, 2);
+```
+
 ## 3진법 뒤집기 (3진수)
 [https://programmers.co.kr/learn/courses/30/lessons/68935](https://programmers.co.kr/learn/courses/30/lessons/68935)
 ```js
