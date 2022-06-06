@@ -502,6 +502,7 @@ for (let index6 = 1; index6 <= 10; index6 += 1) {
   console.log('숫자 ' + index6 + '은 ' + oddEven + ' 입니다.');
 }
 ```
+* [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/12937)
 
 ### for문의 범위(Scope), Script 변수와 Block(Local) 변수의 차이
 1. 초기문 사용하지 않기
@@ -554,7 +555,7 @@ for (let index9 = 0; index9 < array1.length; index9++) {
 }
 ```
 * ❕ `array1[index9]` 어떻게 동작하는지 `Console 창`에서 설명
-* ❕ 위의 `평균 문제`를 배열을 사용했을 경우 어떻게 되는지 보여주고 비교해 보기
+* ❕ 위의 `평균 문제`를 배열을 사용했을 경우 어떻게 되는지 보여주고 비교해 보기 [프로그래머스](https://programmers.co.kr/learn/courses/30/lessons/12944)
 * ❔ 문제: `Script 상수 array2`에 `빈 배열`을 넣고, 위에 for문을 이용해 `array2` 배열을 `[1, 2, 3]`으로 만들고, `array2`를 for문이 끝나고 `console.log`로 찍어 보기
 * <details><summary>정답</summary>
 
