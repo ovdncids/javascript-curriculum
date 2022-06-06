@@ -107,6 +107,9 @@ let reverse = ternary.split('').reverse().join('');
 let answer = Number.parseInt(reverse, 3);
 ```
 
+## 최대공약수와 최소공배수
+[https://programmers.co.kr/learn/courses/30/lessons/12940](https://programmers.co.kr/learn/courses/30/lessons/12940)
+
 ## [1차] 비밀지도
 [https://programmers.co.kr/learn/courses/30/lessons/17681](https://programmers.co.kr/learn/courses/30/lessons/17681)
 
