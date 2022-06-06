@@ -15,6 +15,9 @@
 ## 두 정수 사이의 합
 [https://programmers.co.kr/learn/courses/30/lessons/12912](https://programmers.co.kr/learn/courses/30/lessons/12912)
 
+## 제일 작은 수 제거하기
+[https://programmers.co.kr/learn/courses/30/lessons/12935](https://programmers.co.kr/learn/courses/30/lessons/12935)
+
 ## 이상한 문자 만들기
 [https://programmers.co.kr/learn/courses/30/lessons/12930](https://programmers.co.kr/learn/courses/30/lessons/12930)
 
