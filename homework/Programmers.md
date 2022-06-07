@@ -9,6 +9,9 @@
 ## 평균 구하기
 [https://programmers.co.kr/learn/courses/30/lessons/12944](https://programmers.co.kr/learn/courses/30/lessons/12944)
 
+## x만큼 간격이 있는 n개의 숫자
+[https://programmers.co.kr/learn/courses/30/lessons/12954](https://programmers.co.kr/learn/courses/30/lessons/12954)
+
 ## 자릿수 더하기
 [https://programmers.co.kr/learn/courses/30/lessons/12931](https://programmers.co.kr/learn/courses/30/lessons/12931)
 
