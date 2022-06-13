@@ -42,4 +42,4 @@ function solution(s) {
 
 ## 타겟 넘버
 [https://programmers.co.kr/learn/courses/30/lessons/43165](https://programmers.co.kr/learn/courses/30/lessons/43165)
-[경우의 수 만들기](https://github.com/ovdncids/javascript-curriculum/blob/master/homework/8week.md#8%EB%B9%84%ED%8A%B8-%EA%B2%BD%EC%9A%B0%EC%9D%98-%EC%88%98)
+* [경우의 수 만들기](https://github.com/ovdncids/javascript-curriculum/blob/master/homework/8week.md#8%EB%B9%84%ED%8A%B8-%EA%B2%BD%EC%9A%B0%EC%9D%98-%EC%88%98)
