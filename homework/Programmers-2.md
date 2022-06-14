@@ -62,3 +62,6 @@ function solution(numbers) {
 solution([1, 1, 1, 1, 1]);
 ```
 -->
+
+## 짝지어 제거하기
+[https://programmers.co.kr/learn/courses/30/lessons/12973](https://programmers.co.kr/learn/courses/30/lessons/12973)
