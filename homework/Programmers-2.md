@@ -65,3 +65,75 @@ solution([1, 1, 1, 1, 1]);
 
 ## 짝지어 제거하기
 [https://programmers.co.kr/learn/courses/30/lessons/12973](https://programmers.co.kr/learn/courses/30/lessons/12973)
+
+## 행렬 테두리 회전하기
+[https://programmers.co.kr/learn/courses/30/lessons/77485](https://programmers.co.kr/learn/courses/30/lessons/77485)
+<!--
+```js
+function solution(rows, columns, queries) {
+    const answer = [], result = [];
+    let num = 1;
+    for (let y = 0; y < rows; y++) {
+        answer.push([]);
+        for (let x = 0; x < columns; x++) {
+            answer[y].push(num++);
+        }
+    }
+    for (let index = 0; index < queries.length; index++) {
+        const query = queries[index];
+        const offset = {
+            top: [],
+            right: [],
+            bottom: [],
+            left: []
+        };
+        for (let y = query[0] - 1; y < query[2]; y++) {
+            for (let x = query[1] - 1; x < query[3]; x++) {
+                if (y === query[0] - 1) {
+                    // 첫줄인 경우
+                    offset.top.push({
+                        x: x,
+                        y: y,
+                        value: answer[y][x]
+                    });
+                } else if (y === query[2] - 1) {
+                    // 마지막 줄인 경우
+                    offset.bottom.unshift({
+                        x: x,
+                        y: y,
+                        value: answer[y][x]
+                    });
+                } else {
+                    if (x === query[1] - 1) {
+                        // 왼쪽인 경우
+                        offset.left.unshift({
+                            x: x,
+                            y: y,
+                            value: answer[y][x]
+                        });
+                    } else if (x === query[3] - 1) {
+                        // 오른쪽인 경우
+                        offset.right.push({
+                            x: x,
+                            y: y,
+                            value: answer[y][x]
+                        });
+                    }
+                }
+            }
+        }
+        const offsets = [].concat(offset.top, offset.right, offset.bottom, offset.left);
+        let min = offsets[0].value;
+        // 회전 시키기
+        for (let i = 0; i < offsets.length; i++) {
+            const from = offsets[i];
+            const to = offsets[(i + 1) % (offsets.length)];
+            answer[to.y][to.x] = from.value;
+            if (from.value < min) min = from.value;
+        }
+        result.push(min);
+    }
+    return result;
+}
+```
+-->
