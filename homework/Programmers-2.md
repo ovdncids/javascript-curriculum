@@ -68,6 +68,13 @@ solution([1, 1, 1, 1, 1]);
 
 ## 행렬 테두리 회전하기
 [https://programmers.co.kr/learn/courses/30/lessons/77485](https://programmers.co.kr/learn/courses/30/lessons/77485)
+```sh
+Left 부분 ⬇ (위에서 아래로, 마지막은 계산하지 않는다)
+Bottom 부분 ➡ (왼쪽에서 오른쪽으로, 마지막은 계산하지 않는다)
+Right 부분 ⬆ (아래에서 위로, 마지막은 계산하지 않는다)
+Top 부분 ⬅ (오른쪽에서 왼쪽으로, 마지막은 계산하지 않는다)
+처음칸이 이동할 위치에 처음값을 넣는다.
+```
 <!--
 ```js
 function solution(rows, columns, queries) {
