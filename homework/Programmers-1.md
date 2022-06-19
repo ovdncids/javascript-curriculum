@@ -127,6 +127,10 @@ let ternary = n.toString(3);
 let reverse = ternary.split('').reverse().join('');
 let answer = Number.parseInt(reverse, 3);
 ```
+```js
+// 숫자만 받기
+isNaN(Number.parseInt('abc'));
+```
 
 ## 최대공약수와 최소공배수
 [https://programmers.co.kr/learn/courses/30/lessons/12940](https://programmers.co.kr/learn/courses/30/lessons/12940)
