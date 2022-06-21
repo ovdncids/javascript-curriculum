@@ -147,39 +147,6 @@ function solution(rows, columns, queries) {
 
 ## 메뉴 리뉴얼
 [https://programmers.co.kr/learn/courses/30/lessons/72411](https://programmers.co.kr/learn/courses/30/lessons/72411)
-<!--
-```js
-function solution(orders, course) {
-  const answer = {};
-  const getAnswer = function (x, strings, array) {
-      if (x < strings.length) {
-          getAnswer(x + 1, strings, ((array[x] = true) || true) && array);
-          getAnswer(x + 1, strings, ((array[x] = false) || true) && array);
-      } else {
-          let str = '';
-          for (let i = 0; i < array.length; i++) {
-              if (array[i]) str += strings[i];
-          }
-          if (course.includes(str.length)) {
-              answer[str] = answer[str] ? ++answer[str] : 1;
-          }
-      }
-  }
-  for (let i = 0; i < orders.length; i++) {
-      const strings = orders[i].split('').sort().join('');
-      getAnswer(0, strings, []);
-  }
-  const result = [];
-  for (let key in answer) {
-      if (answer[key] >= 2) {
-          result.push(key)
-      }
-  }
-  return result.sort();
-}
-
-console.log(solution(["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"], [2,3,4]));
-console.log(solution(["ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"], [2,3,5]));
-console.log(solution(["XYZ", "XWY", "WXA"], [2,3,4]));
+```sh
+요리 개수중에 가장 많이 주문된 코스만 담기
 ```
--->
