@@ -150,3 +150,9 @@ function solution(rows, columns, queries) {
 ```sh
 요리 개수중에 가장 많이 주문된 코스만 담기
 ```
+
+## 괄호 변환
+[https://programmers.co.kr/learn/courses/30/lessons/60058](https://programmers.co.kr/learn/courses/30/lessons/60058)
+```sh
+올바른 괄호 문자열을 계산할때 주의 해야함
+```
