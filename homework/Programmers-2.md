@@ -156,3 +156,6 @@ function solution(rows, columns, queries) {
 ```sh
 올바른 괄호 문자열을 계산할때 주의 해야함
 ```
+
+## [1차] 뉴스 클러스터링
+[https://programmers.co.kr/learn/courses/30/lessons/17677](https://programmers.co.kr/learn/courses/30/lessons/17677)
