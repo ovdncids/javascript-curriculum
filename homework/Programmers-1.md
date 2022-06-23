@@ -142,6 +142,7 @@ isNaN(Number.parseInt('abc'));
 [https://programmers.co.kr/learn/courses/30/lessons/68644](https://programmers.co.kr/learn/courses/30/lessons/68644)
 ```js
 const set = new Set();
+// const set = new Set([1, 1, 2, 2, 3, 3]);
 set.add(1);
 set.add('a');
 const array = [...set];
