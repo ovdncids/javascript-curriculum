@@ -159,3 +159,6 @@ function solution(rows, columns, queries) {
 
 ## [1차] 뉴스 클러스터링
 [https://programmers.co.kr/learn/courses/30/lessons/17677](https://programmers.co.kr/learn/courses/30/lessons/17677)
+
+## 거리두기 확인하기
+[https://programmers.co.kr/learn/courses/30/lessons/81302#fnref1](https://programmers.co.kr/learn/courses/30/lessons/81302#fnref1)
