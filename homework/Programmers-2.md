@@ -169,3 +169,63 @@ function solution(rows, columns, queries) {
 const numbers = [3, 1, 2];
 Math.max(...numbers);
 ```
+<!--
+```js
+function calc(numbers, signs, signsOrder) {
+    for (let i = 0; i < signsOrder.length; i++) {
+        const sign = signsOrder[i];
+        for (let j = 0; j < signs.length; j++) {
+            if (signs[j] === sign) {
+                if (sign === '+') {
+                    numbers[j] += numbers[j + 1];
+                } else if (sign === '-') {
+                    numbers[j] -= numbers[j + 1];
+                } else {
+                    numbers[j] *= numbers[j + 1];
+                }
+                numbers.splice(j + 1, 1);
+                signs.splice(j--, 1);
+            }
+        }
+    }
+    return Math.abs(numbers[0]);
+}
+
+function solution(expression) {
+    // 숫자와 기호 분리
+    const numbers = [];
+    const signs = [];
+    for (let i = 1; i < expression.length; i++) {
+        const str = expression[i];
+        if (str === '+' || str === '-' || str === '*') {
+            numbers.push(Number(expression.substring(0, i)));
+            expression = expression.substring(i + 1);
+            i = 0;
+            signs.push(str);
+        }
+    }
+    numbers.push(Number(expression));
+
+    // 기호 개수 확인
+    const signsCount = [...(new Set(signs))].sort();
+    const sums = [];
+    if (signsCount.length === 1) {
+        sums.push(calc([...numbers], [...signs], [signsCount[0]]));
+    } else if (signsCount.length === 2) {
+        sums.push(calc([...numbers], [...signs], [signsCount[0], signsCount[1]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[1], signsCount[0]]));
+    } else {
+        sums.push(calc([...numbers], [...signs], [signsCount[0], signsCount[1], signsCount[2]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[0], signsCount[2], signsCount[1]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[1], signsCount[0], signsCount[2]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[1], signsCount[2], signsCount[0]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[2], signsCount[0], signsCount[1]]));
+        sums.push(calc([...numbers], [...signs], [signsCount[2], signsCount[1], signsCount[0]]));
+    }
+
+    // 결과
+    // console.log(numbers, signs, signsCount, sums);
+    return Math.max(...sums);
+}
+```
+-->
