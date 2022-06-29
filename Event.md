@@ -71,6 +71,8 @@ document.getElementById('').classList.toggle('active');
 document.getElementById('').classList[0];
 // 클래스 개수
 document.getElementById('').classList.length;
+// 적용된 클래스 보기
+document.getElementById('').classList.value;
 ```
 
 # Form
