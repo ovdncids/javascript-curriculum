@@ -267,5 +267,8 @@ function solution(expression) {
 ## 튜플
 [https://programmers.co.kr/learn/courses/30/lessons/64065](https://programmers.co.kr/learn/courses/30/lessons/64065)
 
-## 빛의 경로 사이클
+## 빛의 경로 사이클 (어려움)
 [https://programmers.co.kr/learn/courses/30/lessons/86052](https://programmers.co.kr/learn/courses/30/lessons/86052)
+
+## 프린터 (쉬움)
+[https://programmers.co.kr/learn/courses/30/lessons/42587](https://programmers.co.kr/learn/courses/30/lessons/42587)
