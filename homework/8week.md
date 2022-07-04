@@ -85,6 +85,30 @@ console.log(cases);
 console.log(JSON.stringify(ways) === JSON.stringify(cases));
 ```
 
+## 순열
+```js
+const results = [];
+const alphabets = 'ABC';
+const permutation = (alphabets, fromIndex = alphabets.length, order = alphabets.split('')) => {
+    if (fromIndex === 1) {
+        results.push(order.join(''));
+        return
+    };
+    const firstIndex = alphabets.length - fromIndex;
+    for (let i = firstIndex; i < alphabets.length; i++) {
+        const nOrder = [...order];
+        const nIndex = i % alphabets.length;
+        nOrder[nIndex] = nOrder[firstIndex];
+        nOrder[firstIndex] = order[nIndex];
+        permutation(alphabets, fromIndex - 1, nOrder);
+    }
+};
+permutation(alphabets);
+console.log(results.sort());
+```
+* `순열` = `ABC` 카드의 순서를 가지고 만들 수 있는 `경우의 수` (ABC, ACB, BAC, BCA, CBA, CAB)
+* 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 (9자리 수부터 연산 결과가 1초를 넘게 된다.)
+
 ## 알고력, 코딩력
 ```sh
 알고리즘에 대한 지식은 알고력, 코드를 구현하는 능력은 코딩력이라고 표현합니다.
