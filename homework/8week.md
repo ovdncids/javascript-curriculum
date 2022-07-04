@@ -106,7 +106,8 @@ const permutation = (alphabets, fromIndex = alphabets.length, order = alphabets.
 permutation(alphabets);
 console.log(results.sort());
 ```
-* `순열` = `ABC` 카드의 순서를 가지고 만들 수 있는 `경우의 수` (ABC, ACB, BAC, BCA, CBA, CAB)
+* [순열](https://ovdncids.github.io/javascript-curriculum/images/Permutation.gif)
+* `ABC` 카드의 순서를 가지고 만들 수 있는 `경우의 수` (ABC, ACB, BAC, BCA, CBA, CAB)
 * 1, 2, 6, 24, 120, 720, 5040, 40320, 362880 (9자리 수부터 연산 결과가 1초를 넘게 된다.)
 
 ## 알고력, 코딩력
