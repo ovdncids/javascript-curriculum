@@ -88,22 +88,22 @@ console.log(JSON.stringify(ways) === JSON.stringify(cases));
 ## 순열
 ```js
 const results = [];
-const alphabets = 'ABC';
-const permutation = (alphabets, fromIndex = alphabets.length, order = alphabets.split('')) => {
-    if (fromIndex === 1) {
-        results.push(order.join(''));
-        return
-    };
-    const firstIndex = alphabets.length - fromIndex;
-    for (let i = firstIndex; i < alphabets.length; i++) {
-        const nOrder = [...order];
-        const nIndex = i % alphabets.length;
-        nOrder[nIndex] = nOrder[firstIndex];
-        nOrder[firstIndex] = order[nIndex];
-        permutation(alphabets, fromIndex - 1, nOrder);
-    }
+const cards = 'ABC';
+const permutation = (cards, fromIndex = cards.length, order = cards.split('')) => {
+  if (fromIndex === 1) {
+    results.push(order.join(''));
+    return
+  };
+  const firstIndex = cards.length - fromIndex;
+  for (let i = firstIndex; i < cards.length; i++) {
+    const nOrder = [...order];
+    const nIndex = i % cards.length;
+    nOrder[nIndex] = nOrder[firstIndex];
+    nOrder[firstIndex] = order[nIndex];
+    permutation(cards, fromIndex - 1, nOrder);
+  }
 };
-permutation(alphabets);
+permutation(cards);
 console.log(results.sort());
 ```
 * [순열](https://ovdncids.github.io/javascript-curriculum/images/Permutation.gif)
