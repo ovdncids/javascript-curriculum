@@ -279,3 +279,6 @@ function solution(expression) {
 ## 소수 찾기
 [https://programmers.co.kr/learn/courses/30/lessons/42839](https://programmers.co.kr/learn/courses/30/lessons/42839)
 * [순열](https://github.com/ovdncids/javascript-curriculum/blob/master/homework/8week.md#%EC%88%9C%EC%97%B4)
+
+## 조이스틱
+[https://school.programmers.co.kr/learn/courses/30/lessons/42860](https://school.programmers.co.kr/learn/courses/30/lessons/42860)
