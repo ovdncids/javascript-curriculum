@@ -72,10 +72,10 @@ const numberOfCases = function (degree, index = 0, cases = [], ways = []) {
   }
   return ways;
 }
-const cases = numberOfCases(8);
-console.log(cases);
+const ways = numberOfCases(8);
+console.log(ways);
 
-console.log(JSON.stringify(hardWays) === JSON.stringify(cases));
+console.log(JSON.stringify(hardWays) === JSON.stringify(ways));
 ```
 <!--
 ```js
