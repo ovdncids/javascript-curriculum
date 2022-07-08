@@ -283,5 +283,5 @@ function solution(expression) {
 ## 조이스틱
 [https://school.programmers.co.kr/learn/courses/30/lessons/42860](https://school.programmers.co.kr/learn/courses/30/lessons/42860)
 
-## 게임 맵 최단거리 (재미 & 감동 & 어려움)
+## 게임 맵 최단거리 (추천 & 감동)
 [https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
