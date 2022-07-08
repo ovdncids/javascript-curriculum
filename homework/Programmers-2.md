@@ -163,7 +163,7 @@ function solution(rows, columns, queries) {
 ## 거리두기 확인하기
 [https://programmers.co.kr/learn/courses/30/lessons/81302#fnref1](https://programmers.co.kr/learn/courses/30/lessons/81302#fnref1)
 
-## 수식 최대화 (추천)
+## 수식 최대화 (추천 & 감동)
 [https://programmers.co.kr/learn/courses/30/lessons/67257](https://programmers.co.kr/learn/courses/30/lessons/67257)
 ```js
 const numbers = [3, 1, 2];
