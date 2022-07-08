@@ -273,7 +273,7 @@ function solution(expression) {
 ## 프린터 (쉬움)
 [https://programmers.co.kr/learn/courses/30/lessons/42587](https://programmers.co.kr/learn/courses/30/lessons/42587)
 
-## 가장 큰 수 (재미 있는 문제)
+## 가장 큰 수 (재미)
 [https://programmers.co.kr/learn/courses/30/lessons/42746](https://programmers.co.kr/learn/courses/30/lessons/42746)
 
 ## 소수 찾기
@@ -282,3 +282,6 @@ function solution(expression) {
 
 ## 조이스틱
 [https://school.programmers.co.kr/learn/courses/30/lessons/42860](https://school.programmers.co.kr/learn/courses/30/lessons/42860)
+
+## 게임 맵 최단거리 (재미 & 감동 & 어려움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
