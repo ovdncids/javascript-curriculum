@@ -285,3 +285,6 @@ function solution(expression) {
 
 ## 게임 맵 최단거리 (추천 & 감동)
 [https://school.programmers.co.kr/learn/courses/30/lessons/1844](https://school.programmers.co.kr/learn/courses/30/lessons/1844)
+
+## 예상 대진표 (쉬움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12985](https://school.programmers.co.kr/learn/courses/30/lessons/12985)
