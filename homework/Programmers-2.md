@@ -309,8 +309,9 @@ const lowerBound = (array, key, start = 0, end = array.length - 1, INF = 9876543
 };
 console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
 ```
-```js
+```diff
 // upperBound
 // 찾고자 하는 수, 초과의 수가 처음으로 나오는 위치를 찾는다
-if (array[mid] <= key) {
+- if (array[mid] < key) {
++ if (array[mid] <= key) {
 ```
