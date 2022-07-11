@@ -288,3 +288,29 @@ function solution(expression) {
 
 ## 예상 대진표 (쉬움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12985](https://school.programmers.co.kr/learn/courses/30/lessons/12985)
+
+## 순위 검색
+[https://school.programmers.co.kr/learn/courses/30/lessons/72412](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
+```js
+// 찾고자 하는 수, 이상의 수가 처음으로 나오는 위치를 찾는다
+const lowerBound = (array, key, start = 0, end = array.length - 1, INF = 987654321) => {
+  let result = INF;
+  let mid;
+  while (start <= end) {
+    mid = Math.floor((start + end) / 2);
+    if (array[mid] < key) {
+      start = mid + 1;
+      continue;
+    }
+    result = Math.min(result, mid);
+    end = mid - 1;
+  }
+  return result === INF ? -1 : result;
+};
+console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
+```
+```js
+// upperBound
+// 찾고자 하는 수, 초과의 수가 처음으로 나오는 위치를 찾는다
+if (array[mid] <= key) {
+```
