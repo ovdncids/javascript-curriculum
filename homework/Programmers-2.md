@@ -315,3 +315,6 @@ console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
 - if (array[mid] < key) {
 + if (array[mid] <= key) {
 ```
+
+## 괄호 회전하기
+[https://school.programmers.co.kr/learn/courses/30/lessons/76502](https://school.programmers.co.kr/learn/courses/30/lessons/76502)
