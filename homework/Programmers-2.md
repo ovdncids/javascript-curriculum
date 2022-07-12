@@ -157,6 +157,9 @@ function solution(rows, columns, queries) {
 올바른 괄호 문자열을 계산할때 주의 해야함
 ```
 
+## 괄호 회전하기
+[https://school.programmers.co.kr/learn/courses/30/lessons/76502](https://school.programmers.co.kr/learn/courses/30/lessons/76502)
+
 ## [1차] 뉴스 클러스터링
 [https://programmers.co.kr/learn/courses/30/lessons/17677](https://programmers.co.kr/learn/courses/30/lessons/17677)
 
@@ -315,6 +318,3 @@ console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
 - if (array[mid] < key) {
 + if (array[mid] <= key) {
 ```
-
-## 괄호 회전하기
-[https://school.programmers.co.kr/learn/courses/30/lessons/76502](https://school.programmers.co.kr/learn/courses/30/lessons/76502)
