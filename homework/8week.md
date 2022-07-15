@@ -132,6 +132,47 @@ console.log(results.sort());
 
 * 9자리 수부터 연산 결과가 1초를 넘게 된다.
 
+## 조합 (순서가 중요하지 않은 순열)
+### 하드코딩
+```js
+const combinations = [];
+for (let i = 0; i < 4; i++) {
+  for (let j = i + 1; j < 4; j++) {
+    for (let k = j + 1; k < 4; k++) {
+      combinations.push([i, j, k]);
+    }
+  }
+}
+console.log(combinations);
+```
+```js
+// 숫자 4개(0, 1, 2, 3) 중, 숫자 3개를 조합 할 수 있는 경우의 수
+[
+  [0, 1, 2],
+  [0, 1, 3],
+  [0, 2, 3],
+  [1, 2, 3]
+]
+```
+
+### 재귀함수
+```js
+const makeCombination = function(cases, length, i = 0, combinations = []) {
+  // 인덱스가 0이면 0, 이상이면, 앞에 인덱스에서 1 더한다.
+  cases[i] = i === 0 ? 0 : cases[i - 1] + 1;
+  for (; cases[i] < length; cases[i]++) {
+    if (i + 1 === cases.length) {
+      combinations.push([...cases]);
+      continue;
+    }
+    makeCombination(cases, length, i + 1, combinations);
+  }
+  return combinations;
+};
+console.log(makeCombination([0, 0, 0], 4));
+```
+* [조합](https://aerocode.net/376#%EC%A1%B0%ED%95%A9-combination)
+
 ## 알고력, 코딩력
 ```sh
 알고리즘에 대한 지식은 알고력, 코드를 구현하는 능력은 코딩력이라고 표현합니다.
