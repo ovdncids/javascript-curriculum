@@ -157,7 +157,7 @@ console.log(combinations);
 
 ### 재귀함수
 ```js
-const makeCombination = function(cases, length, i = 0, combinations = []) {
+const makeCombinations = function(cases, length, i = 0, combinations = []) {
   // 인덱스가 0이면 0, 이상이면, 앞에 인덱스에서 1 더한다.
   cases[i] = i === 0 ? 0 : cases[i - 1] + 1;
   for (; cases[i] < length; cases[i]++) {
@@ -165,11 +165,11 @@ const makeCombination = function(cases, length, i = 0, combinations = []) {
       combinations.push([...cases]);
       continue;
     }
-    makeCombination(cases, length, i + 1, combinations);
+    makeCombinations(cases, length, i + 1, combinations);
   }
   return combinations;
 };
-console.log(makeCombination([0, 0, 0], 4));
+console.log(makeCombinations([0, 0, 0], 4));
 ```
 * [조합](https://aerocode.net/376#%EC%A1%B0%ED%95%A9-combination)
 
