@@ -318,3 +318,8 @@ console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
 - if (array[mid] < key) {
 + if (array[mid] <= key) {
 ```
+
+## 후보키 (어려움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/42890](https://school.programmers.co.kr/learn/courses/30/lessons/42890)
+* [조합](https://github.com/ovdncids/javascript-curriculum/blob/master/homework/8week.md#%EC%A1%B0%ED%95%A9-%EC%88%9C%EC%84%9C%EA%B0%80-%EC%A4%91%EC%9A%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%80-%EC%88%9C%EC%97%B4)
+* [교집합](https://88240.tistory.com/519)
