@@ -327,3 +327,64 @@ console.log(lowerBound([12, 13, 13, 13, 14, 14, 15], 14));
 ## 배달 (추천)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12978](https://school.programmers.co.kr/learn/courses/30/lessons/12978)
 * [다익스트라](https://m.blog.naver.com/ndb796/221234424646)
+<!--
+```js
+function solution(N, road, K) {
+  // 길 만들기
+  const ways = [];
+  const nodes = [];
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      if (j === 0) ways[i] = [];
+      ways[i][j] = i === j ? 0 : Infinity;
+    }
+    nodes[i] = { time: Infinity, visited: false };
+    }
+  nodes[0] = { time: 0, visited: true };
+
+  // 길 그리기
+  road.map(r => {
+    ways[r[0] - 1][r[1] - 1] = r[2] < ways[r[0] - 1][r[1] - 1] ? r[2] : ways[r[0] - 1][r[1] - 1];
+    ways[r[1] - 1][r[0] - 1] = r[2] < ways[r[1] - 1][r[0] - 1] ? r[2] : ways[r[1] - 1][r[0] - 1];
+  });
+
+  // nodes 방문 경로중 가장 작은 값 넣기
+  for (let i = 1; i < nodes.length; i++) {
+    nodes[i].time = ways[0][i];
+  }
+
+  // 가장 작은 값 찾기
+  while (true) {
+    let min = { time: Infinity, i: 0 };
+    for (let i = 1; i < nodes.length; i++) {
+      const node = nodes[i];
+      if (!node.visited && node.time < min.time) {
+        min = { time: node.time, i: i };
+      }
+    }
+    if (min.i === 0) break;
+    nodes[min.i].visited = true;
+    const way = ways[min.i];
+    for (let i = 1; i < way.length; i++) {
+      const w = way[i];
+      if (w === Infinity || w === 0) continue;
+      const time = min.time + w;
+      if (time < nodes[i].time) {
+        nodes[i].time = time;
+      }
+    }
+  }
+
+  // K 시간 이하 찾기
+  let count = 1;
+  for (let i = 1; i < nodes.length; i++) {
+    if (nodes[i].time <= K) count++;
+  }
+
+  console.log(nodes);
+  console.log(ways);
+  console.log(road);
+  return count;
+}
+```
+-->
