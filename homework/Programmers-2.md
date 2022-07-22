@@ -388,3 +388,7 @@ function solution(N, road, K) {
 }
 ```
 -->
+
+## 2 x n 타일링 (감동)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12900](https://school.programmers.co.kr/learn/courses/30/lessons/12900)
+* [힌트](https://ko.wikipedia.org/wiki/%ED%94%BC%EB%B3%B4%EB%82%98%EC%B9%98_%EC%88%98)
