@@ -398,3 +398,6 @@ function solution(N, road, K) {
 
 ## 다리를 지나는 트럭 (쉬움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/42583](https://school.programmers.co.kr/learn/courses/30/lessons/42583)
+
+## H-Index
+[https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1](https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1)
