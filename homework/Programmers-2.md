@@ -401,3 +401,6 @@ function solution(N, road, K) {
 
 ## H-Index
 [https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1](https://school.programmers.co.kr/learn/courses/30/lessons/42747#fn1)
+
+## 카펫 (수학)
+[https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
