@@ -169,7 +169,9 @@ const makeCombinations = function(cases, length, i = 0, combinations = []) {
   }
   return combinations;
 };
-console.log(makeCombinations([0, 0, 0], 4));
+console.log(makeCombinations(Array(3).fill(0), 4));
+// 4가지 숫자 중에 3개만 선택 가능한 조합 만들기
+// console.log(makeCombinations([0, 0, 0], 4));
 ```
 * [조합](https://aerocode.net/376#%EC%A1%B0%ED%95%A9-combination)
 
