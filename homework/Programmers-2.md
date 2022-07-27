@@ -404,3 +404,6 @@ function solution(N, road, K) {
 
 ## 카펫 (수학)
 [https://school.programmers.co.kr/learn/courses/30/lessons/42842](https://school.programmers.co.kr/learn/courses/30/lessons/42842)
+
+## 큰 수 만들기 (어려움, 감동)
+[https://school.programmers.co.kr/learn/courses/30/lessons/42883](https://school.programmers.co.kr/learn/courses/30/lessons/42883)
