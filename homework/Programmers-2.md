@@ -414,3 +414,6 @@ function solution(N, road, K) {
   조합 말고(시간 초과 발생), 스텍(배열)을 사용 해야함
   ```
 </details>
+
+## 피로도
+[https://school.programmers.co.kr/learn/courses/30/lessons/87946](https://school.programmers.co.kr/learn/courses/30/lessons/87946)
