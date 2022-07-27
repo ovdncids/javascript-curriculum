@@ -407,3 +407,10 @@ function solution(N, road, K) {
 
 ## 큰 수 만들기 (어려움, 감동)
 [https://school.programmers.co.kr/learn/courses/30/lessons/42883](https://school.programmers.co.kr/learn/courses/30/lessons/42883)
+
+* <details><summary>힌트</summary>
+
+  ```sh
+  조합 말고(시간 초과 발생), 스텍(배열)을 사용 해야함
+  ```
+</details>
