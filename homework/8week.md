@@ -104,12 +104,11 @@ console.log(JSON.stringify(ways) === JSON.stringify(cases));
 
 ## 순열
 ```js
-const results = [];
-const cards = 'ABC';
-const permutation = (cards, fromIndex = cards.length, order = cards.split('')) => {
+const permutation = (cards, fromIndex = cards.length, order = cards, results = []) => {
   if (fromIndex === 1) {
     results.push(order.join(''));
-    return
+    // results.push(order);
+    return;
   };
   const firstIndex = cards.length - fromIndex;
   for (let i = firstIndex; i < cards.length; i++) {
@@ -117,10 +116,12 @@ const permutation = (cards, fromIndex = cards.length, order = cards.split('')) =
     const nIndex = i % cards.length;
     nOrder[nIndex] = nOrder[firstIndex];
     nOrder[firstIndex] = order[nIndex];
-    permutation(cards, fromIndex - 1, nOrder);
+    permutation(cards, fromIndex - 1, nOrder, results);
   }
+    return results;
 };
-permutation(cards);
+const results = permutation('ABC'.split(''));
+console.log(results);
 console.log(results.sort());
 ```
 * [순열](https://ovdncids.github.io/javascript-curriculum/images/Permutation.gif)
