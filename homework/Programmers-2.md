@@ -421,3 +421,6 @@ function solution(N, road, K) {
 ## [1차] 프렌즈4블록 (추천 & 재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/17679](https://school.programmers.co.kr/learn/courses/30/lessons/17679)
 * 테트리스 개발시 도움
+
+## 2개 이하로 다른 비트
+[https://school.programmers.co.kr/learn/courses/30/lessons/77885](https://school.programmers.co.kr/learn/courses/30/lessons/77885)
