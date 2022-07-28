@@ -424,3 +424,6 @@ function solution(N, road, K) {
 
 ## 2개 이하로 다른 비트 (재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/77885](https://school.programmers.co.kr/learn/courses/30/lessons/77885)
+
+## 삼각 달팽이 (재미)
+[https://school.programmers.co.kr/learn/courses/30/lessons/68645](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
