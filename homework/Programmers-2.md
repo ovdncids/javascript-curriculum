@@ -422,5 +422,5 @@ function solution(N, road, K) {
 [https://school.programmers.co.kr/learn/courses/30/lessons/17679](https://school.programmers.co.kr/learn/courses/30/lessons/17679)
 * 테트리스 개발시 도움
 
-## 2개 이하로 다른 비트
+## 2개 이하로 다른 비트 (재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/77885](https://school.programmers.co.kr/learn/courses/30/lessons/77885)
