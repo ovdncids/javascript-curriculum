@@ -436,3 +436,6 @@ function solution(N, road, K) {
 
 ## 교점에 별 만들기 (재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/87377](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
+
+## 전력망을 둘로 나누기
+[https://school.programmers.co.kr/learn/courses/30/lessons/86971](https://school.programmers.co.kr/learn/courses/30/lessons/86971)
