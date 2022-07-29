@@ -433,3 +433,6 @@ function solution(N, road, K) {
 
 ## 구명보트
 [https://school.programmers.co.kr/learn/courses/30/lessons/42885](https://school.programmers.co.kr/learn/courses/30/lessons/42885)
+
+## 교점에 별 만들기 (재미)
+[https://school.programmers.co.kr/learn/courses/30/lessons/87377](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
