@@ -446,3 +446,6 @@ function solution(N, road, K) {
 ## [1차] 캐시
 [https://school.programmers.co.kr/learn/courses/30/lessons/17680](https://school.programmers.co.kr/learn/courses/30/lessons/17680)
 * [LRU Cache 알고리즘](https://blo9.xyz/2020/08/10/Coding/Algorithm/JavaScript1/lru_cache/)
+
+## 이진 변환 반복하기 (쉬움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/70129](https://school.programmers.co.kr/learn/courses/30/lessons/70129)
