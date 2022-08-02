@@ -449,3 +449,6 @@ function solution(N, road, K) {
 
 ## 이진 변환 반복하기 (쉬움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/70129](https://school.programmers.co.kr/learn/courses/30/lessons/70129)
+
+## 점프와 순간 이동
+[https://school.programmers.co.kr/learn/courses/30/lessons/12980](https://school.programmers.co.kr/learn/courses/30/lessons/12980)
