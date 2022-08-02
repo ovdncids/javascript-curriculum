@@ -442,3 +442,7 @@ function solution(N, road, K) {
 
 ## 모음사전
 [https://school.programmers.co.kr/learn/courses/30/lessons/84512](https://school.programmers.co.kr/learn/courses/30/lessons/84512)
+
+## [1차] 캐시
+[https://school.programmers.co.kr/learn/courses/30/lessons/17680](https://school.programmers.co.kr/learn/courses/30/lessons/17680)
+* [LRU Cache 알고리즘](https://blo9.xyz/2020/08/10/Coding/Algorithm/JavaScript1/lru_cache/)
