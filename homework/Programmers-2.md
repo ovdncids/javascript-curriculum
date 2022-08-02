@@ -452,3 +452,6 @@ function solution(N, road, K) {
 
 ## 점프와 순간 이동
 [https://school.programmers.co.kr/learn/courses/30/lessons/12980](https://school.programmers.co.kr/learn/courses/30/lessons/12980)
+
+## 3 x n 타일링 (어려움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12902](https://school.programmers.co.kr/learn/courses/30/lessons/12902)
