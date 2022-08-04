@@ -455,3 +455,6 @@ function solution(N, road, K) {
 
 ## 3 x n 타일링 (어려움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12902](https://school.programmers.co.kr/learn/courses/30/lessons/12902)
+
+## n^2 배열 자르기
+[https://school.programmers.co.kr/learn/courses/30/lessons/87390](https://school.programmers.co.kr/learn/courses/30/lessons/87390)
