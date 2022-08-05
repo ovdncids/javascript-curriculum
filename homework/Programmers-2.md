@@ -458,3 +458,6 @@ function solution(N, road, K) {
 
 ## n^2 배열 자르기
 [https://school.programmers.co.kr/learn/courses/30/lessons/87390](https://school.programmers.co.kr/learn/courses/30/lessons/87390)
+
+## 쿼드압축 후 개수 세기
+[https://school.programmers.co.kr/learn/courses/30/lessons/68936](https://school.programmers.co.kr/learn/courses/30/lessons/68936)
