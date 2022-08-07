@@ -461,3 +461,6 @@ function solution(N, road, K) {
 
 ## 쿼드압축 후 개수 세기
 [https://school.programmers.co.kr/learn/courses/30/lessons/68936](https://school.programmers.co.kr/learn/courses/30/lessons/68936)
+
+## 스킬트리
+[https://school.programmers.co.kr/learn/courses/30/lessons/49993](https://school.programmers.co.kr/learn/courses/30/lessons/49993)
