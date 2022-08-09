@@ -464,3 +464,6 @@ function solution(N, road, K) {
 
 ## 스킬트리
 [https://school.programmers.co.kr/learn/courses/30/lessons/49993](https://school.programmers.co.kr/learn/courses/30/lessons/49993)
+
+## 방문 길이
+[https://school.programmers.co.kr/learn/courses/30/lessons/49994](https://school.programmers.co.kr/learn/courses/30/lessons/49994)
