@@ -467,3 +467,6 @@ function solution(N, road, K) {
 
 ## 방문 길이
 [https://school.programmers.co.kr/learn/courses/30/lessons/49994](https://school.programmers.co.kr/learn/courses/30/lessons/49994)
+
+## [3차] 방금그곡 (추천 & 재미)
+[https://school.programmers.co.kr/learn/courses/30/lessons/17683](https://school.programmers.co.kr/learn/courses/30/lessons/17683)
