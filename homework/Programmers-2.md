@@ -474,5 +474,6 @@ function solution(N, road, K) {
 ## 가장 큰 정사각형 찾기 (수학)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12905](https://school.programmers.co.kr/learn/courses/30/lessons/12905)
 ```js
+// 거듭제곱
 10 ** 2; // 같음 Math.pow(10, 2);
 ```
