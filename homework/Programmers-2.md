@@ -470,3 +470,9 @@ function solution(N, road, K) {
 
 ## [3차] 방금그곡 (추천 & 재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/17683](https://school.programmers.co.kr/learn/courses/30/lessons/17683)
+
+## 가장 큰 정사각형 찾기 (수학)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12905](https://school.programmers.co.kr/learn/courses/30/lessons/12905)
+```js
+10 ** 2; // 같음 Math.pow(10, 2);
+```
