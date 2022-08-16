@@ -480,3 +480,10 @@ function solution(N, road, K) {
 
 ## [3차] 압축
 [https://school.programmers.co.kr/learn/courses/30/lessons/17684](https://school.programmers.co.kr/learn/courses/30/lessons/17684)
+
+## [3차] 파일명 정렬 (정렬)
+[https://school.programmers.co.kr/learn/courses/30/lessons/17686](https://school.programmers.co.kr/learn/courses/30/lessons/17686)
+```js
+const a = 'abc10def20'.match(/[0-9]+/);
+console.log(a[0]);
+```
