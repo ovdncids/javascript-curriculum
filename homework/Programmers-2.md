@@ -477,3 +477,6 @@ function solution(N, road, K) {
 // 거듭제곱
 10 ** 2; // 같음 Math.pow(10, 2);
 ```
+
+## [3차] 압축
+[https://school.programmers.co.kr/learn/courses/30/lessons/17684](https://school.programmers.co.kr/learn/courses/30/lessons/17684)
