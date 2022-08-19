@@ -487,3 +487,6 @@ function solution(N, road, K) {
 const a = 'abc10def20'.match(/[0-9]+/);
 console.log(a[0]);
 ```
+
+## 올바른 괄호
+[https://school.programmers.co.kr/learn/courses/30/lessons/12909](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
