@@ -490,3 +490,6 @@ console.log(a[0]);
 
 ## 올바른 괄호
 [https://school.programmers.co.kr/learn/courses/30/lessons/12909](https://school.programmers.co.kr/learn/courses/30/lessons/12909)
+
+## [3차] n진수 게임
+[https://school.programmers.co.kr/learn/courses/30/lessons/17687](https://school.programmers.co.kr/learn/courses/30/lessons/17687)
