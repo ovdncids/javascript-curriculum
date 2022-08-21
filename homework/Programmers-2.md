@@ -499,3 +499,6 @@ console.log(a[0]);
 
 ## 땅따먹기 (수학)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12913](https://school.programmers.co.kr/learn/courses/30/lessons/12913)
+```sh
+DP (Dynamic Programming)
+```
