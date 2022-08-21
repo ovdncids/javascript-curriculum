@@ -496,3 +496,6 @@ console.log(a[0]);
 
 ## 다음 큰 숫자
 [https://school.programmers.co.kr/learn/courses/30/lessons/12911](https://school.programmers.co.kr/learn/courses/30/lessons/12911)
+
+## 땅따먹기 (수학)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12913](https://school.programmers.co.kr/learn/courses/30/lessons/12913)
