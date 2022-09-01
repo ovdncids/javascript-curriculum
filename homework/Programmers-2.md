@@ -508,3 +508,6 @@ DP (Dynamic Programming)
 
 ## k진수에서 소수 개수 구하기 (소수)
 [https://school.programmers.co.kr/learn/courses/30/lessons/92335](https://school.programmers.co.kr/learn/courses/30/lessons/92335)
+
+## 숫자의 표현
+[https://school.programmers.co.kr/learn/courses/30/lessons/12924](https://school.programmers.co.kr/learn/courses/30/lessons/12924)
