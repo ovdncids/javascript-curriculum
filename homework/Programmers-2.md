@@ -511,3 +511,6 @@ DP (Dynamic Programming)
 
 ## 숫자의 표현
 [https://school.programmers.co.kr/learn/courses/30/lessons/12924](https://school.programmers.co.kr/learn/courses/30/lessons/12924)
+
+## 최댓값과 최솟값
+[https://school.programmers.co.kr/learn/courses/30/lessons/12939](https://school.programmers.co.kr/learn/courses/30/lessons/12939)
