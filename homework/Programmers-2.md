@@ -515,5 +515,8 @@ DP (Dynamic Programming)
 ## 최댓값과 최솟값
 [https://school.programmers.co.kr/learn/courses/30/lessons/12939](https://school.programmers.co.kr/learn/courses/30/lessons/12939)
 
-## JadenCase 문자열 만들기
+## JadenCase 문자열 만들기 (쉬움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12951](https://school.programmers.co.kr/learn/courses/30/lessons/12951)
+
+## 최솟값 만들기 (쉬움)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12941](https://school.programmers.co.kr/learn/courses/30/lessons/12941)
