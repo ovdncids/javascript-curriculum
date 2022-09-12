@@ -512,7 +512,7 @@ DP (Dynamic Programming)
 ## 숫자의 표현
 [https://school.programmers.co.kr/learn/courses/30/lessons/12924](https://school.programmers.co.kr/learn/courses/30/lessons/12924)
 
-## 최댓값과 최솟값
+## 최댓값과 최솟값 (쉬움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12939](https://school.programmers.co.kr/learn/courses/30/lessons/12939)
 
 ## JadenCase 문자열 만들기 (쉬움)
