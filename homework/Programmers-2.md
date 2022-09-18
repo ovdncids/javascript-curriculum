@@ -526,3 +526,6 @@ DP (Dynamic Programming)
 
 ## N개의 최소공배수
 [https://school.programmers.co.kr/learn/courses/30/lessons/12953](https://school.programmers.co.kr/learn/courses/30/lessons/12953)
+
+## 행렬의 곱셈
+[https://school.programmers.co.kr/learn/courses/30/lessons/12949](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
