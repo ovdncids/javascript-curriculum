@@ -122,7 +122,7 @@ const permutation = (cards, fromIndex = cards.length, order = cards, results = [
 };
 const results = permutation('ABC'.split(''));
 console.log(results);
-console.log(results.sort());
+console.log([...results].sort());
 ```
 * [순열](https://ovdncids.github.io/javascript-curriculum/images/Permutation.gif)
 * `ABC` 카드의 순서를 가지고 만들 수 있는 `경우의 수` (ABC, ACB, BAC, BCA, CBA, CAB)
