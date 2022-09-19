@@ -118,7 +118,7 @@ const permutation = (cards, fromIndex = cards.length, order = cards, results = [
     nOrder[firstIndex] = order[nIndex];
     permutation(cards, fromIndex - 1, nOrder, results);
   }
-    return results;
+  return results;
 };
 const results = permutation('ABC'.split(''));
 console.log(results);
