@@ -529,3 +529,9 @@ DP (Dynamic Programming)
 
 ## 행렬의 곱셈
 [https://school.programmers.co.kr/learn/courses/30/lessons/12949](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
+
+## 주차 요금 계산 (시간)
+[https://school.programmers.co.kr/learn/courses/30/lessons/92341](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
+```js
+const [hour, minute] = time.split(':');
+```
