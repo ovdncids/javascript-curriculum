@@ -544,7 +544,8 @@ const [hour, minute] = time.split(':');
 
 ## N-Queen (어려움, 재미)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12952](https://school.programmers.co.kr/learn/courses/30/lessons/12952)
-<!—-
+
+<!--
 참조
 https://data-engineer.tistory.com/22
--—>
+-->
