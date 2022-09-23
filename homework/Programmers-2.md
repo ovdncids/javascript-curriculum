@@ -541,3 +541,10 @@ const [hour, minute] = time.split(':');
 
 ## 하노이의 탑 (어려움)
 [https://school.programmers.co.kr/learn/courses/30/lessons/12946](https://school.programmers.co.kr/learn/courses/30/lessons/12946)
+
+## N-Queen (어려움, 재미)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12952](https://school.programmers.co.kr/learn/courses/30/lessons/12952)
+<!—
+참조
+https://data-engineer.tistory.com/22
+—>
