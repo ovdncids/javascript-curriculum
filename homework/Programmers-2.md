@@ -515,6 +515,23 @@ DP (Dynamic Programming)
 ## k진수에서 소수 개수 구하기 (소수)
 [https://school.programmers.co.kr/learn/courses/30/lessons/92335](https://school.programmers.co.kr/learn/courses/30/lessons/92335)
 
+## 숫자 블록 (문제 이해하기 어려움, 소수)
+[https://school.programmers.co.kr/learn/courses/30/lessons/12923](https://school.programmers.co.kr/learn/courses/30/lessons/12923)
+```sh
+1,000,000,000 배열의 기본 값이 0으로 시작 하고,
+1번 블록 부터 10,000,000번 블록까지 공식을 이용해서 블록을설치
+```
+```js
+// 1,000 배열의 기본 값이 0으로 시작하고,
+// 1번 블록 부터 10번 블록까지 공식을 이용해서 블록을 설치
+const road = Array(1000).fill(0);
+for (let i = 1; i <= 10; i++) {
+    for (let j = 2; i * j <= road.length; j++) {
+        road[i * j - 1] = i;
+    }
+}
+```
+
 ## 숫자의 표현
 [https://school.programmers.co.kr/learn/courses/30/lessons/12924](https://school.programmers.co.kr/learn/courses/30/lessons/12924)
 
