@@ -65,13 +65,13 @@ const defaultValue2 = null ?? undefined ?? 0 ?? false;
 ## 전개 구조 (Spread Operator)
 ### 배열 복사
 ```js
-const array1 = [1, 2, 3];
+const array1 = [1, 2, 3, 4, 5];
 const array2 = [...array1, ...array1];
 ```
 
 ## 배열 만큼의 변수 생성 (비구조화 할당)
 ```js
-let [v1, v2, v3] = array1;
+let [v1, v2, v3, ...rest] = array1;
 ```
 
 ### 오브젝트 복사
