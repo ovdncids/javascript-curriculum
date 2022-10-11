@@ -69,7 +69,7 @@ const array1 = [1, 2, 3, 4, 5];
 const array2 = [...array1, ...array1];
 ```
 
-## 배열 만큼의 변수 생성 (비구조화 할당)
+### 배열 만큼의 변수 생성 (비구조화 할당)
 ```js
 let [v1, v2, v3, ...rest] = array1;
 ```
@@ -78,9 +78,12 @@ let [v1, v2, v3, ...rest] = array1;
 ```js
 const object3 = {
   key1: 'abc'
-}
+};
 const object4 = {
   ...object3
-}
+};
 const condition1 = object3 === object4;
+
+// 상수 이름 바꾸어서 받기
+const { key1: key2 } = object3;
 ```
