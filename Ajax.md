@@ -276,3 +276,12 @@ const membersRead = function() {
 ```
 
 * ❔ `membersRead`안에 `successFunction` 상수를 삭제하고, 해당 `함수`를 `.then()` 안에 넣기
+
+### 쿠키로 로그인 할때 도메인이 틀려질 경우 설정
+```js
+const api = axios.create({
+  baseURL: ...,
+  withCredentials: true
+});
+```
+* 서버쪽에서도 `Credentials` 설정 해줘야 한다.
