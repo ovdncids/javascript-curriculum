@@ -9,6 +9,7 @@
   
   navPaging(1, 10, 10);
   // pageNumber, pageSize, navSize
+  // Backend에서 페이징이 구현 되었다면 navPaging만 사용하면 된다.
   ```
 ## 목표
 Paging의 원리를 알아 보자
