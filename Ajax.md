@@ -285,3 +285,6 @@ const api = axios.create({
 });
 ```
 * 서버쪽에서도 `Credentials` 설정 해줘야 한다.
+
+### Ubuntu Axios GET통신에서 인코딩이 깨질때
+* https://github.com/axios/axios/issues/5296
