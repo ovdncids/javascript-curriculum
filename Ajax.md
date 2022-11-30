@@ -288,3 +288,6 @@ const api = axios.create({
 
 ### Ubuntu Axios GET통신에서 인코딩이 깨질때
 * https://github.com/axios/axios/issues/5296
+
+### Typescript
+* https://github.com/ovdncids/angular-curriculum/blob/master/Typescript.md#axios-error-%ED%83%80%EC%9E%85-%EA%B0%80%EC%A0%B8%EC%98%A4%EA%B8%B0
