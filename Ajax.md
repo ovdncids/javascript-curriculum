@@ -284,7 +284,7 @@ const api = axios.create({
   withCredentials: true
 });
 ```
-* 서버쪽에서도 `Credentials` 설정 해줘야 한다.
+* 서버쪽에서도 [Credentials](https://github.com/ovdncids/react-curriculum/blob/35c38236b5ce72eb5944d7d06a31f067feeed56b/Express.md#%EC%84%9C%EB%A1%9C-%EB%8B%A4%EB%A5%B8-%EB%8F%84%EB%A9%94%EC%9D%B8-%EA%B0%84%EC%97%90-cookie-%EA%B3%B5%EC%9C%A0) 설정 해줘야 한다.
 
 ### Ubuntu Axios GET통신에서 인코딩이 깨질때
 * https://github.com/axios/axios/issues/5296
