@@ -43,6 +43,12 @@ const array1 = JSON.parse(string1);
 const string2 = JSON.stringify(array1);
 ```
 
+* JSON 이쁘게 출력 (pretty print JSON string)
+```js
+JSON.stringify([{"abc": 123}], null, 2);
+console.log(JSON.stringify([{"abc": 123}], null, 2));
+```
+
 ### sessionStorage, localStorage
 * 브라우저에서 사용하는 DB로 쿠키와 비슷하다고 생각하면 된다.
 
