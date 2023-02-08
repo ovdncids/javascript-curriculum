@@ -105,41 +105,41 @@ sessionStorage.setItem('array2', storageSet);
 ```
 
 #### sessionStorage, localStorage 실습
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersStorage.html)
-* membersStorage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersFunction.html
+* [데모](https://ovdncids.github.io/javascript-curriculum/usersStorage.html)
+* usersStorage.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/usersFunction.html
 
 ```diff
-- const members = [];
+- const users = [];
 ```
 ```js
-const membersGet = sessionStorage.getItem('members');
-const membersLogical = membersGet || '[]';
-const members = JSON.parse(membersLogical);
+const usersGet = sessionStorage.getItem('users');
+const usersLogical = usersGet || '[]';
+const users = JSON.parse(usersLogical);
 ```
 
-* membersCreate, membersDelete, membersUpdate에 추가
+* usersCreate, usersDelete, usersUpdate에 추가
 ```js
-const membersSet = JSON.stringify(members);
-sessionStorage.setItem('members', membersSet);
+const usersSet = JSON.stringify(users);
+sessionStorage.setItem('users', usersSet);
 ```
 
 * ❔ 문제: 리팩토링
   ```
-  1. `membersCreate`, `membersDelete`, `membersUpdate`에 추가된 `공통 부분`을 `함수`로 만들고, `membersSet` `Script 상수`에 넣고
-  2. `membersCreate`, `membersDelete`, `membersUpdate`에서 `membersSet` 실행 시키기
+  1. `usersCreate`, `usersDelete`, `usersUpdate`에 추가된 `공통 부분`을 `함수`로 만들고, `usersSet` `Script 상수`에 넣고
+  2. `usersCreate`, `usersDelete`, `usersUpdate`에서 `usersSet` 실행 시키기
   ```
 * <details><summary>정답</summary>
 
   ```js
-  const membersSet = function() {
-    const membersSet = JSON.stringify(members);
-    sessionStorage.setItem('members', membersSet);
+  const usersSet = function() {
+    const usersSet = JSON.stringify(users);
+    sessionStorage.setItem('users', usersSet);
   };
   ```
   ```diff
-  - const membersSet = JSON.stringify(members);
-  - sessionStorage.setItem('members', membersSet);
-  + membersSet();
+  - const usersSet = JSON.stringify(users);
+  - sessionStorage.setItem('users', usersSet);
+  + usersSet();
   ```
   * ❕ 공통적으로 반복되는 부분을 함수로 만드는 작업(내부 구조 개선)을 리팩토링(Refactoring)이라 한다.
 </details>
@@ -165,16 +165,16 @@ document.writeln('documentWrite9');
 ```
 
 #### document.write, location 실습
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersDocumentWrite.html)
-* documentWrite.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersStorage.html
+* [데모](https://ovdncids.github.io/javascript-curriculum/usersDocumentWrite.html)
+* documentWrite.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/usersStorage.html
 
-* membersRead 추가
+* usersRead 추가
 ```js
-for (let index in members) {
-  document.writeln(members[index]);
+for (let index in users) {
+  document.writeln(users[index]);
 }
 ```
-* membersCreate, membersDelete, membersUpdate에 추가
+* usersCreate, usersDelete, usersUpdate에 추가
 ```js
 window.location.reload();
 ```
@@ -263,9 +263,9 @@ console.timeEnd('html bottom');
 * 주로 구글이나 네이버의 검색창에 사용 된다.
 
 #### form 태그 넣기 (body 태그 안에 넣기)
-form/membersForm.html
+form/usersForm.html
 ```html
-<form method="get" action="./membersForm.html">
+<form method="get" action="./usersForm.html">
   <input type="text" name="input-text" value="초기값" placeholder="명령을 입력 하세요.">
   <input type="hidden" name="input-hidden" value="숨겨진값">
   <input type="submit" value="전송">
@@ -277,7 +277,7 @@ form/membersForm.html
 
 #### onsubmit 메소드 추가
 ```diff
-- <form method="get" action="./membersForm.html">
+- <form method="get" action="./usersForm.html">
 + <form method="get" onsubmit="debugger; console.log(event, this); event.preventDefault();">
 ```
 * ❔ `event.target === this` 같은지 확인 (Console 창에서 확인)
@@ -289,25 +289,25 @@ form/membersForm.html
 -->
 
 #### form 태그 실습
-* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersForm.html)
-* form/membersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/membersDocumentWrite.html
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/usersForm.html)
+* form/usersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/usersDocumentWrite.html
 
 ```diff
 - <form method="get" onsubmit="debugger; console.log(event, this); event.preventDefault();">
-+ <form onsubmit="membersSubmit(event, this);">
++ <form onsubmit="usersSubmit(event, this);">
 ```
 
 #### .js 파일 부르기 (head 태그 안에 넣기)
 ```html
-<script src="./membersForm.js"></script>
+<script src="./usersForm.js"></script>
 ```
 
-#### form/membersForm.js
+#### form/usersForm.js
 ```diff
 - window.location.reload();
 ```
 ```js
-const membersSubmit = function(event, form) {
+const usersSubmit = function(event, form) {
   const inputTextObject = form['input-text'];
   try {
     const evalReturn = eval(inputTextObject.value);
@@ -336,7 +336,7 @@ inputTextObject.a1 = inputTextObject.value;
 inputTextObject.a2 = inputTextObject.value;
 
 // Input 객체 Update
-inputTextObject.value = 'membersDelete(0)';
+inputTextObject.value = 'usersDelete(0)';
 
 // Input 객체 Delete
 delete inputTextObject.value;
@@ -344,25 +344,25 @@ inputTextObject.value = '';
 ```
 
 ### pre 태그, document.getElementById
-form/membersForm.html
+form/usersForm.html
 ```diff
-- <script src="./membersForm.js"></script>
-+ <script defer src="./membersForm.js"></script>
+- <script src="./usersForm.js"></script>
++ <script defer src="./usersForm.js"></script>
 ```
 ```html
 <pre id="tag-pre"></pre>
 ```
 
-form/membersForm.js
+form/usersForm.js
 ```diff
-- for (let index in members) {
--   document.writeln(members[index]);
+- for (let index in users) {
+-   document.writeln(users[index]);
 - }
 ```
 ```js
 const tagPre = document.getElementById('tag-pre');
-for (let index in members) {
-  let innerHTML = tagPre.innerHTML + members[index];
+for (let index in users) {
+  let innerHTML = tagPre.innerHTML + users[index];
   innerHTML += '\n';
   tagPre.innerHTML = innerHTML;
 }
@@ -370,14 +370,14 @@ for (let index in members) {
 * ❔ `defer`를 뺀다면
 * ❔ 문제: 다음을 한줄로 표현 하라
   ```js
-  let innerHTML = tagPre.innerHTML + members[index];
+  let innerHTML = tagPre.innerHTML + users[index];
   innerHTML += '\n';
   tagPre.innerHTML = innerHTML;
   ```
 * <details><summary>정답</summary>
 
   ```js
-  tagPre.innerHTML += members[index] + '\n';
+  tagPre.innerHTML += users[index] + '\n';
   ```
 </details>
 
@@ -395,7 +395,7 @@ tagPre.a1 = tagPre.innerHTML;
 tagPre.a2 = tagPre.innerHTML;
 
 // Pre 객체 Update
-tagPre.innerHTML = 'membersDelete(0)';
+tagPre.innerHTML = 'usersDelete(0)';
 
 // Pre 객체 Delete
 delete tagPre.innerHTML;
@@ -463,90 +463,90 @@ inputTextObject.focus();
 ```
 
 ### 새로고침 없이 회원 CRUD
-* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersNoRefresh.html)
-* form/membersNoRefresh.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.html
-* form/membersNoRefresh.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersForm.js
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/usersNoRefresh.html)
+* form/usersNoRefresh.html <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/usersForm.html
+* form/usersNoRefresh.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/usersForm.js
 
 #### Read
-form/membersNoRefresh.html
+form/usersNoRefresh.html
 ```diff
-- <script defer src="./membersForm.js"></script>
-+ <script defer src="./membersNoRefresh.js"></script>
+- <script defer src="./usersForm.js"></script>
++ <script defer src="./usersNoRefresh.js"></script>
 ```
 
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ``` diff
-- for (let index in members) {
--   tagPre.innerHTML += members[index] + '\n';
+- for (let index in users) {
+-   tagPre.innerHTML += users[index] + '\n';
 - }
 ```
 ```js
 tagPre.innerHTML = '';
-for (let index in members) {
-  tagPre.innerHTML += '<input type="text" name="members-name" value="' + members[index] + '">';
-  tagPre.innerHTML += '<button onclick="membersDelete(' + index + ')">Delete</button>';
+for (let index in users) {
+  tagPre.innerHTML += '<input type="text" name="users-name" value="' + users[index] + '">';
+  tagPre.innerHTML += '<button onclick="usersDelete(' + index + ')">Delete</button>';
   tagPre.innerHTML += '\n';
 }
-console.log('Readed', members);
+console.log('Readed', users);
 ```
 
 #### Delete
 ``` diff
-const membersDelete = function(index) {
+const usersDelete = function(index) {
 - return 'Deleted';
-+ return membersRead();
++ return usersRead();
 ```
 
 #### Update
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```js
-tagPre.innerHTML += '<button onclick="membersUpdate(' + index + ')">Update</button>';
+tagPre.innerHTML += '<button onclick="usersUpdate(' + index + ')">Update</button>';
 ```
 
 ```diff
-- const membersUpdate = function(index, member) {
--   members[index] = member;
--   membersSet();
+- const usersUpdate = function(index, user) {
+-   users[index] = user;
+-   usersSet();
 -   return 'Updated';
 - };
 ```
 ```js
-const membersUpdate = function(index) {
+const usersUpdate = function(index) {
   const name = ❔ 문제
-  members[index] = name;
-  membersSet();
-  return membersRead();
+  users[index] = name;
+  usersSet();
+  return usersRead();
 };
 ```
 
 #### Create
-form/membersNoRefresh.html
+form/usersNoRefresh.html
 ```diff
-- <form onsubmit="membersSubmit(event, this);">
-+ <form onsubmit="event.preventDefault(); membersCreate(this);">
+- <form onsubmit="usersSubmit(event, this);">
++ <form onsubmit="event.preventDefault(); usersCreate(this);">
 ```
 
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```diff
-- const membersCreate = function(member) {
--   members.push(member);
--   membersSet();
+- const usersCreate = function(user) {
+-   users.push(user);
+-   usersSet();
 -   return 'Created';
 - };
 ```
 ```js
-const membersCreate = function(form) {
+const usersCreate = function(form) {
   const inputTextObject = form['input-text'];
-  members.push(❔ 문제);
-  membersSet();
-  return membersRead();
+  users.push(❔ 문제);
+  usersSet();
+  return usersRead();
 };
 ```
-* `membersSubmit` 메소드 삭제
+* `usersSubmit` 메소드 삭제
 * ❔ 문제: `create` 후 입력된 `input box`의 문자 지우기
 
 ### div 태그 복사
-form/membersNoRefresh.html
+form/usersNoRefresh.html
 
 * div 태그 설명
 ```diff
@@ -556,28 +556,28 @@ form/membersNoRefresh.html
 <div id="tag-div-parent"></div>
 <div style="display: none;">
   <div id="tag-div-child">
-    <input type="text" name="members-name" value="">
-    <button name="members-update" onclick="membersUpdate(index)">Update</button>
-    <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+    <input type="text" name="users-name" value="">
+    <button name="users-update" onclick="usersUpdate(index)">Update</button>
+    <button name="users-delete" onclick="usersDelete(index)">Delete</button>
   </div>
 </div>
 ```
 
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```diff
-- const membersRead (삭제)
+- const usersRead (삭제)
 ```
 ```js
-const membersRead = function() {
+const usersRead = function() {
   const tagDivParent = document.getElementById('tag-div-parent');
   tagDivParent.innerHTML = '';
   const tagDivChild = document.getElementById('tag-div-child');
-  for (let index in members) {
+  for (let index in users) {
     const newDivChild = tagDivChild.cloneNode(true);
     tagDivParent.appendChild(newDivChild);
   }
-  console.log('Readed', members);
-  return members;
+  console.log('Readed', users);
+  return users;
 };
 ```
 <!--
@@ -586,64 +586,64 @@ const membersRead = function() {
 -->
 
 #### DOM 객체 접근하기
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```js
-const membersNameObject = document.getElementsByName('members-name')[index];
-const membersUpdateObject = document.getElementsByName('members-update')[index];
-const membersDeleteObject = document.getElementsByName('members-delete')[index];
-membersNameObject.value = members[index];
-membersUpdateObject.index = index;
-membersDeleteObject.index = index;
+const usersNameObject = document.getElementsByName('users-name')[index];
+const usersUpdateObject = document.getElementsByName('users-update')[index];
+const usersDeleteObject = document.getElementsByName('users-delete')[index];
+usersNameObject.value = users[index];
+usersUpdateObject.index = index;
+usersDeleteObject.index = index;
 ```
 * ❕ `onclick` 안에 `index` 설명
 
 ### 회원 정보에 나이 추가
-* [데모](https://ovdncids.github.io/javascript-curriculum/form/membersObject.html)
+* [데모](https://ovdncids.github.io/javascript-curriculum/form/usersObject.html)
 
 #### Create
-form/membersNoRefresh.html
+form/usersNoRefresh.html
 ```diff
 - <input type="text" name="input-text" value="" placeholder="Name">
 - <input type="hidden" name="input-hidden" value="숨겨진값">
 ```
 ```html
-<input type="text" name="member-name" value="" placeholder="Name">
-<input type="text" name="member-age" value="" placeholder="Age">
+<input type="text" name="user-name" value="" placeholder="Name">
+<input type="text" name="user-age" value="" placeholder="Age">
 ```
 
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```diff
 - const inputTextObject = form['input-text'];
-- members.push(inputTextObject.value);
+- users.push(inputTextObject.value);
 - inputTextObject.value = '';
 ```
 ```js
-const memberNameObject = form['member-name'];
-const memberAgeObject = form['member-age'];
-members.push({
-  name: memberNameObject.value,
-  age: memberAgeObject.value
+const userNameObject = form['user-name'];
+const userAgeObject = form['user-age'];
+users.push({
+  name: userNameObject.value,
+  age: userAgeObject.value
 });
-memberNameObject.value = '';
-memberAgeObject.value = '';
+userNameObject.value = '';
+userAgeObject.value = '';
 ```
 
 #### Read
-form/membersNoRefresh.html
+form/usersNoRefresh.html
 ```html
-<input type="text" name="members-age" value="">
+<input type="text" name="users-age" value="">
 ```
 
-form/membersNoRefresh.js
+form/usersNoRefresh.js
 ```js
-const membersAgeObject = document.getElementsByName('members-age')[index];
+const usersAgeObject = document.getElementsByName('users-age')[index];
 ```
 ```diff
-- membersNameObject.value = members[index];
+- usersNameObject.value = users[index];
 ```
 ```js
-membersNameObject.value = members[index].name;
-membersAgeObject.value = members[index].age;
+usersNameObject.value = users[index].name;
+usersAgeObject.value = users[index].age;
 ```
 
 #### Update
@@ -651,13 +651,13 @@ membersAgeObject.value = members[index].age;
 * <details><summary>정답</summary>
 
   ```js
-  const age = document.getElementsByName('members-age')[index].value;
+  const age = document.getElementsByName('users-age')[index].value;
   ```
   ```diff
-  - members[index] = name;
+  - users[index] = name;
   ```
   ```js
-  members[index] = {
+  users[index] = {
     name: name,
     age: age
   };
