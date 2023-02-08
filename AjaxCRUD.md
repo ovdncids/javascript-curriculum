@@ -1,14 +1,14 @@
 # CRUD (Create, Read, Update, Delete)
 
 ## Markup
-members.html
+users.html
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>CRUD</title>
-<script defer src="./js/members.js"></script>
+<script defer src="./js/users.js"></script>
 </head>
 <body>
 <h1>CRUD</h1>
@@ -23,16 +23,16 @@ members.html
         <th>Modify</th>
       </tr>
     </thead>
-    <tbody id="tbody-members"></tbody>
+    <tbody id="tbody-users"></tbody>
   </table>
   <table style="display: none;">
     <tbody>
-      <tr id="tr-template-members">
-        <td name="members-name"></td>
-        <td><input type="text" placeholder="Age" name="members-age" /></td>
+      <tr id="tr-template-users">
+        <td name="users-name"></td>
+        <td><input type="text" placeholder="Age" name="users-age" /></td>
         <td>
-          <button name="members-update" onclick="membersUpdate(index)">Update</button>
-          <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+          <button name="users-update" onclick="usersUpdate(index)">Update</button>
+          <button name="users-delete" onclick="usersDelete(index)">Delete</button>
         </td>
       </tr>
     </tbody>
@@ -41,57 +41,57 @@ members.html
 <hr />
 <div>
   <h2>Create</h2>
-  <input type="text" placeholder="Name" id="member-name" />
-  <input type="text" placeholder="Age" id="member-age" />
-  <button onclick="membersCreate()">Create</button>
+  <input type="text" placeholder="Name" id="user-name" />
+  <input type="text" placeholder="Age" id="user-age" />
+  <button onclick="usersCreate()">Create</button>
 </div>
 </body>
 </html>
 ```
 
-## CRUD members
-./js/members.js
+## CRUD users
+./js/users.js
 ```js
-// members 배열 만들기
-const members = [];
-// members.push 메서드를 이용해 member 2명 넣기, name과 age
-members.push({
+// users 배열 만들기
+const users = [];
+// users.push 메서드를 이용해 user 2명 넣기, name과 age
+users.push({
   name: '홍길동',
   age: 40
 });
-members.push({
+users.push({
   name: '춘향이',
   age: 20
 });
-// members for문에서 name과 age console.log 찍기
-for (let index = 0; index < members.length; index++) {
-  console.log(members[index].name, members[index].age);
+// users for문에서 name과 age console.log 찍기
+for (let index = 0; index < users.length; index++) {
+  console.log(users[index].name, users[index].age);
 }
-// 2번째 member 정보 바꾸기
-members[1] = {
+// 2번째 user 정보 바꾸기
+users[1] = {
   name: '심청이',
   age: 16
 };
-// 2번째 member 지우기
-members.splice(1, 1);
+// 2번째 user 지우기
+users.splice(1, 1);
 ```
 
 ## Create
 ```js
-const membersCreate = function() {
-  members.push({
-    name: document.getElementById('member-name').value,
-    age: document.getElementById('member-age').value
+const usersCreate = function() {
+  users.push({
+    name: document.getElementById('user-name').value,
+    age: document.getElementById('user-age').value
   });
-  console.log('Done membersCreate');
-  membersRead();
+  console.log('Done usersCreate');
+  usersRead();
 };
 ```
 
-## CRUD tbody (members 배열과 상관 없이)
+## CRUD tbody (users 배열과 상관 없이)
 ```js
 // tbody 객체 받기
-const tbody = document.getElementById('tbody-members');
+const tbody = document.getElementById('tbody-users');
 // 새로운 tr을 document.createElement('tr') 메소드로 생성하고, innerHTML에 '<td>1</td>' 넣기
 const tr = document.createElement('tr');
 tr.innerHTML = '<td>1</td>';
@@ -111,48 +111,48 @@ tbody.removeChild(tbody.children[0]);
 
 ## Read
 ```js
-const membersRead = function() {
-  const tbody = document.getElementById('tbody-members');
+const usersRead = function() {
+  const tbody = document.getElementById('tbody-users');
   while (tbody.children.length) {
     tbody.removeChild(tbody.children[0]);
   }
-  for (let index = 0; index < members.length; index++) {
-    const member = members[index];
-    const tr = document.getElementById('tr-template-members').cloneNode(true);
+  for (let index = 0; index < users.length; index++) {
+    const user = users[index];
+    const tr = document.getElementById('tr-template-users').cloneNode(true);
     tbody.appendChild(tr);
-    document.getElementsByName('members-name')[index].innerHTML = member.name;
-    document.getElementsByName('members-age')[index].value = member.age;
-    document.getElementsByName('members-update')[index].index = index;
-    document.getElementsByName('members-delete')[index].index = index;
+    document.getElementsByName('users-name')[index].innerHTML = user.name;
+    document.getElementsByName('users-age')[index].value = user.age;
+    document.getElementsByName('users-update')[index].index = index;
+    document.getElementsByName('users-delete')[index].index = index;
   }
-  console.log('Done membersRead');
+  console.log('Done usersRead');
 };
 ```
 
 ## Update
 ```js
-const membersUpdate = function(index) {
-  members[index] = {
-    name: document.getElementsByName('members-name')[index].innerHTML,
-    age: document.getElementsByName('members-age')[index].value
+const usersUpdate = function(index) {
+  users[index] = {
+    name: document.getElementsByName('users-name')[index].innerHTML,
+    age: document.getElementsByName('users-age')[index].value
   };
-  console.log('Done membersUpdate');
-  membersRead();
+  console.log('Done usersUpdate');
+  usersRead();
 };
 ```
 
 ## Delete
 ```js
-const membersDelete = function(index) {
-  members.splice(index, 1);
-  console.log('Done membersDelete');
-  membersRead();
+const usersDelete = function(index) {
+  users.splice(index, 1);
+  console.log('Done usersDelete');
+  usersRead();
 };
 ```
 
 ## Finally
 ```js
-membersRead();
+usersRead();
 ```
 
 # Ajax
@@ -195,17 +195,17 @@ xhr.send(JSON.stringify({}));
 
 ## Ajax Create
 ```js
-const membersCreate = function() {
-  const member = {
-    name: document.getElementById('member-name').value,
-    age: document.getElementById('member-age').value
+const usersCreate = function() {
+  const user = {
+    name: document.getElementById('user-name').value,
+    age: document.getElementById('user-age').value
   };
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done membersCreate', xhr.responseText);
-      membersRead();
+      console.log('Done usersCreate', xhr.responseText);
+      usersRead();
     } else {
       const error = {
         status: xhr.status,
@@ -215,34 +215,34 @@ const membersCreate = function() {
       console.error(error);
     }
   };
-  xhr.open('POST', 'http://localhost:3100/api/v1/members');
+  xhr.open('POST', 'http://localhost:3100/api/v1/users');
   xhr.setRequestHeader('Content-Type', 'application/json');
-  xhr.send(JSON.stringify(member));
+  xhr.send(JSON.stringify(user));
 };
 ```
 
 ## Ajax Read
 ```js
-const membersRead = function() {
+const usersRead = function() {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      const members = JSON.parse(xhr.responseText).members;
-      const tbody = document.getElementById('tbody-members');
+      const users = JSON.parse(xhr.responseText).users;
+      const tbody = document.getElementById('tbody-users');
       while (tbody.children.length) {
         tbody.removeChild(tbody.children[0]);
       }
-      for (let index = 0; index < members.length; index++) {
-        const member = members[index];
-        const tr = document.getElementById('tr-template-members').cloneNode(true);
+      for (let index = 0; index < users.length; index++) {
+        const user = users[index];
+        const tr = document.getElementById('tr-template-users').cloneNode(true);
         tbody.appendChild(tr);
-        document.getElementsByName('members-name')[index].innerHTML = member.name;
-        document.getElementsByName('members-age')[index].value = member.age;
-        document.getElementsByName('members-update')[index].index = index;
-        document.getElementsByName('members-delete')[index].index = index;
+        document.getElementsByName('users-name')[index].innerHTML = user.name;
+        document.getElementsByName('users-age')[index].value = user.age;
+        document.getElementsByName('users-update')[index].index = index;
+        document.getElementsByName('users-delete')[index].index = index;
       }
-      console.log('Done membersRead', xhr.responseText);
+      console.log('Done usersRead', xhr.responseText);
     } else {
       const error = {
         status: xhr.status,
@@ -252,7 +252,7 @@ const membersRead = function() {
       console.error(error);
     }
   };
-  xhr.open('GET', 'http://localhost:3100/api/v1/members');
+  xhr.open('GET', 'http://localhost:3100/api/v1/users');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
 };
@@ -260,17 +260,17 @@ const membersRead = function() {
 
 ## Ajax Update
 ```js
-const membersUpdate = function(index) {
-  const member = {
-    name: document.getElementsByName('members-name')[index].innerHTML,
-    age: document.getElementsByName('members-age')[index].value
+const usersUpdate = function(index) {
+  const user = {
+    name: document.getElementsByName('users-name')[index].innerHTML,
+    age: document.getElementsByName('users-age')[index].value
   };
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done membersUpdate', xhr.responseText);
-      membersRead();
+      console.log('Done usersUpdate', xhr.responseText);
+      usersRead();
     } else {
       const error = {
         status: xhr.status,
@@ -280,24 +280,24 @@ const membersUpdate = function(index) {
       console.error(error);
     }
   };
-  xhr.open('PATCH', 'http://localhost:3100/api/v1/members');
+  xhr.open('PATCH', 'http://localhost:3100/api/v1/users');
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify({
     index: index,
-    member: member
+    user: user
   }));
 };
 ```
 
 ## Ajax Delete
 ```js
-const membersDelete = function(index) {
+const usersDelete = function(index) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
     if (xhr.readyState !== 4) return;
     if (xhr.status === 200) {
-      console.log('Done membersDelete', xhr.responseText);
-      membersRead();
+      console.log('Done usersDelete', xhr.responseText);
+      usersRead();
     } else {
       const error = {
         status: xhr.status,
@@ -307,7 +307,7 @@ const membersDelete = function(index) {
       console.error(error);
     }
   };
-  xhr.open('DELETE', 'http://localhost:3100/api/v1/members/' + index);
+  xhr.open('DELETE', 'http://localhost:3100/api/v1/users/' + index);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send();
 };
