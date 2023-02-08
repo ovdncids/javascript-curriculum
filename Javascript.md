@@ -725,62 +725,62 @@ f5함수 호출
 6. 라이브러리: 특정 함수들의 모음 (Moment.js, Lodash)
 
 ### 함수 실습 (회원 CRUD 만들기)
-membersFunction.html
+usersFunction.html
 ```html
 <script>
 </script>
 ```
 
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html)
+* [데모](https://ovdncids.github.io/javascript-curriculum/usersFunction.html)
 * Console 창에서 호출
 ```js
 // Create
-membersCreate('홍길동');
+usersCreate('홍길동');
 
 // Read
-membersRead();
+usersRead();
 
 // Update
-membersUpdate(0, '김유신');
+usersUpdate(0, '김유신');
 
 // Delete
-membersDelete(0);
+usersDelete(0);
 ```
 
 1. Create
 ```js
-const members = [];
+const users = [];
 
-const membersCreate = function(member) {
-  members.push(member);
+const usersCreate = function(user) {
+  users.push(user);
   return 'Created';
 };
 ```
 
 2. Read
 ```js
-const membersRead = function() {
-  return members;
+const usersRead = function() {
+  return users;
 };
 ```
 
 3. Delete
 ```js
-const membersDelete = function(index) {
-  members.splice(index, 1);
+const usersDelete = function(index) {
+  users.splice(index, 1);
   return 'Deleted';
 };
 ```
 
 4. Update
 ```js
-const membersUpdate = function(index, member) {
-  members[index] = member;
+const usersUpdate = function(index, user) {
+  users[index] = user;
   return 'Updated';
 };
 ```
 
-* `배열의 CRUD`를 참조 하여, `membersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
+* `배열의 CRUD`를 참조 하여, `usersFunction2.html` 파일을 생성하고, 처음 부터 코딩 해보기
 
 ## 오브젝트 (객체)
 
@@ -903,27 +903,27 @@ chain1.plus1().plus10().plus(2);
 
 ### 오브젝트 실습 (회원 CRUD 사용)
 
-* [데모](https://ovdncids.github.io/javascript-curriculum/membersFunction.html) 또는 membersFunction.html 파일 호출 시키기
+* [데모](https://ovdncids.github.io/javascript-curriculum/usersFunction.html) 또는 usersFunction.html 파일 호출 시키기
 
 * Console 창에서 호출
 ```js
 // Create
-membersCreate({
+usersCreate({
   name: '홍길동',
   age: 20
 });
 
 // Read
-membersRead();
+usersRead();
 
 // Update
-membersUpdate(0, {
+usersUpdate(0, {
   name: '김유신',
   age: 30
 });
 
 // Delete
-membersDelete(0);
+usersDelete(0);
 ```
 * `회원 CRUD` 안보고 Console 창에서 CRUD 호출 해보기
 
