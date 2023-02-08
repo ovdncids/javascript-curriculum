@@ -119,7 +119,7 @@ server.on('upgrade', function(request, socket, head) {
 ```
 
 ### Express Server Router에서 WebSocket 활용
-routes/members.js
+routes/users.js
 ```js
 router.get('/', function(request, response) {
   const wss = global.wss;

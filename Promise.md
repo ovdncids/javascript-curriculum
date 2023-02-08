@@ -32,14 +32,14 @@ const promiseAll = Promise.all([promise1, promise2]).then(function(result) {
 ```js
 const promises = [];
 promises[0] = new Promise(function(resolve, reject) {
-  axios.get('http://localhost:3100/api/v1/members').then(function(response) {
+  axios.get('http://localhost:3100/api/v1/users').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);
   })
 });
 promises[1] = new Promise(function(resolve, reject) {
-  axios.get('http://localhost:3100/api/v1/members').then(function(response) {
+  axios.get('http://localhost:3100/api/v1/users').then(function(response) {
     resolve(response.data);
   }).catch(function(error) {
     reject(error);

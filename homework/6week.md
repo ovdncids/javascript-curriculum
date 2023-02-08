@@ -59,6 +59,6 @@
     }
     ```
 
-3. `form/membersForm.html`을 복사해서 `form/usersForm.html` 파일을 만들고,
-   `form/membersForm.js`을 복사해서 `form/usersForm.js` 파일을 만들고,
-   변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 프로그램이 잘 돌아가는지 확인 하시요.
+3. `form/usersForm.html`을 복사해서 `form/usersForm.html` 파일을 만들고,
+   `form/usersForm.js`을 복사해서 `form/usersForm.js` 파일을 만들고,
+   변수명이 users들어간 부분을 users로, user들어간 부분을 user로 변경 후 프로그램이 잘 돌아가는지 확인 하시요.

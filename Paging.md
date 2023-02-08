@@ -195,18 +195,18 @@ data() {
   }
 },
 watch: {
-  members: function() {
+  users: function() {
     this.paging.pageNumber = this.$route.query.pageNumber >= 1 ? Number(this.$route.query.pageNumber) : 1
-    this.paging.pageMax = Math.ceil(this.membersTotal / this.paging.pageSize)
+    this.paging.pageMax = Math.ceil(this.usersTotal / this.paging.pageSize)
     this.paging.navs = this.navPaging(this.paging.pageNumber, this.paging.pageMax, this.paging.navSize)
   },
   '$route.query.pageNumber': function(pageNumber) {
-    this.$store.dispatch('membersRead', pageNumber)
+    this.$store.dispatch('usersRead', pageNumber)
   }
 },
 computed: {
-  membersTotal() {
-    return this.$store.state.members.membersTotal
+  usersTotal() {
+    return this.$store.state.users.usersTotal
   }
 },
 methods: {
@@ -227,15 +227,15 @@ methods: {
 ```
 ```html
 <div v-if="paging.pageMax">
-  <router-link :to="{name: 'Members', query: {pageNumber: 1}}">처음</router-link>
-  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageNumber - 1}}">이전</router-link>
+  <router-link :to="{name: 'Users', query: {pageNumber: 1}}">처음</router-link>
+  <router-link :to="{name: 'Users', query: {pageNumber: paging.pageNumber - 1}}">이전</router-link>
   <router-link
     v-for="(nav, index) in paging.navs" :key="index"
-    :to="{name: 'Members', query: {pageNumber: nav}}"
+    :to="{name: 'Users', query: {pageNumber: nav}}"
     :class="{active: nav === paging.pageNumber}"
   >{{nav}}</router-link>
-  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageNumber + 1}}">다음</router-link>
-  <router-link :to="{name: 'Members', query: {pageNumber: paging.pageMax}}">마지막</router-link>
+  <router-link :to="{name: 'Users', query: {pageNumber: paging.pageNumber + 1}}">다음</router-link>
+  <router-link :to="{name: 'Users', query: {pageNumber: paging.pageMax}}">마지막</router-link>
 </div>
 ```
 -->

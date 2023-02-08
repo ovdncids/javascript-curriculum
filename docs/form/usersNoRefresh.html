@@ -5,18 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script defer src="./membersNoRefresh.js"></script>
+  <script defer src="./usersNoRefresh.js"></script>
 </head>
 <body>
   <div id="tag-div-parent"></div>
   <div style="display: none;">
     <div id="tag-div-child">
-      <input type="text" name="members-name" value="">
-      <button name="members-update" onclick="membersUpdate(index)">Update</button>
-      <button name="members-delete" onclick="membersDelete(index)">Delete</button>
+      <input type="text" name="users-name" value="">
+      <button name="users-update" onclick="usersUpdate(index)">Update</button>
+      <button name="users-delete" onclick="usersDelete(index)">Delete</button>
     </div>
   </div>
-  <form onsubmit="event.preventDefault(); membersCreate(this);">
+  <form onsubmit="event.preventDefault(); usersCreate(this);">
     <input type="text" name="input-text" value="" placeholder="Name">
     <input type="hidden" name="input-hidden" value="숨겨진값">
     <input type="submit" value="Create">

@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script defer src="./membersForm.js"></script>
+  <script defer src="./usersForm.js"></script>
 </head>
 <body>
   <pre id="tag-pre"></pre>
-  <form onsubmit="membersSubmit(event, this);">
-    <input type="text" name="input-text" value="membersCreate('홍길동')" placeholder="명령을 입력 하세요.">
+  <form onsubmit="usersSubmit(event, this);">
+    <input type="text" name="input-text" value="usersCreate('홍길동')" placeholder="명령을 입력 하세요.">
     <input type="hidden" name="input-hidden" value="숨겨진값">
     <input type="submit" value="전송">
   </form>

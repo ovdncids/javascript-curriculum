@@ -64,7 +64,7 @@
     const string9 = '"프리미엄 회원이거나 광고를 봤으면  ';
     const string10 = '이지만, 프리미엄 회원이 아니거나 광고를 보지 않았다면 ';
     const string11 = '이다"라는 명제는 거짓이다.';
-    const isPremiumMember = false;
+    const isPremiumUser = false;
     const isWatchedAdd = true;
     ```
     출력

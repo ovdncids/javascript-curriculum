@@ -22,8 +22,8 @@
     | 고양이 | 개 | 코끼리 |
     | [페르시안, 시암] | [포메라니안, 푸들, 말티즈] | 인도 코끼리 |
 
-4. `membersFunction2.html`을 복사해서 `usersFunction2.html` 파일을 만들고,
-   변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
+4. `usersFunction2.html`을 복사해서 `usersFunction2.html` 파일을 만들고,
+   변수명이 users들어간 부분을 users로, user들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
     ```js
     // Create
     usersCreate({

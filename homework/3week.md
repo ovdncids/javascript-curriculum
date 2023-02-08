@@ -72,8 +72,8 @@
     연결 종료
     ```
 
-5. `membersFunction2.html`을 복사해서 `usersFunction.html` 파일을 만들고,
-   변수명이 members들어간 부분을 users로, member들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
+5. `usersFunction2.html`을 복사해서 `usersFunction.html` 파일을 만들고,
+   변수명이 users들어간 부분을 users로, user들어간 부분을 user로 변경 후 `Console 창`에서 프로그램이 잘 돌아가는지 확인 하시요.
     ```js
     // Create
     usersCreate('홍길동');

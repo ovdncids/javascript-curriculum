@@ -1,0 +1,32 @@
+<script>
+const usersGet = sessionStorage.getItem('users');
+const usersLogical = usersGet || '[]';
+const users = JSON.parse(usersLogical);
+
+const usersCreate = function(user) {
+  users.push(user);
+  usersSet();
+  return 'Created';
+};
+
+const usersRead = function() {
+  return users;
+};
+
+const usersDelete = function(index) {
+  users.splice(index, 1);
+  usersSet();
+  return 'Deleted';
+};
+
+const usersUpdate = function(index, user) {
+  users[index] = user;
+  usersSet();
+  return 'Updated';
+};
+
+const usersSet = function() {
+  const usersSet = JSON.stringify(users);
+  sessionStorage.setItem('users', usersSet);
+};
+</script>
