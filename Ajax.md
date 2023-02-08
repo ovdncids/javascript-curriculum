@@ -84,30 +84,30 @@ node index.js
 Ctrl + c
 ```
 
-* ❕ `member` 구조를 `스키마` 또는 `모델`이라고 한다.
+* ❕ `user` 구조를 `스키마` 또는 `모델`이라고 한다.
 
 
 ### Frontend Server
-* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAJAX.html)
-* ajax/membersAJAX.html <- [form/membersNoRefresh.html](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.html)
-* ajax/membersAJAX.js <- [form/membersNoRefresh.js](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/membersObject.js)
+* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/usersAJAX.html)
+* ajax/usersAJAX.html <- [form/usersNoRefresh.html](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/usersObject.html)
+* ajax/usersAJAX.js <- [form/usersNoRefresh.js](https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/form/usersObject.js)
 
 #### Create
 ```diff
-- const membersCreate (삭제)
+- const usersCreate (삭제)
 ```
 ```js
-const membersCreate = function(form) {
-  const memberNameObject = form['member-name'];
-  const memberAgeObject = form['member-age'];
-  const member = {
-    name: memberNameObject.value,
-    age: memberAgeObject.value
+const usersCreate = function(form) {
+  const userNameObject = form['user-name'];
+  const userAgeObject = form['user-age'];
+  const user = {
+    name: userNameObject.value,
+    age: userAgeObject.value
   };
   const successFunction = function() {
-    memberNameObject.value = '';
-    memberAgeObject.value = '';
-    membersRead();
+    userNameObject.value = '';
+    userAgeObject.value = '';
+    usersRead();
   }
   const xhrObject = new XMLHttpRequest();
   xhrObject.onreadystatechange = function() {
@@ -123,44 +123,44 @@ const membersCreate = function(form) {
       console.error(error);
     }
   };
-  xhrObject.open('POST', 'http://localhost:3100/api/v1/members');
+  xhrObject.open('POST', 'http://localhost:3100/api/v1/users');
   xhrObject.setRequestHeader('Content-Type', 'application/json');
-  xhrObject.send(JSON.stringify(member));
+  xhrObject.send(JSON.stringify(user));
 };
 ```
 
 #### Read
 ```diff
-- const membersGet = sessionStorage.getItem('members');
-- const membersLogical = membersGet || '[]';
-- const members = JSON.parse(membersLogical);
-+ let members;
+- const usersGet = sessionStorage.getItem('users');
+- const usersLogical = usersGet || '[]';
+- const users = JSON.parse(usersLogical);
++ let users;
 ```
 
 ```diff
-- const membersRead (삭제)
+- const usersRead (삭제)
 ```
 ```js
-const membersRead = function() {
+const usersRead = function() {
   const successFunction = function(xhrObject) {
-    const membersLogical = JSON.parse(xhrObject.responseText);
-    members = membersLogical.members;
+    const usersLogical = JSON.parse(xhrObject.responseText);
+    users = usersLogical.users;
     const tagDivParent = document.getElementById('tag-div-parent');
     tagDivParent.innerHTML = '';
     const tagDivChild = document.getElementById('tag-div-child');
-    for (let index in members) {
+    for (let index in users) {
       const newDivChild = tagDivChild.cloneNode(true);
       tagDivParent.appendChild(newDivChild);
-      const membersNameObject = document.getElementsByName('members-name')[index];
-      const membersAgeObject = document.getElementsByName('members-age')[index];
-      const membersUpdateObject = document.getElementsByName('members-update')[index];
-      const membersDeleteObject = document.getElementsByName('members-delete')[index];
-      membersNameObject.value = members[index].name;
-      membersAgeObject.value = members[index].age;
-      membersUpdateObject.index = index;
-      membersDeleteObject.index = index;
+      const usersNameObject = document.getElementsByName('users-name')[index];
+      const usersAgeObject = document.getElementsByName('users-age')[index];
+      const usersUpdateObject = document.getElementsByName('users-update')[index];
+      const usersDeleteObject = document.getElementsByName('users-delete')[index];
+      usersNameObject.value = users[index].name;
+      usersAgeObject.value = users[index].age;
+      usersUpdateObject.index = index;
+      usersDeleteObject.index = index;
     }
-    console.log('Readed', members);
+    console.log('Readed', users);
   };
   const xhrObject = new XMLHttpRequest();
   xhrObject.onreadystatechange = function () {
@@ -176,7 +176,7 @@ const membersRead = function() {
       console.error(error);
     }
   };
-  xhrObject.open('GET', 'http://localhost:3100/api/v1/members');
+  xhrObject.open('GET', 'http://localhost:3100/api/v1/users');
   xhrObject.setRequestHeader('Content-Type', 'application/json');
   xhrObject.send();
 };
@@ -184,16 +184,16 @@ const membersRead = function() {
 
 #### Delete
 ```diff
-- const membersDelete (삭제)
+- const usersDelete (삭제)
 ```
 ```js
-const membersDelete = function(index) {
-  const url = 'http://localhost:3100/api/v1/members/' + index;
+const usersDelete = function(index) {
+  const url = 'http://localhost:3100/api/v1/users/' + index;
   const xhrObject = new XMLHttpRequest();
   xhrObject.onreadystatechange = function () {
     if (xhrObject.readyState !== 4) return;
     if (xhrObject.status === 200) {
-      membersRead();
+      usersRead();
     } else {
       const error = {
         status: xhrObject.status,
@@ -211,14 +211,14 @@ const membersDelete = function(index) {
 
 #### Update
 ```diff
-- const membersUpdate (삭제)
+- const usersUpdate (삭제)
 ```
 ```js
-const membersUpdate = function(index) {
-  const url = 'http://localhost:3100/api/v1/members/' + index;
-  const name = document.getElementsByName('members-name')[index].value;
-  const age = document.getElementsByName('members-age')[index].value;
-  const member = {
+const usersUpdate = function(index) {
+  const url = 'http://localhost:3100/api/v1/users/' + index;
+  const name = document.getElementsByName('users-name')[index].value;
+  const age = document.getElementsByName('users-age')[index].value;
+  const user = {
     name: name,
     age: age
   };
@@ -226,7 +226,7 @@ const membersUpdate = function(index) {
   xhrObject.onreadystatechange = function () {
     if (xhrObject.readyState !== 4) return;
     if (xhrObject.status === 200) {
-      membersRead();
+      usersRead();
     } else {
       const error = {
         status: xhrObject.status,
@@ -238,7 +238,7 @@ const membersUpdate = function(index) {
   };
   xhrObject.open('PATCH', url);
   xhrObject.setRequestHeader('Content-Type', 'application/json');
-  xhrObject.send(JSON.stringify(member));
+  xhrObject.send(JSON.stringify(user));
 };
 ```
 * RESTful API 설명
@@ -262,20 +262,20 @@ const membersUpdate = function(index) {
 
 ## Axios
 https://github.com/axios/axios
-* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/membersAxios.html)
+* [데모](https://ovdncids.github.io/javascript-curriculum/ajax/usersAxios.html)
 * ❔ 공통 부분 함수화를 Axios로 수정 하기
 ```diff
-const membersRead = function() {
+const usersRead = function() {
 - const successFunction = function(xhrObject) {
--   const membersLogical = JSON.parse(xhrObject.responseText);
+-   const usersLogical = JSON.parse(xhrObject.responseText);
 ```
 ```js
-const membersRead = function() {
+const usersRead = function() {
   const successFunction = function(response) {
-    const membersLogical = response.data;
+    const usersLogical = response.data;
 ```
 
-* ❔ `membersRead`안에 `successFunction` 상수를 삭제하고, 해당 `함수`를 `.then()` 안에 넣기
+* ❔ `usersRead`안에 `successFunction` 상수를 삭제하고, 해당 `함수`를 `.then()` 안에 넣기
 
 ### 쿠키로 로그인 할때 도메인이 틀려질 경우 설정
 ```js
