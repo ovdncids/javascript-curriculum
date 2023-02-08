@@ -703,7 +703,7 @@ func4(scriptConst4);
 5. 익명 함수를 인수로 넘기기
 ```js
 const func5 = function(parameter1) {
-  console.log('f5함수 호출');
+  console.log('func5함수 호출');
 };
 func5(function() {
   console.log('익명함수 호출');
@@ -711,7 +711,7 @@ func5(function() {
 ```
 * ❔ 문제: `인수`로 넘긴 `익명 함수`를, `인자`로 호출 시키기
 ```sh
-f5함수 호출
+func5함수 호출
 익명함수 호출
 ```
 * <details><summary>정답</summary>
