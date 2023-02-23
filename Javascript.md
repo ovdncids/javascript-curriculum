@@ -899,7 +899,8 @@ const chain1 = {
 chain1.plus1().plus10().plus(2);
 ```
 * ❕ 체이닝 패턴의 핵심은 함수 호출 후에 `this`를 리턴한다.
-* ❔ `chain1.total` 값을 `27`로 만들기
+* ❔ `plus1, plus10, plus` 함수를 1번씩 써서 `chain1.total` 값을 `27`로 만들기
+* ❔ `plus1, plus10, plus` 함수를 2번씩 써서 `chain1.total` 값을 `27`로 만들기
 
 ### 오브젝트 실습 (회원 CRUD 사용)
 
