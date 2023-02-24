@@ -78,7 +78,8 @@ sessionStorage.clear();
 ```
 * sessionStorage 저장 기간: 새로고침 해도 남아 있지만, 해당 탭이 닫히면 사라진다.
 * localStorage 저장 기간: 영구 보관이 기본이나, 브라우저에 따라 모바일 환경에 따라 다르다. 용량은 5MB까지
-* ❔ `sessionStorage`를 `localStorage` 변경하여 확인 하기
+* ❔ Console 창에서 `sessionStorage`를 `localStorage` 변경하여 실행 해보기
+* ❔ `localStorage.setItem('ss1', 1);`만 실행후 `새 탭`을 열고 `localStorage`가 남아 있는지 확인
 
 <!--
 ### Prototype과 toString()
