@@ -291,6 +291,7 @@ form/usersForm.html
 #### form 태그 실습
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/usersForm.html)
 * form/usersForm.js <- https://raw.githubusercontent.com/ovdncids/javascript-curriculum/master/docs/usersDocumentWrite.html
+* ❕ `.html` 파일을 `.js`로 수정
 
 ```diff
 - <form method="get" onsubmit="debugger; console.log(event, this); event.preventDefault();">
@@ -317,7 +318,7 @@ const usersSubmit = function(event, form) {
     alert(error);
     event.preventDefault();
   }
-}
+};
 ```
 * `eval` 설명 (Console 창에서 `eval` 함수 확인)
 * ❔ `eval` 대신 `JSON.parse`를 사용한다면
