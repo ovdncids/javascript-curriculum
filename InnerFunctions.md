@@ -320,10 +320,8 @@ const usersSubmit = function(event, form) {
   }
 };
 ```
-* `eval` 설명 (Console 창에서 `eval` 함수 확인)
+* `eval` [설명](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval) (Console 창에서 `eval` 함수 확인)
 * ❔ `eval` 대신 `JSON.parse`를 사용한다면
-
-https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/eval
 
 #### Input.value CRUD
 * `inputTextObject` 상수에서 `break point` 걸고, Console 창에서 실행
