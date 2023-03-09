@@ -451,8 +451,8 @@ const inputTextObject = inputTextObjects[0];
 
 ### Query string - getAll
 ```js
-const inputHiddens = queryString.getAll('input-hidden');
-const inputHidden = inputHiddens[0];
+const inputHiddenList = queryString.getAll('input-hidden');
+const inputHidden = inputHiddenList[0];
 ```
 
 ### focus, blur
@@ -486,7 +486,7 @@ for (let index in users) {
   tagPre.innerHTML += '<button onclick="usersDelete(' + index + ')">Delete</button>';
   tagPre.innerHTML += '\n';
 }
-console.log('Readed', users);
+console.log('Read', users);
 ```
 
 #### Delete
@@ -575,7 +575,7 @@ const usersRead = function() {
     const newDivChild = tagDivChild.cloneNode(true);
     tagDivParent.appendChild(newDivChild);
   }
-  console.log('Readed', users);
+  console.log('Read', users);
   return users;
 };
 ```
