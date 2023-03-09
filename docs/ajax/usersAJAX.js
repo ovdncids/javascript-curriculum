@@ -54,7 +54,7 @@ const usersRead = function() {
       usersUpdateObject.index = index;
       usersDeleteObject.index = index;
     }
-    console.log('Readed', users);
+    console.log('Read', users);
   };
   ajax('GET', 'http://localhost:3100/api/v1/users', undefined, successFunction);
 };
