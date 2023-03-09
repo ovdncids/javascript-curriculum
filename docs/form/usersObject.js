@@ -31,7 +31,7 @@ const usersRead = function() {
     usersUpdateObject.index = index;
     usersDeleteObject.index = index;
   }
-  console.log('Readed', users);
+  console.log('Read', users);
   return users;
 };
 
