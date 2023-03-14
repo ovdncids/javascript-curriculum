@@ -557,7 +557,6 @@ form/usersNoRefresh.html
   <div id="tag-div-child">
     <input type="text" name="users-name" value="">
     <button name="users-update" onclick="usersUpdate(index)">Update</button>
-    <button name="users-delete" onclick="usersDelete(index)">Delete</button>
   </div>
 </div>
 ```
@@ -589,12 +588,11 @@ form/usersNoRefresh.js
 ```js
 const usersNameObject = document.getElementsByName('users-name')[index];
 const usersUpdateObject = document.getElementsByName('users-update')[index];
-const usersDeleteObject = document.getElementsByName('users-delete')[index];
 usersNameObject.value = users[index];
 usersUpdateObject.index = index;
-usersDeleteObject.index = index;
 ```
 * ❕ `onclick` 안에 `index` 설명
+* ❔ 문제: `Delete 버튼` 구현하기
 
 ### 회원 정보에 나이 추가
 * [데모](https://ovdncids.github.io/javascript-curriculum/form/usersObject.html)
