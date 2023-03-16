@@ -82,7 +82,6 @@
 * http://1004lucifer.blogspot.com/2019/06/regex.html
 ```js
 // ^((?!단어).)*$
-//
 /^((?!').)*$/.test("abc123") === true
 /^((?!').)*$/.test("abc'123") === false ('(홑따옴표)가 포함 되면 거짓)
 ```
