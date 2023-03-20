@@ -107,3 +107,34 @@ if (/^[a-zA-Z0-9ㄱ-ㅎ가-힣\_]+$/.test('azAZ09ㄱㅎ가힣\')) {
 ```js
 'a1b2c3'.replace(/[^0-9]/g, '')
 ```
+
+# Highlight (하이라이트)
+```html
+<script>
+const enterToBr = function(text) {
+  return text.replace(/(?:\\ r\n|\r|\n)/g, '<br>');
+};
+const highlightApply = function(originalText, highlightText) {
+  try {
+    highlightText = highlightText.replace(new RegExp('\\\\', 'g'), '\\\\');
+    for (const specialCharacter of '$^*()+[]|/?') {
+      highlightText = highlightText.replace(new RegExp('\\' + specialCharacter, 'g'), '\\$&');
+    }
+    originalText = originalText.replace(new RegExp(`${highlightText}`, 'gi'), '<span style="color: orange;">$&</span>');
+    originalText = enterToBr(originalText);
+  } catch(error) {
+    console.error(error);
+  }
+  return originalText;
+}
+const change = function() {
+  const originalText = document.getElementById('originalText').value;
+  const highlightText = document.getElementById('highlightText').value;
+  document.getElementById('highlight').innerHTML = highlightApply(originalText, highlightText);
+}
+</script>
+<textarea id="originalText">`~!@#$%^&*()-=_+[]{}\|;':",./<>?</textarea>
+<textarea id="highlightText"></textarea>
+<button onclick="change();">Change</button>
+<div id="highlight"></div>
+```
