@@ -11,7 +11,7 @@ xhrObject.onreadystatechange = function() {
     // 통신 완료 후 실행할 부분
     console.log('Done', xhrObject.responseText);
   } else {
-    // 통신 도중 에러가 발생 할때 실행할 부분
+    // 통신 도중 에러가 발생할 때 실행할 부분
     const error = {
       status: xhrObject.status,
       statusText: xhrObject.statusText,
