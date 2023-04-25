@@ -6,6 +6,7 @@ https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Pr
 **언제 완료 될지 모르는 여러 쓰레드를 기다려다가 모두 완료 되면 처리하는 내장 함수**
 
 ## 기본 문법
+promise.html
 ```js
 const promise1 = new Promise(function(resolve, reject) {
   // resolve('Resolved promise1');
@@ -16,7 +17,7 @@ const promise2 = new Promise(function(resolve, reject) {
   reject('Rejected promise2');
 });
 const promiseAll = Promise.all([promise1, promise2]).then(function(result) {
-  console.log(result);
+  console.warn(result);
 }).catch(function(error) {
   console.error(error);
 });
@@ -27,6 +28,31 @@ const promiseAll = Promise.all([promise1, promise2]).then(function(result) {
 
 ### Case2
 모든 프로미쓰가 resolve 메소드를 실행 할 경우 then 메소드가 실행 됨
+
+```js
+const promise = {
+  promise1Resolve: null,
+  promise1Reject: null,
+  promise2Resolve: null,
+  promise2Reject: null
+};
+const promise1 = new Promise(function(resolve, reject) {
+  promise.promise1Resolve = resolve;
+  promise.promise1Reject = reject;
+});
+const promise2 = new Promise(function(resolve, reject) {
+  promise.promise2Resolve = resolve;
+  promise.promise2Reject = reject;
+});
+const promiseAll = Promise.all([promise1, promise2]).then(function(result) {
+  console.warn(result);
+}).catch(function(error) {
+  console.error(error);
+});
+console.log(promise);
+```
+* ❔ `Promise.all` 안에 있는 `console.warn` 찍히게 해보기
+* ❔ `Promise.all` 안에 있는 `console.error` 찍히게 해보기
 
 ## Axios 대입
 ```js
