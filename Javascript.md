@@ -54,7 +54,7 @@ console.log(v1, v2, v3);
 * `console.log();` 설명
 * ❔ `v1` 변수에 let을 2번 선언 한다면
 * ❔ 선언 하지 않은 `v4` 변수를 `console.log(v4);`로 읽는(Read)다면
-* ❔ `v4` 변수를 `true`로 변경해 보기
+* ❔ `v4` 변수를 `true`로 변경해 보기
 * `변수`에 대한 `CRUD` 설명
 * ❕ `변수명`에 대한 규칙
   ```
@@ -94,7 +94,7 @@ console.log(calc / 10);
 ```js
 let a, b, c;
 ```
-* ❔ 문제: console.log(a); 한다면
+* ❔ 문제: `console.log(a);` 한다면
 * ❔ 문제: 한줄로 변수 `a, b, c`에 각각 `1, 2, 3` 넣어 보기
 * <details><summary>정답</summary>
 
